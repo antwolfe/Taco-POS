@@ -41,6 +41,6 @@ ul {
     margin: .5em;
 }
 
-#homepage-id-photo {
+#homepage-id-photo, #about-anthony > img {
     border-radius: 50%;
 }
