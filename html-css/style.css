@@ -2,8 +2,9 @@
 /* Use flexbox for your grid */
 
 
-/* :root */
-/* color schemes */
+:root {
+background: linear-gradient(to right, rgb(77, 77, 218), rgba(142, 129, 211, 0.438));
+}
 
 footer > a {
     text-decoration: none;
@@ -44,3 +45,4 @@ ul {
 #homepage-id-photo, #about-anthony > img {
     border-radius: 50%;
 }
+
