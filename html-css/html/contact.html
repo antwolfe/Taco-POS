@@ -34,11 +34,26 @@
         <section class="contact-card">
             <img src="https://picsum.photos/200" alt="anthony's contact card">
 
-            <p>Message Me: </p>
-            <form>
-                Name: <input type="text" name="name"> <br>
-                Message: <input type="text" name="email-message"> <br>
+            <form action="_blank">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <br>
+                <div>
+                    <label for="message">Message Me</label><br>
+                    <textarea name="message" id="message"
+                    cols="35" rows="6"></textarea>
+                </div>
+
                 <button type="submit">Submit</button>
+                
+
+                
             </form>
 
         </section>
