@@ -10,11 +10,6 @@ background: linear-gradient(to right, rgb(77, 77, 218), rgba(142, 129, 211, 0.43
 --highlight-color: rgb(236, 236, 235);
 }
 
-footer > a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-
 body {
     margin: 1.5em;
 }
@@ -24,9 +19,7 @@ a {
     color: var(--highlight-color);
 }
 
-ul {
-    list-style: none;
-}
+
 
 .navbar {
 
@@ -38,6 +31,7 @@ ul {
 .navbar > ul {
     display: flex;
     margin: 1.5em .5em;
+    list-style: none;
 }
 
 .navbar > ul > li {
@@ -56,4 +50,15 @@ button {
     padding: .8em;
     background-color: var(--accent-color);
     font-weight: bold;
+}
+
+
+
+footer {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: var(--accent-color);
+    padding: .8em;
+    text-align: center;
+
 }
