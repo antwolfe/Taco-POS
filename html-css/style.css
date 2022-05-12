@@ -26,6 +26,9 @@ a {
     background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
+    margin: auto;
+    padding: 0 2em;
+    
 }
 
 .navbar > ul {
