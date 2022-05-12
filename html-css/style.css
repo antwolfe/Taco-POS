@@ -31,6 +31,13 @@ img {
     padding: .5em;
 }
 
+.logo {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+
+}
+
 button {
     border-radius: .5em;
     border:rgb(0, 0, 0), 2em ;
@@ -55,8 +62,8 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    padding: 0 2em;
-    font-size: 1.23rem;
+    padding: 0 .5em;
+    font-size: 1.2rem;
     
 }
 
