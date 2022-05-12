@@ -35,7 +35,6 @@ img {
     border-radius: 50%;
     width: 5em;
     height: 5em;
-
 }
 
 button {
@@ -52,19 +51,17 @@ footer {
     background-color: var(--accent-color);
     padding: .8em;
     text-align: center;
-
 }
 
  /* Navbar */
-.navbar {
 
+.navbar {
     background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
     margin: auto;
     padding: 0 .5em;
     font-size: 1.2rem;
-    
 }
 
 .navbar ul {
@@ -76,12 +73,19 @@ footer {
 .navbar ul li {
     display: flex;
     margin: .5em;
-    /* justify-content: space-around; */
 }
 
 /* Photos */
 #homepage-id-photo, #about-anthony img {
     border-radius: 50%;
+}
+
+#index-image {
+    margin: auto;
+    padding: .5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 
