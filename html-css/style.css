@@ -3,18 +3,18 @@
 
 
 :root {
-background: linear-gradient(to right, rgb(77, 77, 218), rgba(142, 129, 211, 0.438));
---main-color: rgb(16, 49, 107);
---secondary-color: rgb(0, 0, 0);
---accent-color: rgb(226, 88, 34);
---highlight-color: rgb(236, 236, 235);
+background: linear-gradient(to right, #4d4dda, #8e81d370);
+--main-color: #10316b;
+--secondary-color: #000000;
+--accent-color: #e25822;
+--highlight-color: #ececeb;
+--primary-font: 'Noto Sans', sans-serif;
 }
 
 
 body {
     margin: .5em;
     font-size: 1.4rem;
-    font-family: 'Noto Sans', sans-serif;
 }
 
 .content {
@@ -104,6 +104,7 @@ footer {
 
 
 
+/* Media Queries */
 
 
 
