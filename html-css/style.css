@@ -20,6 +20,7 @@
 body {
     font-size: 1.4rem;
     font-family: var(--primary-font);
+    color: #000000;
 }
 
 /* .content {
@@ -89,8 +90,35 @@ footer {
 
 .navbar ul li {
     margin: .5em;
-    padding-top: .4em;;
+    padding-top: .4em;
 }
+
+/* Bio Page */
+
+#bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#bio-container #about-anthony img {
+    display: block;
+    margin: auto;
+}
+
+#bio-container main {
+    
+
+}
+
+
+
+
+
+
 
 /* Photos */
 
@@ -118,18 +146,15 @@ footer {
 /*  todo: this is navbar, move? */
 #index-image nav * {
     color: var(--secondary-color);
-
-   
 }
 
 /* Contact Page  */
 
 #contact-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Contact Form */
@@ -146,7 +171,7 @@ footer {
     text-align: center;
     margin-bottom: .8em;
 }
-   
+
 #form-container form-group {
     padding: 20px;
 }
@@ -154,7 +179,6 @@ footer {
 #form-container label {
     display: block;
     margin-bottom: .2em;
-    
 }
 
 #form-container input {
