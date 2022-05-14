@@ -3,12 +3,12 @@
 
 
 :root {
-background: linear-gradient(to right, #4d4dda, #8e81d370);
---main-color: #10316b;
---secondary-color: #000000;
---accent-color: #e25822;
---highlight-color: #ececeb;
---primary-font: 'Noto Sans', sans-serif;
+    background: linear-gradient(to right, #4d4dda, #8e81d370);
+    --main-color: #10316b;
+    --secondary-color: #000000;
+    --accent-color: #e25822;
+    --highlight-color: #ececeb;
+    --primary-font: 'Noto Sans', sans-serif;
 }
 
 
@@ -19,13 +19,18 @@ body {
 }
 
 .content {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
 a {
     text-decoration: none;
     color: var(--highlight-color);
+}
+
+a :hover {
+    font-size: 1.8rem;
+    color: black;
 }
 
 img {
@@ -40,7 +45,7 @@ img {
 
 button {
     border-radius: .5em;
-    border:rgb(0, 0, 0), 2em ;
+    border: rgb(0, 0, 0), 2em;
     padding: .8em;
     background-color: var(--accent-color);
     font-weight: bold;
@@ -51,10 +56,12 @@ footer {
     color: rgb(0, 0, 0);
     background-color: var(--accent-color);
     padding: .8em;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
 }
 
- /* Navbar */
+/* Navbar */
 
 .navbar {
     background-color: var(--main-color);
@@ -76,7 +83,8 @@ footer {
 }
 
 /* Photos */
-#homepage-id-photo, #about-anthony img {
+#homepage-id-photo,
+#about-anthony img {
     border-radius: 50%;
 }
 
@@ -95,9 +103,11 @@ footer {
     flex-direction: column;
     font-size: 2rem;
 }
- /*  todo: this is navbar, move? */ 
-#index-image nav {
+
+/*  todo: this is navbar, move? */
+#index-image nav * {
     justify-content: flex-start;
+    color: var(--secondary-color);
 }
 
 
@@ -106,6 +116,3 @@ footer {
 
 
 /* Media Queries */
-
-
-
