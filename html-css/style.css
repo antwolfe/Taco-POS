@@ -16,11 +16,13 @@ body {
     margin: .5em;
     font-size: 1.4rem;
     font-family: var(--primary-font);
+    
 }
 
 .content {
     display: flex;
     flex-direction: column;
+     
 }
 
 a {
@@ -28,9 +30,8 @@ a {
     color: var(--highlight-color);
 }
 
-a :hover {
-    font-size: 1.8rem;
-    color: black;
+a:hover {
+    font-size: 1.5rem;
 }
 
 img {
@@ -49,6 +50,11 @@ button {
     padding: .8em;
     background-color: var(--accent-color);
     font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ec4a0a
 }
 
 footer {
@@ -67,7 +73,7 @@ footer {
     background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
-    margin: auto;
+    
     padding: 0 .5em;
     font-size: 1.2rem;
 }
@@ -80,6 +86,7 @@ footer {
 
 .navbar ul li {
     margin: .5em;
+    padding-top: .4em;;
 }
 
 /* Photos */
@@ -106,9 +113,11 @@ footer {
 
 /*  todo: this is navbar, move? */
 #index-image nav * {
-    justify-content: flex-start;
     color: var(--secondary-color);
+
+   
 }
+
 
 
 /* Text */
