@@ -139,7 +139,15 @@ footer {
    padding: 2px;    
 }
 
+/* Gallery Page */
 
+#gallery-container {
+    display: flex;
+    flex-direction: column;
+
+
+
+}
 
 
 
@@ -187,9 +195,10 @@ footer {
 
 #form-container {
     border: 3px black dotted;
-    height: 50vh;
+    height: 22em;
     padding: 1.2em;
     margin-top: 1.2em;
+    margin-bottom: 1.2em;
     font-family: var(--primary-font);
 }
 
