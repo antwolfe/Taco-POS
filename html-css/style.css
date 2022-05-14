@@ -11,19 +11,22 @@
     --primary-font: 'Noto Sans', sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    margin: .5em;
     font-size: 1.4rem;
     font-family: var(--primary-font);
-    
 }
 
-.content {
+/* .content {
     display: flex;
     flex-direction: column;
-     
-}
+    max-width: 500px;
+} */
 
 a {
     text-decoration: none;
@@ -73,7 +76,7 @@ footer {
     background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
-    
+    width: 100%;
     padding: 0 .5em;
     font-size: 1.2rem;
 }
@@ -90,6 +93,7 @@ footer {
 }
 
 /* Photos */
+
 #homepage-id-photo,
 #about-anthony img {
     border-radius: 50%;
@@ -117,6 +121,35 @@ footer {
 
    
 }
+
+/* Contact Page  */
+
+#contact-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}
+
+/* Contact Form */
+
+#form-container {
+    border: 1px black solid;
+    height: 50vh;
+    padding: 1.2em;
+    margin-top: 1.2em;
+
+}
+
+#form-container form {
+   
+}
+
+#form-container form-group {
+    padding: 20px;
+}
+
 
 
 
