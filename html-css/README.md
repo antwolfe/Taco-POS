@@ -6,3 +6,8 @@
 
 ### StackOverflow
 - Fixing list-style to be inside the aside element
+
+## Icons
+- Message : <a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Freepik - Flaticon</a>
+
+- Github : <a href="https://github.com/logos">Github Logos</a>

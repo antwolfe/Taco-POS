@@ -77,7 +77,7 @@ footer {
     background-color: var(--main-color);
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
     padding: 0 .5em;
     font-size: 1.2rem;
 }
@@ -144,10 +144,17 @@ footer {
 #gallery-container {
     display: flex;
     flex-direction: column;
-
-
-
+    border: #000000 solid 1px; /*delete before prod. */
 }
+
+#gallery {
+    /* max-width: 1200px; <- media query to stop at 5 per line */
+}
+
+.gallery-photo {
+    display: inline-flex;
+}
+
 
 
 
