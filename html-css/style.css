@@ -80,6 +80,7 @@ footer {
     width: 100vw;
     padding: 0 .5em;
     font-size: 1.2rem;
+    margin-bottom: 50px;
 }
 
 .navbar ul {
@@ -197,11 +198,11 @@ footer {
     align-items: center;
 }
 
-/* Contact Form */
-
 #contact-image img {
     width: 250px;
 }
+
+/* Contact Form */
 
 #form-container {
     border: 3px black dotted;
