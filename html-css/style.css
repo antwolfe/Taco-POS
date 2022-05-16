@@ -34,10 +34,6 @@ a {
     color: var(--highlight-color);
 }
 
-a:hover {
-    font-size: 1.5rem;
-}
-
 img {
     padding: .5em;
 }
@@ -79,7 +75,7 @@ footer {
     width: 100vw;
     padding: 0 .5em;
     font-size: 1.2rem;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 }
 
 .navbar ul {
@@ -92,6 +88,14 @@ footer {
     margin: .5em;
 }
 
+.navbar ul a:hover {
+    font-size: 1.5rem;
+}
+
+.navbar img:hover {
+    font-size: 1.5rem;
+}
+
 /* Bio Page */
 
 #bio-container {
@@ -102,7 +106,7 @@ footer {
     padding: 0 15px 15px 15px;
 }
 
-#bio-container #about-anthony img, h1 {
+#bio-container #about-anthony > img, h1 {
     display: block;
     margin: auto;
     margin-bottom: .9em;
@@ -144,12 +148,6 @@ footer {
     display: inline-flex;
 }
 
-
-
-
-
-
-
 /* Photos */
 
 #homepage-id-photo,
@@ -157,12 +155,7 @@ footer {
     border-radius: 50%;
 }
 
-/* todo: consider making index nav vertical over logo */
-/* todo: make logo "background" under a vertical nav */
-
-#index-image img {
-    z-index: -1;
-}
+/* Bonus Page */
 
 #index-image {
     margin: auto;
@@ -173,7 +166,6 @@ footer {
     font-size: 2rem;
 }
 
-/*  todo: this is navbar, move? */
 #index-image nav * {
     color: var(--secondary-color);
 }
@@ -192,6 +184,10 @@ footer {
 }
 
 /* Contact Form */
+
+#contact-container a:hover {
+    font-size: 1.7rem;
+}
 
 #form-container {
     border: 3px black dotted;
@@ -235,11 +231,6 @@ footer {
     background: #ec4a0a;
 }
 
-
-/* Text */
-
-
-
 /* Media Queries */
 
 @media (min-width: 769px) {
@@ -255,17 +246,23 @@ footer {
         align-items: center;
     }
 
-    .navbar ul li a:hover {
-        font-size: 3rem;
+    /* Everything I know about the world is in danger  */
+    .navbar ul a:hover {
+        font-size: 1.5rem;
     }
 
+    .navbar ul img:hover {
+        font-size: 5rem;
+    }
 
     /* fix logo hover for fullscreen in mobile? */
 
-    .logo {
+    /* .logo {
         width: 5em;
-        height: 5em;;
-    }
+        height: 5em;
+    } */
+
+    /* End existential crisis */
     
     #bio-container main {
         display: flex;
@@ -291,15 +288,14 @@ footer {
     }
 
     #gallery-container {
-        /* height: 100vh; */
         align-items: center;
         
     }
 
     #gallery {
         max-width: 1200px;
-        margin-bottom: 217px;
-        justify-content: space-between;
+        align-self: center;
+        margin: 100px 0 150px 0;
     }
 
 }
