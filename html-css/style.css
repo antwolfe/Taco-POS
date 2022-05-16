@@ -137,11 +137,7 @@ footer {
 #gallery-container {
     display: flex;
     flex-direction: column;
-    border: #000000 solid 1px; /*delete before prod. */
-}
-
-#gallery {
-    /* max-width: 1200px; <- media query to stop at 5 per line */
+    border: #000000 solid 1px; /* delete before prod. */
 }
 
 .gallery-photo {
@@ -259,38 +255,51 @@ footer {
         align-items: center;
     }
 
-    .navbar ul a:hover {
+    .navbar ul li a:hover {
         font-size: 3rem;
     }
+
 
     /* fix logo hover for fullscreen in mobile? */
 
     .logo {
-        width: 7em;
-        height: 7em;
+        width: 5em;
+        height: 5em;;
     }
     
-    #bio-container {
-        display: flex;
-    }
-
     #bio-container main {
         display: flex;
         justify-content: space-between;
-        /* align-items: flex-end; */
+    }
+
+    #bio-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+    }
+
+    #bio-background span {
+        color: var(--highlight-color);
+        font-size: 2rem;
     }
 
     #bio-container #bio-background, 
     #bio-container #hobbies {
-        width: 45%
+        width: 45%;
+        margin: 100px 0px;
     }
 
-}
+    #gallery-container {
+        /* height: 100vh; */
+        align-items: center;
+        
+    }
 
-@media (max-width: 1024px) {
-}
+    #gallery {
+        max-width: 1200px;
+        margin-bottom: 217px;
+        justify-content: space-between;
+    }
 
-@media (min-width: 1025px) {
-
-  
 }
