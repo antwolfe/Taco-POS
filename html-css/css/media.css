@@ -1,0 +1,69 @@
+/* Media Queries */
+
+@media (min-width: 769px) {
+    /* Used for screen sizes at least 769px in width */
+
+    /* Navbar */
+
+    .navbar {
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul a:hover {
+        font-size: 3rem;
+    }
+
+    .navbar a img:hover {
+        font-size: 3rem;
+    }
+
+    /* Bio Page */
+
+    #bio-container main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #bio-background {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1.5;
+    }
+
+    #bio-background span {
+        color: var(--highlight-color);
+        font-size: 2rem;
+    }
+
+    #bio-container #bio-background,
+    #bio-container #hobbies {
+        width: 45%;
+        margin: 75px 0px;
+    }
+
+    /* Gallery Page */
+
+    #gallery-container {
+        align-items: center;
+    }
+
+    #gallery {
+        max-width: 1200px;
+        align-self: center;
+        margin: 100px 0 150px 0;
+    }
+
+    /* Contact Page */
+
+
+
+}
+
+
