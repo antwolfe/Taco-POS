@@ -23,11 +23,11 @@ body {
     color: #000000;
 }
 
-/* .content {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-} */
+.paragraph {
+    line-height: 1.8;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
 
 a {
     text-decoration: none;
@@ -66,7 +66,6 @@ footer {
     color: rgb(0, 0, 0);
     background-color: var(--accent-color);
     padding: .8em;
-    /* text-align: center; */
     display: flex;
     justify-content: center;
 }
@@ -109,7 +108,7 @@ footer {
     margin-bottom: .9em;
 }
 
-#bio-container .bio-background {
+#bio-container #bio-background {
     background: var(--accent-color);
     text-align: center;
     padding: 10px;
@@ -118,13 +117,7 @@ footer {
     border-radius: 3px;
 }
 
-#bio-container .bio-paragraph {
-    line-height: 1.8;
-    padding: 0px 5px;
-    margin-bottom: 5px;
-}
-
-#bio-container aside {
+#bio-container #hobbies {
     background: var(--main-color);
     color: var(--highlight-color);
     text-align: center;
@@ -135,7 +128,7 @@ footer {
     border-radius: 3px;
 }
 
-#bio-container aside ul li {
+#bio-container #hobbies ul li {
    padding: 2px;    
 }
 
@@ -252,3 +245,57 @@ footer {
 
 
 /* Media Queries */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Used for screen sizes at least 769px in width */
+
+    .navbar {
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul a:hover {
+        font-size: 3rem;
+    }
+
+    /* fix logo hover for fullscreen in mobile? */
+
+    .logo {
+        width: 7em;
+        height: 7em;
+    }
+    
+}
+
+@media (min-width: 1025px) {
+
+    .navbar {
+        justify-content: space-around;
+        font-size: 2rem;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul a:hover {
+        font-size: 3rem;
+    }
+
+    /* fix logo hover for fullscreen in mobile? */
+
+    .logo {
+        width: 7em;
+        height: 7em;
+    }
+
+    #bio-container main section {
+        
+    }
+}
