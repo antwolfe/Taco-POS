@@ -106,13 +106,14 @@ footer {
     padding: 0 15px 15px 15px;
 }
 
-#bio-container #about-anthony > img, h1 {
+#bio-container #about-anthony>img,
+h1 {
     display: block;
     margin: auto;
     margin-bottom: .9em;
 }
 
-#bio-container #about-anthony > img {
+#bio-container #about-anthony>img {
     width: 300px;
     height: 400px;
 }
@@ -138,7 +139,7 @@ footer {
 }
 
 #bio-container #hobbies ul li {
-   padding: 2px;    
+    padding: 2px;
 }
 
 /* Gallery Page */
@@ -149,7 +150,6 @@ footer {
 }
 
 #gallery img {
-
     width: 215px;
     height: 300px;
     margin: 10px;
@@ -157,9 +157,6 @@ footer {
 
 .gallery-photo {
     display: inline-flex;
-    /* width: 200px;
-    height: 200px;
-    margin: 5px; */
 }
 
 /* Photos */
@@ -176,6 +173,11 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+#contact-container a:hover {
+    font-size: 1.7rem;
 }
 
 #contact-image img {
@@ -183,10 +185,6 @@ footer {
 }
 
 /* Contact Form */
-
-#contact-container a:hover {
-    font-size: 1.7rem;
-}
 
 #form-container {
     border: 3px black dotted;
@@ -246,7 +244,7 @@ footer {
         justify-content: center;
         align-items: center;
     }
-    
+
     .navbar ul a:hover {
         font-size: 3rem;
     }
@@ -256,7 +254,7 @@ footer {
     }
 
     /* Bio Page */
-    
+
     #bio-container main {
         display: flex;
         justify-content: space-between;
@@ -274,7 +272,7 @@ footer {
         font-size: 2rem;
     }
 
-    #bio-container #bio-background, 
+    #bio-container #bio-background,
     #bio-container #hobbies {
         width: 45%;
         margin: 75px 0px;
@@ -294,7 +292,6 @@ footer {
 
     /* Contact Page */
 
-    
 
 
 }
