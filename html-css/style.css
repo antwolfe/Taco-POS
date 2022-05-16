@@ -246,7 +246,7 @@ footer {
 
 /* Media Queries */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) {
     /* Used for screen sizes at least 769px in width */
 
     .navbar {
@@ -270,32 +270,27 @@ footer {
         height: 7em;
     }
     
+    #bio-container {
+        display: flex;
+    }
+
+    #bio-container main {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: flex-end; */
+    }
+
+    #bio-container #bio-background, 
+    #bio-container #hobbies {
+        width: 45%
+    }
+
+}
+
+@media (max-width: 1024px) {
 }
 
 @media (min-width: 1025px) {
 
-    .navbar {
-        justify-content: space-around;
-        font-size: 2rem;
-    }
-
-    .navbar ul {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .navbar ul a:hover {
-        font-size: 3rem;
-    }
-
-    /* fix logo hover for fullscreen in mobile? */
-
-    .logo {
-        width: 7em;
-        height: 7em;
-    }
-
-    #bio-container main section {
-        
-    }
+  
 }
