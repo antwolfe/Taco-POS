@@ -112,6 +112,11 @@ footer {
     margin-bottom: .9em;
 }
 
+#bio-container #about-anthony > img {
+    width: 300px;
+    height: 400px;
+}
+
 #bio-container #bio-background {
     background: var(--accent-color);
     text-align: center;
@@ -141,11 +146,20 @@ footer {
 #gallery-container {
     display: flex;
     flex-direction: column;
-    border: #000000 solid 1px; /* delete before prod. */
+}
+
+#gallery img {
+
+    width: 215px;
+    height: 300px;
+    margin: 10px;
 }
 
 .gallery-photo {
     display: inline-flex;
+    /* width: 200px;
+    height: 200px;
+    margin: 5px; */
 }
 
 /* Photos */
@@ -245,8 +259,6 @@ footer {
         justify-content: center;
         align-items: center;
     }
-
-    /* Everything I know about the world is in danger  */
     
     .navbar ul a:hover {
         font-size: 3rem;
@@ -255,15 +267,6 @@ footer {
     .navbar a img:hover {
         font-size: 3rem;
     }
-
-    /* fix logo hover for fullscreen in mobile? */
-
-    /* .logo {
-        width: 5em;
-        height: 5em;
-    } */
-
-    /* End existential crisis */
     
     #bio-container main {
         display: flex;
@@ -285,12 +288,11 @@ footer {
     #bio-container #bio-background, 
     #bio-container #hobbies {
         width: 45%;
-        margin: 100px 0px;
+        margin: 75px 0px;
     }
 
     #gallery-container {
         align-items: center;
-        
     }
 
     #gallery {
