@@ -1,0 +1,42 @@
+commit 2b502c8d9f59112f89180e6df7160bc302ff460f
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 18:20:21 2022 -0500
+
+    add resources
+
+commit dbc849faa96f4e67db879b9d158738d4da9d1128
+Merge: 92756cd 13e771a
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 18:07:04 2022 -0500
+
+    fix merge conflicts
+
+commit 92756cd83ce7e76a6bc74ce527ad43e505383533
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 17:35:06 2022 -0500
+
+    add 'line of code'
+
+commit 13e771af2556fbe2cfb0b0f29c150efd8e706070
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 17:31:42 2022 -0500
+
+    replace bold line with italicized
+
+commit 07f350d7fd06291978208d656a07bbb3bcc702cf
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 17:25:21 2022 -0500
+
+    add new bold line
+
+commit a7ec86192c88df3502cc4e8225d5e2d5ead8a11e
+Author: antwolfe <muddywolfe77@gmail.com>
+Date:   Tue May 10 17:21:55 2022 -0500
+
+    add headings
+
+commit 663a3aa3f50d5839eb0f81fac073884156b34469
+Author: antwolfe <43706281+antwolfe@users.noreply.github.com>
+Date:   Tue May 10 16:22:37 2022 -0500
+
+    Initial commit
