@@ -4,6 +4,19 @@ const section = document.getElementsByClassName('faq-item');
 
 
 // 1. define arrow to click
+    const arrows = document.querySelectorAll('.arrow-icon')
+    
+    console.log(arrows);
+
+    arrows.forEach(arrow => {
+        arrow.addEventListener('click', hello);
+    });
+
+    // .addEventListener('click', hello);
+
+    function hello(e){
+        alert("Hello World");
+    }
 
 //2. create simple event when arrow is clicked like an alert
 
