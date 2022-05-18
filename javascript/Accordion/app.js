@@ -1,23 +1,25 @@
 
-const arrows = document.querySelectorAll('.arrow-icon') //img.arrow-icon list
+const arrows = Array.from(document.querySelectorAll('.arrow-icon')) //img.arrow-icon list
 const firstArrow = document.querySelector('.arrow-icon');
 // console.log(arrows);
 
 const answers = document.getElementsByClassName('answer hidden'); //p.answer.hidden list
 
 answersArray = Array.from(answers); //turn HTMLcollection into array
+const question = document.getElementsByClassName('question');
+console.log(question);
 // console.log(answers[0].textContent);
 
 // for each arrow in list, create an alert when the image is clicked
 
 
-console.log(firstArrow);
-
-firstArrow.addEventListener('click', function(){
-    answers[0].classList.toggle('hidden');
-})
-
-
+arrows.forEach(arrow => {
+    arrow.addEventListener('click', function(){
+        index = arrows.indexOf(arrow);
+        question[index].classList.toggle('selected-question');
+        answersArray[index].classList.toggle('hidden');
+    });
+});
 
 
 
