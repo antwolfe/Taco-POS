@@ -1,35 +1,42 @@
-const section = document.getElementsByClassName('faq-item');
 
-// console.log(section[0].lastElementChild.textContent);
+const arrows = document.querySelectorAll('.arrow-icon') //img.arrow-icon list
 
+// console.log(arrows);
 
-// 1. define arrow to click
-    const arrows = document.querySelectorAll('.arrow-icon')
+const answers = document.getElementsByClassName('answer hidden'); //p.answer.hidden list
+
+//answersArray = Array.from(answers); //turn HTMLcollection into array
+// console.log(answers[0].textContent);
+
+// for each arrow in list, create an alert when the image is clicked
+arrows.forEach(arrow => {
+    arrow.addEventListener('click', arrowClicked);
+});
+
+function arrowClicked(e){
+    // show hidden answers
+    //if arrowclicked index matches answerhidden index, add answer under clicked arrow
+
     
-    console.log(arrows);
 
-    arrows.forEach(arrow => {
-        arrow.addEventListener('click', hello);
-    });
+}
 
-    // .addEventListener('click', hello);
 
-    function hello(e){
-        alert("Hello World");
-    }
 
-//2. create simple event when arrow is clicked like an alert
 
-//3. find best route to show 'answer hidden' class
+answersArray.forEach(answer => {
+    answer.addEventListener('click', arrowClicked);
+})
+
+function arrowClicked(e) {
+    console.log("Is this my arrow?");
+}
+
 
 //4. add shown 'answer hidden' class to event
 
 // 5. refactor: for each or map through section list adding onclick event for each arrow image?
 
 
-// arrow.addEventListener("click", onClick())
-
-// function onClick(e) {
-    
-// }
+// const section = document.getElementsByClassName('faq-item');
 
