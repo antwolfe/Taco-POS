@@ -5,6 +5,7 @@ const ids = Array.from(document.querySelectorAll('input'));
 const searchArray = ids.map(id => {
     return `#${id.name}`;
 });
+const messageArray = ["Email cannot be empty", "Looks like this is not a valid email"]
 
 
 
@@ -51,9 +52,6 @@ function validateEmail(email) {
         return (true)
     }
 }
-
-
-
 
 // switch statement refactor?
 // could maybe use a while loop
