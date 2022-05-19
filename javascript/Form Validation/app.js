@@ -2,19 +2,18 @@
 // array of search ID's for all input fields
 
 const form = document.querySelector('form')
-// form.addEventListener('submit', function)
 const ids = Array.from(document.querySelectorAll('input'));
-// const submitBtn = document.querySelector('button');
 const searchArray = ids.map(id => 
                         {return `#${id.name}`;
-                    });
+});
+const emailError = document.getElementById('email-error')
+console.log(emailError);
+const emailErrorMessage = document.createElement('small');
+emailErrorMessage.textContent = "Looks like this is not a valid email";
+emailErrorMessage.classList.add('error');
 
-
-
-// const firstName = document.querySelector('#first-name');
-// console.log(firstName.value);
-
-// console.log(searchArray);
+// console.log(emailErrorMessage);
+form.repl
 
 form.addEventListener('submit', validateForm)
 
@@ -32,18 +31,20 @@ function validateForm(e) {
             //email validation
             if (!(validateEmail(inputField))){
                 console.log("ERROR");
-            } else {
-                console.log("NO EMAIL ERROR");
+                emailError.replaceWith(emailErrorMessage);
+                emailErrorMessage.style.visibility = "visible";
+                // add error class to emailError
+                // find error child and replace with emailError
             }
             
         } else if (inputField != "") {
             document.querySelector(searchArray[i] + "-error").style.visibility = "hidden";
         }
+            e.preventDefault();
             console.log(inputField);
-            // console.log(searchArray[i] == "#password");
         }
         // this works!
-        e.preventDefault();
+        
     }
     
     function validateEmail(email) {
@@ -52,30 +53,7 @@ function validateForm(e) {
         }
     }
 
-
-    // searchArray.forEach(inputTerm => {
-    //     if (document.querySelector(inputTerm).value == null){
-    //         document.querySelector(inputTerm + "-error").style.visibility = 'visible';
-    //         console.log(inputTerm.value);
-    //     } 
-    //     else {
-    //         document.querySelector(inputTerm + "-error").style.visibility = 'hidden';
-    //     };
-
-        // e.preventDefault();
-    // });
-// })
-    
-
-function firstName() {
-    searchArray.forEach(inputTerm => {
-       
-    // console.log("Do Something");
-    })
-};
-
- 
-    
-
-
-// switch()
+    // switch statement refactor?
+    // could maybe use a while loop
+    // variable refactor?
+    // clean up code
