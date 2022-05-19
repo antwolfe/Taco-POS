@@ -7,13 +7,15 @@ const searchArray = ids.map(id =>
                         {return `#${id.name}`;
 });
 const emailError = document.getElementById('email-error')
-console.log(emailError);
-const emailErrorMessage = document.createElement('small');
-emailErrorMessage.textContent = "Looks like this is not a valid email";
-emailErrorMessage.classList.add('error');
+console.log(searchArray);
+const validEmailMessage = document.createElement('small');
+validEmailMessage.textContent = "Looks like this is not a valid email";
+validEmailMessage.classList.add('error');
+// form.insertBefore(validEmailMessage, emailError);
 
-// console.log(emailErrorMessage);
-form.repl
+console.log(validEmailMessage.classList);
+console.log(emailError.classList);
+
 
 form.addEventListener('submit', validateForm)
 
@@ -31,11 +33,16 @@ function validateForm(e) {
             //email validation
             if (!(validateEmail(inputField))){
                 console.log("ERROR");
-                emailError.replaceWith(emailErrorMessage);
-                emailErrorMessage.style.visibility = "visible";
-                // add error class to emailError
-                // find error child and replace with emailError
-            }
+                emailError.replaceWith(validEmailMessage);                
+                validEmailMessage.style.visibility = "visible";
+            } //replaceWith is causing issues if form is cleared, will not go back to empty message. Need to find a way to either toggle between the two or enter validMessage as it's own element
+            
+            // else { 
+            //     emailError.classList.toggle('visibility');
+            //     validEmailMessage.style.visibility = "hidden";
+            //     console.log(emailError.classList);
+            //     console.log(validEmailMessage.classList);
+            // }
             
         } else if (inputField != "") {
             document.querySelector(searchArray[i] + "-error").style.visibility = "hidden";
