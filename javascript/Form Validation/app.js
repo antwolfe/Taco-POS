@@ -9,19 +9,21 @@ const searchArray = ids.map(id => {
 form.addEventListener('submit', validateForm);
 
 function validateForm(e) {
-    e.preventDefault();
     resetEmailError();
-
+    
     for (let i = 0; i < searchArray.length; i++) {
-
+        
         let inputField = document.querySelector(searchArray[i]).value;
         let currentId = searchArray[i];
-
+        
         if (inputField == "") {
             document.querySelector(currentId + "-error").style.visibility = "visible";
+            e.preventDefault();
         } else {
             if (currentId == "#email" && !validateEmailInput(inputField)) {
                 displayInvalidErrorMessage();
+                e.preventDefault();
+
             } else {
                 document.querySelector(currentId + "-error").style.visibility = "hidden";
             }
