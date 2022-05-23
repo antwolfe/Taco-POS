@@ -1,0 +1,224 @@
+:root {
+    background: linear-gradient(to right, #4d4dda, #8e81d370);
+    --main-color: #10316b;
+    --secondary-color: #000000;
+    --accent-color: #e25822;
+    --highlight-color: #ececeb;
+    --primary-font: 'Noto Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.4rem;
+    font-family: var(--primary-font);
+    color: #000000;
+}
+
+.paragraph {
+    line-height: 1.8;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--highlight-color);
+}
+
+img {
+    padding: .5em;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+button {
+    border-radius: .5em;
+    border: rgb(0, 0, 0), 2em;
+    padding: .8em;
+    background-color: var(--accent-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ec4a0a
+}
+
+footer {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: var(--accent-color);
+    padding: .8em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0 .5em;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.navbar ul {
+    display: flex;
+    margin: 1.5em .5em;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin: .5em;
+}
+
+.navbar ul a:hover {
+    font-size: 1.5rem;
+}
+
+.navbar img:hover {
+    font-size: 1.5rem;
+}
+
+/* Bio Page */
+
+#bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px 15px 15px;
+}
+
+#bio-container #about-anthony>img,
+h1 {
+    display: block;
+    margin: auto;
+    margin-bottom: .9em;
+}
+
+#bio-container #about-anthony>img {
+    width: 300px;
+    height: 400px;
+}
+
+#bio-container #bio-background {
+    background: var(--accent-color);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 1em;
+    border: var(--main-color) 2px solid;
+    border-radius: 3px;
+}
+
+#bio-container #hobbies {
+    background: var(--main-color);
+    color: var(--highlight-color);
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    list-style: inside;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+#bio-container #hobbies ul li {
+    padding: 2px;
+}
+
+/* Gallery Page */
+
+#gallery-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#gallery img {
+    width: 215px;
+    height: 300px;
+    margin: 10px;
+}
+
+.gallery-photo {
+    display: inline-flex;
+}
+
+/* Photos */
+
+#homepage-id-photo,
+#about-anthony img {
+    border-radius: 50%;
+}
+
+/* Contact Page  */
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-container a:hover {
+    font-size: 1.7rem;
+}
+
+#contact-image img {
+    width: 250px;
+}
+
+/* Contact Form */
+
+#form-container {
+    border: 3px black dotted;
+    height: 22em;
+    padding: 1.2em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+    font-family: var(--primary-font);
+}
+
+#form-container h2 {
+    text-align: center;
+    margin-bottom: .8em;
+}
+
+#form-container form-group {
+    padding: 20px;
+}
+
+#form-container label {
+    display: block;
+    margin-bottom: .2em;
+}
+
+#form-container input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: .8em;
+    border-radius: 5px;
+    border: #aaa5a5;
+}
+
+#form-container button {
+    width: 100%;
+    margin-top: 1em;
+    cursor: pointer;
+    color: #000000;
+}
+
+#form-container button:hover {
+    background: #ec4a0a;
+}
