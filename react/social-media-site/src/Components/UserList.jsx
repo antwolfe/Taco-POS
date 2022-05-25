@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import User from "./User";
 
 const axios = require("axios");
 const API_KEY = "628da197616612aa51a596a1";
@@ -19,12 +20,10 @@ function UserList() {
   }, []);
 
   let userList = users.map((user) => {
-    {
-      return user;
-    }
+    return <User user={user} />;
   });
 
-  return console.log(userList);
+  return <div>{userList}</div>;
 }
 
 export default UserList;
