@@ -6,11 +6,11 @@ import UserList from "./components/UserList";
 const App = () => {
   return (
     <div>
-      <h1>Hello, You've Got This!</h1>
-      <UserList />;
-      <ContentCard>
+      <h1>Hello!</h1>
+      <UserList />
+      {/* <ContentCard>
         <CommentContent author="Paul" />
-      </ContentCard>
+      </ContentCard> */}
     </div>
   );
 };

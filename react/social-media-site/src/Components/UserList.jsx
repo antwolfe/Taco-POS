@@ -3,9 +3,7 @@ import React, { useEffect, useState } from "react";
 const axios = require("axios");
 const API_KEY = "628da197616612aa51a596a1";
 
-const UserList = () => {
-  // Get info from API
-
+function UserList() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -16,16 +14,17 @@ const UserList = () => {
         },
       })
       .then((dataArray) => {
-        console.log(setUsers(dataArray.data.data));
-      })
-      .catch((err) => {
-        console.log("failure");
+        setUsers(dataArray.data.data);
       });
   }, []);
 
-  return console.log({ users });
-};
+  let userList = users.map((user) => {
+    {
+      return user;
+    }
+  });
+
+  return console.log(userList);
+}
 
 export default UserList;
-
-// returns three values in console ??
