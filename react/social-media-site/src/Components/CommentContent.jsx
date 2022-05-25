@@ -1,6 +1,8 @@
 import React from "react";
 
 const CommentCard = () => {
+  const [author, setAuthor] = "N.S";
+
   return (
     <div className="ui container comments">
       <div className="comment">
@@ -8,9 +10,7 @@ const CommentCard = () => {
           <img src="https://www.picsum.photos/50" alt="avatar" />
         </a>
         <div className="content">
-          <a href="#" className="author">
-            Alex
-          </a>
+          <span className="author">{author}</span>
 
           <div className="metadata">
             <span className="date"> The date </span>

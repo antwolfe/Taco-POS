@@ -1,15 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import CommentContent from "./Components/CommentContent";
 
-const App = () => {
-  return (
-    <div>
-      <CommentContent />
-      <CommentContent />
-      <CommentContent />
-    </div>
-  );
-};
+import App from "./App";
 
 ReactDOM.render(<App />, document.querySelector("#root"));
