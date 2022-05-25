@@ -2,8 +2,8 @@ import React from "react";
 
 const ContentCard = (props) => {
   return (
-    <div class="ui raised card">
-      <div class="content">{props.children}</div>
+    <div className="ui raised card">
+      <div className="content">{props.children}</div>
     </div>
   );
 };
