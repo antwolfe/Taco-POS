@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import User from "./components/users/User";
 import UserList from "./components/users/UserList";
 import Feed from "./components/Feed";
+import FeedCard from "./components/FeedCard";
 
 const App = () => {
   return (
