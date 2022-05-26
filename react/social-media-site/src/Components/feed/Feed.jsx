@@ -6,6 +6,7 @@ import CommentCard from "../comments/CommentCard";
 
 export default function Feed() {
   const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState(Comment);
 
   useEffect(() => {
     axios

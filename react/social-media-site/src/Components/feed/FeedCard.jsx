@@ -1,5 +1,5 @@
 import React from "react";
-import { commentsList } from "../comments/CommentFeed";
+import CommentCard from "../comments/CommentCard";
 
 // TODO: Link comment dropdown to comments
 // Link comments to FeedCard through parseComments
@@ -33,8 +33,8 @@ export default function FeedCard(props) {
               className="comment icon"
               onClick={() => {
                 let comment = document.createElement("p");
-                let text = props.comment;
-                console.log(props.comment);
+                let text = CommentCard();
+                console.log(text);
                 console.log(comment);
                 document
                   .querySelector(".ui .accordion")

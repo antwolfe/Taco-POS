@@ -17,6 +17,12 @@ export default function CommentFeed() {
       });
   }, []);
 
+  function getRandomComments(commentList) {
+    let numOfComments = Math.floor(Math.random() * commentsList.length + 1);
+    console.log(numOfComments);
+    return commentsList.slice(numOfComments);
+  }
+
   let commentsList = comments.map((commentData) => {
     return (
       <CommentCard
@@ -31,5 +37,5 @@ export default function CommentFeed() {
   // put random comment number into FeedCard props
   //this will allow to pass comment card into feedcard
 
-  return <div>{commentsList}</div>;
+  return <div>{getRandomComments(commentsList)}</div>;
 }
