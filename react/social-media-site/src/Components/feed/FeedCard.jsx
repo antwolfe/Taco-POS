@@ -1,5 +1,6 @@
 import React from "react";
 import CommentCard from "../comments/CommentCard";
+import CommentFeed from "../comments/CommentFeed";
 
 // TODO: Link comment dropdown to comments
 // Link comments to FeedCard through parseComments
@@ -10,40 +11,28 @@ export default function FeedCard(props) {
     <div className="container">
       <div className="ui card" style={{ margin: 10 }}>
         <div className="content">
-          <div className="right floated meta">
-            {props.postDate.slice(0, 10)}
-          </div>
-          <img className="ui avatar image" src={props.avatar} />
-          {props.name}
+          <div className="right floated meta">{props.post.publishDate}</div>
+          <img className="ui avatar image" src={props.post.owner.picture} />
+          {props.post.owner.firstName}
         </div>
         <div className="image">
-          <img src={props.image} />
+          <img src={props.post.image} />
         </div>
         <div className="content">
           <p className="description" style={{ padding: 2 }}>
-            {props.description}
+            {props.post.text}
           </p>
           <span className="right floated">
             <i className="heart outline like icon"></i>
-            {props.likeCount}
+            {props.post.likes}
           </span>
           <div id="comment-section" className="ui accordion">
             <i
               style={{ cursor: "pointer" }}
               className="comment icon"
-              onClick={() => {
-                console.log("jello");
-                console.log(props.comment);
-                // let comment = document.createElement("p");
-                // let text = CommentCard();
-                // console.log(text);
-                // console.log(comment);
-                // document
-                //   .querySelector(".ui .accordion")
-                //   .appendChild(comment).innerHTML = text;
-              }} // THIS BUT WITH COMMENTCARD elements instead
+              onClick={() => {}}
             ></i>
-            3 comments
+            <CommentFeed post={props.post.id} />
           </div>
           <div className="content"></div>
         </div>

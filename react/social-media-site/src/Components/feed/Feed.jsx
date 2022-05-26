@@ -20,26 +20,28 @@ export default function Feed() {
       });
   }, []);
 
-  let comment = (
-    <CommentCard>
-      <FeedCard />
-    </CommentCard>
-  );
+  // let comment = (
+  //   <CommentCard>
+  //     <FeedCard />
+  //   </CommentCard>
+  // );
 
   let postList = posts.map((post) => {
     return (
       <FeedCard
-        avatar={post.owner.picture}
-        name={post.owner.firstName + " " + post.owner.lastName}
-        image={post.image}
-        description={post.text}
-        likeCount={post.likes}
-        postDate={post.publishDate}
-        comment={comment.children}
+        post={post}
+        key={post.id}
+        // avatar={post.owner.picture}
+        // name={post.owner.firstName + " " + post.owner.lastName}
+        // image={post.image}
+        // description={post.text}
+        // likeCount={post.likes}
+        // postDate={post.publishDate}
+        // comment={comment.children}
       />
     );
   });
 
-  console.log(postList);
+  // console.log(postList);
   return <div className="container">{postList}</div>;
 }

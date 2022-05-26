@@ -4,7 +4,7 @@ export default function CommentCard({ avatar, author, commentDate, message }) {
   return (
     <div className="ui container comments">
       <div className="ui card">
-        <div className="comment-content" style={{ margin: 4 }}>
+        <div className="comment-content" style={{ margin: 3 }}>
           <div className="comment">
             <a href="#" className="avatar">
               <img src={avatar} alt="avatar" />
