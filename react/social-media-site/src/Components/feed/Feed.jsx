@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import FeedCard from "./FeedCard";
+import CommentFeed from "../comments/CommentFeed";
+import CommentCard from "../comments/CommentCard";
 
 export default function Feed() {
   const [posts, setPosts] = useState([]);
@@ -21,11 +23,12 @@ export default function Feed() {
     return (
       <FeedCard
         avatar={post.owner.picture}
-        name={post.owner.firstName}
+        name={post.owner.firstName + " " + post.owner.lastName}
         image={post.image}
         description={post.text}
         likeCount={post.likes}
         postDate={post.publishDate}
+        // comment={CommentCard.message}
       />
     );
   });

@@ -28,5 +28,8 @@ export default function CommentFeed() {
     );
   });
 
+  // put random comment number into FeedCard props
+  //this will allow to pass comment card into feedcard
+
   return <div>{commentsList}</div>;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { displayComments } from "../comments/CommentFeed";
+import { commentsList } from "../comments/CommentFeed";
 
 // TODO: Link comment dropdown to comments
 // Link comments to FeedCard through parseComments
@@ -27,23 +27,19 @@ export default function FeedCard(props) {
             <i className="heart outline like icon"></i>
             {props.likeCount}
           </span>
-          <div className="ui accordion">
+          <div id="comment-section" className="ui accordion">
             <i
               style={{ cursor: "pointer" }}
               className="comment icon"
               onClick={() => {
+                let comment = document.createElement("p");
+                let text = props.comment;
+                console.log(props.comment);
+                console.log(comment);
                 document
-                  .querySelector("#show-comments")
-                  .classList.toggle("visible")(
-                  <p id="show-comments" class="transition hidden">
-                    A dog is a type of domesticated animal. Known for its
-                    loyalty and faithfulness, it can be found as a welcome guest
-                    in many households across the world.
-                  </p>
-                );
-                console.log("hello");
-                console.log("goodbye");
-              }}
+                  .querySelector(".ui .accordion")
+                  .appendChild(comment).innerHTML = text;
+              }} // THIS BUT WITH COMMENTCARD elements instead
             ></i>
             3 comments
           </div>
