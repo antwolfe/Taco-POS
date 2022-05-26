@@ -1,5 +1,5 @@
 import React from "react";
-
+import CommentCard from "../comments/CommentCard";
 // TODO: Link comment dropdown to comments
 // Link comments to FeedCard through parseComments
 //Enter Comment onEnter key or have post button
