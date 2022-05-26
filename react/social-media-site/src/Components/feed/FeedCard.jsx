@@ -32,13 +32,15 @@ export default function FeedCard(props) {
               style={{ cursor: "pointer" }}
               className="comment icon"
               onClick={() => {
-                let comment = document.createElement("p");
-                let text = CommentCard();
-                console.log(text);
-                console.log(comment);
-                document
-                  .querySelector(".ui .accordion")
-                  .appendChild(comment).innerHTML = text;
+                console.log("jello");
+                console.log(props.comment);
+                // let comment = document.createElement("p");
+                // let text = CommentCard();
+                // console.log(text);
+                // console.log(comment);
+                // document
+                //   .querySelector(".ui .accordion")
+                //   .appendChild(comment).innerHTML = text;
               }} // THIS BUT WITH COMMENTCARD elements instead
             ></i>
             3 comments

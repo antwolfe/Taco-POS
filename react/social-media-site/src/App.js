@@ -13,8 +13,9 @@ const App = () => {
       <h1 className="ui center aligned header">Social Media App</h1>
       <Navbar />
       <div className="ui container">
-        <CommentFeed />
+        {/* <CommentFeed /> */}
         {/* <UserFeed /> */}
+        <Feed />
       </div>
     </div>
   );

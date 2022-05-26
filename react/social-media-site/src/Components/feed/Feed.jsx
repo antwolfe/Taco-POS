@@ -6,7 +6,7 @@ import CommentCard from "../comments/CommentCard";
 
 export default function Feed() {
   const [posts, setPosts] = useState([]);
-  const [comments, setComments] = useState(Comment);
+  // const [comments, setComments] = useState(Comment);
 
   useEffect(() => {
     axios
@@ -20,6 +20,12 @@ export default function Feed() {
       });
   }, []);
 
+  let comment = (
+    <CommentCard>
+      <FeedCard />
+    </CommentCard>
+  );
+
   let postList = posts.map((post) => {
     return (
       <FeedCard
@@ -29,10 +35,11 @@ export default function Feed() {
         description={post.text}
         likeCount={post.likes}
         postDate={post.publishDate}
-        // comment={CommentCard.message}
+        comment={comment.children}
       />
     );
   });
 
+  console.log(postList);
   return <div className="container">{postList}</div>;
 }
