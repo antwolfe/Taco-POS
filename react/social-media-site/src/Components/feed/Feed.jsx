@@ -1,12 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import FeedCard from "./FeedCard";
-import CommentFeed from "../comments/CommentFeed";
-import CommentCard from "../comments/CommentCard";
 
 export default function Feed() {
   const [posts, setPosts] = useState([]);
-  // const [comments, setComments] = useState(Comment);
 
   useEffect(() => {
     axios
@@ -17,31 +14,13 @@ export default function Feed() {
       })
       .then((res) => {
         setPosts(res.data.data);
+        console.log(res.data.data);
       });
   }, []);
 
-  // let comment = (
-  //   <CommentCard>
-  //     <FeedCard />
-  //   </CommentCard>
-  // );
-
   let postList = posts.map((post) => {
-    return (
-      <FeedCard
-        post={post}
-        key={post.id}
-        // avatar={post.owner.picture}
-        // name={post.owner.firstName + " " + post.owner.lastName}
-        // image={post.image}
-        // description={post.text}
-        // likeCount={post.likes}
-        // postDate={post.publishDate}
-        // comment={comment.children}
-      />
-    );
+    return <FeedCard post={post} key={post.id} />;
   });
 
-  // console.log(postList);
   return <div className="container">{postList}</div>;
 }

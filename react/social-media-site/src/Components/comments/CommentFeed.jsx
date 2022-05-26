@@ -15,6 +15,7 @@ export default function CommentFeed(props) {
       })
       .then((res) => {
         setComments(res.data.data);
+        console.log(res.data.data);
         setIsLoading(false);
       });
   }, []);
@@ -26,17 +27,11 @@ export default function CommentFeed(props) {
         author={commentData.owner.firstName}
         message={commentData.message}
         commentDate={commentData.publishDate}
+        commentNumber={commentData.length}
       />
     );
   });
 
-  // function getRandomComments(commentsList) {
-  // let numOfComments = Math.floor(Math.random() * commentsList.length + 1);
-  // console.log(numOfComments);
-  // commentsList.slice(numOfComments);
-  // }
-  // put random comment number into FeedCard props
-  //this will allow to pass comment card into feedcard
   if (!isLoading) {
     return <div>{commentsList}</div>;
   }
