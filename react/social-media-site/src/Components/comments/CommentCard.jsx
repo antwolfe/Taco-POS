@@ -1,23 +1,21 @@
 import React from "react";
 
-export default function CommentCard(props) {
-  console.log(props);
-
+export default function CommentCard({ avatar, author, commentDate, message }) {
   return (
     <div className="ui container comments">
-      <div className="ui raised card">
-        <div className="content">
+      <div className="ui card">
+        <div className="comment-content" style={{ margin: 4 }}>
           <div className="comment">
             <a href="#" className="avatar">
-              <img src={props.avatar} alt="avatar" />
+              <img src={avatar} alt="avatar" />
             </a>
             <div className="content">
-              <span className="author">{props.author}</span>
+              <span className="author">{author}</span>
 
               <div className="metadata">
-                <span className="date"> {props.commentDate} </span>
+                <span className="date"> {commentDate.slice(0, 10)} </span>
               </div>
-              <div className="text">{props.message}</div>
+              <div className="text">{message}</div>
             </div>
           </div>
         </div>

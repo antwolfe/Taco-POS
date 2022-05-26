@@ -2,28 +2,28 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div class="ui attached stackable menu">
-      <div class="ui container">
-        <a class="item">
-          <i class="home icon"></i> Home
+    <div className="ui attached stackable menu">
+      <div className="ui container">
+        <a className="item">
+          <i className="home icon"></i> Home
         </a>
-        <a class="item">
-          <i class="edit icon"></i> Profile
+        <a className="item">
+          <i className="edit icon"></i> Profile
         </a>
-        <a class="item">
-          <i class="grid layout icon"></i> Browse
+        <a className="item">
+          <i className="grid layout icon"></i> Browse
         </a>
-        <div class="ui simple dropdown item">
+        <div className="ui simple dropdown item">
           More
-          <i class="dropdown icon"></i>
-          <div class="menu">
-            <a class="item">
-              <i class="mail icon"></i> Messages
+          <i className="dropdown icon"></i>
+          <div className="menu">
+            <a className="item">
+              <i className="mail icon"></i> Messages
             </a>
           </div>
         </div>
-        <div class="right item">
-          <div class="ui input">
+        <div className="right item">
+          <div className="ui input">
             <input type="text" placeholder="Search" />
           </div>
         </div>

@@ -17,8 +17,6 @@ export default function CommentFeed() {
       });
   }, []);
 
-  console.log(comments);
-
   let commentsList = comments.map((commentData) => {
     return (
       <CommentCard

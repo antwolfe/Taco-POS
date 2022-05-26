@@ -1,5 +1,6 @@
 import React from "react";
-import CommentCard from "../comments/CommentCard";
+import { displayComments } from "../comments/CommentFeed";
+
 // TODO: Link comment dropdown to comments
 // Link comments to FeedCard through parseComments
 //Enter Comment onEnter key or have post button
@@ -24,9 +25,17 @@ export default function FeedCard(props) {
             <i className="heart outline like icon"></i>
             {props.likeCount}
           </span>
-          <a href="" className="comment-dropdown">
-            <i className="comment icon"></i>3 comments
-          </a>
+          <div className="ui accordion">
+            <i
+              style={{}}
+              className="comment icon"
+              onClick={() => {
+                console.log("hello");
+              }}
+            ></i>
+            3 comments
+          </div>
+          <div className="content"></div>
         </div>
         <div className="extra content">
           <div className="ui large transparent left icon input">
