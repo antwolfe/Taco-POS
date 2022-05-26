@@ -30,9 +30,5 @@ export default function Feed() {
     );
   });
 
-  return (
-    <div style={{}} className="container">
-      {postList}
-    </div>
-  );
+  return <div className="container">{postList}</div>;
 }
