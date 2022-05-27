@@ -1,10 +1,36 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import CommentFeed from "../comments/CommentFeed";
 
 //Enter Comment onEnter key or have post button
 
 export default function FeedCard(props) {
-  console.log(props);
+  const [userInput, setUserInput] = useState("");
+
+  // useEffect(() => {
+  //   axios
+  //     .post("https://dummyapi.io/data/v1/comment/create", {
+  //       headers: {
+  //         "app-id": "628da197616612aa51a596a1",
+  //       },
+  //     })
+  //     .then((res) => {
+  //       console.log(res);
+  //     });
+  // }, [userInput]);
+
+  const handleOnClick = (e) => {
+    const commentSection = document.querySelector("#comment-list");
+    console.log("hello");
+  };
+
+  const logUserComment = (e) => {
+    if (e.key === "Enter") {
+      console.log(e.target.value);
+      setUserInput(e.target.value);
+    }
+  };
+
   return (
     <div className="container">
       <div className="ui card" style={{ margin: 10 }}>
@@ -30,21 +56,25 @@ export default function FeedCard(props) {
             <i
               style={{ cursor: "pointer" }}
               className="comment icon"
-              onClick={() => {
-                console.log("hello");
-              }}
+              onClick={handleOnClick}
             ></i>
             {"Comments"}
             <div id="comment-list" className="ui image">
               <CommentFeed post={props.post.id} />
             </div>
           </div>
-          <div className="content"></div>
         </div>
         <div className="extra content">
           <div className="ui large transparent left icon input">
             <i className="heart outline icon"></i>
-            <input type="text" placeholder="Add Comment..." />
+            <input
+              id="comment-input"
+              defaultValue={userInput}
+              type="text"
+              // onChange={getInputValue}
+              placeholder="Add Comment..."
+              onKeyDown={logUserComment}
+            />
           </div>
         </div>
       </div>

@@ -15,7 +15,6 @@ export default function CommentFeed(props) {
       })
       .then((res) => {
         setComments(res.data.data);
-        console.log(res.data.data);
         setIsLoading(false);
       });
   }, []);

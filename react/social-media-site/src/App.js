@@ -1,22 +1,28 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  NavLink,
+  Routes,
+} from "react-router-dom";
 
+import Navbar from "./components/Navbar";
 import Feed from "./components/feed/Feed";
-import CommentCard from "./components/comments/CommentCard";
-import CommentFeed from "./components/comments/CommentFeed";
-import UserFeed from "./components/users/UserFeed";
+import UserCard from "./components/users/UserCard";
 
 const App = () => {
   return (
     <div className="ui">
       <h1 className="ui center aligned header">Social Media App</h1>
-      <Navbar />
-      <div className="ui container">
-        {/* <CommentFeed /> */}
-        {/* <UserFeed /> */}
-        <Feed />
-      </div>
+      <Router>
+        <Navbar />
+        <div className="ui container">
+          <Routes>
+            <Route path="/" element={<Feed />} />
+            <Route path="/profile" element={<UserCard />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
   );
 };

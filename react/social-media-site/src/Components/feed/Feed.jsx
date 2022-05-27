@@ -14,7 +14,6 @@ export default function Feed() {
       })
       .then((res) => {
         setPosts(res.data.data);
-        console.log(res.data.data);
       });
   }, []);
 
