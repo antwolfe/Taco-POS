@@ -20,21 +20,6 @@ export default function UserList() {
       });
   }, []);
 
-  //how to chain?
-  //how to setUsers to IDmap?
-  // let userIds = users.map((user) => {
-  //   axios
-  //     .get("https://dummyapi.io/data/v1/user/" + user.id, {
-  //       headers: {
-  //         "app-id": API_KEY,
-  //       },
-  //     })
-  //     .then((ids) => {
-  //       console.log(ids);
-  //       setUsers(ids);
-  //     });
-  // });
-
   let userList = users.map((user) => {
     return (
       <User

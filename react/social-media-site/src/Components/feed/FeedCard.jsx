@@ -2,32 +2,52 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CommentFeed from "../comments/CommentFeed";
 
-//Enter Comment onEnter key or have post button
-
 export default function FeedCard(props) {
   const [userInput, setUserInput] = useState("");
 
-  // useEffect(() => {
-  //   axios
-  //     .post("https://dummyapi.io/data/v1/comment/create", {
-  //       headers: {
-  //         "app-id": "628da197616612aa51a596a1",
-  //       },
-  //     })
-  //     .then((res) => {
-  //       console.log(res);
-  //     });
-  // }, [userInput]);
+  const userId = `${props.post.owner.id}`;
+  const postId = `${props.post.id}`;
+
+  // async function createComment(userInput) {
+  //   const res = await axios.post("https://dummyapi.io/data/v1/comment/create", {
+  //     headers: {
+  //       "app-id": "628da197616612aa51a596a1",
+  //     },
+  //     body: {
+  //       message: userInput,
+  //       owner: userId,
+  //       post: postId,
+  //     },
+  //   });
+  //   console.log(res);
+  // }
+
+  const createComment = async () => {
+    const res = await axios.post("https://dummyapi.io/data/v1/comment/create", {
+      body: {
+        message: userInput,
+        owner: userId,
+        post: postId,
+      },
+      headers: {
+        "app-id": "628da197616612aa51a596a1",
+      },
+    });
+    console.log(res);
+    props.newRequest(res.data);
+    setUserInput("");
+  };
 
   const handleOnClick = (e) => {
     const commentSection = document.querySelector("#comment-list");
-    console.log("hello");
+    // console.log("hello");
   };
 
   const logUserComment = (e) => {
     if (e.key === "Enter") {
       console.log(e.target.value);
       setUserInput(e.target.value);
+      createComment();
     }
   };
 

@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Feed from "./components/feed/Feed";
-import UserCard from "./components/users/UserCard";
+import CurrentUser from "./components/users/CurrentUser";
 
 const App = () => {
   return (
@@ -19,7 +14,7 @@ const App = () => {
         <div className="ui container">
           <Routes>
             <Route path="/" element={<Feed />} />
-            <Route path="/profile" element={<UserCard />} />
+            <Route path="/profile" element={<CurrentUser />} />
           </Routes>
         </div>
       </Router>
