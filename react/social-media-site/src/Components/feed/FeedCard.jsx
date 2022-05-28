@@ -16,6 +16,7 @@ export default function FeedCard(props) {
 
   const logUserComment = (e) => {
     if (e.key === "Enter") {
+      console.log(userId);
       setUserInput(e.target.value);
       console.log(userInput);
 
