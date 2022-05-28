@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CommentCard from "./CommentCard";
+const API_KEY = "628da197616612aa51a596a1";
 
+// props from FeedCard
 export default function CommentFeed(props) {
   const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +12,7 @@ export default function CommentFeed(props) {
     axios
       .get(`https://dummyapi.io/data/v1/post/${props.post}/comment`, {
         headers: {
-          "app-id": "628da197616612aa51a596a1",
+          "app-id": API_KEY,
         },
       })
       .then((res) => {
@@ -19,9 +21,10 @@ export default function CommentFeed(props) {
       });
   }, []);
 
-  let commentsList = comments.map((commentData) => {
+  let commentsList = comments.map((commentData, i) => {
     return (
       <CommentCard
+        key={i}
         avatar={commentData.owner.picture}
         author={commentData.owner.firstName}
         message={commentData.message}

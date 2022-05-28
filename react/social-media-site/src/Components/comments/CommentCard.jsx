@@ -1,5 +1,7 @@
 import React from "react";
 
+//props from CommentFeed
+
 export default function CommentCard({ avatar, author, commentDate, message }) {
   return (
     <div className="ui container comments">

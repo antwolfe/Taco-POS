@@ -1,25 +1,32 @@
 import React from "react";
+import axios from "axios";
+const API_KEY = "628da197616612aa51a596a1";
 
-export default function CreateComment() {
-  // const [comment, setComments]
+export default function CreateComment(props) {
+  let userInput = props.input;
+  let userId = props.user;
+  let postId = props.post;
 
-  useEffect(() => {
-    axios
-      .post("https://dummyapi.io/data/v1/comment/create", {
-        headers: {
-          "app-id": "628da197616612aa51a596a1",
-        },
-        data: {
-          message: "This is a comment",
-          owner: "60d0fe4f5311236168a109ca",
-          post: "This is a comment",
-        },
-      })
-      .then((res) => {
-        console.log(res);
-        setComments(res.data.data);
-      });
-  }, []);
+  // console.log(userInput);
+  console.log(userId);
+  console.log(postId);
+
+  const createComment = async () => {
+    const res = await axios.post("https://dummyapi.io/data/v1/comment/create", {
+      body: {
+        message: userInput,
+        owner: userId,
+        post: postId,
+      },
+      headers: {
+        "app-id": API_KEY,
+      },
+    });
+    console.log(res);
+    // props.newRequest(res.data);
+  };
+
+  createComment();
 
   return <div>CreateComment</div>;
 }

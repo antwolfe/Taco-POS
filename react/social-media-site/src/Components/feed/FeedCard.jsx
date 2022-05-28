@@ -1,42 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CommentFeed from "../comments/CommentFeed";
+import CreateComment from "../comments/CreateComment";
 
 export default function FeedCard(props) {
   const [userInput, setUserInput] = useState("");
 
-  const userId = `${props.post.owner.id}`;
-  const postId = `${props.post.id}`;
-
-  // async function createComment(userInput) {
-  //   const res = await axios.post("https://dummyapi.io/data/v1/comment/create", {
-  //     headers: {
-  //       "app-id": "628da197616612aa51a596a1",
-  //     },
-  //     body: {
-  //       message: userInput,
-  //       owner: userId,
-  //       post: postId,
-  //     },
-  //   });
-  //   console.log(res);
-  // }
-
-  const createComment = async () => {
-    const res = await axios.post("https://dummyapi.io/data/v1/comment/create", {
-      body: {
-        message: userInput,
-        owner: userId,
-        post: postId,
-      },
-      headers: {
-        "app-id": "628da197616612aa51a596a1",
-      },
-    });
-    console.log(res);
-    props.newRequest(res.data);
-    setUserInput("");
-  };
+  let userId = `${props.post.owner.id}`;
+  let postId = `${props.post.id}`;
 
   const handleOnClick = (e) => {
     const commentSection = document.querySelector("#comment-list");
@@ -45,9 +16,10 @@ export default function FeedCard(props) {
 
   const logUserComment = (e) => {
     if (e.key === "Enter") {
-      console.log(e.target.value);
       setUserInput(e.target.value);
-      createComment();
+      console.log(userInput);
+
+      return <CreateComment input={userInput} user={userId} post={postId} />;
     }
   };
 
@@ -101,3 +73,6 @@ export default function FeedCard(props) {
     </div>
   );
 }
+
+// There is a "delay" between setUserInput and logging the current UserInput
+//

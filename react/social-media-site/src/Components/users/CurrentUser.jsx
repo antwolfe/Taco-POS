@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+const API_KEY = "628da197616612aa51a596a1";
 
 export default function CurrentUser() {
   const [allUsers, setAllUsers] = useState([]);
@@ -9,7 +10,7 @@ export default function CurrentUser() {
     axios
       .get("https://dummyapi.io/data/v1/user/", {
         headers: {
-          "app-id": "628da197616612aa51a596a1",
+          "app-id": API_KEY,
         },
       })
       .then((res) => {
