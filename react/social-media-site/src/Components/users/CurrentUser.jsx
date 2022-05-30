@@ -7,29 +7,26 @@ export default function CurrentUser() {
   // const [allUsers, setAllUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState([]);
 
+  const getUser = async () => {
+    const res = await axios.get(`https://dummyapi.io/data/v1/user/${userId}`, {
+      headers: {
+        "app-id": API_KEY,
+      },
+    });
+    setCurrentUser(res.data);
+  };
+
   useEffect(() => {
-    axios
-      .get(`https://dummyapi.io/data/v1/user/${userId}`, {
-        headers: {
-          "app-id": API_KEY,
-        },
-      })
-      .then((res) => {
-        console.log(res.data);
-        console.log(res.data.location);
-        setCurrentUser(res.data);
-      });
+    getUser();
   }, []);
 
   let name = currentUser.firstName + " " + currentUser.lastName;
-  // console.log(currentUser.location.city);
-  // let state = currentUser.location.state;
-  // let country = currentUser.location.country;
+  // console.log(currentUser);
 
   return (
     <div>
-      <div className="container">
-        <div className="ui">
+      <div className=" ui container" style={{ marginTop: 20 }}>
+        <div>
           <div className="ui items">
             <div className="item">
               <a className="ui small image">
@@ -37,16 +34,15 @@ export default function CurrentUser() {
               </a>
               <div className="content aligned center">
                 <a className="header">{name}</a>
-                <div className="description">
-                  <ul>
+                <div className="content">
+                  <ul className="content">
                     <li> Gender: {currentUser.gender}</li>
-                    <li> {currentUser.dateOfBirth} </li>
-                    <li>{/* {city}, {state}, and {country}` */}</li>
+                    <li> Birthdate: {currentUser.dateOfBirth} </li>
+                    {/* <li> City: {currentUser.location.city} </li> */}
+                    {/* <li> State: {currentUser.location.state} </li> */}
+                    {/* <li> Country: {currentUser.location.country} </li> */}
                   </ul>
-                  <ul>
-                    Many people also have their own barometers for what makes a
-                    cute dog.
-                  </ul>
+                  <p>This is you! Welcome to the App!</p>
                 </div>
               </div>
             </div>

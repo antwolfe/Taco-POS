@@ -6,21 +6,20 @@ import CreateComment from "../comments/CreateComment";
 export default function FeedCard(props) {
   const [userInput, setUserInput] = useState("");
 
-  let userId = `${props.post.owner.id}`;
+  let userId = "60d0fe4f5311236168a10a2c";
   let postId = `${props.post.id}`;
+  let textInput;
 
   const handleOnClick = (e) => {
     const commentSection = document.querySelector("#comment-list");
     // console.log("hello");
   };
 
+  //STUCK
   const logUserComment = (e) => {
-    if (e.key === "Enter") {
-      console.log(userId);
-      setUserInput(e.target.value);
-      console.log(userInput);
-
-      return <CreateComment input={userInput} user={userId} post={postId} />;
+    if (e.key == "Enter") {
+      let textInput = e.target.value;
+      setUserInput(textInput);
     }
   };
 
@@ -61,13 +60,18 @@ export default function FeedCard(props) {
           <div className="ui large transparent left icon input">
             <i className="heart outline icon"></i>
             <input
+              onKeyDown={logUserComment}
               id="comment-input"
-              defaultValue={userInput}
+              defaultValue={""}
               type="text"
               // onChange={getInputValue}
               placeholder="Add Comment..."
-              onKeyDown={logUserComment}
             />
+            {userInput !== "" ? (
+              <CreateComment text={userInput} post={postId} user={userId} />
+            ) : (
+              console.log("no input found")
+            )}
           </div>
         </div>
       </div>
