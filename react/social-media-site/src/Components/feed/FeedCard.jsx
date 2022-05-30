@@ -10,12 +10,6 @@ export default function FeedCard(props) {
   let postId = `${props.post.id}`;
   let textInput;
 
-  const handleOnClick = (e) => {
-    const commentSection = document.querySelector("#comment-list");
-    // console.log("hello");
-  };
-
-  //STUCK
   const logUserComment = (e) => {
     if (e.key == "Enter") {
       let textInput = e.target.value;
@@ -45,11 +39,7 @@ export default function FeedCard(props) {
             {props.post.likes}
           </span>
           <div id="comment-section" className="ui">
-            <i
-              style={{ cursor: "pointer" }}
-              className="comment icon"
-              onClick={handleOnClick}
-            ></i>
+            <i className="comment icon"></i>
             {"Comments"}
             <div id="comment-list" className="ui image">
               <CommentFeed post={props.post.id} />
@@ -64,7 +54,6 @@ export default function FeedCard(props) {
               id="comment-input"
               defaultValue={""}
               type="text"
-              // onChange={getInputValue}
               placeholder="Add Comment..."
             />
             {userInput !== "" ? (

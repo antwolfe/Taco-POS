@@ -38,6 +38,7 @@ export default function CurrentUser() {
                   <ul className="content">
                     <li> Gender: {currentUser.gender}</li>
                     <li> Birthdate: {currentUser.dateOfBirth} </li>
+                    {/* Accessing the location properties below will break the program on reload */}
                     {/* <li> City: {currentUser.location.city} </li> */}
                     {/* <li> State: {currentUser.location.state} </li> */}
                     {/* <li> Country: {currentUser.location.country} </li> */}

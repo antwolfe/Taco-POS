@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import CommentCard from "./CommentCard";
 const API_KEY = "628da197616612aa51a596a1";
 
 export default function CreateComment(props) {
@@ -30,12 +31,13 @@ export default function CreateComment(props) {
 
       const newPost = await res;
       console.log(newPost);
+      return newPost;
     } catch (error) {
       console.log(error);
     }
   };
 
-  postComment();
+  let newComment = postComment();
 
-  return <div></div>;
+  return <div>{userInput}</div>;
 }
