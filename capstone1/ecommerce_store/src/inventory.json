@@ -1,275 +1,397 @@
 [
     {
         "title": "Carrie",
-        "year": 1974
+        "year": 1974,
+        "price": 10.99,
+        "qty": 11
     },
     {
         "title": "'Salem's Lot",
-        "year": 1975
+        "year": 1975,
+        "price": 12.99,
+        "qty": 9
     },
     {
         "title": "Rage",
         "year": 1977,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 5.99,
+        "qty": 5
     },
     {
         "title": "The Shining",
-        "year": 1977
+        "year": 1977,
+        "price": 15.99,
+        "qty": 50
     },
     {
         "title": "Night Shift",
         "year": 1978,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 7.99,
+        "qty": 10
     },
     {
         "title": "The Stand",
-        "year": 1978
+        "year": 1978,
+        "price": 10.99,
+        "qty": 20
     },
     {
         "title": "The Long Walk",
         "year": 1978,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 10.98,
+        "qty": 6
     },
     {
         "title": "The Dead Zone",
-        "year": 1979
+        "year": 1979,
+        "price": 10.99,
+        "qty": 4
     },
     {
         "title": "Firestarter",
-        "year": 1980
+        "year": 1980,
+        "price": 12.99,
+        "qty": 3
     },
     {
         "title": "Roadwork",
         "year": 1981,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 7.99,
+        "qty": 1
     },
     {
         "title": "Cujo",
-        "year": 1981
+        "year": 1981,
+        "price": 7.99,
+        "qty": 11
     },
     {
         "title": "Danse Macabre",
         "year": 1981,
-        "tags": ["Non-Fiction"]
+        "tags": ["Non-Fiction"],
+        "price": 10.99,
+        "qty": 1
     },
     {
         "title": "The Dark Tower I: The Gunslinger",
         "year": 1982,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "The Running Man",
         "year": 1982,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 8.50,
+        "qty": 5
     },
     {
         "title": "Different Seasons",
         "year": 1982,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 15.00,
+        "qty": 10
     },
     {
         "title": "Christine",
-        "year": 1983
+        "year": 1983,
+        "price": 15.50,
+        "qty": 20
     },
     {
         "title": "Pet Sematary",
-        "year": 1983
+        "year": 1983,
+        "price": 8.50,
+        "qty": 20
     },
     {
         "title": "The Talisman",
         "year": 1984,
-        "tags": ["with Peter Straub"]
+        "tags": ["with Peter Straub"],
+        "price": 1.50,
+        "qty": 2
     },
     {
         "title": "Thinner (Bachman)",
         "year": 1984,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 11.99,
+        "qty": 4
     },
     {
         "title": "Cycle of the Werewolf",
-        "year": 1985
+        "year": 1985,
+        "price": 3.00,
+        "qty": 1
     },
     {
         "title": "Skeleton Crew",
         "year": 1985,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 15.50,
+        "qty": 8
     },
     {
         "title": "IT",
-        "year": 1986
+        "year": 1986,
+        "price": 18.50,
+        "qty": 665
     },
     {
         "title": "The Eyes of the Dragon",
-        "year": 1987
+        "year": 1987,
+        "price": 1.00,
+        "qty": 1
     },
     {
         "title": "The Dark Tower II: The Drawing of the Three",
         "year": 1987,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 15.50,
+        "qty": 2
     },
     {
         "title": "Misery",
-        "year": 1987
+        "year": 1987,
+        "price": 25.50,
+        "qty": 15
     },
     {
         "title": "The Tommyknockers",
-        "year": 1987
+        "year": 1987,
+        "price": 10.99,
+        "qty": 2
     },
     {
         "title": "The Dark Half",
-        "year": 1989
+        "year": 1989,
+        "price": 8.99,
+        "qty": 3
     },
     {
         "title": "Four Past Midnight",
         "year": 1990,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 7.89,
+        "qty": 6
+        
     },
     {
         "title": "Needful Things",
-        "year": 1991
+        "year": 1991,
+        "price": 8.99,
+        "qty": 7
     },
     {
         "title": "The Dark Tower III: The Waste Lands",
         "year": 1991,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 5.50,
+        "qty": 2
     },
     {
         "title": "Gerald's Game",
-        "year": 1992
+        "year": 1992,
+        "price": 8.99,
+        "qty": 3
     },
     {
         "title": "Dolores Claiborne",
-        "year": 1993
+        "year": 1993,
+        "price": 5.50,
+        "qty": 2
     },
     {
         "title": "Nightmares and Dreamscapes",
         "year": 1993,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 11.50,
+        "qty": 2
     },
     {
         "title": "Insomnia",
-        "year": 1994
+        "year": 1994,
+        "price": 7.50,
+        "qty": 2
     },
     {
         "title": "Rose Madder",
-        "year": 1995
+        "year": 1995,
+        "price": 5.50,
+        "qty": 1
     },
     {
         "title": "Desperation",
-        "year": 1996
+        "year": 1996,
+        "price": 12.00,
+        "qty": 5
     },
     {
         "title": "The Regulators",
         "year": 1996,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 6.00,
+        "qty": 0
     },
     {
         "title": "The Green Mile",
-        "year": 1996
+        "year": 1996,
+        "price": 8.99,
+        "qty": 5
     },
     {
         "title": "The Dark Tower IV: Wizard and Glass",
         "year": 1997,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 8.99,
+        "qty": 2
     },
     {
         "title": "Bag of Bones",
-        "year": 1998
+        "year": 1998,
+        "price": 8.99,
+        "qty": 3
     },
     {
         "title": "The Girl Who Loved Tom Gordon",
-        "year": 1999
+        "year": 1999,
+        "price": 5.50,
+        "qty": 2
     },
     {
         "title": "Hearts in Atlantis",
         "year": 1999,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 5.50,
+        "qty": 2
     },
     {
         "title": "On Writing",
         "year": 2000,
-        "tags": ["Non-Fiction"]
+        "tags": ["Non-Fiction"],
+        "price": 5.50,
+        "qty": 2
     },
     {
         "title": "Dreamcatcher",
-        "year": 2001
+        "year": 2001,
+        "price": 12.00,
+        "qty": 5
     },
     {
         "title": "Black House",
         "year": 2001,
-        "tags": ["with Peter Straub"]
+        "price": 2.00,
+        "qty": 0
     },
     {
         "title": "From A Buick 8",
-        "year": 2002
+        "year": 2002,
+        "price": 1.50,
+        "qty": 0
     },
     {
         "title": "Everything's Eventual: 14 Dark Tales",
         "year": 2002,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 12.00,
+        "qty": 2
     },
     {
         "title": "The Dark Tower V: The Wolves of the Calla",
         "year": 2003,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 12.00,
+        "qty": 5
     },
     {
         "title": "The Dark Tower VI: Song of Susannah",
         "year": 2004,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 13.00,
+        "qty": 2
     },
     {
         "title": "The Dark Tower VII: The Dark Tower",
         "year": 2004,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 13.00,
+        "qty": 3
     },
     {
         "title": "The Colorado Kid",
-        "year": 2005
+        "year": 2005,
+        "price": 2.00,
+        "qty": 3
     },
     {
         "title": "Cell",
-        "year": 2006
+        "year": 2006,
+        "price": 12.00,
+        "qty": 5
     },
     {
         "title": "Lisey's Story",
-        "year": 2006
+        "year": 2006,
+        "price": 1.00,
+        "qty": 0
     },
     {
         "title": "Blaze",
         "year": 2007,
-        "tags": ["as Richard Bachman"]
+        "tags": ["as Richard Bachman"],
+        "price": 13.00,
+        "qty": 0
     },
     {
         "title": "Duma Key",
-        "year": 2008
+        "year": 2008,
+        "price": 13.00,
+        "qty": 0
     },
     {
         "title": "Just After Sunset",
         "year": 2008,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 13.00,
+        "qty": 0
     },
     {
         "title": "Under the Dome",
-        "year": 2009
+        "year": 2009,
+        "price": 15.00,
+        "qty": 4
     },
     {
         "title": "Full Dark, No Stars",
         "year": 2010,
-        "tags": ["Collection"]
+        "tags": ["Collection"],
+        "price": 14.25,
+        "qty": 1
     },
     {
         "title": "11/22/63",
-        "year": 2011
+        "year": 2011,
+        "price": 14.25,
+        "qty": 3
     },
     {
         "title": "The Dark Tower: The Wind Through the Keyhole",
         "year": 2012,
-        "tags": ["The Dark Tower"]
+        "tags": ["The Dark Tower"],
+        "price": 14.25,
+        "qty": 1
     },
     {
         "title": "Joyland",
-        "year": 2013
+        "year": 2013,
+        "price": 14.25,
+        "qty": 5
     },
     {
         "title": "Doctor Sleep",
@@ -278,79 +400,96 @@
     {
         "title": "Mr. Mercedes",
         "year": 2014,
-        "tags": ["Bill Hodges Trilogy"]
+        "tags": ["Bill Hodges Trilogy"],
+        "price": 14.25,
+        "qty": 1
     },
     {
         "title": "Revival",
-        "year": 2014
+        "year": 2014,
+        "price": 14.25,
+        "qty": 1
     },
     {
         "title": "Finders Keepers",
         "year": 2015,
         "tags": ["Bill Hodges Trilogy"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "The Bazaar of Bad Dreams",
         "year": 2015,
         "tags": ["Collection"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "End of Watch",
         "year": 2016,
         "tags": ["Bill Hodges Trilogy"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "Charlie the Choo-Choo",
         "year": 2016,
         "tags": ["The Dark Tower"],
-        "status": "disabled"
+        "price": 12.00,
+        "qty": 2
+        
     },
     {
         "title": "Gwendy's Button Box",
         "year": 2017,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "Sleeping Beauties",
         "year": 2017,
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "The Outsider",
         "year": 2018,
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 30
     },
     {
         "title": "The Institute",
         "year": 2019,
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "Gwendy's Magic Feather",
         "year": 2019,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 7
     },
     {
         "title": "If It Bleeds",
         "year": 2020,
         "tags": ["Collection"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 5
     },
     {
         "title": "Later",
         "year": 2021,
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 8
     },
     {
         "title": "Gwendy's Final Task",
-        "year": 2018,
+        "year": 2022,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
-        "status": "disabled"
+        "price": 10.99,
+        "qty": 9
     }
 
 ]
