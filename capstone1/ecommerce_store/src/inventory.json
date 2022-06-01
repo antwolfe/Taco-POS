@@ -1,0 +1,356 @@
+[
+    {
+        "title": "Carrie",
+        "year": 1974
+    },
+    {
+        "title": "'Salem's Lot",
+        "year": 1975
+    },
+    {
+        "title": "Rage",
+        "year": 1977,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "The Shining",
+        "year": 1977
+    },
+    {
+        "title": "Night Shift",
+        "year": 1978,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "The Stand",
+        "year": 1978
+    },
+    {
+        "title": "The Long Walk",
+        "year": 1978,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "The Dead Zone",
+        "year": 1979
+    },
+    {
+        "title": "Firestarter",
+        "year": 1980
+    },
+    {
+        "title": "Roadwork",
+        "year": 1981,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "Cujo",
+        "year": 1981
+    },
+    {
+        "title": "Danse Macabre",
+        "year": 1981,
+        "tags": ["Non-Fiction"]
+    },
+    {
+        "title": "The Dark Tower I: The Gunslinger",
+        "year": 1982,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "The Running Man",
+        "year": 1982,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "Different Seasons",
+        "year": 1982,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "Christine",
+        "year": 1983
+    },
+    {
+        "title": "Pet Sematary",
+        "year": 1983
+    },
+    {
+        "title": "The Talisman",
+        "year": 1984,
+        "tags": ["with Peter Straub"]
+    },
+    {
+        "title": "Thinner (Bachman)",
+        "year": 1984,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "Cycle of the Werewolf",
+        "year": 1985
+    },
+    {
+        "title": "Skeleton Crew",
+        "year": 1985,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "IT",
+        "year": 1986
+    },
+    {
+        "title": "The Eyes of the Dragon",
+        "year": 1987
+    },
+    {
+        "title": "The Dark Tower II: The Drawing of the Three",
+        "year": 1987,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "Misery",
+        "year": 1987
+    },
+    {
+        "title": "The Tommyknockers",
+        "year": 1987
+    },
+    {
+        "title": "The Dark Half",
+        "year": 1989
+    },
+    {
+        "title": "Four Past Midnight",
+        "year": 1990,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "Needful Things",
+        "year": 1991
+    },
+    {
+        "title": "The Dark Tower III: The Waste Lands",
+        "year": 1991,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "Gerald's Game",
+        "year": 1992
+    },
+    {
+        "title": "Dolores Claiborne",
+        "year": 1993
+    },
+    {
+        "title": "Nightmares and Dreamscapes",
+        "year": 1993,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "Insomnia",
+        "year": 1994
+    },
+    {
+        "title": "Rose Madder",
+        "year": 1995
+    },
+    {
+        "title": "Desperation",
+        "year": 1996
+    },
+    {
+        "title": "The Regulators",
+        "year": 1996,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "The Green Mile",
+        "year": 1996
+    },
+    {
+        "title": "The Dark Tower IV: Wizard and Glass",
+        "year": 1997,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "Bag of Bones",
+        "year": 1998
+    },
+    {
+        "title": "The Girl Who Loved Tom Gordon",
+        "year": 1999
+    },
+    {
+        "title": "Hearts in Atlantis",
+        "year": 1999,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "On Writing",
+        "year": 2000,
+        "tags": ["Non-Fiction"]
+    },
+    {
+        "title": "Dreamcatcher",
+        "year": 2001
+    },
+    {
+        "title": "Black House",
+        "year": 2001,
+        "tags": ["with Peter Straub"]
+    },
+    {
+        "title": "From A Buick 8",
+        "year": 2002
+    },
+    {
+        "title": "Everything's Eventual: 14 Dark Tales",
+        "year": 2002,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "The Dark Tower V: The Wolves of the Calla",
+        "year": 2003,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "The Dark Tower VI: Song of Susannah",
+        "year": 2004,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "The Dark Tower VII: The Dark Tower",
+        "year": 2004,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "The Colorado Kid",
+        "year": 2005
+    },
+    {
+        "title": "Cell",
+        "year": 2006
+    },
+    {
+        "title": "Lisey's Story",
+        "year": 2006
+    },
+    {
+        "title": "Blaze",
+        "year": 2007,
+        "tags": ["as Richard Bachman"]
+    },
+    {
+        "title": "Duma Key",
+        "year": 2008
+    },
+    {
+        "title": "Just After Sunset",
+        "year": 2008,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "Under the Dome",
+        "year": 2009
+    },
+    {
+        "title": "Full Dark, No Stars",
+        "year": 2010,
+        "tags": ["Collection"]
+    },
+    {
+        "title": "11/22/63",
+        "year": 2011
+    },
+    {
+        "title": "The Dark Tower: The Wind Through the Keyhole",
+        "year": 2012,
+        "tags": ["The Dark Tower"]
+    },
+    {
+        "title": "Joyland",
+        "year": 2013
+    },
+    {
+        "title": "Doctor Sleep",
+        "year": 2013
+    },
+    {
+        "title": "Mr. Mercedes",
+        "year": 2014,
+        "tags": ["Bill Hodges Trilogy"]
+    },
+    {
+        "title": "Revival",
+        "year": 2014
+    },
+    {
+        "title": "Finders Keepers",
+        "year": 2015,
+        "tags": ["Bill Hodges Trilogy"],
+        "status": "disabled"
+    },
+    {
+        "title": "The Bazaar of Bad Dreams",
+        "year": 2015,
+        "tags": ["Collection"],
+        "status": "disabled"
+    },
+    {
+        "title": "End of Watch",
+        "year": 2016,
+        "tags": ["Bill Hodges Trilogy"],
+        "status": "disabled"
+    },
+    {
+        "title": "Charlie the Choo-Choo",
+        "year": 2016,
+        "tags": ["The Dark Tower"],
+        "status": "disabled"
+    },
+    {
+        "title": "Gwendy's Button Box",
+        "year": 2017,
+        "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
+        "status": "disabled"
+    },
+    {
+        "title": "Sleeping Beauties",
+        "year": 2017,
+        "status": "disabled"
+    },
+    {
+        "title": "The Outsider",
+        "year": 2018,
+        "status": "disabled"
+    },
+    {
+        "title": "The Institute",
+        "year": 2019,
+        "status": "disabled"
+    },
+    {
+        "title": "Gwendy's Magic Feather",
+        "year": 2019,
+        "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
+        "status": "disabled"
+    },
+    {
+        "title": "If It Bleeds",
+        "year": 2020,
+        "tags": ["Collection"],
+        "status": "disabled"
+    },
+    {
+        "title": "Later",
+        "year": 2021,
+        "status": "disabled"
+    },
+    {
+        "title": "Gwendy's Final Task",
+        "year": 2018,
+        "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
+        "status": "disabled"
+    }
+
+]
