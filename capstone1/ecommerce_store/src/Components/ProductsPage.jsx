@@ -1,12 +1,19 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 export default function ProductsPage() {
   return (
     <div>
-      <img className="book-cover" src="" alt="TITLE cover" />
-      <h3>Book Title</h3>
-      <h5>Book Price</h5>
-      <Button className="">See Details</Button>
+      <div className="book-item">
+        <img className="book-cover" src="/" alt="TITLE cover" />
+        <span>
+          <h2 className="book-title">Book Title</h2>
+          <h5 className="book-price">Book Price</h5>
+          <a href="/">
+            <Button className="btn">See Details</Button>
+          </a>
+        </span>
+      </div>
     </div>
   );
 }

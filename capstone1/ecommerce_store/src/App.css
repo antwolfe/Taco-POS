@@ -4,11 +4,14 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing:border-box;
 }
 
 h1 {
   padding: 4px;
+}
+
+.navbar {
+  margin: 5px;
 }
 
 .navbar input {
@@ -29,8 +32,6 @@ h1 {
   border: 1px black dotted;
   margin: 5px 0px;
   justify-content: space-between;
-  
-  
 }
 
 .mobile-carousel {
@@ -49,12 +50,51 @@ h1 {
   border: 1px black dotted;
 }
 
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.book-item {
+  display: flex;
+  border: 1px black solid;
+  padding: 5px;
+  margin: 5px;
+  
 }
+
+.book-cover {
+  height: 300px;
+  width: 200px;
+  border: 1px red dotted;
+  margin: 3px 10px 3px 5px;
+}
+
+.book-item span {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  margin: auto;
+  text-align: center;
+}
+
+.book-title, 
+.book-price, 
+.btn {
+  padding: 3px;
+  margin: 10px 5px;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .App-header {
   background-color: #282c34;
