@@ -1,7 +1,7 @@
 import React from "react";
 import HomeBar from "./HomeBar";
-import ParseInventory from "./ParseInventory";
-import ProductPreview from "./ProductPreview";
+import ParseInventory from "../Components/ParseInventory";
+import ProductPreview from "../Components/ProductPreview";
 
 export default function ProductsPage() {
   return (
