@@ -1,10 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import HomeBar from "./HomeBar";
 
 export default function ProductPreview(props) {
-  console.log(props);
-
   return (
     <div>
       <div className="book-item">

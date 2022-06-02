@@ -390,12 +390,14 @@
     {
         "title": "Joyland",
         "year": 2013,
-        "price": 14.25,
+        "price": 11.50,
         "qty": 5
     },
     {
         "title": "Doctor Sleep",
-        "year": 2013
+        "year": 2013,
+        "price": 14.25,
+        "qty": 5
     },
     {
         "title": "Mr. Mercedes",
