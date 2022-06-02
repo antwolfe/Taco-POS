@@ -461,7 +461,7 @@
     {
         "title": "The Institute",
         "year": 2019,
-        "price": 10.99,
+        "price": 9.99,
         "qty": 7
     },
     {
@@ -475,7 +475,7 @@
         "title": "If It Bleeds",
         "year": 2020,
         "tags": ["Collection"],
-        "price": 10.99,
+        "price": 12.99,
         "qty": 5
     },
     {
@@ -491,5 +491,4 @@
         "price": 10.99,
         "qty": 9
     }
-
 ]
