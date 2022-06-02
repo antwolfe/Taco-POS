@@ -1,12 +1,13 @@
 import React from "react";
+import ParseInventory from "./ParseInventory";
 import ProductPreview from "./ProductPreview";
 
 export default function ProductsPage(props) {
   console.log(props.books);
   return (
     <div>
-      {/* <ProductPreview title={books.title} price={books.price} /> */}
-      ProductPage
+      <ParseInventory />
+      <ProductPreview />
     </div>
   );
 }
