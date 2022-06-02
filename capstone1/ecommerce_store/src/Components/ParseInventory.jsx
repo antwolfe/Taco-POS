@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import inventoryData from "../inventory.json";
 import ProductPreview from "./ProductPreview";
-import ProductsPage from "./ProductsPage";
 
 export default function ParseInventory() {
   const bookList = inventoryData.map((book, i) => {
