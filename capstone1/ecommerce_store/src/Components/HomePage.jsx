@@ -1,5 +1,6 @@
 import React from "react";
 import HomeBar from "./HomeBar";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
@@ -9,7 +10,9 @@ export default function HomePage() {
       </div>
       <div className="middle-options">
         <img src="/" alt="Coolest Selection background" />
-        <img src="/" alt="Book icon" />
+        <Link to="/products">
+          <img src="/" alt="Book icon" />
+        </Link>
         <img src="/" alt="Handpicked Books background" />
       </div>
       <div className="mobile-carousel">
