@@ -1,11 +1,15 @@
 import "./App.css";
-import data from "./inventory.json";
+import NavBar from "./Components/NavBar.jsx";
+import HomePage from "./Components/HomePage";
+import ParseInventory from "./Components/ParseInventory";
+import ProductsPage from "./Components/ProductsPage";
 
 export default function App() {
   return (
     <div>
-      Hello, World!
-      {console.log(data)}
+      <NavBar />
+      {/* <HomePage /> */}
+      <ProductsPage />
     </div>
   );
 }

@@ -1,11 +1,54 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
 }
+
+h1 {
+  padding: 4px;
+}
+
+.navbar input {
+  width: 250px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hero {
+  border: 3px solid black;
+  height: 40vh;
+  margin-top: 10px;
+}
+
+.middle-options {
+  padding: 2px 5px;
+  display: flex;
+  border: 1px black dotted;
+  margin: 5px 0px;
+  justify-content: space-between;
+  
+  
+}
+
+.mobile-carousel {
+  height: 42vh;
+  border: 1px black dotted;
+  margin-bottom: 5px;
+
+}
+
+.homebar {
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  padding: 2px 5px;
+  align-items: center;
+  border: 1px black dotted;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
