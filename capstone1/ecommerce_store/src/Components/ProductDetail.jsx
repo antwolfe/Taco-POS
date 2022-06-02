@@ -3,7 +3,7 @@ import Button from "react-bootstrap/esm/Button";
 import { useLocation } from "react-router-dom";
 import HomeBar from "./HomeBar";
 
-export default function ProductDetail(props) {
+export default function ProductDetail() {
   const location = useLocation();
   let book = location.state.props;
   return (
@@ -18,7 +18,7 @@ export default function ProductDetail(props) {
         <Button variant="primary">ADD TO CART</Button>
         <Button variant="success">BUY NOW</Button>
       </div>
-      <HomeBar />
+      {/* <HomeBar /> */} {/* might remove */}
     </div>
   );
 }

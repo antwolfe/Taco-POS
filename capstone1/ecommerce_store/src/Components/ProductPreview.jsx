@@ -4,8 +4,6 @@ import ProductDetail from "./ProductDetail";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function ProductPreview(props) {
-  const [book, setBook] = useState([props]);
-
   const navigate = useNavigate();
 
   return (
@@ -20,15 +18,9 @@ export default function ProductPreview(props) {
               className="btn"
               onClick={(e) => {
                 e.preventDefault();
-                console.log(props);
                 navigate("/book", { state: { props } });
-                //route to ProductDetail and pass props
               }}
             >
-              {/* handleOnClick() {
-
-              // for props above button clicked, open new page displaying correct information derived from props
-              } */}
               See Details
             </Button>
           </a>

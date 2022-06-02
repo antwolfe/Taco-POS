@@ -50,7 +50,6 @@ h1 {
 .homebar {
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
   height: 65px;
   padding: 2px 5px;
   align-items: center;

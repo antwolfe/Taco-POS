@@ -5,7 +5,6 @@ import ProductPreview from "./ProductPreview";
 export default function ParseInventory() {
   const [data, setData] = useState(inventoryData);
   const bookList = data.map((book) => {
-    console.log(book);
     return (
       <ProductPreview
         key={book.id}
