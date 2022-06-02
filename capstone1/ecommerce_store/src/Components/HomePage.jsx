@@ -1,4 +1,5 @@
 import React from "react";
+import HomeBar from "./HomeBar";
 
 export default function HomePage() {
   return (
@@ -14,11 +15,7 @@ export default function HomePage() {
       <div className="mobile-carousel">
         <img src="/" alt="rotating books" />
       </div>
-      <div className="homebar">
-        <img src="/" alt="home icon" />
-        <img src="/" alt="search icon" />
-        <img src="/" alt="cart icon" />
-      </div>
+      <HomeBar />
     </div>
   );
 }

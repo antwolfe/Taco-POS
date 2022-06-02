@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
+import HomeBar from "./HomeBar";
 
 export default function ProductsPage() {
   return (
@@ -14,6 +15,7 @@ export default function ProductsPage() {
           </a>
         </span>
       </div>
+      <HomeBar />
     </div>
   );
 }
