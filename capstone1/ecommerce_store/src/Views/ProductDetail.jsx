@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useLocation } from "react-router-dom";
 import AddToCartModal from "../Components/AddToCartModal";
-import onAdd from "../Components/OnAdd";
+import OnAdd from "../Components/OnAdd";
+import Basket from "./Basket";
 import HomeBar from "./HomeBar";
 
 export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
-  const { onAdd } = props;
-  console.log(props);
+
+  const { setCartItems } = props;
+
+  const fillCart = (book) => {
+    setCartItems(book);
+  };
 
   return (
     <div>
@@ -22,8 +27,8 @@ export default function ProductDetail(props) {
         <p>Book Description</p>
         <Button
           variant="primary"
-          onClick={(e) => {
-            e.preventDefault();
+          onClick={() => {
+            fillCart(book);
           }}
         >
           ADD TO CART

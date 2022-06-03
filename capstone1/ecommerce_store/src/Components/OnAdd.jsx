@@ -21,6 +21,12 @@ export default function OnAdd(props) {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
   };
+  onAdd();
 
-  return <div>{cartItems}</div>;
+  return (
+    <div>
+      <ProductDetail onAdd={onAdd} />
+      <Basket cartItems={cartItems} />
+    </div>
+  );
 }

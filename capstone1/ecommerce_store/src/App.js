@@ -14,21 +14,7 @@ import Basket from "./Views/Basket";
 
 export default function App() {
   const products = inventoryData;
-  // const [cartItems, setCartItems] = useState([]);
-  // const onAdd = (product) => {
-  //   const exist = cartItems.find((item) => item.id == product.id);
-  //   if (exist) {
-  //     console.log("exists");
-  //     // setCartItems(
-  //     //   cartItems.map(
-  //     //     (item =
-  //     //       item.id == product.id ? { ...exist, qty: exist.qty + 1 } : item)
-  //     //   )
-  //     // );
-  //   } else {
-  //     setCartItems([...cartItems, { ...product, qty: 1 }]);
-  //   }
-  // };
+  const [cartItems, setCartItems] = useState([]);
 
   return (
     <div>
@@ -42,9 +28,17 @@ export default function App() {
             element={<ProductsPage products={products} />}
           />
 
-          <Route path="/book" element={<ProductDetail />} />
+          <Route
+            path="/book"
+            element={<ProductDetail setCartItems={setCartItems} />}
+          />
 
-          <Route path="/cart" element={<Basket />} />
+          <Route
+            path="/cart"
+            element={
+              <Basket cartItems={cartItems} setCartItems={setCartItems} />
+            }
+          />
         </Routes>
       </Router>
     </div>
