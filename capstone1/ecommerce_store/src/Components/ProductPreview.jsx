@@ -1,6 +1,4 @@
-import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import ProductDetail from "../Views/ProductDetail";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function ProductPreview({ product }) {

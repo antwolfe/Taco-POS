@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import AddToCartModal from "../Components/AddToCartModal";
 import HomeBar from "./HomeBar";
 
@@ -21,6 +21,7 @@ export default function ProductDetail() {
           variant="primary"
           onClick={(e) => {
             e.preventDefault();
+            alert("Good Job Anthony!");
             <AddToCartModal />;
             {
               /* Add to Cart Modal */

@@ -8,6 +8,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,7 +26,7 @@ h1 {
 }
 
 .navbar {
-  margin: 5px;
+  margin: 5px 0px;
 }
 
 .navbar input {
