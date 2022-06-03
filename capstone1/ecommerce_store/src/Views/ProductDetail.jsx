@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useLocation } from "react-router-dom";
 import AddToCartModal from "../Components/AddToCartModal";
+import onAdd from "../Components/OnAdd";
 import HomeBar from "./HomeBar";
 
-export default function ProductDetail() {
+export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
+  const { onAdd } = props;
+  console.log(props);
 
   return (
     <div>
@@ -21,11 +24,6 @@ export default function ProductDetail() {
           variant="primary"
           onClick={(e) => {
             e.preventDefault();
-            alert("Good Job Anthony!");
-            <AddToCartModal />;
-            {
-              /* Add to Cart Modal */
-            }
           }}
         >
           ADD TO CART

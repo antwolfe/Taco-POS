@@ -3,7 +3,7 @@ import inventoryData from "../inventory2.json";
 import ProductPreview from "./ProductPreview";
 
 export default function ParseInventory({ products }) {
-  // const [data, setData] = useState(inventoryData);
+  const [data, setData] = useState(inventoryData);
   // const bookList = data.map((book) => {
   //   return (
   //     <ProductPreview
@@ -28,13 +28,5 @@ export default function ParseInventory({ products }) {
 
   //create inventory component and use as parent for rest of components?
 
-  return (
-    <div>
-      {products.map((product) => {
-        {
-          return product;
-        }
-      })}
-    </div>
-  );
+  return <div>{{ data }}</div>;
 }
