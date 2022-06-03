@@ -6,9 +6,7 @@ import HomeBar from "./HomeBar";
 
 export default function ProductDetail() {
   const location = useLocation();
-  const navigate = useNavigate();
   let book = location.state.props;
-  const [showModal, setShowModal] = useState(<AddToCartModal />);
 
   return (
     <div>
@@ -22,12 +20,13 @@ export default function ProductDetail() {
         <Button
           variant="primary"
           onClick={(e) => {
-            // e.preventDefault();
-            setShowModal(true);
-            alert("Good Job!");
+            e.preventDefault();
+            <AddToCartModal />;
+            {
+              /* Add to Cart Modal */
+            }
           }}
         >
-          {/* Add to Cart Modal */}
           ADD TO CART
         </Button>
         <Button variant="success">BUY NOW</Button>

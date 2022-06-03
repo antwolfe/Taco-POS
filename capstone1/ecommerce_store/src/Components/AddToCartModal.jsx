@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import Modal from "react-bootstrap/Modal";
+import { useLocation } from "react-router-dom";
 
-export default function AddToCartModal(props) {
-  console.log(props);
+export default function AddToCartModal() {
+  console.log();
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <div>
-      Modal
       {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button> */}

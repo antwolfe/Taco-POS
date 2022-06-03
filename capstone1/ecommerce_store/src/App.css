@@ -112,6 +112,29 @@ h1 {
   margin: 10px 5px;
 } 
 
+.cart-item {
+  padding: 10px 15px;
+  border: 1px solid blue;
+  margin: 10px;
+}
+
+.cart-item .close-btn {
+  display: block;
+  margin-left: auto;
+}
+
+.cart-content {
+  display: flex;
+}
+
+.cart-content .cart-text {
+  width: 300px;
+  text-align: center;
+
+}
+
+
+
 
 
 
