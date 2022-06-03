@@ -6,7 +6,7 @@ import HomeBar from "./HomeBar";
 
 export default function ProductDetail() {
   const location = useLocation();
-  let book = location.state.props;
+  let book = location.state.product;
 
   return (
     <div>

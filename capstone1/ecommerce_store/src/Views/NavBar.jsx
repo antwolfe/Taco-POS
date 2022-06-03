@@ -9,7 +9,7 @@ export default function NavBar() {
           <h1>KingBooks</h1>
         </Link>
         <input type="text" name="search" placeholder="Search..." />
-        <Link to="/cart">
+        <Link to="/">
           <img src="/" alt="cart icon" />
         </Link>
       </nav>

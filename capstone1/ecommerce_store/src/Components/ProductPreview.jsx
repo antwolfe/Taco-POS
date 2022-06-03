@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import ProductDetail from "../Views/ProductDetail";
 import { useNavigate, Link } from "react-router-dom";
 
-export default function ProductPreview(props) {
+export default function ProductPreview({ product }) {
   const navigate = useNavigate();
 
   return (
@@ -11,14 +11,14 @@ export default function ProductPreview(props) {
       <div className="book-item">
         <img className="book-cover" src="/" alt="book cover" />
         <span>
-          <h2 className="book-title">{props.title}</h2>
-          <h5 className="book-price">${props.price}</h5>
+          <h2 className="book-title">{product.title}</h2>
+          <h5 className="book-price">${product.price}</h5>
           <a href="/">
             <Button
               className="btn"
               onClick={(e) => {
                 e.preventDefault();
-                navigate("/book", { state: { props } });
+                navigate("/book", { state: { product } });
               }}
             >
               See Details
