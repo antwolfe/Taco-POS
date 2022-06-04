@@ -17,7 +17,7 @@ export default function App() {
   const [cartItems, setCartItems] = useState([]);
 
   return (
-    <div>
+    <main className="App">
       <Router>
         <NavBar />
         <Routes>
@@ -50,6 +50,6 @@ export default function App() {
           />
         </Routes>
       </Router>
-    </div>
+    </main>
   );
 }

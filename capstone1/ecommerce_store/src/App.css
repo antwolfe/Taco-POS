@@ -9,10 +9,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--highlight-color);
 }
 
-body {
- /* background gradient */
+.App {
+ background-image: linear-gradient(var(--secondary-color), var(--side-color));
+ color:var(--highlight-color);
 }
 
 /* fix later */
@@ -22,15 +24,14 @@ a {
 
 h1 {
   padding: 4px;
-  color: black;
 }
 
 .navbar {
-  margin: 5px 0px;
+  margin: 0px 5px;
 }
 
 .navbar input {
-  width: 250px;
+  width: 200px;
   border-radius: 5px;
   text-align: center;
 }
