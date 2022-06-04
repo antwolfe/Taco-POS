@@ -6,10 +6,6 @@ import inventoryData from "./inventory2.json";
 import HomePage from "./Views/HomePage";
 import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
-import CartDisplay from "./Views/Basket";
-import AddToCartModal from "./Components/AddToCartModal";
-import CartItem from "./Components/CartItem";
-import CartTotal from "./Components/CartTotal";
 import Basket from "./Views/Basket";
 
 export default function App() {
@@ -18,9 +14,15 @@ export default function App() {
 
   const addToCart = (product) => {
     console.log("Add", product.title);
-    // const newItem = product;
     setCartItems([...cartItems, product]);
   };
+
+  const deleteFromCart = (product) => {
+    console.log("Deleting", product.title);
+    setCartItems(cartItems.filter((item) => item.id !== product.id));
+  };
+
+  const modifyItemQty = (product) => {};
 
   return (
     <main className="App">
@@ -38,7 +40,14 @@ export default function App() {
 
           <Route
             path="/cart"
-            element={<Basket products={products} cartItems={cartItems} />}
+            element={
+              <Basket
+                products={products}
+                cartItems={cartItems}
+                onDelete={deleteFromCart}
+                setCartItems={setCartItems}
+              />
+            }
           />
         </Routes>
       </Router>

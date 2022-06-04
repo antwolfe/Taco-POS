@@ -5,10 +5,7 @@ import { useLocation } from "react-router-dom";
 export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
-
   const { onAdd } = props;
-
-  const onClick = () => {};
 
   return (
     <div>

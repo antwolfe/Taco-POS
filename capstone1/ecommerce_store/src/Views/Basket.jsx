@@ -3,21 +3,22 @@ import Button from "react-bootstrap/esm/Button";
 import CartItem from "../Components/CartItem";
 
 export default function Basket(props) {
-  const { products, cartItems } = props;
-  console.log(cartItems);
+  const { products, cartItems, onDelete } = props;
 
   return (
     <div>
-      <h2> Cart Items </h2>
-      {products.map((product) => {
-        return (
-          <div key={product.id}>
-            <CartItem product={product} />
-          </div>
-        );
-      })}
-      <Button variant="primary">UPDATE CART</Button>
-      <Button variant="dark">CHECKOUT</Button>
+      <div className="cart">
+        <h2 className="text-center"> Cart Items </h2>
+        {cartItems.map((item) => {
+          return (
+            <div key={item.id}>
+              <CartItem product={item} onDelete={onDelete} />
+            </div>
+          );
+        })}
+        <Button variant="primary">UPDATE CART</Button>
+        <Button variant="dark">CHECKOUT</Button>
+      </div>
     </div>
   );
 }
