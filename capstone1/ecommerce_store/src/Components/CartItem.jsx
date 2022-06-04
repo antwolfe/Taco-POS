@@ -16,7 +16,11 @@ export default function CartItem(props) {
             <h2 className="book-title">{product.title}</h2>
             <h5> {product.price} </h5>
             <h5> QTY: {product.qty} </h5>
-            <ModifyQty />
+            <ModifyQty
+              maxQty={product.qty}
+              onDelete={onDelete}
+              product={product}
+            />
           </span>
         </div>
       </div>
