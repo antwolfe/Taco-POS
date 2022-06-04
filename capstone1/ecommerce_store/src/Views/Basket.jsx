@@ -3,15 +3,40 @@ import Button from "react-bootstrap/esm/Button";
 
 export default function Basket(props) {
   const { cartItems, setCartItems } = props;
+  const [cart, setCart] = useState([]);
+
+  //Add Item, keep Cart State
+  const addItem = () => {
+    //   const exist = cartItems.find((item) => item.id == product.id);
+  };
 
   const isCartEmpty = () => {
     if (cartItems.length === 0) {
       return <div>Cart is empty</div>;
     } else {
-      return <div>Cart is not empty</div>;
+      return (
+        <div>
+          <div>{cartItems.title}</div>
+          <div>{cartItems.price}</div>
+        </div>
+      );
     }
   };
 
+  // const onAdd = (product) => {
+  //   const exist = cartItems.find((item) => item.id == product.id);
+  //   if (exist) {
+  //     console.log("exists");
+  //     // setCartItems(
+  //     //   cartItems.map(
+  //     //     (item =
+  //     //       item.id == product.id ? { ...exist, qty: exist.qty + 1 } : item)
+  //     //   )
+  //     // );
+  //   } else {
+  //     setCartItems([...cartItems, { ...product, qty: 1 }]);
+  //   }
+  // };
   //   <div>
   //     {cartItems.map((item) => {
   //       <div key={item.id}>
@@ -25,6 +50,7 @@ export default function Basket(props) {
   // }
 
   // console.log(cartItems);
+
   return (
     <div>
       <h2> Cart Items </h2>
