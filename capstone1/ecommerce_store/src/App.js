@@ -30,7 +30,12 @@ export default function App() {
 
           <Route
             path="/book"
-            element={<ProductDetail setCartItems={setCartItems} />}
+            element={
+              <ProductDetail
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+              />
+            }
           />
 
           <Route

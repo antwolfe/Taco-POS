@@ -10,7 +10,7 @@ export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
 
-  const { setCartItems } = props;
+  const { setCartItems, cartItems } = props;
 
   // const fillCart = (book) => {
   //   setCartItems(book);
@@ -28,7 +28,10 @@ export default function ProductDetail(props) {
         <Button
           variant="primary"
           onClick={() => {
-            setCartItems(book);
+            setCartItems((prevCart, props) => ({
+              cart: book,
+              prevCart,
+            }));
           }}
         >
           ADD TO CART
