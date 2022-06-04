@@ -22,8 +22,6 @@ export default function App() {
     setCartItems(cartItems.filter((item) => item.id !== product.id));
   };
 
-  const modifyItemQty = (product) => {};
-
   return (
     <main className="App">
       <Router>

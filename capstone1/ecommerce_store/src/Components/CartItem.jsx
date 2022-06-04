@@ -9,7 +9,11 @@ export default function CartItem(props) {
   return (
     <div>
       <div className="cart-item">
-        <CloseButton onClick={() => onDelete(product)} className="close-btn" />
+        <CloseButton
+          variant="white"
+          onClick={() => onDelete(product)}
+          className="close-btn"
+        />
         <div className="cart-content">
           <img className="book-cover" src="/" alt="book cover" />
           <span className="cart-text">

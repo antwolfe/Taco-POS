@@ -16,11 +16,8 @@ export default function Basket(props) {
             </div>
           );
         })}
-        <div className="cart-btns">
-          <Button variant="primary" className="cart-upd-btn">
-            UPDATE CART
-          </Button>
-          <Button variant="dark" className="cart-checkout-btn">
+        <div className="d-grid gap-2">
+          <Button variant="dark" size="lg" className="cart-checkout-btn">
             CHECKOUT
           </Button>
         </div>
