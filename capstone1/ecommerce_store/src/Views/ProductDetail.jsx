@@ -12,9 +12,9 @@ export default function ProductDetail(props) {
 
   const { setCartItems } = props;
 
-  const fillCart = (book) => {
-    setCartItems(book);
-  };
+  // const fillCart = (book) => {
+  //   setCartItems(book);
+  // };
 
   return (
     <div>
@@ -28,7 +28,7 @@ export default function ProductDetail(props) {
         <Button
           variant="primary"
           onClick={() => {
-            fillCart(book);
+            setCartItems(book);
           }}
         >
           ADD TO CART

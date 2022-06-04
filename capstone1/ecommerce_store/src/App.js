@@ -36,7 +36,11 @@ export default function App() {
           <Route
             path="/cart"
             element={
-              <Basket cartItems={cartItems} setCartItems={setCartItems} />
+              <Basket
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+                products={products}
+              />
             }
           />
         </Routes>

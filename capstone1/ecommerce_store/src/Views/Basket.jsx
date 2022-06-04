@@ -2,18 +2,32 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 
 export default function Basket(props) {
-  const { cartItems, setCartItems } = props;
+  const { cartItems, setCartItems, products } = props;
   const [cart, setCart] = useState([]);
+  const id = products.map((product) => product.id);
+  console.log(id);
+  console.log(products);
+  console.log(cartItems);
 
   //Add Item, keep Cart State
   const addItem = () => {
-    //   const exist = cartItems.find((item) => item.id == product.id);
+    const exist = id.find((item) => item === cartItems.id);
+    console.log(exist);
+    if (exist) {
+      console.log("exist");
+    } else {
+      console.log("New Item");
+      // setCartItems([...cartItems, { ...products, qty: 1 }]);
+    }
   };
+
+  const setQty = () => {};
 
   const isCartEmpty = () => {
     if (cartItems.length === 0) {
       return <div>Cart is empty</div>;
     } else {
+      addItem();
       return (
         <div>
           <div>{cartItems.title}</div>
