@@ -16,6 +16,12 @@ export default function App() {
   const products = inventoryData;
   const [cartItems, setCartItems] = useState([]);
 
+  const addToCart = (product) => {
+    console.log("Add", product.title);
+    // const newItem = product;
+    setCartItems([...cartItems, product]);
+  };
+
   return (
     <main className="App">
       <Router>
@@ -28,25 +34,11 @@ export default function App() {
             element={<ProductsPage products={products} />}
           />
 
-          <Route
-            path="/book"
-            element={
-              <ProductDetail
-                cartItems={cartItems}
-                setCartItems={setCartItems}
-              />
-            }
-          />
+          <Route path="/book" element={<ProductDetail onAdd={addToCart} />} />
 
           <Route
             path="/cart"
-            element={
-              <Basket
-                cartItems={cartItems}
-                setCartItems={setCartItems}
-                products={products}
-              />
-            }
+            element={<Basket products={products} cartItems={cartItems} />}
           />
         </Routes>
       </Router>

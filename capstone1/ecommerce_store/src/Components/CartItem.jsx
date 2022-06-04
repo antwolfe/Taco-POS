@@ -3,10 +3,7 @@ import Button from "react-bootstrap/esm/Button";
 import CloseButton from "react-bootstrap/esm/CloseButton";
 
 export default function CartItem(props) {
-  console.log(props);
-  const { key, product } = props;
-
-  console.log(product);
+  const { product } = props;
 
   return (
     <div>

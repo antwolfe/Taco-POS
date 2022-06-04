@@ -11,7 +11,7 @@ export default function NavBar() {
         </Link>
         <input type="text" name="search" placeholder="Search..." />
         <Link to="/cart">
-          <FaShoppingCart size="30px" alt="cart icon" />
+          <FaShoppingCart className="cart-icon" size="30px" alt="cart icon" />
         </Link>
       </nav>
     </div>

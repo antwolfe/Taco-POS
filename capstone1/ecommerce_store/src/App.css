@@ -9,12 +9,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--highlight-color);
 }
 
 .App {
  background-image: linear-gradient(var(--secondary-color), var(--side-color));
- color:var(--highlight-color);
+  color: var(--highlight-color);
 }
 
 /* fix later */
@@ -24,6 +23,11 @@ a {
 
 h1 {
   padding: 4px;
+  color: var(--highlight-color);
+}
+
+.cart-icon {
+  color: var(--highlight-color);
 }
 
 .navbar {

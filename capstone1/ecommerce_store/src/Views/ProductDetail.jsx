@@ -6,7 +6,9 @@ export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
 
-  const { setCartItems, cartItems } = props;
+  const { onAdd } = props;
+
+  const onClick = () => {};
 
   return (
     <div>
@@ -17,7 +19,7 @@ export default function ProductDetail(props) {
       <div className="detail-content">
         <p>{book.price}</p>
         <p>Book Description</p>
-        <Button variant="primary" onClick={() => {}}>
+        <Button variant="primary" onClick={() => onAdd(book)}>
           ADD TO CART
         </Button>
         <Button variant="success">BUY NOW</Button>
