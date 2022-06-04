@@ -2,8 +2,11 @@ import React from "react";
 import Button from "react-bootstrap/esm/Button";
 import CloseButton from "react-bootstrap/esm/CloseButton";
 
-export default function CartItem({ book }) {
-  // console.log(book);
+export default function CartItem(props) {
+  console.log(props);
+  const { key, product } = props;
+
+  console.log(product);
 
   return (
     <div>
@@ -12,9 +15,9 @@ export default function CartItem({ book }) {
         <div className="cart-content">
           <img className="book-cover" src="/" alt="book cover" />
           <span className="cart-text">
-            <h2 className="book-title">{book.title}</h2>
-            <h5> {book.price} </h5>
-            <h5> QTY: {book.qty} </h5>
+            <h2 className="book-title">{product.title}</h2>
+            <h5> {product.price} </h5>
+            <h5> QTY: {product.qty} </h5>
           </span>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import HomeBar from "./HomeBar";
 import { Link } from "react-router-dom";
+import { FaBookOpen } from "react-icons/fa";
 
 export default function HomePage() {
   return (
@@ -11,7 +12,7 @@ export default function HomePage() {
       <div className="middle-options">
         <img src="/" alt="Coolest Selection background" />
         <Link to="/products">
-          <img src="/" alt="Book icon" />
+          <FaBookOpen alt="Book icon" size="30px" />
         </Link>
         <img src="/" alt="Handpicked Books background" />
       </div>
