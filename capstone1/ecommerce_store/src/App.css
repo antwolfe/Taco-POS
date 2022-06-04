@@ -147,6 +147,19 @@ h1 {
 
 }
 
+.cart {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cart-btns {
+  justify-content: center;
+  border: #282c34 solid;
+  align-self: flex-end;
+}
+
 
 
 

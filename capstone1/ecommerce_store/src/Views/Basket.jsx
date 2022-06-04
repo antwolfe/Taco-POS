@@ -7,8 +7,8 @@ export default function Basket(props) {
 
   return (
     <div>
+      <h2 className="text-center"> Cart Items </h2>
       <div className="cart">
-        <h2 className="text-center"> Cart Items </h2>
         {cartItems.map((item) => {
           return (
             <div key={item.id}>
@@ -16,8 +16,14 @@ export default function Basket(props) {
             </div>
           );
         })}
-        <Button variant="primary">UPDATE CART</Button>
-        <Button variant="dark">CHECKOUT</Button>
+        <div className="cart-btns">
+          <Button variant="primary" className="cart-upd-btn">
+            UPDATE CART
+          </Button>
+          <Button variant="dark" className="cart-checkout-btn">
+            CHECKOUT
+          </Button>
+        </div>
       </div>
     </div>
   );
