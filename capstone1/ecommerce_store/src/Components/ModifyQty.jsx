@@ -2,29 +2,28 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import QtyTotal from "./QtyTotal";
 
-export default function ModifyQty({ cartItems, onDelete, product }) {
-  const [qty, setQty] = useState(1);
+export default function ModifyQty({ onDelete, product }) {
+  const [itemQty, setItemQty] = useState(1);
 
   const maxQty = product.qty;
   const overMaxQty = "Cannot buy more than we have!";
 
   const increment = () => {
-    if (qty < maxQty) {
-      setQty(qty + 1);
+    let amount = 0;
+    if (itemQty < maxQty) {
+      setItemQty(itemQty + 1);
     } else {
       alert(overMaxQty);
     }
   };
 
   const decrement = () => {
-    if (qty > 0) {
-      setQty(qty - 1);
+    if (itemQty > 0) {
+      setItemQty(itemQty - 1);
     } else {
       onDelete(product);
     }
   };
-
-  console.log(`${product.title}: ${product.price * qty}`);
 
   return (
     <div>
@@ -33,13 +32,12 @@ export default function ModifyQty({ cartItems, onDelete, product }) {
         <input
           className="qty-num"
           type="number"
-          value={qty}
+          value={itemQty}
           style={{ width: "35px" }}
         />
         <Button onClick={increment}>+</Button>
       </div>
-      <div>{(product.price * qty).toFixed(2)}</div>
-      <div></div>
+      <div>{(product.price * itemQty).toFixed(2)}</div>
     </div>
   );
 }

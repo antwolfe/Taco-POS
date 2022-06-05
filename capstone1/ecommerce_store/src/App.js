@@ -7,6 +7,7 @@ import HomePage from "./Views/HomePage";
 import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
 import Basket from "./Views/Basket";
+import Login from "./Views/Login";
 
 export default function App() {
   const products = inventoryData;
@@ -25,6 +26,8 @@ export default function App() {
   const handleDuplicates = (product) => {
     //if product.id === cartitems.map(item => item.id){
     // increaseQty of product
+    if (cartItems.indexOf(product) !== -1) return;
+    setCartItems([...cartItems, product]);
   };
 
   return (
@@ -52,6 +55,8 @@ export default function App() {
               />
             }
           />
+
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </main>

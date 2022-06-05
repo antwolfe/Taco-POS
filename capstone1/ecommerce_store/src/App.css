@@ -186,7 +186,44 @@ h1 {
   align-self: flex-end;
 }
 
+.login-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  padding: 5px;
+}
 
+.heading .login-inputs {
+  margin: 5px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  font-weight: 650;
+  font-size: 55px;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-page input {
+  width: 250px;
+  height: 40px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: center;
+}
 
 
 

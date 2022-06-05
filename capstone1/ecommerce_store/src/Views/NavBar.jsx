@@ -32,7 +32,7 @@ export default function NavBar({ products }) {
                 );
               });
           }}
-          type="text"
+          type="search"
           name="search"
           placeholder="Search..."
         />
