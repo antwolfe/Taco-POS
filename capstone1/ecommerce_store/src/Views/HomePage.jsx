@@ -1,5 +1,4 @@
 import React from "react";
-import HomeBar from "./HomeBar";
 import { Link } from "react-router-dom";
 import { FaBookOpen } from "react-icons/fa";
 import Carousel from "react-bootstrap/Carousel";
@@ -8,7 +7,7 @@ export default function HomePage() {
   return (
     <div>
       <div className="hero">
-        <img src="/" alt="colorful background" />
+        <div className="Hero" alt="colorful background"></div>
       </div>
       <div className="middle-options">
         <span> Coolest Selection !</span>

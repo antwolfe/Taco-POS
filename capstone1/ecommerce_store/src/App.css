@@ -46,6 +46,17 @@ h1 {
   margin-top: 10px;
 }
 
+.Hero {
+  background-image: url(
+./images/istockphoto-book.jpg
+  );
+  display: flex;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .middle-options {
   padding: 2px 5px;
   display: flex;
