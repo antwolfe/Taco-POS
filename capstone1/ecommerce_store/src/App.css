@@ -148,7 +148,6 @@ h1 {
 }
 
 .cart {
-  height: 90vh;
   display: flex;
   flex-direction: column;
 }

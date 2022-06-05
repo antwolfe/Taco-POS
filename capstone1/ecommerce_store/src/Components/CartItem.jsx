@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import CloseButton from "react-bootstrap/esm/CloseButton";
+import CartTotal from "./CartTotal";
 import ModifyQty from "./ModifyQty";
 
 export default function CartItem(props) {
-  const { product, onDelete } = props;
+  const { product, onDelete, cartItems } = props;
 
   return (
     <div>
@@ -24,7 +25,9 @@ export default function CartItem(props) {
               maxQty={product.qty}
               onDelete={onDelete}
               product={product}
+              cartItems={cartItems}
             />
+            <CartTotal />
           </span>
         </div>
       </div>

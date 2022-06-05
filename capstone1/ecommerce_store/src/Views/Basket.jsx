@@ -12,7 +12,11 @@ export default function Basket(props) {
         {cartItems.map((item) => {
           return (
             <div key={item.id}>
-              <CartItem product={item} onDelete={onDelete} />
+              <CartItem
+                product={item}
+                onDelete={onDelete}
+                cartItems={cartItems}
+              />
             </div>
           );
         })}
