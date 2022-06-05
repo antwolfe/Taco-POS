@@ -6,6 +6,7 @@ export default function CartTotal(props) {
     (acc, item) => acc + item.price * item.qty,
     0
   );
+
   const totalPrice = itemsPrice;
 
   let itemTotal = cartItems.map((item) => {
@@ -13,6 +14,7 @@ export default function CartTotal(props) {
       return item.price + [item + qty].length;
     }
   });
+
   function realTotal(a) {
     var total = 0;
     for (var i in a) {

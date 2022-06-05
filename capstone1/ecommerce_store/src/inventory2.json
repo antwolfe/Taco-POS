@@ -4,14 +4,18 @@
         "title": "Carrie",
         "year": 1974,
         "price": 10.99,
-        "qty": 11
+        "qty": 11,
+        "isbn": 9780340951415,
+        "cover": "https://pictures.abebooks.com/isbn/9780340951415-us.jpg"
     },
     {
         "id": 2,
         "title": "'Salem's Lot",
         "year": 1975,
         "price": 12.99,
-        "qty": 9
+        "qty": 9,
+        "isbn": 9780340951477,
+        "cover": "https://pictures.abebooks.com/isbn/9780340951477-us.jpg"
     },
     {
         "id": 3,
@@ -19,14 +23,18 @@
         "year": 1977,
         "tags": ["as Richard Bachman"],
         "price": 5.99,
-        "qty": 5
+        "qty": 5,
+        "isbn": 22,
+        "cover": "URL"
     },
     {
         "id": 4,
         "title": "The Shining",
         "year": 1977,
         "price": 15.99,
-        "qty": 50
+        "qty": 50,
+        "isbn": 9780340951392,
+        "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg"
     },
     {
         "id": 5,
@@ -34,6 +42,8 @@
         "year": 1978,
         "tags": ["Collection"],
         "price": 7.99,
-        "qty": 10
+        "qty": 10,
+        "isbn": 22,
+        "cover": "URL"
     }
 ]
