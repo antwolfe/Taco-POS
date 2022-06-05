@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
-import QtyTotal from "./QtyTotal";
 
 export default function ModifyQty({ onDelete, product }) {
   const [itemQty, setItemQty] = useState(1);
@@ -33,6 +32,9 @@ export default function ModifyQty({ onDelete, product }) {
           className="qty-num"
           type="number"
           value={itemQty}
+          onChange={() => {
+            return itemQty;
+          }}
           style={{ width: "35px" }}
         />
         <Button onClick={increment}>+</Button>

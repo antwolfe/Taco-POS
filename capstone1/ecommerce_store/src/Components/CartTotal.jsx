@@ -1,12 +1,12 @@
 import React from "react";
 
-export default function CartTotal(props) {
-  //   const { cartItems, qty } = props;
-  //   let itemTotal = cartItems.map((item) => {
-  //     if (item.id) {
-  //       return item.price + [item + qty].length;
-  //     }
-  //   });
-  //   console.log(itemTotal);
+export default function CartTotal({ cartItems }) {
+  console.log(cartItems);
+  const prices = cartItems.map((item) => item.price);
+  console.log(prices);
+
+  const subtotal = prices.reduce((acc, curr) => acc + curr, 0);
+
+  console.log(subtotal);
   return <div>CartTotal</div>;
 }
