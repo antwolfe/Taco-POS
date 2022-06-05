@@ -52,13 +52,25 @@ h1 {
   border: 1px black dotted;
   margin: 5px 0px;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  
+}
+
+.middle-options a{
+  color: var(--highlight-color);
+  text-align: center;
+  padding: 2px;
+}
+
+.middle-options a:hover {
+  color:rgb(164, 143, 143);
 }
 
 .mobile-carousel {
   height: 42vh;
   border: 1px black dotted;
   margin-bottom: 5px;
-
 }
 
 .homebar {
@@ -69,6 +81,10 @@ h1 {
   align-items: center;
   border: 1px black dotted;
  /* sticky bottom */
+}
+
+.homebar a{
+  color: var(--highlight-color);
 }
 
 .book-item {

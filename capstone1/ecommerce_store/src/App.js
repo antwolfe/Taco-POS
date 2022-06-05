@@ -30,7 +30,7 @@ export default function App() {
   return (
     <main className="App">
       <Router>
-        <NavBar />
+        <NavBar products={products} />
         <Routes>
           <Route path="/" element={<HomePage />} />
 
