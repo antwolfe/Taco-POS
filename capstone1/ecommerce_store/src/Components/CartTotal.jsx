@@ -2,10 +2,7 @@ import React from "react";
 
 export default function CartTotal(props) {
   const { cartItems, qty } = props;
-  const itemsPrice = cartItems.reduce(
-    (acc, item) => acc + item.price * item.qty,
-    0
-  );
+  const itemsPrice = cartItems.reduce((acc, item) => acc + item.price * qty, 0);
 
   const totalPrice = itemsPrice;
 

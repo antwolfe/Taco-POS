@@ -14,6 +14,7 @@
 .App {
  background-image: linear-gradient(var(--secondary-color), var(--side-color));
   color: var(--highlight-color);
+  height: 100vh;
 }
 
 /* fix later */

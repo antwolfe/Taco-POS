@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 
-export default function ModifyQty({ onDelete, product }) {
-  const [itemQty, setItemQty] = useState(1);
-
+export default function ModifyQty({ onDelete, product, itemQty, setItemQty }) {
   const maxQty = product.qty;
-  const overMaxQty = "Cannot buy more than we have!";
+  const overMaxQty = "SOLD OUT!";
 
   const increment = () => {
-    let amount = 0;
     if (itemQty < maxQty) {
       setItemQty(itemQty + 1);
     } else {
