@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import CartItem from "../Components/CartItem";
+import CartTotal from "../Components/CartTotal";
+import QtyTotal from "../Components/QtyTotal";
 
 export default function Basket(props) {
-  const { products, cartItems, onDelete } = props;
+  const [total, setTotal] = useState(0);
+  // useEffect(() => {
+  //   setTotal(total + purchasePrice);
+  // }, [qty]);
+
+  const addTotal = (product, cartItems, qty) => {};
+  const { cartItems, onDelete } = props;
 
   return (
     <div>
@@ -20,6 +28,9 @@ export default function Basket(props) {
             </div>
           );
         })}
+        <div className="cart-total text-center">
+          <CartTotal cartItems={cartItems} />
+        </div>
         <div className="d-grid gap-2">
           <Button variant="dark" size="lg" className="cart-checkout-btn">
             CHECKOUT

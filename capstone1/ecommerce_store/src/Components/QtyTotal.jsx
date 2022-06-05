@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import CartTotal from "./CartTotal";
 
-export default function CartTotal(props) {
+export default function QtyTotal(props) {
   const { product, qty } = props;
-
-  const calculateCartTotal = () => {
-    //forEach cartItem => calculate bookPrice, accumulate ++ ((reduce)) , return total as render
-  };
+  const purchasePrice = (product.price * qty).toFixed(2);
 
   return (
     <div>
       <div>
-        <div>{product.price * qty}</div>
+        <p>{purchasePrice}</p>
       </div>
     </div>
   );

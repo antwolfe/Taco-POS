@@ -3,9 +3,10 @@ import Button from "react-bootstrap/esm/Button";
 import CloseButton from "react-bootstrap/esm/CloseButton";
 import CartTotal from "./CartTotal";
 import ModifyQty from "./ModifyQty";
+import QtyTotal from "./QtyTotal";
 
 export default function CartItem(props) {
-  const { product, onDelete, cartItems } = props;
+  const { product, onDelete, cartItems, qty, setQty } = props;
 
   return (
     <div>
@@ -17,7 +18,7 @@ export default function CartItem(props) {
         />
         <div className="cart-content">
           <img className="book-cover" src="/" alt="book cover" />
-          <span className="cart-text">
+          <div className="cart-text">
             <h2 className="book-title">{product.title}</h2>
             <h5> {product.price} </h5>
             <h5> QTY: {product.qty} </h5>
@@ -26,9 +27,10 @@ export default function CartItem(props) {
               onDelete={onDelete}
               product={product}
               cartItems={cartItems}
+              qty={qty}
+              setQty={setQty}
             />
-            <CartTotal />
-          </span>
+          </div>
         </div>
       </div>
     </div>

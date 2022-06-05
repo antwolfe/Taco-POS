@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 import QtyTotal from "./QtyTotal";
 
-export default function ModifyQty({ onDelete, product }) {
+export default function ModifyQty({ cartItems, onDelete, product }) {
   const [qty, setQty] = useState(1);
 
   const maxQty = product.qty;
@@ -24,6 +24,8 @@ export default function ModifyQty({ onDelete, product }) {
     }
   };
 
+  console.log(`${product.title}: ${product.price * qty}`);
+
   return (
     <div>
       <div className="counter">
@@ -36,9 +38,8 @@ export default function ModifyQty({ onDelete, product }) {
         />
         <Button onClick={increment}>+</Button>
       </div>
-      <div className="cart-total">
-        <QtyTotal product={product} qty={qty} />
-      </div>
+      <div>{(product.price * qty).toFixed(2)}</div>
+      <div></div>
     </div>
   );
 }
