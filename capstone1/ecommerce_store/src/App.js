@@ -8,10 +8,13 @@ import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
 import Basket from "./Views/Basket";
 import Login from "./Views/Login";
+import InventoryChart from "./Views/InventoryChart";
 
 export default function App() {
   const products = inventoryData;
   const [cartItems, setCartItems] = useState([]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(null);
 
   const addToCart = (product) => {
     console.log("Add", product.title);
@@ -34,6 +37,7 @@ export default function App() {
     <main className="App">
       <Router>
         <NavBar products={products} />
+
         <Routes>
           <Route path="/" element={<HomePage />} />
 
@@ -56,7 +60,14 @@ export default function App() {
             }
           />
 
-          <Route path="/login" element={<Login />} />
+          <Route
+            path="/login"
+            element={
+              <Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}>
+                <InventoryChart />
+              </Login>
+            }
+          />
         </Routes>
       </Router>
     </main>
