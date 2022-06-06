@@ -10,6 +10,7 @@ import Basket from "./Views/Cart";
 import Login from "./Views/Login";
 import InventoryChart from "./Views/InventoryChart";
 import Checkout from "./Views/Checkout";
+import Order from "./Components/Order";
 
 export default function App() {
   const products = inventoryData;
@@ -49,14 +50,11 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-
           <Route
             path="/products"
             element={<ProductsPage products={products} setItems={setItems} />}
           />
-
           <Route path="/book" element={<ProductDetail onAdd={addToCart} />} />
-
           <Route
             path="/cart"
             element={
@@ -68,8 +66,9 @@ export default function App() {
               />
             }
           />
-
           <Route path="/checkout" element={<Checkout />} />
+
+          <Route path="/order" element={<Order />} />
 
           <Route
             path="/login"
@@ -77,7 +76,6 @@ export default function App() {
               <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             }
           />
-
           <Route
             path="/admin"
             element={<InventoryChart data={items} setItems={setItems} />}

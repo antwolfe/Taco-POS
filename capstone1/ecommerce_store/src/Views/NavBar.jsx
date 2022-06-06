@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import Search from "../Components/Search";
 
-export default function NavBar({ products }) {
+export default function NavBar() {
   return (
     <div>
       <nav className="navbar">

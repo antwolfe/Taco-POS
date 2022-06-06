@@ -1,14 +1,23 @@
 import Button from "react-bootstrap/esm/Button";
+import { useNavigate } from "react-router-dom";
 
-export default function Checkout(props) {
-  console.log(props);
+export default function Checkout() {
+  const navigate = useNavigate();
+  const checkoutMessage = (e) => {
+    e.preventDefault();
+    alert("Your Order has been submitted");
+  };
 
-  const checkoutMessage = () => {};
   return (
     <div>
       <div className="checkout">
         <div className="checkout-header">
-          <form action="">
+          <form
+            action=""
+            onSubmit={(e) => {
+              navigate("/order", { replace: true });
+            }}
+          >
             <h1 className="text-center">CheckOut</h1>
             <h2>Payment Information</h2>
 
@@ -72,7 +81,7 @@ export default function Checkout(props) {
               </div>
             </div>
             <p></p>
-            <Button type="submit" className="button" onSubmit={checkoutMessage}>
+            <Button type="submit" className="button">
               Checkout Cart
             </Button>
           </form>

@@ -13,12 +13,7 @@ export default function InventoryChart({ data, setItems }) {
       {data.map((item) => {
         return (
           <div key={item.id}>
-            <InventoryItem
-              product={item}
-              inventoryQty={inventoryQty}
-              setInventoryQty={setInventoryQty}
-              setItems={setItems}
-            />
+            <InventoryItem product={item} />
           </div>
         );
       })}

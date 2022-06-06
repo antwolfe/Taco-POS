@@ -6,7 +6,8 @@
         "price": 10.99,
         "inventory": 11,
         "isbn": 9780340951415,
-        "cover": "https://pictures.abebooks.com/isbn/9780340951415-us.jpg"
+        "cover": "https://pictures.abebooks.com/isbn/9780340951415-us.jpg",
+        "qty": 0
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "price": 12.99,
         "inventory": 9,
         "isbn": 9780340951477,
-        "cover": "https://pictures.abebooks.com/isbn/9780340951477-us.jpg"
+        "cover": "https://pictures.abebooks.com/isbn/9780340951477-us.jpg",
+        "qty": 0
     },
     {
         "id": 3,
@@ -25,7 +27,8 @@
         "price": 5.99,
         "inventory": 5,
         "isbn": 9788401474682,
-        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1271241507l/3047956.jpg"
+        "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1271241507l/3047956.jpg",
+        "qty": 0
     },
     {
         "id": 4,
@@ -34,7 +37,8 @@
         "price": 15.99,
         "inventory": 50,
         "isbn": 9780340951392,
-        "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg"
+        "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg",
+        "qty": 0
     },
     {
         "id": 5,
@@ -44,6 +48,7 @@
         "price": 7.99,
         "inventory": 10,
         "isbn": 9780450054792,
-        "cover": "https://images-na.ssl-images-amazon.com/images/I/41k+wcsxTpL._SY344_BO1,204,203,200_.jpg"
+        "cover": "https://images-na.ssl-images-amazon.com/images/I/41k+wcsxTpL._SY344_BO1,204,203,200_.jpg",
+        "qty": 0
     }
 ]

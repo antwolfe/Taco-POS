@@ -1,35 +1,28 @@
 import { useState } from "react";
-import Search from "../Components/Search";
 import HomeBar from "./HomeBar";
 import ProductPreview from "./ProductPreview";
 
-export default function ProductsPage({ products, setItems }) {
+export default function ProductsPage({ products }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(products);
   console.log(query);
 
   const findProduct = (e) => {
-    // setQuery(query);
     setQuery(e.target.value);
-    console.log(query);
-    //create copy of all products
+
     const allProducts = [...products];
-    // if (query == "") {
-    //   setItems(allProducts);
-    // }
     const newItems = products.filter((item) => {
-      console.log(item.title);
-      console.log(query);
       if (query == "") {
-        return allProducts; //(allProducts);
+        return allProducts;
       } else {
-        //any item name that matches query
-        console.log();
-        return item.title.toLowerCase().includes(query.toLowerCase());
-        // setItems(newItems);
+        if (item.title.toLowerCase().includes(query.toLowerCase())) {
+          console.log(item);
+          return item;
+        }
       }
-      setResults(newItems);
     });
+
+    setResults(newItems);
   };
 
   return (
@@ -40,7 +33,7 @@ export default function ProductsPage({ products, setItems }) {
         placeholder="Search..."
         onChange={(e) => findProduct(e)}
       />
-      {products.map((product) => {
+      {results.map((product) => {
         return <ProductPreview key={product.id} product={product} />;
       })}
 
