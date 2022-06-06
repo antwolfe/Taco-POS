@@ -12,6 +12,10 @@
   - Router Hooks: useNavigate and useLocation
   - Pushing state into array
 
+  ***
+
+  -CSS Full Background in React
+
 - Understanding Router Hooks :
 
   - https://blog.logrocket.com/react-router-hooks-cleaner-components/

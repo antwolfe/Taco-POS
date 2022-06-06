@@ -5,7 +5,6 @@ import { useLocation } from "react-router-dom";
 export default function ProductDetail(props) {
   const location = useLocation();
   let book = location.state.product;
-  console.log(book);
   const { onAdd } = props;
 
   return (
@@ -20,9 +19,7 @@ export default function ProductDetail(props) {
         <Button variant="primary" onClick={() => onAdd(book)}>
           ADD TO CART
         </Button>
-        <Button variant="success">BUY NOW</Button>
       </div>
-      {/* <HomeBar /> */} {/* might remove */}
     </div>
   );
 }

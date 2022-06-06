@@ -8,14 +8,14 @@ export default function CartTotal(props) {
 
   let itemTotal = cartItems.map((item) => {
     if (item.id) {
-      return item.price + [item + qty].length;
+      return item.price * [item + qty].length;
     }
   });
 
-  function realTotal(a) {
+  function realTotal(items) {
     var total = 0;
-    for (var i in a) {
-      total += a[i];
+    for (var i in items) {
+      total += items[i];
     }
     return total;
   }

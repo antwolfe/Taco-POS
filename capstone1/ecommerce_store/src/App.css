@@ -9,12 +9,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ color: var(--highlight-color);
 }
 
-.App {
- background-image: linear-gradient(var(--secondary-color), var(--side-color));
-  color: var(--highlight-color);
-
+html, body {
+ background: linear-gradient(var(--secondary-color), var(--side-color)) ;
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: var(--highlight-color);
 }
 
 /* fix later */
@@ -158,6 +160,7 @@ h1 {
   padding: 10px 15px;
   border: 1px solid blue;
   margin: 10px;
+  color: var(--highlight-color);
 }
 
 .cart-item .close-btn {
@@ -167,6 +170,8 @@ h1 {
 
 .cart-content {
   display: flex;
+  justify-content: center;
+  
 }
 
 .cart-content .cart-text {
@@ -178,6 +183,11 @@ h1 {
 .cart {
   display: flex;
   flex-direction: column;
+  color: var(--highlight-color);
+}
+
+.cart-title {
+  color: var(--highlight-color);
 }
 
 
@@ -236,26 +246,8 @@ h1 {
 
 
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width: 600px ) {
+  .all-products input {
+    width: 500px;
   }
 }

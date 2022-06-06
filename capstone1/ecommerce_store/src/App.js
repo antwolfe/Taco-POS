@@ -6,12 +6,14 @@ import inventoryData from "./inventory2.json";
 import HomePage from "./Views/HomePage";
 import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
-import Basket from "./Views/Basket";
+import Basket from "./Views/Cart";
 import Login from "./Views/Login";
 import InventoryChart from "./Views/InventoryChart";
+import Checkout from "./Views/Checkout";
 
 export default function App() {
   const products = inventoryData;
+  const [items, setItems] = useState(products);
   const [cartItems, setCartItems] = useState([]);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,7 +43,7 @@ export default function App() {
   };
 
   return (
-    <main className="App">
+    <div className="App">
       <Router>
         <NavBar products={products} />
 
@@ -50,7 +52,7 @@ export default function App() {
 
           <Route
             path="/products"
-            element={<ProductsPage products={products} />}
+            element={<ProductsPage products={products} setItems={setItems} />}
           />
 
           <Route path="/book" element={<ProductDetail onAdd={addToCart} />} />
@@ -67,16 +69,21 @@ export default function App() {
             }
           />
 
+          <Route path="/checkout" element={<Checkout />} />
+
+          <Route
+            path="/login"
+            element={
+              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+            }
+          />
+
           <Route
             path="/admin"
-            element={
-              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}>
-                <InventoryChart />
-              </Login>
-            }
+            element={<InventoryChart data={inventoryData} />}
           />
         </Routes>
       </Router>
-    </main>
+    </div>
   );
 }

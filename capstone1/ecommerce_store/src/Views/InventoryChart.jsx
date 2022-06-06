@@ -1,5 +1,6 @@
 import React from "react";
 
-export default function InventoryChart() {
-  return <div>InventoryChart, hello can you see me</div>;
+export default function InventoryChart({ data }) {
+  console.log(data);
+  return <div>INVENTORY CHART</div>;
 }

@@ -10,12 +10,6 @@ export default function NavBar({ products }) {
         <Link to="/">
           <h1>KingBooks</h1>
         </Link>
-        <input
-          onChange={(e) => <Search products={products} query={e} />}
-          type="search"
-          name="search"
-          placeholder="Search..."
-        />
 
         <Link to="/cart">
           <FaShoppingCart className="cart-icon" size="30px" alt="cart icon" />
