@@ -15,10 +15,6 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
     setIsLoggedIn(false);
   };
 
-  // const protectedRoute = (component) => {
-  //   return <Route element={component} />;
-  // };
-
   const onLogIn = (e) => {
     console.log("logging in");
   };
@@ -41,9 +37,7 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
     } else if (userPass == loginPass && userUname == loginUname) {
       logIn();
       navigate("/admin", { replace: true });
-      // protectedRoute(<InventoryChart />);
-      console.log("how?");
-      return true;
+      // return true;
     }
   };
 

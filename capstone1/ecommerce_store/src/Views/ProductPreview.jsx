@@ -1,5 +1,4 @@
 import Button from "react-bootstrap/Button";
-import { FaBook } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function ProductPreview({ product }) {
@@ -7,7 +6,7 @@ export default function ProductPreview({ product }) {
 
   return (
     <div>
-      <div className="book-item">
+      <div className="preview-item">
         <img className="book-cover" src={product.cover} alt="book cover" />
         <span>
           <h2 className="book-title">{product.title}</h2>

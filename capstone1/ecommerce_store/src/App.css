@@ -12,6 +12,7 @@
  color: var(--highlight-color);
 }
 
+
 html, body {
  background: linear-gradient(var(--secondary-color), var(--side-color)) ;
  background-repeat: no-repeat;
@@ -101,9 +102,10 @@ h1 {
   color: var(--highlight-color);
 }
 
-.book-item {
+.preview-item {
   display: flex;
   border: 1px black solid;
+  justify-content:space-around;
   padding: 5px;
   margin: 5px;
   
@@ -236,7 +238,10 @@ h1 {
   justify-content: center;
 }
 
-
+.inventory-item {
+  display: block;
+  justify-content: center;
+  }
 
 
 

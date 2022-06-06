@@ -80,7 +80,7 @@ export default function App() {
 
           <Route
             path="/admin"
-            element={<InventoryChart data={inventoryData} />}
+            element={<InventoryChart data={items} setItems={setItems} />}
           />
         </Routes>
       </Router>
