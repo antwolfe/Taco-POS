@@ -44,17 +44,17 @@ export default function InventoryItem({
             <h5 className="book-price">${product.price}</h5>
             <a href="/">
               <div className="counter">
-                <Button onClick={decrease}>-</Button>
+                <Button>-</Button>
                 <input
                   className="qty-num"
                   type="number"
-                  value={product.inventory}
-                  onChange={() => {
-                    return product.inventory;
-                  }}
+                  // value={product.inventory}
+                  // onChange={() => {
+                  //   return product.inventory;
+                  // }}
                   style={{ width: "35px" }}
                 />
-                <Button onClick={console.log("hello")}>+</Button>
+                <Button>+</Button>
               </div>
             </a>
           </span>

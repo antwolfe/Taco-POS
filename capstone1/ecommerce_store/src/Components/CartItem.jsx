@@ -20,11 +20,9 @@ export default function CartItem(props) {
           <div className="cart-text">
             <h2 className="book-title">{product.title}</h2>
             <h5> {product.price} </h5>
-            <h5> QTY: {product.qty} </h5>
+            <h5> QTY: {product.inventory} </h5>
             <ModifyQty
-              maxQty={product.qty}
-              itemQty={itemQty}
-              setItemQty={setItemQty}
+              maxQty={product.inventory}
               onDelete={onDelete}
               product={product}
               cartItems={cartItems}

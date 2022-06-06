@@ -76,10 +76,7 @@ export default function App() {
               <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             }
           />
-          <Route
-            path="/admin"
-            element={<InventoryChart data={items} setItems={setItems} />}
-          />
+          <Route path="/admin" element={<InventoryChart data={items} />} />
         </Routes>
       </Router>
     </div>

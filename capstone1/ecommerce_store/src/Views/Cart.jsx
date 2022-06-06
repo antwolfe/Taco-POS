@@ -5,14 +5,12 @@ import CartItem from "../Components/CartItem";
 import CartTotal from "../Components/CartTotal";
 
 export default function Basket(props) {
-  const [cartTotal, setCartTotal] = useState(0);
-  const [itemQty, setItemQty] = useState(1);
-
-  const { cartItems, onDelete } = props;
   const navigate = useNavigate();
 
+  const { cartItems, onDelete } = props;
+
   const handleCheckout = () => {
-    navigate("/checkout", { state: cartTotal, replace: true });
+    navigate("/checkout", { replace: true });
   };
 
   return (
@@ -26,15 +24,13 @@ export default function Basket(props) {
                 product={item}
                 onDelete={onDelete}
                 cartItems={cartItems}
-                itemQty={itemQty}
-                setItemQty={setItemQty}
               />
             </div>
           );
         })}
         <div className="modify-qty"></div>
         <div className="cart-total text-center">
-          <CartTotal cartItems={cartItems} qty={itemQty} />
+          <CartTotal cartItems={cartItems} />
         </div>
         <div className="d-grid gap-2 login-btn">
           <Button

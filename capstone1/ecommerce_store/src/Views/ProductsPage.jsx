@@ -16,7 +16,6 @@ export default function ProductsPage({ products }) {
         return allProducts;
       } else {
         if (item.title.toLowerCase().includes(query.toLowerCase())) {
-          console.log(item);
           return item;
         }
       }
@@ -27,6 +26,7 @@ export default function ProductsPage({ products }) {
 
   return (
     <div className="all-products">
+      <a name="top" />
       <input
         value={query}
         name="search"

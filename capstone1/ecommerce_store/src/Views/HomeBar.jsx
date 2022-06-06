@@ -1,5 +1,5 @@
 import React from "react";
-import { FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
+import { FaHome, FaBookOpen, FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function HomeBar() {
@@ -9,7 +9,9 @@ export default function HomeBar() {
         <Link to="/">
           <FaHome alt="home icon" size="30px" />
         </Link>
-        <FaSearch alt="search icon" size="30px" />
+        <Link to="/products/">
+          <FaBookOpen alt="search icon" size="30px" />
+        </Link>
         <Link to="/cart">
           <FaShoppingCart alt="cart icon" size="30px" />
         </Link>
