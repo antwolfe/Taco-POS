@@ -68,7 +68,7 @@ export default function App() {
           />
 
           <Route
-            path="/login"
+            path="/admin"
             element={
               <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}>
                 <InventoryChart />

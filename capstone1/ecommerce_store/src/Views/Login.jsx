@@ -1,6 +1,6 @@
 import React, { Children } from "react";
 import Button from "react-bootstrap/esm/Button";
-import { useNavigate } from "react-router-dom";
+import { Route, useNavigate } from "react-router-dom";
 import InventoryChart from "./InventoryChart";
 
 export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
@@ -15,15 +15,9 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
     setIsLoggedIn(false);
   };
 
-  const checkLoggedIn = () => {
-    if (!isLoggedIn) {
-      // return navigate("/", { replace: true });
-      console.log("curse word");
-    } else {
-      console.log("next steps");
-      // return children;
-    }
-  };
+  // const protectedRoute = (component) => {
+  //   return <Route element={component} />;
+  // };
 
   const onLogIn = (e) => {
     console.log("logging in");
@@ -46,8 +40,8 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
       return false;
     } else if (userPass == loginPass && userUname == loginUname) {
       logIn();
-      navigate(children, { replace: true });
-      return <InventoryChart />;
+      navigate("/admin", { replace: true });
+      // protectedRoute(<InventoryChart />);
       console.log("how?");
       return true;
     }
