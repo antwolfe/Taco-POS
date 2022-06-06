@@ -14,7 +14,14 @@ export default function App() {
   const products = inventoryData;
   const [cartItems, setCartItems] = useState([]);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const logIn = () => {
+    setIsLoggedIn(true);
+  };
+
+  const logOut = () => {
+    setIsLoggedIn(false);
+  };
 
   const addToCart = (product) => {
     console.log("Add", product.title);
@@ -63,7 +70,7 @@ export default function App() {
           <Route
             path="/login"
             element={
-              <Login setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn}>
+              <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}>
                 <InventoryChart />
               </Login>
             }

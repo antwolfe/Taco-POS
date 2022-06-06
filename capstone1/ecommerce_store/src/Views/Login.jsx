@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Children } from "react";
 import Button from "react-bootstrap/esm/Button";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import InventoryChart from "./InventoryChart";
 
-export default function Login({ setIsLoggedIn, isLoggedIn }) {
+export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
+  let navigate = useNavigate();
+
+  console.log(isLoggedIn);
   const logIn = () => {
     setIsLoggedIn(true);
   };
@@ -13,37 +17,53 @@ export default function Login({ setIsLoggedIn, isLoggedIn }) {
 
   const checkLoggedIn = () => {
     if (!isLoggedIn) {
-      return <Navigate to="/" replace={true} />;
+      // return navigate("/", { replace: true });
+      console.log("curse word");
+    } else {
+      console.log("next steps");
+      // return children;
     }
-    // console.log("next steps");
-    // return children;
-    return <div>console.log("idk anymore")</div>;
   };
 
   const onLogIn = (e) => {
-    // {
-    //   e.preventDefault();
-
-    logIn();
-    //   checkLoggedIn();
-    // }
-
-    console.log("logged in");
+    console.log("logging in");
   };
 
   const onLogOut = () => {
-    {
-      // e.preventDefault();
-      logOut();
-      // checkLoggedIn();
+    console.log("Logging Out");
+    logOut();
+  };
+
+  const loginValid = () => {
+    const userUname = document.forms[0][0].value;
+    const userPass = document.forms[0][1].value;
+
+    const loginUname = "admin";
+    const loginPass = "pass";
+
+    if (userPass !== loginPass || userUname !== loginUname) {
+      console.log("wrong info");
+      return false;
+    } else if (userPass == loginPass && userUname == loginUname) {
+      logIn();
+      navigate(children, { replace: true });
+      return <InventoryChart />;
+      console.log("how?");
+      return true;
     }
-    console.log("Logged Out");
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (!loginValid()) {
+      console.log("Incorrect Login Info");
+    }
   };
 
   return (
     <form
       onSubmit={(e) => {
-        checkLoggedIn();
+        onSubmit(e);
       }}
     >
       <div className="login-page">

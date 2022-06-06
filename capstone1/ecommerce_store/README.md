@@ -18,4 +18,6 @@
 
 - Removing arrows from numeric input field: https://www.geeksforgeeks.org/how-to-disable-arrows-from-number-input/
 
-- Setting Up Protected Route: https://www.makeuseof.com/create-protected-route-in-react/#:~:text=Protected%20routes%20are%20those%20routes,to%20visit%20the%20dashboard%20page.
+- Setting Up Protected Route:
+  - https://www.makeuseof.com/create-protected-route-in-react/#:~:text=Protected%20routes%20are%20those%20routes,to%20visit%20the%20dashboard%20page
+  - https://www.robinwieruch.de/react-router-private-routes/

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function InventoryChart() {
-  return <div>InventoryChart</div>;
+  return <div>InventoryChart, hello can you see me</div>;
 }
