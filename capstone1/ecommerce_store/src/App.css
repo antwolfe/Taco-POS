@@ -3,18 +3,21 @@
   --secondary-color: rgb(48, 27, 63);
   --side-color: rgb(60, 65, 92);
   --highlight-color: rgb(180, 165, 165);
+  --background: linear-gradient(var(--secondary-color), var(--side-color));
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- color: var(--highlight-color);
+  color: var(--highlight-color);
+
 }
 
 
+
 html, body {
- background: linear-gradient(var(--secondary-color), var(--side-color)) ;
+ background-image: var(--background);
  background-repeat: no-repeat;
  background-size: cover;
  color: var(--highlight-color);
@@ -241,7 +244,25 @@ h1 {
 .inventory-item {
   display: block;
   justify-content: center;
-  }
+}
+
+.checkout {
+  display: flex;
+  padding: 50px;
+  justify-content: space-around;
+}
+
+.checkout input {
+
+
+}
+
+.checkout div {
+
+}
+
+.leftside {
+}
 
 
 
