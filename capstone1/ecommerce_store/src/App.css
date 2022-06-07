@@ -281,7 +281,7 @@ h1 {
     grid-column-gap: 15px;
     grid-row-gap: 15px;
   }
-  .all-products input {
+  .all-products .searchbar {
     width: 500px;
   }
 
@@ -294,7 +294,7 @@ h1 {
   .all-products {
       grid-template-columns: repeat(5, 1fr);
   }
-  .all-products input {
+  .all-products .searchbar {
       width: 500px;
   }
 }

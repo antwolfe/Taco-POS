@@ -19,7 +19,13 @@ export default function ProductDetail(props) {
         <p>Authored in: {book.year}</p>
         <p>ISBN: {book.isbn}</p>
         <p>{book.tags && `Common tags: ${book.tags}`}</p>
-        <Button variant="primary" onClick={() => onAdd(book)}>
+        <Button
+          variant="primary"
+          onClick={() => {
+            alert(`${book.title} has been added to cart!`);
+            onAdd(book);
+          }}
+        >
           ADD TO CART
         </Button>
       </div>
