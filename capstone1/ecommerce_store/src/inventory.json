@@ -37,7 +37,7 @@
         "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg"
     },
     {
-        "id": 6,
+        "id": 5,
         "title": "Night Shift",
         "year": 1978,
         "tags": ["Collection"],
@@ -56,7 +56,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951446-us.jpg"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "The Long Walk",
         "year": 1978,
         "tags": ["as Richard Bachman"],
@@ -66,7 +66,7 @@
         "cover":"URL"
     },
     {
-        "id": 6,
+        "id": 8,
         "title": "The Dead Zone",
         "year": 1979,
         "price": 10.99,
@@ -75,6 +75,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952689-us.jpg"
     },
     {
+        "id": 9,
         "title": "Firestarter",
         "year": 1980,
         "price": 12.99,
@@ -83,6 +84,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51timyd52dL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 10,
         "title": "Roadwork",
         "year": 1981,
         "tags": ["as Richard Bachman"],
@@ -92,6 +94,7 @@
         "cover":"URL"
     },
     {
+        "id": 11,
         "title": "Cujo",
         "year": 1981,
         "price": 7.99,
@@ -100,7 +103,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952702-us.jpg"
     },
     {
-        "id": 6,
+        "id": 12,
         "title": "Danse Macabre",
         "year": 1981,
         "tags": ["Non-Fiction"],
@@ -110,7 +113,7 @@
         "cover":"URL"
     },
     {
-        "id": 6,
+        "id": 13,
         "title": "The Dark Tower I: The Gunslinger",
         "year": 1982,
         "tags": ["The Dark Tower"],
@@ -120,6 +123,7 @@
         "cover":"URL"
     },
     {
+        "id": 14,
         "title": "The Running Man",
         "year": 1982,
         "tags": ["as Richard Bachman"],
@@ -129,6 +133,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51sz9+P3VtL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 15,
         "title": "Different Seasons",
         "year": 1982,
         "tags": ["Collection"],
@@ -138,6 +143,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952603-us.jpg"
     },
     {
+        "id": 16,
         "title": "Christine",
         "year": 1983,
         "price": 15.50,
@@ -146,6 +152,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51Y1W92TzsL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 17,
         "title": "Pet Sematary",
         "year": 1983,
         "price": 8.50,
@@ -154,7 +161,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951460-us.jpg"
     },
     {
-        "id": 6,
+        "id": 18,
         "title": "The Talisman",
         "year": 1984,
         "tags": ["with Peter Straub"],
@@ -164,7 +171,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51-KGs2ShYL._SX309_BO1,204,203,200_.jpg"
     },
     {
-        "id": 6,
+        "id": 19,
         "title": "Thinner (Bachman)",
         "year": 1984,
         "tags": ["as Richard Bachman"],
@@ -174,6 +181,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41kKuGgQjPL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 20,
         "title": "Cycle of the Werewolf",
         "year": 1985,
         "price": 3.00,
@@ -182,6 +190,7 @@
         "cover":"URL"
     },
     {
+        "id": 21,
         "title": "Skeleton Crew",
         "year": 1985,
         "tags": ["Collection"],
@@ -191,7 +200,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51QAK3cWCZL._SX309_BO1,204,203,200_.jpg"
     },
     {
-        "id": 6,
+        "id": 22,
         "title": "IT",
         "year": 1986,
         "price": 18.50,
@@ -200,7 +209,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951453-us.jpg"
     },
     {
-        "id": 6,
+        "id": 23,
         "title": "The Eyes of the Dragon",
         "year": 1987,
         "price": 1.00,
@@ -209,7 +218,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952726-us.jpg"
     },
     {
-        "id": 6,
+        "id": 24,
         "title": "The Dark Tower II: The Drawing of the Three",
         "year": 1987,
         "tags": ["The Dark Tower"],
@@ -219,6 +228,7 @@
         "cover":"URL"
     },
     {
+        "id": 25,
         "title": "Misery",
         "year": 1987,
         "price": 25.50,
@@ -227,6 +237,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951439-us.jpg"
     },
     {
+        "id": 26,
         "title": "The Tommyknockers",
         "year": 1987,
         "price": 10.99,
@@ -235,6 +246,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/516HvNqtUKL._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 27,
         "title": "The Dark Half",
         "year": 1989,
         "price": 8.99,
@@ -243,7 +255,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41SMeh-Kv9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
     },
     {
-        "id": 6,
+        "id": 28,
         "title": "Four Past Midnight",
         "year": 1990,
         "tags": ["Collection"],
@@ -254,7 +266,7 @@
         
     },
     {
-        "id": 6,
+        "id": 29,
         "title": "Needful Things",
         "year": 1991,
         "price": 8.99,
@@ -263,7 +275,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41FCxCtdP6L._SX309_BO1,204,203,200_.jpg"
     },
     {
-        "id": 6,
+        "id": 30,
         "title": "The Dark Tower III: The Waste Lands",
         "year": 1991,
         "tags": ["The Dark Tower"],
@@ -273,7 +285,7 @@
         "cover":"URL"
     },
     {
-        "id": 6,
+        "id": 31,
         "title": "Gerald's Game",
         "year": 1992,
         "price": 8.99,
@@ -282,7 +294,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/410nJwYqOgL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 6,
+        "id": 32,
         "title": "Dolores Claiborne",
         "year": 1993,
         "price": 5.50,
@@ -291,7 +303,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41wmJNTADEL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 33,
         "title": "Nightmares and Dreamscapes",
         "year": 1993,
         "tags": ["Collection"],
@@ -301,7 +313,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51-Uzp2m6GL._SX309_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 34,
         "title": "Insomnia",
         "year": 1994,
         "price": 7.50,
@@ -310,7 +322,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51ATC6XICcL._SX309_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 35,
         "title": "Rose Madder",
         "year": 1995,
         "price": 5.50,
@@ -319,7 +331,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/614jtna0t+L.jpg"
     },
     {
-        "id": 7,
+        "id": 36,
         "title": "Desperation",
         "year": 1996,
         "price": 12.00,
@@ -328,7 +340,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51PnsqgeuJL.jpg"
     },
     {
-        "id": 7,
+        "id": 37,
         "title": "The Regulators",
         "year": 1996,
         "tags": ["as Richard Bachman"],
@@ -338,7 +350,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UEAfye0xL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 38,
         "title": "The Green Mile",
         "year": 1996,
         "price": 8.99,
@@ -347,7 +359,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 39,
         "title": "The Dark Tower IV: Wizard and Glass",
         "year": 1997,
         "tags": ["The Dark Tower"],
@@ -357,7 +369,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 40,
         "title": "Bag of Bones",
         "year": 1998,
         "price": 8.99,
@@ -366,7 +378,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51eJNj2kXBL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 41,
         "title": "The Girl Who Loved Tom Gordon",
         "year": 1999,
         "price": 5.50,
@@ -375,7 +387,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UaFSa0nhL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 42,
         "title": "Hearts in Atlantis",
         "year": 1999,
         "tags": ["Collection"],
@@ -385,7 +397,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 43,
         "title": "On Writing",
         "year": 2000,
         "tags": ["Non-Fiction"],
@@ -395,7 +407,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 44,
         "title": "Dreamcatcher",
         "year": 2001,
         "price": 12.00,
@@ -404,7 +416,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/5197+4absCL._SY344_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 45,
         "title": "Black House",
         "year": 2001,
         "price": 2.00,
@@ -413,7 +425,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 46,
         "title": "From A Buick 8",
         "year": 2002,
         "price": 1.50,
@@ -422,7 +434,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/5144ifNu7sL._SX310_BO1,204,203,200_.jpg"
     },
     {
-        "id": 7,
+        "id": 47,
         "title": "Everything's Eventual: 14 Dark Tales",
         "year": 2002,
         "tags": ["Collection"],
@@ -432,6 +444,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51w2gEd0C7L._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 48,
         "title": "The Dark Tower V: The Wolves of the Calla",
         "year": 2003,
         "tags": ["The Dark Tower"],
@@ -441,7 +454,7 @@
         "cover":"URL"
     },
     {
-        "id": 7,
+        "id": 49,
         "title": "The Dark Tower VI: Song of Susannah",
         "year": 2004,
         "tags": ["The Dark Tower"],
@@ -451,6 +464,7 @@
         "cover":"URL"
     },
     {
+        "id": 50,
         "title": "The Dark Tower VII: The Dark Tower",
         "year": 2004,
         "tags": ["The Dark Tower"],
@@ -460,6 +474,7 @@
         "cover":"URL"
     },
     {
+        "id": 51,
         "title": "The Colorado Kid",
         "year": 2005,
         "price": 2.00,
@@ -468,6 +483,7 @@
         "cover":"URL"
     },
     {
+        "id": 52,
         "title": "Cell",
         "year": 2006,
         "price": 12.00,
@@ -476,6 +492,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340921531-us.jpg"
     },
     {
+        "id": 53,
         "title": "Lisey's Story",
         "year": 2006,
         "price": 1.00,
@@ -484,6 +501,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340898956-us.jpg"
     },
     {
+        "id": 54,
         "title": "Blaze",
         "year": 2007,
         "tags": ["as Richard Bachman"],
@@ -493,6 +511,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/517EotEtRsL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 55,
         "title": "Duma Key",
         "year": 2008,
         "price": 13.00,
@@ -501,6 +520,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340978030-us.jpg"
     },
     {
+        "id": 56,
         "title": "Just After Sunset",
         "year": 2008,
         "tags": ["Collection"],
@@ -510,6 +530,7 @@
         "cover":"URL"
     },
     {
+        "id": 57,
         "title": "Under the Dome",
         "year": 2009,
         "price": 15.00,
@@ -518,6 +539,7 @@
         "cover":"URL"
     },
     {
+        "id": 58,
         "title": "Full Dark, No Stars",
         "year": 2010,
         "tags": ["Collection"],
@@ -527,6 +549,7 @@
         "cover":"URL"
     },
     {
+        "id": 59,
         "title": "11/22/63",
         "year": 2011,
         "price": 14.25,
@@ -535,15 +558,18 @@
         "cover":"URL"
     },
     {
+        "id": 60,
         "title": "The Dark Tower: The Wind Through the Keyhole",
         "year": 2012,
         "tags": ["The Dark Tower"],
         "price": 14.25,
         "qty": 1,
+     "id": 50,
         "isbn": 22,
         "cover": "URL"
     },
     {
+        "id": 61,
         "title": "Joyland",
         "year": 2013,
         "price": 11.50,
@@ -552,6 +578,7 @@
         "cover": "URL"
     },
     {
+        "id": 62,
         "title": "Doctor Sleep",
         "year": 2013,
         "price": 14.25,
@@ -560,6 +587,7 @@
         "cover": "URL"
     },
     {
+        "id": 63,
         "title": "Mr. Mercedes",
         "year": 2014,
         "tags": ["Bill Hodges Trilogy"],
@@ -569,6 +597,7 @@
         "cover": "URL"
     },
     {
+        "id": 64,
         "title": "Revival",
         "year": 2014,
         "price": 14.25,
@@ -577,6 +606,7 @@
         "cover": "URL"
     },
     {
+        "id": 65,
         "title": "Finders Keepers",
         "year": 2015,
         "tags": ["Bill Hodges Trilogy"],
@@ -586,6 +616,7 @@
         "cover": "URL"
     },
     {
+        "id": 66,
         "title": "The Bazaar of Bad Dreams",
         "year": 2015,
         "tags": ["Collection"],
@@ -595,6 +626,7 @@
         "cover": "URL"
     },
     {
+        "id": 67,
         "title": "End of Watch",
         "year": 2016,
         "tags": ["Bill Hodges Trilogy"],
@@ -604,6 +636,7 @@
         "cover": "URL"
     },
     {
+        "id": 68,
         "title": "Charlie the Choo-Choo",
         "year": 2016,
         "tags": ["The Dark Tower"],
@@ -614,6 +647,7 @@
         
     },
     {
+        "id": 69,
         "title": "Gwendy's Button Box",
         "year": 2017,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
@@ -623,6 +657,7 @@
         "cover": "URL"
     },
     {
+        "id": 70,
         "title": "Sleeping Beauties",
         "year": 2017,
         "price": 10.99,
@@ -631,6 +666,7 @@
         "cover": "URL"
     },
     {
+        "id": 71,
         "title": "The Outsider",
         "year": 2018,
         "price": 10.99,
@@ -639,6 +675,7 @@
         "cover": "URL"
     },
     {
+        "id": 71,
         "title": "The Institute",
         "year": 2019,
         "price": 9.99,
@@ -647,15 +684,7 @@
         "cover": "URL"
     },
     {
-        "title": "Gwendy's Magic Feather",
-        "year": 2019,
-        "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
-        "price": 10.99,
-        "qty": 7,
-        "isbn": 22,
-        "cover": "URL"
-    },
-    {
+        "id": 72,
         "title": "If It Bleeds",
         "year": 2020,
         "tags": ["Collection"],
@@ -665,6 +694,7 @@
         "cover": "URL"
     },
     {
+        "id": 73,
         "title": "Later",
         "year": 2021,
         "price": 10.99,
@@ -673,6 +703,7 @@
         "cover": "URL"
     },
     {
+        "id": 74,
         "title": "Gwendy's Final Task",
         "year": 2022,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
