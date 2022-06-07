@@ -24,10 +24,10 @@ export default function AddInventory({ setItems, items }) {
       {
         id: Number(newId),
         title: newTitle,
-        year: newYear,
-        price: newPrice,
+        year: Number(newYear),
+        price: parseFloat(newPrice),
         qty: 0,
-        inventory: newInventory,
+        inventory: Number(newInventory),
         cover: newCover,
         tags: newTag,
       },
