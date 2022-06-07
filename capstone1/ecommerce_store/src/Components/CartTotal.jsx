@@ -1,15 +1,20 @@
 import React from "react";
 
 export default function CartTotal(props) {
-  const { cartItems, qty } = props;
-  console.log(qty);
-  const itemsPrice = cartItems.reduce((acc, item) => acc + item.price * qty, 0);
+  const { cartItems, itemQty } = props;
+  // console.log(itemQty);
+  // const itemsPrice = cartItems.reduce(
+  //   (acc, item) => acc + item.price * itemQty,
+  //   0
+  // );
 
-  const totalPrice = itemsPrice;
+  const getNewQty = () => {};
 
-  let itemTotal = cartItems.map((item) => {
+  // getItemTotal(itemQty);
+
+  const itemTotal = cartItems.map((item) => {
     if (item.id) {
-      return item.price * [item + qty].length;
+      return item.price * item.qty;
     }
   });
 
@@ -20,9 +25,11 @@ export default function CartTotal(props) {
     }
     return total;
   }
-  console.log(itemsPrice);
-  console.log("this is itemsTotal " + itemTotal);
-  console.log(itemTotal);
-  console.log(realTotal(itemTotal));
+
+  console.log();
+  // console.log(itemsPrice);
+  // console.log("this is itemsTotal " + itemTotal);
+  // console.log(itemTotal);
+  // console.log(realTotal(itemTotal));
   return <div>$ {realTotal(itemTotal)}</div>;
 }

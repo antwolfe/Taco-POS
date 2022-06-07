@@ -7,7 +7,7 @@
         "inventory": 11,
         "isbn": 9780340951415,
         "cover": "https://pictures.abebooks.com/isbn/9780340951415-us.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "inventory": 9,
         "isbn": 9780340951477,
         "cover": "https://pictures.abebooks.com/isbn/9780340951477-us.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 3,
@@ -28,7 +28,7 @@
         "inventory": 5,
         "isbn": 9788401474682,
         "cover": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1271241507l/3047956.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 4,

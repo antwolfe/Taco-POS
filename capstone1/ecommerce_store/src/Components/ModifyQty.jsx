@@ -2,25 +2,40 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import CartTotal from "./CartTotal";
 
-export default function ModifyQty({ onDelete, product, cartItems }) {
+export default function ModifyQty({
+  onDelete,
+  product,
+  cartItems,
+  items,
+  setItems,
+}) {
   const [qty, setQty] = useState(1);
-  console.log(product);
-  const maxQty = product.qty;
-  console.log(qty);
+  // console.log(product);
+  const maxQty = product.inventory;
+  let itemCurrQty = product.qty;
+  console.log(itemCurrQty);
 
   const increment = () => {
     if (qty < maxQty) {
-      setQty(qty + 1);
+      setQty((product.qty += 1));
+      items.map((item) => {
+        if (item.id) {
+          setItems([...items, qty]);
+        }
+      });
     } else {
-      console.log(maxQty);
-      console.log(qty);
-      // alert("Cannot buy more than we have!");
+      alert("OUT OF STOCK");
     }
   };
 
   const decrement = () => {
     if (qty > 0) {
-      setQty(qty - 1);
+      setQty((product.qty -= 1));
+      items.map((item) => {
+        if (item.id) {
+          setItems([...items, qty]);
+        }
+      });
     } else {
       onDelete(product);
     }
@@ -29,7 +44,13 @@ export default function ModifyQty({ onDelete, product, cartItems }) {
   return (
     <div>
       <div className="counter">
-        <Button onClick={increment}>+</Button>
+        <Button
+          onClick={() => {
+            increment();
+          }}
+        >
+          +
+        </Button>
         <input
           className="qty-num"
           type="number"

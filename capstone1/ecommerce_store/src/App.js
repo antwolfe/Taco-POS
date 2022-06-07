@@ -56,6 +56,8 @@ export default function App() {
                 cartItems={cartItems}
                 onDelete={deleteFromCart}
                 setCartItems={setCartItems}
+                items={items}
+                setItems={setItems}
               />
             }
           />

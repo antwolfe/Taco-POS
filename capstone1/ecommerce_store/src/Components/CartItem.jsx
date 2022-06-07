@@ -5,7 +5,7 @@ import CloseButton from "react-bootstrap/esm/CloseButton";
 import ModifyQty from "./ModifyQty";
 
 export default function CartItem(props) {
-  const { product, onDelete, cartItems, itemQty, setItemQty } = props;
+  const { product, onDelete, cartItems, items, setItems, setItemQty } = props;
 
   return (
     <div>
@@ -26,6 +26,9 @@ export default function CartItem(props) {
               onDelete={onDelete}
               product={product}
               cartItems={cartItems}
+              setItemQty={setItemQty}
+              items={items}
+              setItems={setItems}
             />
           </div>
         </div>
