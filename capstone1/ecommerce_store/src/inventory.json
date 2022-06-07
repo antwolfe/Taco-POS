@@ -38,7 +38,7 @@
         "inventory": 50,
         "isbn": 9780340951392,
         "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg",
-        "qty": 10
+        "qty": 1
     },
   {
         "id": 5,
@@ -49,7 +49,7 @@
         "inventory": 10,
         "isbn": 9780450054792,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/41k+wcsxTpL._SY344_BO1,204,203,200_.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 6,
@@ -59,7 +59,7 @@
         "inventory": 20, 
         "isbn": 9780340951446,
         "cover":"https://pictures.abebooks.com/isbn/9780340951446-us.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 7,
@@ -80,7 +80,7 @@
         "inventory": 4, 
         "isbn": 9780340952689,
         "cover":"https://pictures.abebooks.com/isbn/9780340952689-us.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 9,
@@ -90,7 +90,7 @@
         "inventory": 3, 
         "isbn": 9780340952696,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51timyd52dL._SX310_BO1,204,203,200_.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 10,
@@ -101,7 +101,7 @@
         "inventory": 1, 
         "isbn": 9783548263311,
         "cover":"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1450641319l/28253442._SY475_.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 11,
@@ -111,7 +111,7 @@
         "inventory": 11, 
         "isbn": 9780340952702,
         "cover":"https://pictures.abebooks.com/isbn/9780340952702-us.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 12,
@@ -122,7 +122,7 @@
         "inventory": 1, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/71pOBmjdS7L.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 13,
@@ -133,7 +133,7 @@
         "inventory": 7, 
         "isbn": 9780452284692,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/613u6Opw5KL.jpg",
-        "qty": 6
+        "qty": 1
     },
     {
         "id": 14,
@@ -144,7 +144,7 @@
         "inventory": 5, 
         "isbn":  9780340952283,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51sz9+P3VtL._SX310_BO1,204,203,200_.jpg",
-        "qty": 6
+        "qty": 1
     },
     {
         "id": 15,
@@ -155,7 +155,7 @@
         "inventory": 10, 
         "isbn": 9780340952603,
         "cover":"https://pictures.abebooks.com/isbn/9780340952603-us.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 16,
@@ -165,7 +165,7 @@
         "inventory": 20, 
         "isbn": 9780340951408,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51Y1W92TzsL._SX310_BO1,204,203,200_.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 17,
@@ -175,7 +175,7 @@
         "inventory": 20, 
         "isbn": 9780340951460,
         "cover":"https://pictures.abebooks.com/isbn/9780340951460-us.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 18,
@@ -197,7 +197,7 @@
         "inventory": 4, 
         "isbn": 9780340952269,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41kKuGgQjPL._SX310_BO1,204,203,200_.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 20,
@@ -207,7 +207,7 @@
         "inventory": 1, 
         "isbn": 22,
         "cover":"https://thebookloversboudoir.files.wordpress.com/2012/11/cycle-of-the-werewolf.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 21,
@@ -218,7 +218,7 @@
         "inventory": 8, 
         "isbn": 9780340952627,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51QAK3cWCZL._SX309_BO1,204,203,200_.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 22,
@@ -228,7 +228,7 @@
         "inventory": 665, 
         "isbn": 9780340951453,
         "cover":"https://pictures.abebooks.com/isbn/9780340951453-us.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 23,
@@ -238,7 +238,7 @@
         "inventory": 1, 
         "isbn": 9780340952726,
         "cover":"https://pictures.abebooks.com/isbn/9780340952726-us.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 24,
@@ -249,7 +249,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/51Ij7gHT5zL._SL500_.jpg",
-        "qty": 2
+        "qty": 1
     },
     {
         "id": 25,
@@ -259,7 +259,7 @@
         "inventory": 15, 
         "isbn": 9780340951439,
         "cover":"https://pictures.abebooks.com/isbn/9780340951439-us.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 26,
@@ -269,7 +269,7 @@
         "inventory": 2, 
         "isbn": 9780340952733,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/516HvNqtUKL._SX309_BO1,204,203,200_.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 27,
@@ -279,7 +279,7 @@
         "inventory": 3, 
         "isbn": 9780340952610,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41SMeh-Kv9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
-        "qty": 6
+        "qty": 1
     },
     {
         "id": 28,
@@ -290,7 +290,7 @@
         "inventory": 6, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/41jMX-l2iyL.jpg",
-        "qty": 3
+        "qty": 1
         
     },
     {
@@ -301,7 +301,7 @@
         "inventory": 7, 
         "isbn":  9780340952764,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41FCxCtdP6L._SX309_BO1,204,203,200_.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 30,
@@ -312,7 +312,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51187FXCHEL.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 31,
@@ -322,7 +322,7 @@
         "inventory": 3, 
         "isbn": 9780340952771,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/410nJwYqOgL._SX310_BO1,204,203,200_.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 32,
@@ -332,7 +332,7 @@
         "inventory": 2, 
         "isbn": 9780340952634,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41wmJNTADEL._SX310_BO1,204,203,200_.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 33,
@@ -343,7 +343,7 @@
         "inventory": 2, 
         "isbn": 9780340952788,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51-Uzp2m6GL._SX309_BO1,204,203,200_.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 34,
@@ -353,7 +353,7 @@
         "inventory": 2, 
         "isbn": 9780340952795,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51ATC6XICcL._SX309_BO1,204,203,200_.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 35,
@@ -363,7 +363,7 @@
         "inventory": 1, 
         "isbn": 9780340952641,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/614jtna0t+L.jpg",
-        "qty": 10
+        "qty":  1
     },
     {
         "id": 36,
@@ -373,7 +373,7 @@
         "inventory": 5, 
         "isbn": 9783453434042,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51PnsqgeuJL.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 37,
@@ -384,7 +384,7 @@
         "inventory": 0, 
         "isbn":  9780340952276,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UEAfye0xL._SX310_BO1,204,203,200_.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 38,
@@ -394,7 +394,7 @@
         "inventory": 5, 
         "isbn": 22,
         "cover":"https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/5750/9780575084346.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 39,
@@ -405,7 +405,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"http://www.studioremarkable.com/wp-content/uploads/2016/10/Dark-Tower-4.jpg",
-        "qty": 6
+        "qty": 1
     },
     {
         "id": 40,
@@ -415,7 +415,7 @@
         "inventory": 3, 
         "isbn": 9780340951422,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51eJNj2kXBL._SX310_BO1,204,203,200_.jpg",
-        "qty": 4
+        "qty": 1
     },
     {
         "id": 41,
@@ -425,7 +425,7 @@
         "inventory": 2, 
         "isbn": 9780340952382,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UaFSa0nhL._SX310_BO1,204,203,200_.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 42,
@@ -436,7 +436,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/511J1uX5AvL.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 43,
@@ -447,7 +447,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/81IYpJlZ4AL.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 44,
@@ -456,7 +456,8 @@
         "price": 12.00,
         "inventory": 5, 
         "isbn": 9780340952405,
-        "cover":"https://images-na.ssl-images-amazon.com/images/I/5197+4absCL._SY344_BO1,204,203,200_.jpg"
+        "cover":"https://images-na.ssl-images-amazon.com/images/I/5197+4absCL._SY344_BO1,204,203,200_.jpg",
+        "qty": 1
     },
     {
         "id": 45,
@@ -466,7 +467,7 @@
         "inventory": 0, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51D72AABDjL._SX342_SY445_QL70_ML2_.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 46,
@@ -476,7 +477,7 @@
         "inventory": 0, 
         "isbn": 9780340952665,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/5144ifNu7sL._SX310_BO1,204,203,200_.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 47,
@@ -487,7 +488,7 @@
         "inventory": 2, 
         "isbn": 9780340952597,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51w2gEd0C7L._SX310_BO1,204,203,200_.jpg",
-        "qty": 4
+        "qty": 1
     },
     {
         "id": 48,
@@ -498,7 +499,7 @@
         "inventory": 5, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/51z-cqBELZL.jpg",
-        "qty": 4
+        "qty": 1
     },
     {
         "id": 49,
@@ -509,7 +510,7 @@
         "inventory": 2, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/51kaPYB0jcL.jpg",
-        "qty": 4
+        "qty": 1
     },
     {
         "id": 50,
@@ -519,7 +520,8 @@
         "price": 13.00,
         "inventory": 3, 
         "isbn": 22,
-        "cover":"https://images-na.ssl-images-amazon.com/images/I/81qsxzC-fNL.jpg"
+        "cover":"https://images-na.ssl-images-amazon.com/images/I/81qsxzC-fNL.jpg",
+        "qty": 1
     },
     {
         "id": 51,
@@ -529,7 +531,7 @@
         "inventory": 3, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/81ACWnoN4gL.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 52,
@@ -539,7 +541,7 @@
         "inventory": 5, 
         "isbn": 9780340921531,
         "cover":"https://pictures.abebooks.com/isbn/9780340921531-us.jpg",
-        "qty": 10
+        "qty":  1
     },
     {
         "id": 53,
@@ -549,7 +551,7 @@
         "inventory": 0, 
         "isbn": 9780340898956,
         "cover":"https://pictures.abebooks.com/isbn/9780340898956-us.jpg",
-        "qty": 10
+        "qty":  1
     },
     {
         "id": 54,
@@ -560,7 +562,7 @@
         "inventory": 0, 
         "isbn": 9780340952245,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/517EotEtRsL._SX310_BO1,204,203,200_.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 55,
@@ -570,7 +572,7 @@
         "inventory": 0, 
         "isbn": 9780340978030,
         "cover":"https://pictures.abebooks.com/isbn/9780340978030-us.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 56,
@@ -581,7 +583,7 @@
         "inventory": 0, 
         "isbn": 22,
         "cover":"https://images-na.ssl-images-amazon.com/images/I/71m1G5vnbNL.jpg",
-        "qty": 8
+        "qty": 1
     },
     {
         "id": 57,
@@ -591,7 +593,7 @@
         "inventory": 4, 
         "isbn": 22,
         "cover":"https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511289992i/6320534._UY2845_SS2845_.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 58,
@@ -602,7 +604,7 @@
         "inventory": 1, 
         "isbn": 22,
         "cover":"https://m.media-amazon.com/images/I/61EgP0ppMyL.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 59,
@@ -612,7 +614,7 @@
         "inventory": 3, 
         "isbn": 22,
         "cover":"https://upload.wikimedia.org/wikipedia/en/1/14/11-22-63.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 60,
@@ -622,7 +624,8 @@
         "price": 14.25,
         "inventory": 1,
         "isbn": 22,
-        "cover": "https://i.ebayimg.com/images/g/9k4AAOSw9LBf~tHv/s-l500.jpg"
+        "cover": "https://i.ebayimg.com/images/g/9k4AAOSw9LBf~tHv/s-l500.jpg",
+        "qty": 1
     },
     {
         "id": 61,
@@ -632,7 +635,7 @@
         "inventory": 5,
         "isbn": 22,
         "cover": "http://prodimage.images-bn.com/pimages/9781781167694_p0_v4_s1200x630.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 62,
@@ -642,7 +645,7 @@
         "inventory": 5,
         "isbn": 22,
         "cover": "https://target.scene7.com/is/image/Target/GUEST_fdbf49dd-032f-46fb-ae6e-c4aa3bd7c393?wid=488&hei=488&fmt=pjpeg",
-        "qty": 6
+        "qty": 1
     },
     {
         "id": 63,
@@ -653,7 +656,7 @@
         "inventory": 1,
         "isbn": 22,
         "cover": "https://upload.wikimedia.org/wikipedia/en/0/0d/Mrmercedes.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 64,
@@ -662,7 +665,8 @@
         "price": 14.25,
         "inventory": 1,
         "isbn": 22,
-        "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Revival_novel_cover.jpg/220px-Revival_novel_cover.jpg"
+        "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/7/72/Revival_novel_cover.jpg/220px-Revival_novel_cover.jpg",
+        "qty": 1
     },
     {
         "id": 65,
@@ -673,7 +677,7 @@
         "inventory": 7,
         "isbn": 22,
         "cover": "https://m.media-amazon.com/images/I/61AVVMPqnJL.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 66,
@@ -684,7 +688,7 @@
         "inventory": 7,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/71FRevXbbKL.jpg",
-        "qty": 10
+        "qty": 1
     },
     {
         "id": 67,
@@ -695,7 +699,7 @@
         "inventory": 7,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/61zR2nCsE7L.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         "id": 68,
@@ -706,7 +710,7 @@
         "inventory": 2,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/81ymFmpaKQL.jpg",
-        "qty": 10
+        "qty": 1
         
     },
     {
@@ -718,7 +722,7 @@
         "inventory": 7,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/71F+N8EjMHL.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 70,
@@ -728,7 +732,7 @@
         "inventory": 7,
         "isbn": 22,
         "cover": "https://m.media-amazon.com/images/I/51JALP1pBsL.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 71,
@@ -738,7 +742,7 @@
         "inventory": 30,
         "isbn": 22,
         "cover": "https://upload.wikimedia.org/wikipedia/en/e/e4/The_Outsider_by_Stephen_King.jpg",
-        "qty": 3
+        "qty": 1
     },
     {
         "id": 72,
@@ -759,7 +763,7 @@
         "inventory": 5,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/91CD3NzGaNL.jpg",
-        "qty": 5
+        "qty": 1
     },
     {
         "id": 74,
@@ -769,7 +773,7 @@
         "inventory": 8,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/71KR5vWHhzL.jpg",
-        "qty": 7
+        "qty": 1
     },
     {
         
@@ -781,6 +785,6 @@
         "inventory": 9,
         "isbn": 22,
         "cover": "https://images-na.ssl-images-amazon.com/images/I/81gEsoy64ML.jpg",
-        "qty": 10
+        "qty": 1
     }
 ]
