@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
 import CartItem from "../Components/CartItem";

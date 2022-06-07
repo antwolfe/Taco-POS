@@ -2,7 +2,6 @@ import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
-  const navigate = useNavigate();
   const checkoutMessage = (e) => {
     alert("Your Order Has Been Submitted");
   };

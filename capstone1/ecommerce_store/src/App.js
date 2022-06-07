@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Views/NavBar.jsx";
 import inventoryData from "./inventory.json";
@@ -9,7 +9,6 @@ import Cart from "./Views/Cart";
 import Login from "./Views/Login";
 import InventoryChart from "./Views/InventoryChart";
 import Checkout from "./Views/Checkout";
-import Order from "./Components/Order";
 
 export default function App() {
   const products = inventoryData;
@@ -55,8 +54,6 @@ export default function App() {
             }
           />
           <Route path="/checkout" element={<Checkout />} />
-
-          <Route path="/order" element={<Order />} />
 
           <Route
             path="/login"

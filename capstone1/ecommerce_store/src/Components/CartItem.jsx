@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import CloseButton from "react-bootstrap/esm/CloseButton";
 
 import ModifyQty from "./ModifyQty";
