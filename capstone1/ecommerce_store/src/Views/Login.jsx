@@ -17,7 +17,7 @@ export default function Login({ setIsLoggedIn, isLoggedIn }) {
     const userPass = document.forms[0][1].value;
 
     const loginUname = "admin";
-    const loginPass = "pass";
+    const loginPass = "password";
 
     if (userPass !== loginPass || userUname !== loginUname) {
       alert("Wrong Username or Password. Please try again.");
