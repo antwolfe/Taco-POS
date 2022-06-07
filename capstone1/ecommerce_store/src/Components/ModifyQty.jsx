@@ -2,17 +2,10 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import CartTotal from "./CartTotal";
 
-export default function ModifyQty({
-  onDelete,
-  product,
-  cartItems,
-  items,
-  setItems,
-}) {
+export default function ModifyQty({ onDelete, product, items, setItems }) {
   const [qty, setQty] = useState(1);
 
   const maxQty = product.inventory;
-  let itemCurrQty = product.qty;
 
   const increment = () => {
     if (qty < maxQty) {

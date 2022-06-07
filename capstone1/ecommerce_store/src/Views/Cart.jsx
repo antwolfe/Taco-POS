@@ -8,7 +8,7 @@ export default function Cart(props) {
   const navigate = useNavigate();
 
   const { cartItems, onDelete, setItems, items } = props;
-  const [itemQty, setItemQty] = useState(0);
+
   const handleCheckout = () => {
     navigate("/checkout", { replace: true });
   };
@@ -24,7 +24,6 @@ export default function Cart(props) {
                 product={item}
                 onDelete={onDelete}
                 cartItems={cartItems}
-                setItemQty={setItemQty}
                 items={items}
                 setItems={setItems}
               />
@@ -33,7 +32,7 @@ export default function Cart(props) {
         })}
         <div className="modify-qty"></div>
         <div className="cart-total text-center">
-          <CartTotal cartItems={cartItems} itemQty={itemQty} />
+          <CartTotal cartItems={cartItems} />
         </div>
         <div className="d-grid gap-2 login-btn">
           <Button

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function CartTotal(props) {
-  const { cartItems, itemQty } = props;
+  const { cartItems } = props;
 
   const itemTotal = cartItems.map((item) => {
     if (item.id) {
@@ -17,5 +17,5 @@ export default function CartTotal(props) {
     return total;
   }
 
-  return <div>$ {realTotal(itemTotal)}</div>;
+  return <div>$ {realTotal(itemTotal).toFixed(2)}</div>;
 }
