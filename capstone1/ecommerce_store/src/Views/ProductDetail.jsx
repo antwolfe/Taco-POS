@@ -14,8 +14,11 @@ export default function ProductDetail(props) {
         <img className="book-cover" src={book.cover} alt="book cover" />
       </div>
       <div className="detail-content">
-        <p>{book.price}</p>
-        <p>Book Description</p>
+        <p className="price">{book.price}</p>
+        <p className="details">Book Details</p>
+        <p>Authored in: {book.year}</p>
+        <p>ISBN: {book.isbn}</p>
+        <p>{book.tags && `Common tags: ${book.tags}`}</p>
         <Button variant="primary" onClick={() => onAdd(book)}>
           ADD TO CART
         </Button>

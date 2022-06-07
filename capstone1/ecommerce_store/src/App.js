@@ -2,7 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Views/NavBar.jsx";
-import inventoryData from "./inventory2.json";
+import inventoryData from "./inventory.json";
 import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
 import Cart from "./Views/Cart";

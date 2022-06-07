@@ -95,6 +95,7 @@ h1 {
   height: 65px;
   padding: 2px 20px;
   align-items: center;
+  text-align: center;
  
 }
 
@@ -114,8 +115,6 @@ h1 {
   justify-content:space-around;
   padding: 5px;
   margin: 10px 5px;
-
-  
 }
 
 .book-cover {
@@ -288,11 +287,10 @@ h1 {
 
   .homebar {
     justify-content: space-evenly;
-    
   }
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 1250px) {
   .all-products {
       grid-template-columns: repeat(5, 1fr);
   }
