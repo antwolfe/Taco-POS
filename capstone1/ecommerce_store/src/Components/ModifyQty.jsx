@@ -6,6 +6,7 @@ export default function ModifyQty({ onDelete, product, cartItems }) {
   const [qty, setQty] = useState(1);
   console.log(product);
   const maxQty = product.qty;
+  console.log(qty);
 
   const increment = () => {
     if (qty < maxQty) {
