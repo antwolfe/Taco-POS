@@ -37,6 +37,7 @@
         "cover": "https://pictures.abebooks.com/isbn/9780340951392-us.jpg"
     },
     {
+        "id": 6,
         "title": "Night Shift",
         "year": 1978,
         "tags": ["Collection"],
@@ -46,6 +47,7 @@
         "cover":"URL"
     },
     {
+        "id": 6,
         "title": "The Stand",
         "year": 1978,
         "price": 10.99,
@@ -54,6 +56,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951446-us.jpg"
     },
     {
+        "id": 6,
         "title": "The Long Walk",
         "year": 1978,
         "tags": ["as Richard Bachman"],
@@ -63,6 +66,7 @@
         "cover":"URL"
     },
     {
+        "id": 6,
         "title": "The Dead Zone",
         "year": 1979,
         "price": 10.99,
@@ -96,6 +100,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952702-us.jpg"
     },
     {
+        "id": 6,
         "title": "Danse Macabre",
         "year": 1981,
         "tags": ["Non-Fiction"],
@@ -105,6 +110,7 @@
         "cover":"URL"
     },
     {
+        "id": 6,
         "title": "The Dark Tower I: The Gunslinger",
         "year": 1982,
         "tags": ["The Dark Tower"],
@@ -148,6 +154,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951460-us.jpg"
     },
     {
+        "id": 6,
         "title": "The Talisman",
         "year": 1984,
         "tags": ["with Peter Straub"],
@@ -157,6 +164,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51-KGs2ShYL._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 6,
         "title": "Thinner (Bachman)",
         "year": 1984,
         "tags": ["as Richard Bachman"],
@@ -183,6 +191,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51QAK3cWCZL._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 6,
         "title": "IT",
         "year": 1986,
         "price": 18.50,
@@ -191,6 +200,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340951453-us.jpg"
     },
     {
+        "id": 6,
         "title": "The Eyes of the Dragon",
         "year": 1987,
         "price": 1.00,
@@ -199,6 +209,7 @@
         "cover":"https://pictures.abebooks.com/isbn/9780340952726-us.jpg"
     },
     {
+        "id": 6,
         "title": "The Dark Tower II: The Drawing of the Three",
         "year": 1987,
         "tags": ["The Dark Tower"],
@@ -232,6 +243,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41SMeh-Kv9L._SY291_BO1,204,203,200_QL40_FMwebp_.jpg"
     },
     {
+        "id": 6,
         "title": "Four Past Midnight",
         "year": 1990,
         "tags": ["Collection"],
@@ -242,6 +254,7 @@
         
     },
     {
+        "id": 6,
         "title": "Needful Things",
         "year": 1991,
         "price": 8.99,
@@ -250,6 +263,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41FCxCtdP6L._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 6,
         "title": "The Dark Tower III: The Waste Lands",
         "year": 1991,
         "tags": ["The Dark Tower"],
@@ -259,6 +273,7 @@
         "cover":"URL"
     },
     {
+        "id": 6,
         "title": "Gerald's Game",
         "year": 1992,
         "price": 8.99,
@@ -267,6 +282,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/410nJwYqOgL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 6,
         "title": "Dolores Claiborne",
         "year": 1993,
         "price": 5.50,
@@ -275,6 +291,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/41wmJNTADEL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Nightmares and Dreamscapes",
         "year": 1993,
         "tags": ["Collection"],
@@ -284,6 +301,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51-Uzp2m6GL._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Insomnia",
         "year": 1994,
         "price": 7.50,
@@ -292,6 +310,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51ATC6XICcL._SX309_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Rose Madder",
         "year": 1995,
         "price": 5.50,
@@ -300,6 +319,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/614jtna0t+L.jpg"
     },
     {
+        "id": 7,
         "title": "Desperation",
         "year": 1996,
         "price": 12.00,
@@ -308,6 +328,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51PnsqgeuJL.jpg"
     },
     {
+        "id": 7,
         "title": "The Regulators",
         "year": 1996,
         "tags": ["as Richard Bachman"],
@@ -317,6 +338,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UEAfye0xL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "The Green Mile",
         "year": 1996,
         "price": 8.99,
@@ -325,6 +347,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "The Dark Tower IV: Wizard and Glass",
         "year": 1997,
         "tags": ["The Dark Tower"],
@@ -334,6 +357,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "Bag of Bones",
         "year": 1998,
         "price": 8.99,
@@ -342,6 +366,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51eJNj2kXBL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "The Girl Who Loved Tom Gordon",
         "year": 1999,
         "price": 5.50,
@@ -350,6 +375,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/51UaFSa0nhL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Hearts in Atlantis",
         "year": 1999,
         "tags": ["Collection"],
@@ -359,6 +385,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "On Writing",
         "year": 2000,
         "tags": ["Non-Fiction"],
@@ -368,6 +395,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "Dreamcatcher",
         "year": 2001,
         "price": 12.00,
@@ -376,6 +404,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/5197+4absCL._SY344_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Black House",
         "year": 2001,
         "price": 2.00,
@@ -384,6 +413,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "From A Buick 8",
         "year": 2002,
         "price": 1.50,
@@ -392,6 +422,7 @@
         "cover":"https://images-na.ssl-images-amazon.com/images/I/5144ifNu7sL._SX310_BO1,204,203,200_.jpg"
     },
     {
+        "id": 7,
         "title": "Everything's Eventual: 14 Dark Tales",
         "year": 2002,
         "tags": ["Collection"],
@@ -410,6 +441,7 @@
         "cover":"URL"
     },
     {
+        "id": 7,
         "title": "The Dark Tower VI: Song of Susannah",
         "year": 2004,
         "tags": ["The Dark Tower"],
