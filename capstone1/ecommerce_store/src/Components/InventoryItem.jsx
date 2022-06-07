@@ -20,18 +20,18 @@ export default function InventoryItem({
             <h5 className="book-id">ID#: {product.id}</h5>
             <h5 className="book-year">In Stock? {product.inventory}</h5>
             <h5 className="book-price">Selling Price: ${product.price}</h5>
-            <a href="/">
-              <div className="counter">
-                <Button
-                  variant="danger"
-                  onClick={(e) => handleDelete(e, product)}
-                >
-                  DELETE ITEM
-                </Button>
+            <h5 className="book-price">Tags: {product.tags}</h5>
 
-                <br />
-              </div>
-            </a>
+            <div className="counter">
+              <Button
+                variant="danger"
+                onClick={(e) => handleDelete(e, product)}
+              >
+                DELETE ITEM
+              </Button>
+
+              <br />
+            </div>
           </span>
         </div>
       </div>
