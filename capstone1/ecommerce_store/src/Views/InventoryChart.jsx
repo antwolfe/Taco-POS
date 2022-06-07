@@ -11,7 +11,7 @@ export default function InventoryChart({ items, setItems }) {
   };
 
   return (
-    <div>
+    <div className="inventory-page">
       <div>
         {items.map((item) => {
           return (
@@ -23,17 +23,17 @@ export default function InventoryChart({ items, setItems }) {
             </div>
           );
         })}
+        <div className="d-grid gap-2">
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={() => setShowAdd(!showAdd)}
+          >
+            Click Here To Add an Item
+          </Button>
+        </div>
+        {showAdd && <AddInventory setItems={setItems} items={items} />}
       </div>
-      <div className="d-grid gap-2">
-        <Button
-          variant="primary"
-          size="lg"
-          onClick={() => setShowAdd(!showAdd)}
-        >
-          Click Here To Add an Item
-        </Button>
-      </div>
-      {showAdd && <AddInventory setItems={setItems} items={items} />}
     </div>
   );
 }

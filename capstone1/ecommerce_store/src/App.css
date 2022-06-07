@@ -220,15 +220,24 @@ h1 {
   margin: auto;
 }
 
-@media screen and (min-width: 600px ) {
-  .all-products {
+.card-item {
+  display: flex;
+  border: 1px black solid;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin: 10px 10px;
+}
 
+@media screen and (min-width: 600px ) {
+
+  .all-products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* grid-template-rows: repeat(5, 1fr); */
     grid-column-gap: 15px;
     grid-row-gap: 15px;
   }
+
   .all-products .searchbar {
     width: 500px;
   }
@@ -245,4 +254,5 @@ h1 {
   .all-products .searchbar {
       width: 500px;
   }
+  
 }

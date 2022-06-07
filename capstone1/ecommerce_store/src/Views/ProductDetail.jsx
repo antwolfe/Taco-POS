@@ -15,11 +15,10 @@ export default function ProductDetail(props) {
       </div>
       <div className="detail-content">
         <p className="price">${book.price}</p>
-        <p className="details">Book Details</p>
         <p>Published in: {book.year}</p>
         <p>{book.isbn !== 22 && `ISBN: ${book.isbn}`}</p>
         {/*All books without found isbn have 22 in data*/}
-        <p>{book.tags && `Common tags: ${book.tags}`}</p>
+        <p>{book.tags && `Common tags: [${book.tags}]`}</p>
         <p>Number in Stock: {book.inventory}</p>
         <Button
           variant="primary"
