@@ -3,7 +3,7 @@
 - Youtube :
   Cart: https://www.youtube.com/watch?v=AmIdY1Eb8tY&ab_channel=CodingwithBasir
 
-  The idea to utilize functions in App.js, using filter for delete func: https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1429s&ab_channel=TraversyMedia
+  The idea to utilize functions in App.js, using filter for delete func, helped add inventory functions: https://www.youtube.com/watch?v=w7ejDZ8SWv8&t=1429s&ab_channel=TraversyMedia
   Search:
 
 - StackOverflow :
@@ -11,10 +11,9 @@
 
   - Router Hooks: useNavigate and useLocation
   - Pushing state into array
+    -CSS Full Background in React
 
   ***
-
-  -CSS Full Background in React
 
 - Understanding Router Hooks :
 
@@ -30,5 +29,5 @@
 
 - Updating State in an Array (Search) : https://bobbyhadz.com/blog/react-update-object-in-array
 
-- Most of Checkout Form and Validation Pop-Up:
+- Most of Checkout Form and Form Validation Pop-Up:
   https://codepen.io/husain-bhagat/pen/zYoqGqx

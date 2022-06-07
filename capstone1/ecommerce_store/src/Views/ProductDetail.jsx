@@ -16,7 +16,7 @@ export default function ProductDetail(props) {
       <div className="detail-content">
         <p className="price">{book.price}</p>
         <p className="details">Book Details</p>
-        <p>Authored in: {book.year}</p>
+        <p>Published in: {book.year}</p>
         <p>{book.isbn !== 22 && `ISBN: ${book.isbn}`}</p>
         {/*All books without found isbn's have 22 in data*/}
         <p>{book.tags && `Common tags: ${book.tags}`}</p>
