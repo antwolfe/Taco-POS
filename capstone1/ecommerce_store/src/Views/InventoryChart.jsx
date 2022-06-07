@@ -1,11 +1,11 @@
 import InventoryItem from "../Components/InventoryItem";
 import Button from "react-bootstrap/esm/Button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AddInventory from "./AddInventory";
 
 export default function InventoryChart({ items, setItems }) {
-  const allProductsId = items.map((item) => {
-    return item.id;
-  });
+  const [showAdd, setShowAdd] = useState(false);
 
   console.log(items);
 
@@ -13,8 +13,9 @@ export default function InventoryChart({ items, setItems }) {
     setItems(items.filter((item) => item.id !== product.id));
   };
 
-  const addToInventory = (product) => {
-    setItems([...items, product]);
+  const addToInventory = () => {
+    setShowAdd(true);
+    // setItems([...items, product]);
   };
 
   return (
@@ -36,6 +37,7 @@ export default function InventoryChart({ items, setItems }) {
           Click Here To Add an Item
         </Button>
       </div>
+      {showAdd && <AddInventory setItems={setItems} items={items} />}
     </div>
   );
 }
