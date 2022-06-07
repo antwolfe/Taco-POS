@@ -1,39 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import CartTotal from "./CartTotal";
 
 export default function ModifyQty({ onDelete, product, cartItems }) {
-  const currentItemsQty = cartItems.map((item) => {
-    console.log(item.qty);
-    return item.qty;
-  });
+  const currQty = product.qty;
 
-  const [itemQty, setItemQty] = useState(currentItemsQty);
+  console.log(currQty);
 
-  console.log(itemQty);
+  console.log(cartItems);
+  // console.log(itemQty);
 
   const maxQty = product.inventory;
+
   const overMaxQty = "SOLD OUT!";
 
   const increment = () => {
-    if (itemQty < maxQty) {
-      setItemQty(itemQty + 1);
-    } else {
-      alert(overMaxQty);
-    }
+    cartItems.map((product) => {
+      if (product.qty <= maxQty) {
+        product.qty += 1;
+        return currQty;
+        window.location.reload(false);
+      } else {
+        console.log("too many!!");
+        // alert(overMaxQty);
+      }
+    });
   };
 
-  const decrement = () => {
-    if (itemQty > 0) {
-      setItemQty(itemQty - 1);
-    } else {
-      onDelete(product);
-    }
-  };
+  const decrement = () => {};
+  //   if (itemQty > 0) {
+  //     setItemQty(itemQty - 1);
+  //   } else {
+  //     onDelete(product);
+  //   }
+  // };
 
-  const eachItemQty = () => {
-    itemQty.map((item) => {});
-  };
+  // const eachItemQty = () => {
+  //   itemQty.map((item) => {});
+  // };
 
   return (
     <div>
@@ -42,15 +46,15 @@ export default function ModifyQty({ onDelete, product, cartItems }) {
         <input
           className="qty-num"
           type="number"
-          value={itemQty}
+          value={currQty}
           onChange={() => {
-            return itemQty;
+            return currQty;
           }}
           style={{ width: "35px" }}
         />
         <Button onClick={increment}>+</Button>
       </div>
-      <div>{(product.price * itemQty).toFixed(2)}</div>
+      {/* <div>{(product.price * itemQty).toFixed(2)}</div> */}
       <div></div>
     </div>
   );

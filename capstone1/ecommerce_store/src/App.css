@@ -18,9 +18,10 @@
 
 html, body {
  background-image: var(--background);
- background-repeat: no-repeat;
- background-size: cover;
+ /* background-repeat: no-repeat; */
+ /* background-size: auto; */
  color: var(--highlight-color);
+ height: 100vh;
 }
 
 /* fix later */
@@ -93,7 +94,6 @@ h1 {
   height: 65px;
   padding: 2px 20px;
   align-items: center;
-
  
 }
 
@@ -101,10 +101,10 @@ h1 {
   color: var(--highlight-color);
 }
 
-.all-products input {
+.searchbar {
   display: block;
-  text-align: center;
-margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .preview-item {
@@ -272,11 +272,32 @@ margin: auto;
 
 
 
-
-
-
 @media screen and (min-width: 600px ) {
+  .all-products{
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(5, 1fr); */
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+  }
   .all-products input {
     width: 500px;
   }
+
+  .homebar {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 850px) {
+    .all-products {
+    
+      
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+      .all-products input {
+        width: 500px;
+      }
 }

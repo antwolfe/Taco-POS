@@ -5,7 +5,6 @@ import ProductPreview from "./ProductPreview";
 export default function ProductsPage({ products }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(products);
-  console.log(query);
 
   const findProduct = (e) => {
     setQuery(e.target.value);
@@ -25,18 +24,20 @@ export default function ProductsPage({ products }) {
   };
 
   return (
-    <div className="all-products">
-      <a name="top" />
+    <div>
       <input
+        className="searchbar"
         value={query}
         name="search"
         placeholder="Search..."
         onChange={(e) => findProduct(e)}
       />
-      {results.map((product) => {
-        return <ProductPreview key={product.id} product={product} />;
-      })}
 
+      <div className="all-products">
+        {results.map((product) => {
+          return <ProductPreview key={product.id} product={product} />;
+        })}
+      </div>
       <HomeBar />
     </div>
   );
