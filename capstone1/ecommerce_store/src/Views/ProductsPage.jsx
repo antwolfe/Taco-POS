@@ -7,8 +7,6 @@ export default function ProductsPage({ products }) {
   const [results, setResults] = useState(products);
 
   useEffect(() => {
-    // setQuery(e.target.value);
-
     const allProducts = [...products];
     const newItems = products.filter((item) => {
       if (query == "") {

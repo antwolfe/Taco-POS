@@ -25,13 +25,6 @@ export default function App() {
     setCartItems(cartItems.filter((item) => item.id !== product.id));
   };
 
-  const handleDuplicates = (product) => {
-    //if product.id === cartitems.map(item => item.id){
-    // increaseQty of product
-    if (cartItems.indexOf(product) !== -1) return;
-    setCartItems([...cartItems, product]);
-  };
-
   return (
     <div className="App">
       <Router>

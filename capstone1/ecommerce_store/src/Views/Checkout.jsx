@@ -15,7 +15,6 @@ export default function Checkout() {
             action=""
             onSubmit={(e) => {
               checkoutMessage(e);
-              // navigate("/order", { replace: true });
             }}
           >
             <h1 className="text-center">CheckOut</h1>

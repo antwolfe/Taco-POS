@@ -9,13 +9,6 @@ export default function Cart(props) {
 
   const { cartItems, onDelete, setItems, items } = props;
   const [itemQty, setItemQty] = useState(0);
-
-  // function getItemQty(itemQty) {
-  //   console.log(itemQty);
-  // }
-
-  // console.log(itemQty);
-
   const handleCheckout = () => {
     navigate("/checkout", { replace: true });
   };
