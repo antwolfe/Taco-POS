@@ -1,5 +1,4 @@
 import CloseButton from "react-bootstrap/esm/CloseButton";
-
 import ModifyQty from "./ModifyQty";
 
 export default function CartItem(props) {

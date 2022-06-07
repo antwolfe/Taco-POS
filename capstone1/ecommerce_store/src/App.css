@@ -14,8 +14,6 @@
 
 }
 
-
-
 html, body {
  background-image: var(--background);
  /* background-repeat: no-repeat; */
@@ -205,28 +203,22 @@ h1 {
   justify-content: center;
 }
 
-.checkout {
+.checkout-inputs {
   display: flex;
   padding: 50px;
-  justify-content: space-around;
+  column-count: auto;
+  justify-content: center;
+  column-gap: 50px;
 }
 
-.checkout input {
-
-
+.checkout input, .checkout select {
+  margin-bottom: 10px;
 }
 
-.checkout div {
-
+.checkout Button {
+  display: block;
+  margin: auto;
 }
-
-.leftside {
-}
-
-
-
-
-
 
 @media screen and (min-width: 600px ) {
   .all-products {

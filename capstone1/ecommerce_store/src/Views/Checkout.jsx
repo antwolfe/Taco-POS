@@ -17,26 +17,33 @@ export default function Checkout() {
             }}
           >
             <h1 className="text-center">CheckOut</h1>
-            <h2>Payment Information</h2>
+            <h2 className="text-center">Payment Information</h2>
 
-            <div className="leftside">
-              <p>Cardholder Name</p>
-              <input type="text" className="inputbox" name="name" required />
-              <p>Email</p>
-              <input type="text" className="inputbox" name="email" required />
-              <p> Address </p>
-              <input type="text" className="inputbox" name="address" required />
-              <p> City </p>
-              <input type="text" className="inputbox" name="city" required />
-              <p> State </p>
-              <input type="text" className="inputbox" name="state" required />
-              <p> Zip Code </p>
-              <input
-                type="number"
-                className="inputbox"
-                name="zip code"
-                required
-              />
+            <div className="checkout-inputs">
+              <div className="leftside">
+                <p>Cardholder Name</p>
+                <input type="text" className="inputbox" name="name" required />
+                <p>Email</p>
+                <input type="text" className="inputbox" name="email" required />
+                <p> Address </p>
+                <input
+                  type="text"
+                  className="inputbox"
+                  name="address"
+                  required
+                />
+                <p> City </p>
+                <input type="text" className="inputbox" name="city" required />
+                <p> State </p>
+                <input type="text" className="inputbox" name="state" required />
+                <p> Zip Code </p>
+                <input
+                  type="number"
+                  className="inputbox"
+                  name="zip code"
+                  required
+                />
+              </div>
 
               <div className="rightside">
                 <p>Card Number</p>
@@ -78,7 +85,6 @@ export default function Checkout() {
                 </div>
               </div>
             </div>
-            <p></p>
             <Button type="submit" className="button">
               PURCHASE ORDER
             </Button>
