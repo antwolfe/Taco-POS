@@ -13,7 +13,9 @@ export default function InventoryChart({ items, setItems }) {
     setItems(items.filter((item) => item.id !== product.id));
   };
 
-  const addToInventory = (product) => {};
+  const addToInventory = (product) => {
+    setItems([...items, product]);
+  };
 
   return (
     <div>
