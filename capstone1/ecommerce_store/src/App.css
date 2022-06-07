@@ -45,49 +45,6 @@ h1 {
 }
 
 
-.hero {
-  border: 3px solid black;
-  height: 40vh;
-  margin-top: 10px;
-}
-
-.Hero {
-  background-image: url(
-./images/istockphoto-book.jpg
-  );
-  display: flex;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.middle-options {
-  padding: 2px 5px;
-  display: flex;
-  border: 1px black dotted;
-  margin: 5px 0px;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
-  
-}
-
-.middle-options a{
-  color: var(--highlight-color);
-  text-align: center;
-  padding: 2px;
-}
-
-.middle-options a:hover {
-  color:rgb(164, 143, 143);
-}
-
-.mobile-carousel {
-  height: 42vh;
-  border: 1px black dotted;
-  margin-bottom: 5px;
-}
 
 .homebar {
   display: flex;

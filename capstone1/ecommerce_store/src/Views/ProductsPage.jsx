@@ -21,28 +21,8 @@ export default function ProductsPage({ products }) {
         }
       }
     });
-
     setResults(newItems);
   }, [query]);
-
-  // const findProduct = (e) => {
-  //   setQuery(e.target.value);
-
-  //   const allProducts = [...products];
-  //   const newItems = products.filter((item) => {
-  //     if (query == "") {
-  //       return allProducts;
-  //     } else {
-  //       if (item.title.toLowerCase().includes(query.toLowerCase())) {
-  //         return item;
-  //       } else if (item.year.toString().includes(query)) {
-  //         return item;
-  //       }
-  //     }
-  //   });
-
-  //   setResults(newItems);
-  // };
 
   return (
     <div>
