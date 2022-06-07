@@ -5,6 +5,7 @@ export default function Checkout() {
   const checkoutMessage = (e) => {
     alert("Your Order Has Been Submitted");
   };
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -14,6 +15,7 @@ export default function Checkout() {
             action=""
             onSubmit={(e) => {
               checkoutMessage(e);
+              navigate("/", { replace: true });
             }}
           >
             <h1 className="text-center">CheckOut</h1>
