@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Checkout() {
   const navigate = useNavigate();
   const checkoutMessage = (e) => {
-    e.preventDefault();
-    alert("Your Order has been submitted");
+    alert("Your Order Has Been Submitted");
   };
 
   return (
@@ -15,7 +14,8 @@ export default function Checkout() {
           <form
             action=""
             onSubmit={(e) => {
-              navigate("/order", { replace: true });
+              checkoutMessage(e);
+              // navigate("/order", { replace: true });
             }}
           >
             <h1 className="text-center">CheckOut</h1>
@@ -82,7 +82,7 @@ export default function Checkout() {
             </div>
             <p></p>
             <Button type="submit" className="button">
-              Checkout Cart
+              PURCHASE ORDER
             </Button>
           </form>
         </div>

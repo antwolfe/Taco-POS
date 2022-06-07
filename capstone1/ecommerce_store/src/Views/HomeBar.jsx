@@ -8,12 +8,15 @@ export default function HomeBar() {
       <div className="homebar">
         <Link to="/">
           <FaHome alt="home icon" size="30px" />
+          <p> Home </p>
         </Link>
         <Link to="/products/">
           <FaBookOpen alt="search icon" size="30px" />
+          <p>Browse All Products</p>
         </Link>
         <Link to="/cart">
           <FaShoppingCart alt="cart icon" size="30px" />
+          <p> Cart </p>
         </Link>
       </div>
     </div>

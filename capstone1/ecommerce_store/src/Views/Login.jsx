@@ -1,27 +1,15 @@
-import React, { Children } from "react";
 import Button from "react-bootstrap/esm/Button";
-import { Route, useNavigate } from "react-router-dom";
-import InventoryChart from "./InventoryChart";
+import { useNavigate } from "react-router-dom";
 
-export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
+export default function Login({ setIsLoggedIn, isLoggedIn }) {
   let navigate = useNavigate();
 
-  console.log(isLoggedIn);
   const logIn = () => {
     setIsLoggedIn(true);
   };
 
   const logOut = () => {
     setIsLoggedIn(false);
-  };
-
-  const onLogIn = (e) => {
-    console.log("logging in");
-  };
-
-  const onLogOut = () => {
-    console.log("Logging Out");
-    logOut();
   };
 
   const loginValid = () => {
@@ -32,19 +20,18 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
     const loginPass = "pass";
 
     if (userPass !== loginPass || userUname !== loginUname) {
-      console.log("wrong info");
+      alert("Wrong Username or Password. Please try again.");
       return false;
     } else if (userPass == loginPass && userUname == loginUname) {
       logIn();
       navigate("/admin", { replace: true });
-      // return true;
     }
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
     if (!loginValid()) {
-      console.log("Incorrect Login Info");
+      logOut();
     }
   };
 
@@ -68,11 +55,11 @@ export default function Login({ setIsLoggedIn, isLoggedIn, children }) {
         </div>
         <div className="login-btn">
           {isLoggedIn ? (
-            <Button type="submit" variant="dark" size="lg" onClick={onLogOut}>
+            <Button type="submit" variant="dark" size="lg" onClick={logOut}>
               LOGOUT
             </Button>
           ) : (
-            <Button type="submit" variant="dark" size="lg" onClick={onLogIn}>
+            <Button type="submit" variant="dark" size="lg" onClick={logIn}>
               LOGIN
             </Button>
           )}

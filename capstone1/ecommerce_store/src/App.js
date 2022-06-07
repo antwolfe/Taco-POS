@@ -27,12 +27,10 @@ export default function App() {
   };
 
   const addToCart = (product) => {
-    console.log("Add", product.title);
     setCartItems([...cartItems, product]);
   };
 
   const deleteFromCart = (product) => {
-    console.log("Deleting", product.title);
     setCartItems(cartItems.filter((item) => item.id !== product.id));
   };
 

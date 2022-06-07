@@ -1,5 +1,5 @@
 import Button from "react-bootstrap/Button";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductPreview({ product }) {
   const navigate = useNavigate();
