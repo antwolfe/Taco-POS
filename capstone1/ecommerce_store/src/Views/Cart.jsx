@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import CartItem from "../Components/CartItem";
 import CartTotal from "../Components/CartTotal";
 
-export default function Basket(props) {
+export default function Cart(props) {
   const navigate = useNavigate();
 
   const { cartItems, onDelete } = props;

@@ -29,3 +29,6 @@
   - https://www.robinwieruch.de/react-router-private-routes/
 
 - Updating State in an Array (Search) : https://bobbyhadz.com/blog/react-update-object-in-array
+
+- Most of Checkout Form and Validation Pop-Up:
+  https://codepen.io/husain-bhagat/pen/zYoqGqx

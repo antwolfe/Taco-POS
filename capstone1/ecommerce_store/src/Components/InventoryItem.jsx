@@ -3,37 +3,14 @@ import Button from "react-bootstrap/esm/Button";
 
 export default function InventoryItem({
   product,
-  inventoryQty,
-  setInventoryQty,
+  deleteFromInventory,
   setItems,
 }) {
-  //   console.log(product.inventory);
-  const [productInventory, setProductInventory] = useState();
-  //inventoryQty[dataplace][bookID]
-
-  const showCurrQty = (product) => {
-    for (let i in inventoryQty) {
-      if (product.qty == inventoryQty[i + 1]) {
-        console.log(product);
-      }
-    }
-  };
-
-  const increase = (product, e) => {
+  const handleDelete = (e, product) => {
     e.preventDefault();
-    setItems(product.inventory + 1);
-
-    console.log("not enough product~");
+    deleteFromInventory(product);
   };
 
-  const decrease = () => {
-    if (inventoryQty > 0) {
-      setInventoryQty(inventoryQty - 1);
-    } else {
-      //   onDelete(product);
-      console.log("removing item...");
-    }
-  };
   return (
     <div>
       <div className="inventory-item">
@@ -44,17 +21,14 @@ export default function InventoryItem({
             <h5 className="book-price">${product.price}</h5>
             <a href="/">
               <div className="counter">
-                <Button>-</Button>
-                <input
-                  className="qty-num"
-                  type="number"
-                  // value={product.inventory}
-                  // onChange={() => {
-                  //   return product.inventory;
-                  // }}
-                  style={{ width: "35px" }}
-                />
-                <Button>+</Button>
+                <Button
+                  variant="danger"
+                  onClick={(e) => handleDelete(e, product)}
+                >
+                  DELETE ITEM
+                </Button>
+
+                <br />
               </div>
             </a>
           </span>

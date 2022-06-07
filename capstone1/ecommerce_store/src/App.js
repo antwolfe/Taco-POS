@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./Views/NavBar.jsx";
 import inventoryData from "./inventory2.json";
-import HomePage from "./Views/HomePage";
 import ProductsPage from "./Views/ProductsPage";
 import ProductDetail from "./Views/ProductDetail";
-import Basket from "./Views/Cart";
+import Cart from "./Views/Cart";
 import Login from "./Views/Login";
 import InventoryChart from "./Views/InventoryChart";
 import Checkout from "./Views/Checkout";
@@ -16,15 +15,7 @@ export default function App() {
   const products = inventoryData;
   const [items, setItems] = useState(products);
   const [cartItems, setCartItems] = useState([]);
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const logIn = () => {
-    setIsLoggedIn(true);
-  };
-
-  const logOut = () => {
-    setIsLoggedIn(false);
-  };
 
   const addToCart = (product) => {
     setCartItems([...cartItems, product]);
@@ -44,10 +35,14 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar products={products} />
+        <NavBar />
 
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={<ProductsPage products={products} setItems={setItems} />}
+          />
+
           <Route
             path="/products"
             element={<ProductsPage products={products} setItems={setItems} />}
@@ -56,7 +51,7 @@ export default function App() {
           <Route
             path="/cart"
             element={
-              <Basket
+              <Cart
                 products={products}
                 cartItems={cartItems}
                 onDelete={deleteFromCart}
@@ -74,7 +69,10 @@ export default function App() {
               <Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             }
           />
-          <Route path="/admin" element={<InventoryChart data={items} />} />
+          <Route
+            path="/admin"
+            element={<InventoryChart items={items} setItems={setItems} />}
+          />
         </Routes>
       </Router>
     </div>
