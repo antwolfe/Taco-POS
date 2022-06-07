@@ -20,7 +20,7 @@ html, body {
  /* background-size: auto; */
  color: var(--highlight-color);
  height: 100vh;
- margin: 0px 10px;
+ margin: 0px 10px
 }
 
 /* fix later */
@@ -233,8 +233,8 @@ h1 {
   .all-products {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-   column-gap: 15px;
-  row-gap: 15px;
+    column-gap: 15px;
+    row-gap: 15px;
   }
 
   .all-products .searchbar {
