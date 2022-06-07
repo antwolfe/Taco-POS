@@ -674,7 +674,7 @@
         "cover": "https://upload.wikimedia.org/wikipedia/en/e/e4/The_Outsider_by_Stephen_King.jpg"
     },
     {
-        "id": 71,
+        "id": 72,
         "title": "The Institute",
         "year": 2019,
         "price": 9.99,
@@ -683,7 +683,7 @@
         "cover": "https://images-na.ssl-images-amazon.com/images/I/71BIST0zIBL.jpg"
     },
     {
-        "id": 72,
+        "id": 73,
         "title": "If It Bleeds",
         "year": 2020,
         "tags": ["Collection"],
@@ -693,7 +693,7 @@
         "cover": "https://images-na.ssl-images-amazon.com/images/I/91CD3NzGaNL.jpg"
     },
     {
-        "id": 73,
+        "id": 74,
         "title": "Later",
         "year": 2021,
         "price": 10.99,
@@ -702,7 +702,7 @@
         "cover": "https://images-na.ssl-images-amazon.com/images/I/71KR5vWHhzL.jpg"
     },
     {
-        "id": 74,
+        "id": 75,
         "title": "Gwendy's Final Task",
         "year": 2022,
         "tags": ["Gwendy's Button Box Trilogy", "with Richard Chizmar"],
