@@ -4,8 +4,6 @@ import java.util.Scanner;
 
 public class Menu {
 
-
-
     public static void getMenu() {
 
         System.out.println(" ----MENU---- ");
@@ -15,13 +13,16 @@ public class Menu {
         System.out.println("3. Drinks");
         System.out.println("4. Combo");
         System.out.println("===============");
-
-
     }
 
     public static int getUserChoice() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Choice: ");
         return scanner.nextInt();
+    }
+
+    public static int takeOrder() {
+        getMenu();
+        return getUserChoice();
     }
 }

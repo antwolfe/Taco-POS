@@ -5,7 +5,7 @@ public class App
     public static void displayWelcome() {
         System.out.println();
         System.out.println("WELCOME TO TEKTACOS");
-        System.out.println("please choose a number below...");
+        System.out.println("please choose a number below");
         System.out.println();
     }
 
@@ -13,9 +13,11 @@ public class App
     {
         displayWelcome();
         Menu menu = new Menu();
-        menu.getMenu();
-        int choice = menu.getUserChoice();
+        int choice = menu.takeOrder();
         System.out.println(choice);
 
     }
+
+
+
 }
