@@ -13,9 +13,12 @@ public class App
 
     {
         displayWelcome();
-        Menu menu = new Menu();
-        int choice = menu.takeOrder();
-        System.out.println(choice);
+//        Menu menu = new Menu();
+//        int choice = menu.takeOrder();
+//        System.out.println(choice);
+        Entree taco = new Entree("basic");
+        taco.createTacoOrder(taco.tacoType);
+
 
     }
 
