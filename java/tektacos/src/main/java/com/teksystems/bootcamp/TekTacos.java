@@ -21,7 +21,8 @@ public class TekTacos implements takeOrder
         displayWelcome();
         takeOrder.getMenu();
         int userChoice = takeOrder.getUserChoice();
-        System.out.println(userChoice);
+        String newOrder = makeOrder.createTaco(userChoice);
+        System.out.println(newOrder);
 
 
 
