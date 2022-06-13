@@ -4,15 +4,14 @@ import java.util.Scanner;
 
 public class makeOrder {
 
+    Taco newTaco;
+//    Side newSide;
+//    Drink newDrink;
 
-    public static int setUserChoice() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter Choice: ");
-        return scanner.nextInt();
-    }
 
     public void makeBasicTaco() {
         System.out.println("Making Basic Taco");
+
     }
 
     public void makeDeluxeTaco() {
