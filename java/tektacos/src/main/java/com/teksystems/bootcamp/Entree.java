@@ -1,12 +1,11 @@
 package com.teksystems.bootcamp;
-import java.lang.reflect.Array;
 
 public class Entree {
 
         String tacoType;
         Tortilla tortillaType;
         String proteinType;
-        Array toppingsList;
+        String[] toppingsList;
 
     Entree(String tacoInput) {
         this.tacoType = tacoInput;

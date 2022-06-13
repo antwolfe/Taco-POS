@@ -17,7 +17,6 @@ public class Tortilla {
         this.tortillaType = scanner.nextInt();
     }
 
-
     public int getTortillaType() {
         return tortillaType;
     }
@@ -29,6 +28,7 @@ public class Tortilla {
         tortilla.setTortillaType();
         return tortilla.getTortillaType();
     }
+
 
     public void displayChosenTortilla(int choice) {
         switch(choice) {

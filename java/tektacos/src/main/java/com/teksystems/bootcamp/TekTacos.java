@@ -1,7 +1,12 @@
 package com.teksystems.bootcamp;
 
-public class App 
+import java.util.ArrayList;
+
+public class TekTacos implements takeOrder
 {
+
+    ArrayList newOrder = new ArrayList();
+
     public static void displayWelcome() {
         System.out.println();
         System.out.println("WELCOME TO TEKTACOS");
@@ -9,15 +14,15 @@ public class App
         System.out.println();
     }
 
+
     public static void main( String[] args )
 
     {
         displayWelcome();
-//        Menu menu = new Menu();
-//        int choice = menu.takeOrder();
-//        System.out.println(choice);
-        Entree taco = new Entree("basic");
-        taco.createTacoOrder(taco.tacoType);
+        takeOrder.getMenu();
+        int userChoice = takeOrder.getUserChoice();
+        System.out.println(userChoice);
+
 
 
     }
