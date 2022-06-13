@@ -1,11 +1,7 @@
 package com.teksystems.bootcamp;
 
-import java.util.ArrayList;
 
-public class TekTacos implements takeOrder
-{
-
-    ArrayList newOrder = new ArrayList();
+public class TekTacos {
 
     public static void displayWelcome() {
         System.out.println();
@@ -15,19 +11,17 @@ public class TekTacos implements takeOrder
     }
 
 
-    public static void main( String[] args )
-
-    {
+    public static void main(String[] args) {
         displayWelcome();
-        takeOrder.getMenu();
-        int userChoice = takeOrder.getUserChoice();
-        String newOrder = makeOrder.createTaco(userChoice);
-        System.out.println(newOrder);
+        Print.mainMenu();
+        int menuChoice = makeOrder.setUserChoice();
+        //communication logic
+        Print.subMenu(menuChoice);
+//        makeOrder.startOrder(menuChoice);
 
 
 
     }
-
 
 
 }

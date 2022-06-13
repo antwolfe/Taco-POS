@@ -1,8 +1,28 @@
 package com.teksystems.bootcamp;
 
-public interface makeOrder {
+import java.util.Scanner;
 
-    static String createTaco(int tacoType) {
+public class makeOrder {
+
+
+    public static int setUserChoice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Choice: ");
+        return scanner.nextInt();
+    }
+
+    public void makeBasicTaco() {
+        System.out.println("Making Basic Taco");
+    }
+
+    public void makeDeluxeTaco() {
+    }
+
+    public void makeVeggieTaco() {
+    }
+
+
+    public static String createTaco(int tacoType) {
         switch (tacoType) {
             case 1:
                 return "basic";
@@ -14,5 +34,6 @@ public interface makeOrder {
                 return "basic taco meal";
         }
     }
+
 
 }

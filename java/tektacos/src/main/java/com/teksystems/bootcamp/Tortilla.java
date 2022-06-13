@@ -1,4 +1,5 @@
 package com.teksystems.bootcamp;
+
 import java.util.Scanner;
 
 public class Tortilla {
@@ -24,14 +25,14 @@ public class Tortilla {
     public int chooseTortilla() {
         System.out.println("Please choose tortilla type: ");
         Tortilla tortilla = new Tortilla();
-        tortilla.getTortillaMenu();
+        getTortillaMenu();
         tortilla.setTortillaType();
         return tortilla.getTortillaType();
     }
 
 
     public void displayChosenTortilla(int choice) {
-        switch(choice) {
+        switch (choice) {
             case 1:
                 System.out.println("You've chosen a Flour Tortilla");
                 break;
