@@ -9,7 +9,7 @@ public class Tortilla {
 
     public void setTortillaType() {
         System.out.println("Please choose tortilla type: ");
-        Print.TortillaMenu();
+        Print.tortillaMenu();
         Scanner scanner = new Scanner(System.in);
         this.tortillaType = scanner.nextInt();
     }

@@ -24,7 +24,7 @@ public class Print {
         System.out.println("===============");
     }
 
-    public static void TortillaMenu() {
+    public static void tortillaMenu() {
         System.out.println(" ----TORTILLAS---- ");
         System.out.println("===============");
         System.out.println("1. Flour");
@@ -34,6 +34,16 @@ public class Print {
 
     }
 
+    public static void proteinMenu() {
+        System.out.println(" ----PROTEIN---- ");
+        System.out.println("===============");
+        System.out.println("1. Ground beef");
+//        System.out.println("2. Steak");
+//        System.out.println("3. Chicken");
+//        System.out.println("3. Shredded Pork");
+//        System.out.println("3. Black Beans");
+        System.out.println("===============");
+    }
 
 
 
