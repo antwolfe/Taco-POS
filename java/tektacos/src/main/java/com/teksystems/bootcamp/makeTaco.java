@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class makeTaco {
 
-    Taco newTaco;
     Tortilla newTortilla;
     Protein newProtein;
     ArrayList<Topping> toppings;
@@ -12,7 +11,10 @@ public class makeTaco {
 
     public void makeBasicTaco() {
         System.out.println("Making Basic Taco");
-
+        this.newTortilla = new Tortilla();
+        newTortilla.setTortillaType();
+        newTortilla.displayChosenTortilla(newTortilla.tortillaType);
+        this.newProtein = new Protein();
 
     }
 

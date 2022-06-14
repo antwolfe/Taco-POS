@@ -11,7 +11,7 @@ public class takeOrder {
         return scanner.nextInt();
     }
 
-    static void subMenu(int choice) {
+    static void chooseSubMenu(int choice) {
         switch (choice) {
             case 1:
                 System.out.println("You chose Entrees");

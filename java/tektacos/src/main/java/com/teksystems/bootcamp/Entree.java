@@ -12,13 +12,13 @@ public class Entree {
         this.tortillaType = new Tortilla();
     }
 
-    public void createTacoOrder(String tacoType) {
-        if (tacoType.equals("basic")) {
-            System.out.println("Basic taco started.");
-            tortillaType.displayChosenTortilla(tortillaType.chooseTortilla());
-
-        }
-    }
+//    public void createTacoOrder(String tacoType) {
+//        if (tacoType.equals("basic")) {
+//            System.out.println("Basic taco started.");
+//            tortillaType.displayChosenTortilla(tortillaType.chooseTortilla());
+//
+//        }
+//    }
 
     public void makeBasicTaco(String tortillaType, String proteinType) {
 //        this.tortillaType = tortilla;

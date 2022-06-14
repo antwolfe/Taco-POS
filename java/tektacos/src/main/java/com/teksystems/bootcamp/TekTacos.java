@@ -15,8 +15,7 @@ public class TekTacos {
         displayWelcome();
         Print.mainMenu();
         int menuChoice = takeOrder.userChoice();
-        //communication logic
-        takeOrder.subMenu(menuChoice);
+        takeOrder.chooseSubMenu(menuChoice);
 //        makeOrder.startOrder(menuChoice);
 
 

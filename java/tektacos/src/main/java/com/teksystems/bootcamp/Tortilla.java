@@ -5,15 +5,11 @@ import java.util.Scanner;
 public class Tortilla {
     int tortillaType;
 
-    public static void getTortillaMenu() {
-        System.out.println(" ----TORTILLAS---- ");
-        System.out.println("===============");
-        System.out.println("1. Flour");
-        System.out.println("2. Corn");
-        System.out.println("3. Default");
-    }
+
 
     public void setTortillaType() {
+        System.out.println("Please choose tortilla type: ");
+        Print.TortillaMenu();
         Scanner scanner = new Scanner(System.in);
         this.tortillaType = scanner.nextInt();
     }
@@ -22,17 +18,10 @@ public class Tortilla {
         return tortillaType;
     }
 
-    public int chooseTortilla() {
-        System.out.println("Please choose tortilla type: ");
-        Tortilla tortilla = new Tortilla();
-        getTortillaMenu();
-        tortilla.setTortillaType();
-        return tortilla.getTortillaType();
-    }
 
 
-    public void displayChosenTortilla(int choice) {
-        switch (choice) {
+    public void displayChosenTortilla(int type) {
+        switch (type) {
             case 1:
                 System.out.println("You've chosen a Flour Tortilla");
                 break;
