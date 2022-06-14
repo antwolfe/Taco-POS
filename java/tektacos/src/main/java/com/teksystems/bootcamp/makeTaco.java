@@ -1,16 +1,18 @@
 package com.teksystems.bootcamp;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
-public class makeOrder {
+public class makeTaco {
 
     Taco newTaco;
-//    Side newSide;
-//    Drink newDrink;
+    Tortilla newTortilla;
+    Protein newProtein;
+    ArrayList<Topping> toppings;
 
 
     public void makeBasicTaco() {
         System.out.println("Making Basic Taco");
+
 
     }
 
