@@ -49,4 +49,8 @@ public abstract class Taco {
     public void setToppingList(ArrayList<String> toppingList) {
         this.toppingList = toppingList;
     }
+
+    public void addTopping(String newTopping) {
+        toppingList.add(newTopping);
+    }
 }

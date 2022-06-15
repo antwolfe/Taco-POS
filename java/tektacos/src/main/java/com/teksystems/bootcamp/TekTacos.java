@@ -7,11 +7,18 @@ public class TekTacos implements IPrint {
 
     public static void main(String[] args) {
 
-//        Menu displayMenu = new Menu();
-//        IPrint.displayWelcome();
-//        displayMenu.mainMenu();
-        Taco newTaco = new VeggieTaco();
-        System.out.println(newTaco.getProtein());
+        Taco basicTaco = new BasicTaco();
+        Taco deluxeTaco = new DeluxeTaco();
+        Taco veggieTaco = new VeggieTaco();
+
+        basicTaco.addTopping("onion");
+        basicTaco.addTopping("tomato");
+
+        Order newOrder = new Order(basicTaco);
+
+        System.out.println(newOrder.tacoProtein);
+
+
 
 
     }
