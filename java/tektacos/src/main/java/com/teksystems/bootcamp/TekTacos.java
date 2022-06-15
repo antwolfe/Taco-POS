@@ -12,13 +12,6 @@ public class TekTacos {
 
 
     public static void main(String[] args) {
-        displayWelcome();
-        Print.mainMenu();
-        int menuChoice = takeOrder.userChoice();
-        takeOrder.chooseSubMenu(menuChoice);
-//        makeOrder.startOrder(menuChoice);
-
-
 
     }
 

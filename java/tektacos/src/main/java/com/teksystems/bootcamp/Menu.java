@@ -1,8 +1,6 @@
 package com.teksystems.bootcamp;
 
-import java.util.Scanner;
-
-public class Print {
+public class Menu {
 
     public static void mainMenu() {
 
