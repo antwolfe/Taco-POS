@@ -1,17 +1,18 @@
 package com.teksystems.bootcamp;
 
 
-public class TekTacos {
+import java.io.PrintStream;
 
-    public static void displayWelcome() {
-        System.out.println();
-        System.out.println("WELCOME TO TEKTACOS");
-        System.out.println("please choose a number below");
-        System.out.println();
-    }
-
+public class TekTacos implements IPrint {
 
     public static void main(String[] args) {
+
+//        Menu displayMenu = new Menu();
+//        IPrint.displayWelcome();
+//        displayMenu.mainMenu();
+        Taco newTaco = new VeggieTaco();
+        System.out.println(newTaco.getProtein());
+
 
     }
 

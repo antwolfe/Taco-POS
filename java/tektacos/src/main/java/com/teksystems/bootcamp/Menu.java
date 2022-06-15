@@ -2,18 +2,19 @@ package com.teksystems.bootcamp;
 
 public class Menu {
 
-    public static void mainMenu() {
+    public void mainMenu() {
 
-        System.out.println(" ----MENU---- ");
-        System.out.println("===============");
-        System.out.println("1. Entrees");
-//        System.out.println("2. Sides");
-//        System.out.println("3. Drinks");
-//        System.out.println("4. Combo");
-        System.out.println("===============");
+        System.out.println("-------------------");
+        System.out.println(" ----MAIN MENU---- ");
+        System.out.println("===================");
+        System.out.println("    1. Entree");
+//        System.out.println("  2. Side");
+//        System.out.println("  3. Drink");
+//        System.out.println("  4. Combo");
+        System.out.println("===================");
     }
 
-    public static void entreeMenu() {
+    public void entreeMenu() {
         System.out.println(" ----ENTREES---- ");
         System.out.println("===============");
         System.out.println("1. Basic Taco");
@@ -22,7 +23,7 @@ public class Menu {
         System.out.println("===============");
     }
 
-    public static void tortillaMenu() {
+    public void tortillaMenu() {
         System.out.println(" ----TORTILLAS---- ");
         System.out.println("===============");
         System.out.println("1. Flour");
