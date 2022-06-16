@@ -5,6 +5,6 @@ import java.util.Arrays;
 
 public class VeggieTaco extends Taco {
     public VeggieTaco() {
-        super("veggie", "corn" , "black beans", new ArrayList<>());
+        super("veggie", Tortilla.CORN , Protein.BLACKBEANS, new ArrayList<>());
     }
 }

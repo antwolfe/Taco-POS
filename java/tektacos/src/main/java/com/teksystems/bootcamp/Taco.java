@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public abstract class Taco {
 
     private String tacoType;
-    private String tortilla;
-    private String protein;
+    private Tortilla tortilla;
+    private Protein protein;
     private ArrayList<String> toppingList;
 
 
-    public Taco(String tacoType, String tortilla, String protein, ArrayList<String> toppingList) {
+    public Taco(String tacoType, Tortilla tortilla, Protein protein, ArrayList<String> toppingList) {
         this.tacoType = tacoType;
         this.tortilla = tortilla;
         this.protein = protein;
@@ -26,19 +26,19 @@ public abstract class Taco {
         this.tacoType = tacoType;
     }
 
-    public String getTortilla() {
+    public Tortilla getTortilla() {
         return tortilla;
     }
 
-    public void setTortilla(String tortilla) {
+    public void setTortilla(Tortilla tortilla) {
         this.tortilla = tortilla;
     }
 
-    public String getProtein() {
+    public Protein getProtein() {
         return protein;
     }
 
-    public void setProtein(String protein) {
+    public void setProtein(Protein protein) {
         this.protein = protein;
     }
 

@@ -35,7 +35,7 @@ public class Order {
 
     public void print(){
         for (MenuItem item:orderList) {
-            System.out.println(item.getDescription());
+            System.out.println(item.getDescription() + " --> " + item.getPrice());
         }
     }
 

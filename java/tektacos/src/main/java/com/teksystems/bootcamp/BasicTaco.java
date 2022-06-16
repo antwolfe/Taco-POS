@@ -4,10 +4,8 @@ import java.util.ArrayList;
 
 public class BasicTaco extends Taco implements MenuItem {
 
-
-
     public BasicTaco() {
-        super("basic", "flour", "ground beef", new ArrayList<>());
+        super("basic", Tortilla.FLOUR, Protein.GROUNDBEEF, new ArrayList<>());
     }
 
     @Override
@@ -17,7 +15,9 @@ public class BasicTaco extends Taco implements MenuItem {
 
     @Override
     public String getDescription() {
-        return "basic taco with something";
+        return "Basic taco with "
+                + getTortilla().getDisplayName() + " tortilla, "
+                + getProtein().getDisplayName() + ", and...\n";
     }
 }
 
