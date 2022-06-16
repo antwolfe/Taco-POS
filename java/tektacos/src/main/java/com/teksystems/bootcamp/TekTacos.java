@@ -16,7 +16,11 @@ public class TekTacos implements IPrint {
 
         Order newOrder = new Order(basicTaco);
 
-        System.out.println(newOrder.tacoProtein);
+        System.out.println(newOrder.tacoToppings);
+
+        newOrder.printReceipt(newOrder);
+
+
 
 
 

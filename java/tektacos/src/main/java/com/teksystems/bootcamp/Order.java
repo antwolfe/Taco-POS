@@ -17,7 +17,14 @@ public class Order {
         this.tacoToppings = taco.getToppingList();
     }
 
-
+    public void printReceipt(Order order) {
+        System.out.println("Here is your order: ");
+        System.out.println(tacoType + " taco with " + tacoProtein + ",");
+        for (String topping : tacoToppings) {
+            System.out.print(topping + ", ");
+        }
+        System.out.println("on a " + tacoTortilla + " tortilla.");
+    }
 
 }
 
