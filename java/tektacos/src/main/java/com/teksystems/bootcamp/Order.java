@@ -8,13 +8,20 @@ public class Order {
     String tacoTortilla;
     String tacoProtein;
     ArrayList<String> tacoToppings;
+    Drink drink;
+    String drinkType;
 
-    public Order(Taco taco) {
+    Side side;
+    String sideType;
+
+    public Order(Taco taco, Drink drink, Side side) {
         this.taco = taco;
         this.tacoType = taco.getTacoType();
         this.tacoTortilla = taco.getTortilla();
         this.tacoProtein = taco.getProtein();
         this.tacoToppings = taco.getToppingList();
+        this.sideType = side.getSide();
+        this.drinkType = drink.getDrink();
     }
 
     public void printReceipt(Order order) {
@@ -24,6 +31,9 @@ public class Order {
             System.out.print(topping + ", ");
         }
         System.out.println("on a " + tacoTortilla + " tortilla.");
+        System.out.println();
+        System.out.println(sideType + " for sides.");
+        System.out.println("A " + drinkType + " to drink.");
     }
 
 }

@@ -10,13 +10,17 @@ public class TekTacos implements IPrint {
         Taco basicTaco = new BasicTaco();
         Taco deluxeTaco = new DeluxeTaco();
         Taco veggieTaco = new VeggieTaco();
+        Drink newDrink = new Drink("tea");
+        Side newSide = new Side("chips and queso");
 
         basicTaco.addTopping("onion");
         basicTaco.addTopping("tomato");
 
-        Order newOrder = new Order(basicTaco);
 
-        System.out.println(newOrder.tacoToppings);
+
+
+
+        Order newOrder = new Order(basicTaco, newDrink, newSide);
 
         newOrder.printReceipt(newOrder);
 
