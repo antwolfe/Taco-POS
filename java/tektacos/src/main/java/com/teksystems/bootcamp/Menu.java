@@ -24,11 +24,12 @@ public class Menu {
     }
 
     public void tortillaMenu() {
+        Tortilla[] tortillas = Tortilla.values();
         System.out.println(" ----TORTILLAS---- ");
         System.out.println("===============");
-        System.out.println("1. Flour");
-//        System.out.println("2. Corn");
-//        System.out.println("3. Default");
+        for (int i = 1; i <= tortillas.length; i++){
+            System.out.println(i + ". " + tortillas[i-1]);
+        }
         System.out.println("===============");
 
     }
