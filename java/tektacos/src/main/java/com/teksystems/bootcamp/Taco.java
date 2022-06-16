@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public abstract class Taco {
@@ -7,10 +8,10 @@ public abstract class Taco {
     private String tacoType;
     private Tortilla tortilla;
     private Protein protein;
-    private ArrayList<String> toppingList;
+    private ArrayList<Topping> toppingList;
 
 
-    public Taco(String tacoType, Tortilla tortilla, Protein protein, ArrayList<String> toppingList) {
+    public Taco(String tacoType, Tortilla tortilla, Protein protein, ArrayList<Topping> toppingList) {
         this.tacoType = tacoType;
         this.tortilla = tortilla;
         this.protein = protein;
@@ -42,15 +43,16 @@ public abstract class Taco {
         this.protein = protein;
     }
 
-    public ArrayList<String> getToppingList() {
+    public ArrayList<Topping> getToppingList() {
         return toppingList;
     }
 
-    public void setToppingList(ArrayList<String> toppingList) {
+
+    public void setToppingList(ArrayList<Topping> toppingList) {
         this.toppingList = toppingList;
     }
 
-    public void addTopping(String newTopping) {
+    public void addTopping(Topping newTopping) {
         toppingList.add(newTopping);
     }
 }
