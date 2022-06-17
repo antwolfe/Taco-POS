@@ -42,16 +42,24 @@ public abstract class TakeOrder extends Order {
         int choice = getUserInput();
         switch (choice) {
             case 1:
-                Order newOrder = new Order();
+                Order newBasicOrder = new Order();
                 BasicTaco basicTaco = new BasicTaco();
-                newOrder.addItemToOrder(basicTaco);
+                newBasicOrder.addItemToOrder(basicTaco);
                 new Menu().tortillaMenu();
-                newOrder.print();
                 break;
             case 2:
-            case 3:
+                Order newDeluxeOrder = new Order();
+                DeluxeTaco deluxeTaco = new DeluxeTaco();
+                newDeluxeOrder.addItemToOrder(deluxeTaco);
+                new Menu().tortillaMenu();
                 break;
-            case 4:
+            case 3:
+                Order newVeggieOrder = new Order();
+                VeggieTaco veggieTaco = new VeggieTaco();
+                newVeggieOrder.addItemToOrder(veggieTaco);
+                new Menu().tortillaMenu();
+                break;
+            case 4: //checkout with defaults?
                 System.exit(1);
         }
     }
