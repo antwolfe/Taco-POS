@@ -29,6 +29,9 @@ public class DeluxeTaco extends Taco implements MenuItem {
         int toppingLimit = 6;
         if (toppingList.toArray().length < toppingLimit) {
             toppingList.add(newTopping);
+        } else {
+            System.out.println("You cannot add anymore toppings.");
         }
     }
+
 }

@@ -22,6 +22,12 @@ public class VeggieTaco extends Taco implements MenuItem {
 
     @Override
     public void addTopping(Topping newTopping) {
-
+        ArrayList<Topping> toppingList = getToppingList();
+        int toppingLimit = 4;
+        if (toppingList.toArray().length < toppingLimit) {
+            toppingList.add(newTopping);
+        } else {
+            System.out.println("You cannot add anymore toppings.");
+        }
     }
 }
