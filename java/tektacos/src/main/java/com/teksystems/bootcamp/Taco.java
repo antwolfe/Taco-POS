@@ -19,14 +19,6 @@ public abstract class Taco {
     }
 
 
-    public String getTacoType() {
-        return tacoType;
-    }
-
-    public void setTacoType(String tacoType) {
-        this.tacoType = tacoType;
-    }
-
     public Tortilla getTortilla() {
         return tortilla;
     }

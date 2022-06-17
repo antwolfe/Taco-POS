@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class BasicTaco extends Taco implements MenuItem {
 
     public BasicTaco() {
-        super("basic", Tortilla.FLOUR, Protein.GROUNDBEEF, new ArrayList<Topping>());
+        super("basic", Tortilla.FLOUR, Protein.GROUNDBEEF, new ArrayList<>());
     }
 
     @Override

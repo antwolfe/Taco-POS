@@ -1,11 +1,10 @@
 package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class VeggieTaco extends Taco implements MenuItem {
     public VeggieTaco() {
-        super("veggie", Tortilla.CORN , Protein.BLACKBEANS, new ArrayList<Topping>());
+        super("veggie", Tortilla.CORN , Protein.BLACKBEANS, new ArrayList<>());
     }
 
     @Override

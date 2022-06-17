@@ -6,18 +6,9 @@ public class TekTacos implements IPrint {
 
     public static void main(String[] args) {
 
-        Taco basicTaco = new DeluxeTaco();
+        new Menu().mainMenu();
+        int choice = IPrint.getUserInput();
 
-        Drink newDrink = new Drink("tea");
-
-        Menu menu = new Menu();
-
-        Order newOrder = new Order();
-
-        newOrder.addItemToOrder((MenuItem) basicTaco);
-        newOrder.addItemToOrder(newDrink);
-
-        newOrder.print();
 
 
 
