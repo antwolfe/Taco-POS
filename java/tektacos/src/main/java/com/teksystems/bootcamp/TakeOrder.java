@@ -1,12 +1,26 @@
 package com.teksystems.bootcamp;
 
 
-public abstract class TakeOrder {
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
 
+public abstract class TakeOrder extends Order {
+    // user input handling
 
+//    ArrayList<MenuItem> itemsInOrder;
+//    public TakeOrder() {
+//        this.itemsInOrder = new ArrayList<>();
+//    }
+
+    int getUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Choose a number: ");
+        return scanner.nextInt();
+    }
 
     public void fromMainMenu() {
-    int choice = IPrint.getUserInput();
+    int choice = getUserInput();
         switch (choice) {
             case 1:
                 new Menu().entreeMenu();
@@ -25,7 +39,25 @@ public abstract class TakeOrder {
     }
 
     public void fromEntreeMenu() {
-        int choice = IPrint.getUserInput();
+        int choice = getUserInput();
+        switch (choice) {
+            case 1:
+                Order newOrder = new Order();
+                BasicTaco basicTaco = new BasicTaco();
+                newOrder.addItemToOrder(basicTaco);
+                new Menu().tortillaMenu();
+                newOrder.print();
+                break;
+            case 2:
+            case 3:
+                break;
+            case 4:
+                System.exit(1);
+        }
+    }
+
+    public void fromTortillaMenu() {
+        int choice = getUserInput();
         switch (choice) {
             case 1:
             case 2:

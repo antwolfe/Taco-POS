@@ -20,7 +20,7 @@ public class BasicTaco extends Taco implements MenuItem {
         return "Basic taco with "
                 + getTortilla().getDisplayName() + " tortilla, "
                 + getProtein().getDisplayName() + ", and...\n"
-                + getToppingList() + " as toppings.";
+                + (getToppingList().isEmpty() ? "no toppings" : getToppingList()) + " as toppings.";
     }
 
     @Override
@@ -33,5 +33,6 @@ public class BasicTaco extends Taco implements MenuItem {
             System.out.println("You cannot add anymore toppings.");
         }
     }
+
 }
 
