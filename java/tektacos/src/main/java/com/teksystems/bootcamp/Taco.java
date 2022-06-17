@@ -3,7 +3,7 @@ package com.teksystems.bootcamp;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public abstract class Taco {
+public abstract class Taco implements MenuItem {
 
     private String tacoType;
     private Tortilla tortilla;

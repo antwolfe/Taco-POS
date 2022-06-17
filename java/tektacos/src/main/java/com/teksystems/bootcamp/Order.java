@@ -3,26 +3,8 @@ package com.teksystems.bootcamp;
 import java.util.ArrayList;
 
 public class Order {
-//    Taco taco;
-//    String tacoType;
-//    String tacoTortilla;
-//    String tacoProtein;
-//    ArrayList<String> tacoToppings;
-//    Drink drink;
-//    String drinkType;
-//    Side side;
-//    String sideType;
-    ArrayList<MenuItem> orderList;
 
-//    public Order(Taco taco, Drink drink, Side side) {
-//        this.taco = taco;
-//        this.tacoType = taco.getTacoType();
-//        this.tacoTortilla = taco.getTortilla();
-//        this.tacoProtein = taco.getProtein();
-//        this.tacoToppings = taco.getToppingList();
-//        this.sideType = side.getSide();
-//        this.drinkType = drink.getDrink();
-//    }
+    ArrayList<MenuItem> orderList;
 
 
     public Order() {
@@ -31,6 +13,10 @@ public class Order {
 
     public void addItemToOrder(MenuItem item) {
         orderList.add(item);
+    }
+
+    public void subItemToOrder(MenuItem item) {
+
     }
 
     public void print(){

@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp;
 
-public enum Tortilla {
+public enum Tortilla implements MenuItem {
     FLOUR("flour"),
     CORN("corn");
 
@@ -12,6 +12,16 @@ public enum Tortilla {
 
     public String getDisplayName() {
         return displayName;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public String getDescription() {
+        return null;
     }
 }
 

@@ -1,9 +1,11 @@
 package com.teksystems.bootcamp;
 
-import java.util.Scanner;
-
 public class Menu extends TakeOrder {
 
+
+//    public Menu(Order currentOrder) {
+//        super(currentOrder);
+//    }
 
     public void mainMenu() {
 
@@ -27,6 +29,8 @@ public class Menu extends TakeOrder {
         System.out.println("3. Veggie Taco");
         System.out.println("=================");
         fromEntreeMenu();
+
+
     }
 
     public void tortillaMenu() {
@@ -38,7 +42,7 @@ public class Menu extends TakeOrder {
         }
         System.out.println("3. default");
         System.out.println("===============");
-
+        fromTortillaMenu();
     }
 
     public void proteinMenu() {
