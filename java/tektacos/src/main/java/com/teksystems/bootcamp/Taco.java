@@ -44,7 +44,6 @@ public abstract class Taco {
         this.toppingList = toppingList;
     }
 
-    public void addTopping(Topping newTopping) {
-        toppingList.add(newTopping);
-    }
+    public abstract void addTopping(Topping newTopping);
+
 }

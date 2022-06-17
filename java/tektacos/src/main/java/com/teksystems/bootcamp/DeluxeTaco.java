@@ -22,4 +22,13 @@ public class DeluxeTaco extends Taco implements MenuItem {
                 + getProtein().getDisplayName() + ", and...\n"
                 + getToppingList() + " as toppings.";
     }
+
+    @Override
+    public void addTopping(Topping newTopping) {
+        ArrayList<Topping> toppingList = getToppingList();
+        int toppingLimit = 6;
+        if (toppingList.toArray().length < toppingLimit) {
+            toppingList.add(newTopping);
+        }
+    }
 }

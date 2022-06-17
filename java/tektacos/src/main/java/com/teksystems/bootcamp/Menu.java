@@ -47,11 +47,11 @@ public class Menu {
     public void toppingMenu() {
         Topping[] toppings = Topping.values();
         System.out.println(" ----TOPPINGS---- ");
-        System.out.println("===============");
+        System.out.println("=================");
         for (int i = 1; i <= toppings.length; i++){
             System.out.println(i + ". " + toppings[i-1].getDisplayName());
         }
-        System.out.println("===============");
+        System.out.println("=================");
 
     }
 

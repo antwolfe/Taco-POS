@@ -19,4 +19,9 @@ public class VeggieTaco extends Taco implements MenuItem {
                 + getProtein().getDisplayName() + ", and...\n"
                 + getToppingList() + " as toppings.";
     }
+
+    @Override
+    public void addTopping(Topping newTopping) {
+
+    }
 }
