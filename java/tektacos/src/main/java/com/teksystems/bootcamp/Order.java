@@ -19,8 +19,8 @@ public class Order {
 
     }
 
-    public void print(){
-        for (MenuItem item:orderList) {
+    public void print() {
+        for (MenuItem item : orderList) {
             System.out.println(item.getDescription() + " --> " + item.getPrice());
         }
     }
@@ -37,7 +37,6 @@ public class Order {
 //        System.out.println(sideType + " for sides.");
 //        System.out.println("A " + drinkType + " to drink.");
 //    }
-
 
 
 }

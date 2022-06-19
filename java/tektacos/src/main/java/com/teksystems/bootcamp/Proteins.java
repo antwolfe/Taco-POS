@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp;
 
-public enum Protein {
+public enum Proteins {
 
     GROUNDBEEF("ground beef"),
     STEAK("steak"),
@@ -10,7 +10,7 @@ public enum Protein {
 
     private final String displayName;
 
-    Protein(String displayName) {
+    Proteins(String displayName) {
         this.displayName = displayName;
     }
 

@@ -4,10 +4,8 @@ import java.util.ArrayList;
 
 public class BasicTaco extends Taco {
 
-
-
     public BasicTaco() {
-        super("basic", Tortilla.FLOUR, Protein.GROUNDBEEF, new ArrayList<>());
+        super("basic", Tortillas.FLOUR, Proteins.GROUNDBEEF, new ArrayList<>());
     }
 
     @Override
@@ -24,11 +22,11 @@ public class BasicTaco extends Taco {
     }
 
     @Override
-    public void addTopping(Topping newTopping) {
-        ArrayList<Topping> toppingList = getToppingList();
+    public void addTopping(Toppings newToppings) {
+        ArrayList<Toppings> toppingsList = getToppingList();
         int toppingLimit = 4;
-        if (toppingList.toArray().length < toppingLimit) {
-            toppingList.add(newTopping);
+        if (toppingsList.toArray().length < toppingLimit) {
+            toppingsList.add(newToppings);
         } else {
             System.out.println("You cannot add anymore toppings.");
         }

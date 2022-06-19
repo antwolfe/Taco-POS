@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp;
 
-public enum Topping {
+public enum Toppings {
 
     SHREDDEDLETTUCE("shredded lettuce"),
     TOMATO("tomato"),
@@ -12,14 +12,13 @@ public enum Topping {
     private final String displayName;
 
 
-    Topping(String displayName) {
+    Toppings(String displayName) {
         this.displayName = displayName;
     }
 
     public String getDisplayName() {
         return displayName;
     }
-
 
 
 }

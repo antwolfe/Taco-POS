@@ -1,24 +1,17 @@
 package com.teksystems.bootcamp;
 
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
-public abstract class TakeOrder extends Order {
-
+public abstract class TakeOrder {
     // user input handling
-
     Order currentOrder = new Order();
 
-
-    @Override
-    public void addItemToOrder(MenuItem item) {
-        super.addItemToOrder(item);
+    public Order getCurrentOrder() {
+        return currentOrder;
     }
 
-    @Override
-    public void print() {
-        super.print();
+    public void setCurrentOrder(Order currentOrder) {
+        this.currentOrder = currentOrder;
     }
 
     int getUserInput() {
@@ -47,13 +40,11 @@ public abstract class TakeOrder extends Order {
     }
 
     public void fromEntreeMenu() {
-
         int choice = getUserInput();
         switch (choice) {
             case 1:
                 BasicTaco basicTaco = new BasicTaco();
                 currentOrder.addItemToOrder(basicTaco);
-                currentOrder.print();
                 new Menu().tortillaMenu();
                 break;
             case 2:
@@ -71,15 +62,15 @@ public abstract class TakeOrder extends Order {
             case 4: //checkout with defaults?
                 System.exit(1);
         }
-
-
     }
 
     public void fromTortillaMenu() {
         int choice = getUserInput();
         switch (choice) {
             case 1:
-                currentOrder.print();
+                currentOrder = getCurrentOrder();
+                currentOrder.addItemToOrder(Tortillas.FLOUR);
+                currentOrder.print(); // ADD SUB CLASS TO ORDER CLASS OR// IMPLEMENT MENUITEM THROUGH TACO ABSTRACT ??
                 break;
             case 2:
             case 3:

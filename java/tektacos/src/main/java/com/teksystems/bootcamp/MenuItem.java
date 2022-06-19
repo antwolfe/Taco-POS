@@ -6,6 +6,7 @@ public interface MenuItem {
     String item = null;
 
     double getPrice();
+
     String getDescription();
 
 

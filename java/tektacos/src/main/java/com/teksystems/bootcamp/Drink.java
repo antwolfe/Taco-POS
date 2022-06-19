@@ -2,10 +2,10 @@ package com.teksystems.bootcamp;
 
 public class Drink implements MenuItem {
 
-   String drink;
+    String drink;
 
     public Drink(String chosenDrink) {
-      this.drink = chosenDrink;
+        this.drink = chosenDrink;
     }
 
     public String getDrink() {

@@ -1,12 +1,12 @@
 package com.teksystems.bootcamp;
 
-public enum Tortilla implements MenuItem {
+public enum Tortillas implements MenuItem {
     FLOUR("flour"),
     CORN("corn");
 
     private final String displayName;
 
-    Tortilla(String displayName) {
+    Tortillas(String displayName) {
         this.displayName = displayName;
     }
 
