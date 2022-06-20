@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DeluxeTaco extends Taco implements MenuItem {
+    int toppingLimit = 6;
 
     public DeluxeTaco() {
-        super("deluxe", Tortillas.FLOUR, Proteins.STEAK, new ArrayList<>(Arrays.asList(Toppings.SHREDDEDLETTUCE, Toppings.ONION, Toppings.TOMATO, Toppings.CHEESE)));
+        super(6, Tortillas.FLOUR, Proteins.STEAK, new ArrayList<>(Arrays.asList(Toppings.SHREDDEDLETTUCE, Toppings.ONION, Toppings.TOMATO, Toppings.CHEESE)));
     }
 
 
@@ -26,7 +27,7 @@ public class DeluxeTaco extends Taco implements MenuItem {
     @Override
     public void addTopping(Toppings newToppings) {
         ArrayList<Toppings> toppingsList = getToppingList();
-        int toppingLimit = 6;
+
         if (toppingsList.toArray().length < toppingLimit) {
             toppingsList.add(newToppings);
         } else {

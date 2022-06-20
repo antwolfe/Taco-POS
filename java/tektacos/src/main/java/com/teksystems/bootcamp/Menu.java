@@ -1,13 +1,12 @@
 package com.teksystems.bootcamp;
 
-public class Menu extends TakeOrder {
-
+public interface Menu {
 
 //    public Menu(Order currentOrder) {
 //        super(currentOrder);
 //    }
 
-    public void mainMenu() {
+    public static void mainMenu() {
         System.out.println("-------------------");
         System.out.println(" ----MAIN MENU---- ");
         System.out.println("===================");
@@ -17,20 +16,18 @@ public class Menu extends TakeOrder {
         System.out.println("    4. Combo");
         System.out.println("    5. Exit");
         System.out.println("===================");
-        fromMainMenu();
     }
 
-    public void entreeMenu() {
+    public static void entreeMenu() {
         System.out.println(" ----ENTREES---- ");
         System.out.println("================");
         System.out.println("1. Basic Taco");
         System.out.println("2. Deluxe Taco");
         System.out.println("3. Veggie Taco");
         System.out.println("=================");
-        fromEntreeMenu();
     }
 
-    public void tortillaMenu() {
+    public static void tortillaMenu() {
         Tortillas[] tortillas = Tortillas.values();
         System.out.println("---TORTILLAS---");
         System.out.println("===============");
@@ -39,10 +36,9 @@ public class Menu extends TakeOrder {
         }
         System.out.println("3. default");
         System.out.println("===============");
-        fromTortillaMenu();
     }
 
-    public void proteinMenu() {
+    public static void proteinMenu() {
         Proteins[] proteins = Proteins.values();
         System.out.println(" ----PROTEINS---- ");
         System.out.println("===============");
@@ -52,7 +48,7 @@ public class Menu extends TakeOrder {
         System.out.println("===============");
     }
 
-    public void toppingMenu() {
+    public static void toppingMenu() {
         Toppings[] toppings = Toppings.values();
         System.out.println(" ----TOPPINGS---- ");
         System.out.println("=================");

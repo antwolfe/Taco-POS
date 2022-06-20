@@ -2,7 +2,7 @@ package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements TakeOrder {
 
     ArrayList<MenuItem> orderList;
 
@@ -15,9 +15,16 @@ public class Order {
         orderList.add(item);
     }
 
-    public void subItemToOrder(MenuItem item) {
-
+    public void seeItems(){
+        for (MenuItem item : orderList ) {
+            System.out.println(item + ",");
+        }
     }
+
+    public ArrayList<MenuItem> getOrderList() {
+        return orderList;
+    }
+
 
     public void print() {
         for (MenuItem item : orderList) {

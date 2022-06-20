@@ -2,21 +2,20 @@ package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
 
-public abstract class Taco implements MenuItem {
+public abstract class Taco extends Entree implements MenuItem {
 
-    private final String tacoType;
+    final int toppingLimit;
     private Tortillas tortillas;
     private Proteins proteins;
     private ArrayList<Toppings> toppingsList;
 
 
-    public Taco(String tacoType, Tortillas tortillas, Proteins proteins, ArrayList<Toppings> toppingsList) {
-        this.tacoType = tacoType;
+    public Taco(int toppingLimit , Tortillas tortillas, Proteins proteins, ArrayList<Toppings> toppingsList) {
+        this.toppingLimit = toppingLimit;
         this.tortillas = tortillas;
         this.proteins = proteins;
         this.toppingsList = toppingsList;
     }
-
 
     public Tortillas getTortilla() {
         return tortillas;
@@ -36,11 +35,6 @@ public abstract class Taco implements MenuItem {
 
     public ArrayList<Toppings> getToppingList() {
         return toppingsList;
-    }
-
-
-    public void setToppingList(ArrayList<Toppings> toppingsList) {
-        this.toppingsList = toppingsList;
     }
 
     public abstract void addTopping(Toppings newToppings);

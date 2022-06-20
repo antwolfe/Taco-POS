@@ -3,8 +3,9 @@ package com.teksystems.bootcamp;
 import java.util.ArrayList;
 
 public class VeggieTaco extends Taco implements MenuItem {
+    int toppingLimit = 4;
     public VeggieTaco() {
-        super("veggie", Tortillas.CORN, Proteins.BLACKBEANS, new ArrayList<>());
+        super(4, Tortillas.CORN, Proteins.BLACKBEANS, new ArrayList<>());
     }
 
     @Override
@@ -23,7 +24,7 @@ public class VeggieTaco extends Taco implements MenuItem {
     @Override
     public void addTopping(Toppings newToppings) {
         ArrayList<Toppings> toppingsList = getToppingList();
-        int toppingLimit = 4;
+
         if (toppingsList.toArray().length < toppingLimit) {
             toppingsList.add(newToppings);
         } else {

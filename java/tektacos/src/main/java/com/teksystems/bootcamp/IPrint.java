@@ -5,7 +5,7 @@ import java.util.Scanner;
 public interface IPrint {
 
 
-    static void displayWelcome() {
+  default void displayWelcome() {
         System.out.println();
         System.out.println("------------------------------");
         System.out.println("     WELCOME TO TEKTACOS");
@@ -13,9 +13,9 @@ public interface IPrint {
         System.out.println("what would you like to order?");
     }
 
-    static int getUserInput() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Choose a number: ");
-        return scanner.nextInt();
-    }
+//    static int getUserInput() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Choose a number: ");
+//        return scanner.nextInt();
+//    }
 }
