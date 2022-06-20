@@ -39,7 +39,7 @@ public interface TakeOrder {
                     theOrder.addItemToOrder(fromDrinksMenu(theOrder));
                     break;
                 case 4:
-//                    theOrder.addItemToOrder(fromComboMenu(theOrder));
+                    theOrder.addItemToOrder(fromComboMenu(theOrder));
                     break;
                 case 5:
                     System.exit(1);
@@ -91,9 +91,6 @@ public interface TakeOrder {
         chosenTaco = fromToppingMenu(theOrder, chosenTaco);
         return chosenTaco;
     }
-
-    // refactor: if choice NOT last choice ((default)) SET_? ELSE, DO NOTHING/SET CHOICE TO DEFAULT
-    // VALIDATION
 
     default Tortillas fromTortillaMenu(Order theOrder, Taco theTaco) {
         Menu.tortillaMenu();
@@ -174,7 +171,7 @@ public interface TakeOrder {
         Taco newTaco = fromEntreeMenu(theOrder);
         Sides newSide = fromSideMenu(theOrder);
         Drinks newDrink = fromDrinksMenu(theOrder);
-        return new Combo( newTaco, newSide, newDrink);
+        return new Combo(newTaco, newSide, newDrink);
     }
 
 }

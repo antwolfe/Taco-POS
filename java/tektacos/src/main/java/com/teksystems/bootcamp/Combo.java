@@ -1,7 +1,5 @@
 package com.teksystems.bootcamp;
 
-import java.util.ArrayList;
-
 public class Combo implements MenuItem {
 
     Taco taco;
@@ -21,7 +19,9 @@ public class Combo implements MenuItem {
 
     @Override
     public String getDescription() {
-        return "Combo meal --> " +
-                ""
+        return "Combo meal: \n" +
+                taco.getDescription() + "\n" +
+                side.getDescription() + "\n" +
+                drink.getDescription();
     }
 }
