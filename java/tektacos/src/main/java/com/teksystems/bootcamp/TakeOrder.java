@@ -11,24 +11,44 @@ public interface TakeOrder {
         return scanner.nextInt();
     }
 
-    default void fromMainMenu(Order theOrder, int choice) {
-        switch (choice) {
-            case 1:
-                theOrder.fromEntreeMenu(theOrder);
-                System.out.println("done with entree");
-                break;
-            case 2:
-                theOrder.fromSideMenu(theOrder);
-                System.out.println("done with side");
-                break;
-            case 3:
-                System.out.println("new menu drink menu");
-                break;
-            case 4:
-                System.out.println("Start combo menu");
-            case 5:
-                System.exit(1);
-        }
+    default Order fromMainMenu(Order theOrder) {
+        boolean completedOrder = false;
+       while (!completedOrder){
+           Menu.mainMenu();
+        int choice = getUserInput();
+
+            switch (choice) {
+                case 1:
+                    theOrder.fromEntreeMenu(theOrder);
+                    System.out.println("done with entree");
+                    break;
+                case 2:
+                    theOrder.fromSideMenu(theOrder);
+                    System.out.println("done with side");
+                    break;
+                case 3:
+                    theOrder.fromDrinksMenu(theOrder);
+                    System.out.println("done with drink");
+                   break;
+                case 4:
+                    System.out.println("Start combo menu");
+                case 5:
+                    System.exit(1);
+            }
+
+            System.out.print("Would you like to add something else? (y or n) --> ");
+            Scanner scIn = new Scanner(System.in);
+            String response = scIn.nextLine();
+            if (response.equals("n")) {
+                completedOrder = true;
+            } else {
+                System.out.println(("Yes, add some more"));
+            }
+
+
+            //add theOrder to orderList
+            //should loop here
+        }  return theOrder;
     }
 
     default void fromEntreeMenu(Order theOrder) {
@@ -47,7 +67,7 @@ public interface TakeOrder {
             default: //checkout with defaults?
                 System.exit(1);
         }
-        theOrder.addItemToOrder(chosenTaco);
+
         theOrder.fromTortillaMenu(theOrder, chosenTaco);
     }
 
@@ -87,7 +107,6 @@ public interface TakeOrder {
                 }
             }
         }
-        theOrder.print();
         theOrder.addItemToOrder(theTaco);
     }
 
@@ -100,7 +119,17 @@ public interface TakeOrder {
                 theOrder.addItemToOrder(sides[choice-1]);
             }
         }
-        theOrder.print();
-
     }
+
+    default void fromDrinksMenu(Order theOrder) {
+        Menu.drinkMenu();
+        int choice = theOrder.getUserInput();
+        Drinks[] drinks = Drinks.values();
+        for (Drinks drink : drinks) {
+            if (drinks[choice - 1] == drink) {
+                theOrder.addItemToOrder(drinks[choice-1]);
+            }
+        }
+    }
+
 }

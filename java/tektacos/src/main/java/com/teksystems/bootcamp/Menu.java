@@ -68,4 +68,13 @@ public interface Menu {
         System.out.println("=================");
     }
 
+    static void drinkMenu() {
+        Drinks[] drinks = Drinks.values();
+        System.out.println(" ----Drinks---- ");
+        System.out.println("=================");
+        for (int i = 1; i <= drinks.length; i++) {
+            System.out.println(i + ". " + drinks[i - 1].getDisplayName());
+        }
+        System.out.println("=================");
+    }
 }

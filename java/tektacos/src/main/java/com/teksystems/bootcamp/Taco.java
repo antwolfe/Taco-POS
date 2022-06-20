@@ -2,7 +2,7 @@ package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
 
-public abstract class Taco extends Entree implements MenuItem {
+public abstract class Taco implements MenuItem {
 
     final int toppingLimit;
     private Tortillas tortillas;

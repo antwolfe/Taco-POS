@@ -11,6 +11,10 @@ public enum Sides implements MenuItem {
         this.displayName = displayName;
     }
 
+    public String getDisplayName() {
+        return displayName;
+    }
+
     @Override
     public double getPrice() {
         return 2.5;

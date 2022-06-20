@@ -11,9 +11,13 @@ public enum Drinks implements MenuItem {
         this.displayName = displayName;
     }
 
+    public String getDisplayName() {
+        return displayName;
+    }
+
     @Override
     public double getPrice() {
-        return 0;
+        return 1.5;
     }
 
     @Override

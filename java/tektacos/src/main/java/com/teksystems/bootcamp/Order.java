@@ -16,15 +16,18 @@ public class Order implements TakeOrder {
     }
 
 
-    public ArrayList<MenuItem> getOrderList() {
-        return orderList;
+    public int getOrderList() {
+        return orderList.size();
     }
 
 
     public void print() {
+        double total = 0;
         for (MenuItem item : orderList) {
             System.out.println(item.getDescription() + " --> " + item.getPrice());
+            total += item.getPrice();
         }
+        System.out.println("Your total is: $" + total );
     }
 
 
