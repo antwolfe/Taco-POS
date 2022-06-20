@@ -7,7 +7,9 @@ public class DeluxeTaco extends Taco implements MenuItem {
     int toppingLimit = 6;
 
     public DeluxeTaco() {
-        super(6, Tortillas.FLOUR, Proteins.STEAK, new ArrayList<>(Arrays.asList(Toppings.SHREDDEDLETTUCE, Toppings.ONION, Toppings.TOMATO, Toppings.CHEESE)));
+        super(6, Tortillas.FLOUR, Proteins.STEAK,
+                new ArrayList<>
+                        (Arrays.asList(Toppings.SHREDDEDLETTUCE, Toppings.ONION, Toppings.TOMATO, Toppings.CHEESE)));
     }
 
 

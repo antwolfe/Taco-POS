@@ -18,6 +18,7 @@ public interface TakeOrder {
                 System.out.println("done with entree");
                 break;
             case 2:
+                theOrder.fromSideMenu(theOrder);
                 System.out.println("done with side");
                 break;
             case 3:
@@ -87,7 +88,19 @@ public interface TakeOrder {
             }
         }
         theOrder.print();
+        theOrder.addItemToOrder(theTaco);
     }
 
+    default void fromSideMenu(Order theOrder) {
+        Menu.sideMenu();
+        int choice = theOrder.getUserInput();
+        Sides[] sides = Sides.values();
+        for (Sides side : sides) {
+            if (sides[choice - 1] == side) {
+                theOrder.addItemToOrder(sides[choice-1]);
+            }
+        }
+        theOrder.print();
 
+    }
 }

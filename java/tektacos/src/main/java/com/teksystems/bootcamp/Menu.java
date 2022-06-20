@@ -58,5 +58,14 @@ public interface Menu {
         System.out.println("=================");
     }
 
+    static void sideMenu() {
+        Sides[] sides = Sides.values();
+        System.out.println(" ----Sides---- ");
+        System.out.println("=================");
+        for (int i = 1; i <= sides.length; i++) {
+            System.out.println(i + ". " + sides[i - 1].getDisplayName());
+        }
+        System.out.println("=================");
+    }
 
 }

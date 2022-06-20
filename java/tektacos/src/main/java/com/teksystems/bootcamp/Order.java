@@ -15,11 +15,6 @@ public class Order implements TakeOrder {
         orderList.add(item);
     }
 
-    public void seeItems(){
-        for (MenuItem item : orderList ) {
-            System.out.println(item + ",");
-        }
-    }
 
     public ArrayList<MenuItem> getOrderList() {
         return orderList;

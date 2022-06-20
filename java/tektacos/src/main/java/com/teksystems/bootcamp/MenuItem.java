@@ -9,7 +9,4 @@ public interface MenuItem {
 
     String getDescription();
 
-    default void customizeItem(Order theOrder, MenuItem item) {
-
-    }
 }
