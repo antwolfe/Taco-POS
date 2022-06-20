@@ -33,7 +33,7 @@ public class BasicTaco extends Taco {
         return "Basic taco with "
                 + getTortilla().getDisplayName() + " tortilla, "
                 + getProtein().getDisplayName() + ", and\n"
-                + (getToppingList().isEmpty() ? "no toppings" : (getToppingList().)
+                + (getToppingList().isEmpty() ? "no toppings" : (getToppingList())
                 + " as toppings.");
     }
 

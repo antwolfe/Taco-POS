@@ -5,7 +5,7 @@ import java.util.Scanner;
 public interface TakeOrder {
     // user input handling
 
-    default int getUserInput() {
+    default int getUserInput() { //VALIDATION
         Scanner scanner = new Scanner(System.in);
         System.out.print("Choose a number: ");
         return scanner.nextInt();
@@ -38,16 +38,13 @@ public interface TakeOrder {
 
             System.out.print("Would you like to add something else? (y or n) --> ");
             Scanner scIn = new Scanner(System.in);
-            String response = scIn.nextLine();
+            String response = scIn.nextLine(); //VALIDATION
             if (response.equals("n")) {
                 completedOrder = true;
             } else {
-                System.out.println(("Yes, add some more"));
+                System.out.println(("Yes, add some more!"));
             }
 
-
-            //add theOrder to orderList
-            //should loop here
         }  return theOrder;
     }
 
@@ -72,6 +69,7 @@ public interface TakeOrder {
     }
 
     // refactor: if choice NOT last choice ((default)) SET_? ELSE, DO NOTHING/SET CHOICE TO DEFAULT
+    // VALIDATION
 
     default void fromTortillaMenu(Order theOrder, Taco theTaco) {
         Menu.tortillaMenu();
