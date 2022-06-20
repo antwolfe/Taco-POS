@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BasicTaco extends Taco {
     int toppingLimit = 4;
@@ -18,22 +19,6 @@ public class BasicTaco extends Taco {
             System.out.println("You cannot add anymore toppings.");
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @Override
     public double getPrice() {
