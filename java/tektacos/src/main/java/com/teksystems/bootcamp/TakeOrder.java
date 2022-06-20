@@ -13,9 +13,9 @@ public interface TakeOrder {
 
     default Order fromMainMenu(Order theOrder) {
         boolean completedOrder = false;
-       while (!completedOrder){
-           Menu.mainMenu();
-        int choice = getUserInput();
+        while (!completedOrder) {
+            Menu.mainMenu();
+            int choice = getUserInput();
 
             switch (choice) {
                 case 1:
@@ -29,23 +29,31 @@ public interface TakeOrder {
                 case 3:
                     theOrder.fromDrinksMenu(theOrder);
                     System.out.println("done with drink");
-                   break;
+                    break;
                 case 4:
                     System.out.println("Start combo menu");
                 case 5:
                     System.exit(1);
             }
 
-            System.out.print("Would you like to add something else? (y or n) --> ");
-            Scanner scIn = new Scanner(System.in);
-            String response = scIn.nextLine(); //VALIDATION
-            if (response.equals("n")) {
-                completedOrder = true;
-            } else {
-                System.out.println(("Yes, add some more!"));
+            boolean isValidInput = false;
+            while (!isValidInput) {
+                System.out.print("Would you like to add something else? (y or n) --> ");
+                Scanner scIn = new Scanner(System.in);
+                String response = scIn.nextLine();
+                if (response.equalsIgnoreCase("n")) {
+                    isValidInput = true;
+                    completedOrder = true;
+                } else if (response.equalsIgnoreCase("y")) {
+                    System.out.println(("Yes, add some more!"));
+                    isValidInput = true;
+                } else {
+                    System.out.println("Please enter in 'y' or 'n'");
+                }
             }
 
-        }  return theOrder;
+        }
+        return theOrder;
     }
 
     default void fromEntreeMenu(Order theOrder) {
@@ -53,7 +61,7 @@ public interface TakeOrder {
         Taco chosenTaco = null;
         switch (theOrder.getUserInput()) {
             case 1:
-               chosenTaco = new BasicTaco();
+                chosenTaco = new BasicTaco();
                 break;
             case 2:
                 chosenTaco = new DeluxeTaco();
@@ -114,7 +122,7 @@ public interface TakeOrder {
         Sides[] sides = Sides.values();
         for (Sides side : sides) {
             if (sides[choice - 1] == side) {
-                theOrder.addItemToOrder(sides[choice-1]);
+                theOrder.addItemToOrder(sides[choice - 1]);
             }
         }
     }
@@ -125,7 +133,7 @@ public interface TakeOrder {
         Drinks[] drinks = Drinks.values();
         for (Drinks drink : drinks) {
             if (drinks[choice - 1] == drink) {
-                theOrder.addItemToOrder(drinks[choice-1]);
+                theOrder.addItemToOrder(drinks[choice - 1]);
             }
         }
     }
