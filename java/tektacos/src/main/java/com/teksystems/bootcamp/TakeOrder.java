@@ -48,38 +48,19 @@ public interface TakeOrder {
         }
         theOrder.addItemToOrder(chosenTaco);
         theOrder.fromTortillaMenu(theOrder, chosenTaco);
-
     }
+
+    // refactor: if choice NOT last choice ((default)) SET_? ELSE, DO NOTHING/SET CHOICE TO DEFAULT
 
     default void fromTortillaMenu(Order theOrder, Taco theTaco) {
         Menu.tortillaMenu();
         int choice = theOrder.getUserInput();
-        if (choice != 2) {
+        if (choice != 2 && (!theTaco.getTortilla().equals(Tortillas.CORN))) {
             theTaco.setTortilla(Tortillas.FLOUR);
         } else {
             theTaco.setTortilla(Tortillas.CORN);
         }
-
         theOrder.fromProteinMenu(theOrder, theTaco);
-//        switch (theOrder.getUserInput()) {
-//            case 1:
-////                System.out.println("flour");
-//                theTaco.setTortilla(Tortillas.FLOUR);
-//                theOrder.print();
-//                theOrder.fromProteinMenu(theOrder, theTaco);
-//                break;
-//            case 2:
-////                System.out.println("corn");
-//                theTaco.setTortilla(Tortillas.CORN);
-//                theOrder.print();
-//                theOrder.fromProteinMenu(theOrder, theTaco);
-//                break;
-//            case 3:
-//                System.out.println("default");
-//                break;
-//            default:
-//                System.exit(1);
-//        }
     }
 
     default void fromProteinMenu(Order theOrder, Taco theTaco) {
@@ -91,8 +72,7 @@ public interface TakeOrder {
                 theTaco.setProtein(proteins[choice - 1]);
             }
         }
-        theOrder.print();
-        fromToppingMenu(theOrder, theTaco);
+        theOrder.fromToppingMenu(theOrder, theTaco);
     }
 
     default void fromToppingMenu(Order theOrder, Taco theTaco) {
@@ -105,7 +85,6 @@ public interface TakeOrder {
                     theTaco.addTopping(toppings[choice - 1]);
                 }
             }
-
         }
         theOrder.print();
     }
