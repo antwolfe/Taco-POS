@@ -30,16 +30,16 @@ public interface TakeOrder {
 
             switch (choice) {
                 case 1:
-                    theOrder.fromEntreeMenu(theOrder);
+                    theOrder.addItemToOrder(fromEntreeMenu(theOrder));
                     break;
                 case 2:
-                    theOrder.fromSideMenu(theOrder);
+                    theOrder.addItemToOrder(fromSideMenu(theOrder));
                     break;
                 case 3:
-                    theOrder.fromDrinksMenu(theOrder);
+                    theOrder.addItemToOrder(fromDrinksMenu(theOrder));
                     break;
                 case 4:
-                    theOrder.fromComboMenu(theOrder);
+//                    theOrder.addItemToOrder(fromComboMenu(theOrder));
                     break;
                 case 5:
                     System.exit(1);
@@ -69,7 +69,7 @@ public interface TakeOrder {
 
     // all options on main menu
 
-    default void fromEntreeMenu(Order theOrder) {
+    default Taco fromEntreeMenu(Order theOrder) {
         Menu.entreeMenu();
         Taco chosenTaco = null;
         switch (theOrder.getUserInput(4)) {
@@ -86,51 +86,49 @@ public interface TakeOrder {
                 System.exit(1); //VALIDATION
         }
 
-        theOrder.fromTortillaMenu(theOrder, chosenTaco);
+        chosenTaco.setTortilla(fromTortillaMenu(theOrder, chosenTaco));
+        chosenTaco.setProtein(fromProteinMenu(theOrder, chosenTaco));
+        chosenTaco = fromToppingMenu(theOrder, chosenTaco);
+        return chosenTaco;
     }
 
     // refactor: if choice NOT last choice ((default)) SET_? ELSE, DO NOTHING/SET CHOICE TO DEFAULT
     // VALIDATION
 
-    default void fromTortillaMenu(Order theOrder, Taco theTaco) {
+    default Tortillas fromTortillaMenu(Order theOrder, Taco theTaco) {
         Menu.tortillaMenu();
         int choice = theOrder.getUserInput(Tortillas.values().length + 1);
         if (choice != 2 && (!theTaco.getTortilla().equals(Tortillas.CORN))) {
-            theTaco.setTortilla(Tortillas.FLOUR);
             System.out.println("You chose the flour tortilla");
+            return Tortillas.FLOUR;
         } else {
-            theTaco.setTortilla(Tortillas.CORN);
             System.out.println("You chose the corn tortilla");
+            return Tortillas.CORN;
         }
-        theOrder.fromProteinMenu(theOrder, theTaco);
     }
 
-    default void fromProteinMenu(Order theOrder, Taco theTaco) {
+    default Proteins fromProteinMenu(Order theOrder, Taco theTaco) {
         if (theTaco.getProtein() == Proteins.BLACKBEANS) {
             System.out.println();
             System.out.println("--------------------------------------");
             System.out.println("Veggie taco comes with black beans");
             System.out.println("--------------------------------------");
+            return Proteins.BLACKBEANS;
         } else {
             Menu.proteinMenu();
             Proteins[] proteins = Proteins.values();
             int choice = theOrder.getUserInput(proteins.length + 1);
             if (choice == 6) {
                 System.out.println("You chose " + theTaco.getProtein().toString());
+                return theTaco.getProtein();
             } else {
-                for (Proteins protein : proteins) {
-                    if (proteins[choice - 1] == protein) {
-                        theTaco.setProtein(proteins[choice - 1]);
-                        System.out.println("You added " + proteins[choice - 1].toString());
-                    }
-                }
+                System.out.println("You added " + proteins[choice - 1].toString());
+                return proteins[choice - 1];
             }
         }
-
-        theOrder.fromToppingMenu(theOrder, theTaco);
     }
 
-    default void fromToppingMenu(Order theOrder, Taco theTaco) {
+    default Taco fromToppingMenu(Order theOrder, Taco theTaco) {
         Toppings[] toppings = Toppings.values();
         while (theTaco.getToppingList().size() < theTaco.toppingLimit) {
             Menu.toppingMenu();
@@ -142,41 +140,41 @@ public interface TakeOrder {
                 }
             }
         }
-        theOrder.addItemToOrder(theTaco);
+        return theTaco;
     }
 
-    default void fromSideMenu(Order theOrder) {
+    default Sides fromSideMenu(Order theOrder) {
         Menu.sideMenu();
         Sides[] sides = Sides.values();
         int choice = theOrder.getUserInput(sides.length);
-        for (Sides side : sides) {
-            if (sides[choice - 1] == side) {
-                theOrder.addItemToOrder(sides[choice - 1]);
-                System.out.println("You added " + sides[choice - 1].toString());
-            }
+        if (choice <= sides.length) {
+            System.out.println("You added " + sides[choice - 1].toString());
+            return sides[choice - 1];
+        } else {
+            System.out.println("YOU SHALL NOT PASS");
+            return fromSideMenu(theOrder);
         }
     }
 
-    default void fromDrinksMenu(Order theOrder) {
+    default Drinks fromDrinksMenu(Order theOrder) {
         Menu.drinkMenu();
         Drinks[] drinks = Drinks.values();
         int choice = theOrder.getUserInput(drinks.length);
-        for (Drinks drink : drinks) {
-            if (drinks[choice - 1] == drink) {
-                theOrder.addItemToOrder(drinks[choice - 1]);
-                System.out.println("You added " + drinks[choice - 1].toString());
-            }
+        if (choice <= drinks.length) {
+            System.out.println("You added " + drinks[choice - 1].toString());
+            return drinks[choice - 1];
+        } else {
+            System.out.println("NUUUUUU");
+            return fromDrinksMenu(theOrder);
         }
     }
 
-    default void fromComboMenu(Order theOrder) {
+    default Combo fromComboMenu(Order theOrder) {
         System.out.println("Pick an entree, side and drink");
-        Combo newCombo = new Combo();
-        fromEntreeMenu(theOrder);
-        fromSideMenu(theOrder);
-        fromDrinksMenu(theOrder);
-        newCombo.addItemToCombo(theOrder);
-        newCombo.getDescription();
+        Taco newTaco = fromEntreeMenu(theOrder);
+        Sides newSide = fromSideMenu(theOrder);
+        Drinks newDrink = fromDrinksMenu(theOrder);
+        return new Combo( newTaco, newSide, newDrink);
     }
 
 }

@@ -4,14 +4,14 @@ import java.util.ArrayList;
 
 public class Combo implements MenuItem {
 
-    ArrayList<Order> combo;
+    Taco taco;
+    Sides side;
+    Drinks drink;
 
-    public Combo() {
-        this.combo = new ArrayList<>();
-    }
-
-    public void addItemToCombo(Order order){
-        combo.add(order);
+    public Combo(Taco taco, Sides side, Drinks drink) {
+        this.taco = taco;
+        this.side = side;
+        this.drink = drink;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Combo implements MenuItem {
 
     @Override
     public String getDescription() {
-        return "Combo meal --> "
-                + combo.size();
+        return "Combo meal --> " +
+                ""
     }
 }
