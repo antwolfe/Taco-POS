@@ -12,7 +12,6 @@ public class DeluxeTaco extends Taco implements MenuItem {
                         (Arrays.asList(Toppings.SHREDDEDLETTUCE, Toppings.ONION, Toppings.TOMATO, Toppings.CHEESE)));
     }
 
-
     @Override
     public double getPrice() {
         return 5.25;

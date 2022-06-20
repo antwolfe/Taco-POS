@@ -48,6 +48,7 @@ public interface Menu {
         for (int i = 1; i <= proteins.length; i++) {
             System.out.println(i + ". " + proteins[i - 1].getDisplayName());
         }
+        System.out.println("6. default");
         System.out.println("===================");
     }
 

@@ -101,16 +101,27 @@ public interface TakeOrder {
     }
 
     default void fromProteinMenu(Order theOrder, Taco theTaco) {
-        Menu.proteinMenu();
-        System.out.println(theTaco);
-        Proteins[] proteins = Proteins.values();
-        int choice = theOrder.getUserInput(proteins.length);
-        for (Proteins protein : proteins) {
-            if (proteins[choice - 1] == protein) {
-                theTaco.setProtein(proteins[choice - 1]);
-                System.out.println("You added " + proteins[choice - 1].getDisplayName());
+        if (theTaco.getProtein() == Proteins.BLACKBEANS) {
+            System.out.println();
+            System.out.println("--------------------------------------");
+            System.out.println("Veggie taco comes with black beans");
+            System.out.println("--------------------------------------");
+        } else {
+            Menu.proteinMenu();
+            Proteins[] proteins = Proteins.values();
+            int choice = theOrder.getUserInput(proteins.length + 1);
+            if (choice == 6) {
+                System.out.println("You chose " + theTaco.getProtein().getDisplayName());
+            } else {
+                for (Proteins protein : proteins) {
+                    if (proteins[choice - 1] == protein) {
+                        theTaco.setProtein(proteins[choice - 1]);
+                        System.out.println("You added " + proteins[choice - 1].getDisplayName());
+                    }
+                }
             }
         }
+
         theOrder.fromToppingMenu(theOrder, theTaco);
     }
 
