@@ -25,9 +25,7 @@ public class BasicTaco extends Taco {
         return 3.75;
     }
 
-    private void getStringToppings(){
 
-    }
     @Override
     public String getDescription() {
         return "Basic taco with "
