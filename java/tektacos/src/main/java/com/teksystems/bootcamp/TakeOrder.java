@@ -32,26 +32,22 @@ public interface TakeOrder {
 
     default void fromEntreeMenu(Order theOrder) {
         Menu.entreeMenu();
+        Taco chosenTaco = null;
         switch (theOrder.getUserInput()) {
             case 1:
-                Taco basicTaco = new BasicTaco();
-                theOrder.addItemToOrder(basicTaco);
-                theOrder.print();
-                theOrder.fromTortillaMenu(theOrder, basicTaco);
+               chosenTaco = new BasicTaco();
                 break;
             case 2:
-                Taco deluxeTaco = new DeluxeTaco();
-                theOrder.addItemToOrder(deluxeTaco);
-                theOrder.fromTortillaMenu(theOrder, deluxeTaco);
+                chosenTaco = new DeluxeTaco();
                 break;
             case 3:
-                Taco veggieTaco = new VeggieTaco();
-                theOrder.addItemToOrder(veggieTaco);
-                theOrder.fromTortillaMenu(theOrder, veggieTaco);
+                chosenTaco = new VeggieTaco();
                 break;
-            case 4: //checkout with defaults?
+            default: //checkout with defaults?
                 System.exit(1);
         }
+        theOrder.addItemToOrder(chosenTaco);
+        theOrder.fromTortillaMenu(theOrder, chosenTaco);
 
     }
 
