@@ -19,3 +19,5 @@
   - Explained the basics of the assignment, how to get started, and many other questions
 
 
+- TA Abigail Swigert
+  - Helped implement and explain Combo functionality
