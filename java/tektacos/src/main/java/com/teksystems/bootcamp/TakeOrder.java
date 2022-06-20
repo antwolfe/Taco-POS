@@ -5,13 +5,13 @@ import java.util.Scanner;
 public interface TakeOrder {
     // user input handling
 
-    default int getUserInput(int max_num) { //VALIDATION
+    default int getUserInput(int max_num) {
         boolean isValidInput = false;
         int response = 0;
         while (!isValidInput) {
             System.out.print("Choose a number: ");
             Scanner scanner = new Scanner(System.in);
-            response =  scanner.nextInt();
+            response = scanner.nextInt();
             if (response <= max_num) {
                 isValidInput = true;
             } else {
@@ -30,18 +30,16 @@ public interface TakeOrder {
             switch (choice) {
                 case 1:
                     theOrder.fromEntreeMenu(theOrder);
-                    System.out.println("done with entree");
                     break;
                 case 2:
                     theOrder.fromSideMenu(theOrder);
-                    System.out.println("done with side");
                     break;
                 case 3:
                     theOrder.fromDrinksMenu(theOrder);
-                    System.out.println("done with drink");
                     break;
                 case 4:
-                    System.out.println("Start combo menu");
+                    theOrder.fromComboMenu(theOrder);
+                    break;
                 case 5:
                     System.exit(1);
             }
@@ -104,6 +102,7 @@ public interface TakeOrder {
 
     default void fromProteinMenu(Order theOrder, Taco theTaco) {
         Menu.proteinMenu();
+        System.out.println(theTaco);
         Proteins[] proteins = Proteins.values();
         int choice = theOrder.getUserInput(proteins.length);
         for (Proteins protein : proteins) {
@@ -152,6 +151,13 @@ public interface TakeOrder {
                 System.out.println("You added " + drinks[choice - 1].getDisplayName());
             }
         }
+    }
+
+    default void fromComboMenu(Order theOrder) {
+        System.out.println("Pick an entree, side and drink");
+        fromEntreeMenu(theOrder);
+        fromSideMenu(theOrder);
+        fromDrinksMenu(theOrder);
     }
 
 }

@@ -2,7 +2,7 @@ package com.teksystems.bootcamp;
 
 public interface Menu {
 
-    public static void mainMenu() {
+    static void mainMenu() {
         System.out.println();
         System.out.println("-------------------");
         System.out.println(" ----MAIN MENU---- ");
@@ -15,7 +15,7 @@ public interface Menu {
         System.out.println("===================");
     }
 
-    public static void entreeMenu() {
+    static void entreeMenu() {
         System.out.println();
         System.out.println("------------------------------------");
         System.out.println("         ----ENTREES---- ");
@@ -26,7 +26,7 @@ public interface Menu {
         System.out.println("====================================");
     }
 
-    public static void tortillaMenu() {
+    static void tortillaMenu() {
         System.out.println();
         Tortillas[] tortillas = Tortillas.values();
         System.out.println("---------------");
@@ -39,7 +39,7 @@ public interface Menu {
         System.out.println("===============");
     }
 
-    public static void proteinMenu() { //add Defaults
+    static void proteinMenu() { //add Defaults
         System.out.println();
         Proteins[] proteins = Proteins.values();
         System.out.println("-------------------");
@@ -51,7 +51,7 @@ public interface Menu {
         System.out.println("===================");
     }
 
-    public static void toppingMenu() {
+    static void toppingMenu() {
         System.out.println();
         Toppings[] toppings = Toppings.values();
         System.out.println("------------------");

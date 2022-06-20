@@ -13,10 +13,6 @@ public class Order implements TakeOrder {
         orderList.add(item);
     }
 
-    public int getOrderList() {
-        return orderList.size();
-    } // delete
-
     public void print() {
         double total = 0;
         for (MenuItem item : orderList) {

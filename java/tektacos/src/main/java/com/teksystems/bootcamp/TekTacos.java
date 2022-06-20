@@ -9,7 +9,6 @@ public class TekTacos implements Menu {
         Order newOrder = new Order();
 //       newOrder.fromMainMenu(newOrder, choice);
         Order finalOrder = newOrder.fromMainMenu(newOrder);
-        System.out.println(finalOrder.getOrderList());
         finalOrder.print();
     }
 
