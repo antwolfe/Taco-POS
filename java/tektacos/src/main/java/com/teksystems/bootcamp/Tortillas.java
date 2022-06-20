@@ -10,7 +10,7 @@ public enum Tortillas implements MenuItem {
         this.displayName = displayName;
     }
 
-    public String getDisplayName() {
+    public String toString() {
         return displayName;
     }
 

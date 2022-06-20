@@ -14,15 +14,16 @@ public class DeluxeTaco extends Taco implements MenuItem {
 
     @Override
     public double getPrice() {
-        return 5.25;
+        return 6.50;
     }
+
 
     @Override
     public String getDescription() {
         return "Deluxe taco with "
-                + getTortilla().getDisplayName() + " tortilla, "
-                + getProtein().getDisplayName() + ", and...\n"
-                + getToppingList() + " as toppings.";
+                + getTortilla().toString() + " tortilla, "
+                + getProtein().toString() + ", and...\n"
+                + getToppingList().toString() + " as toppings.";
     }
 
     @Override
@@ -35,5 +36,7 @@ public class DeluxeTaco extends Taco implements MenuItem {
             System.out.println("You cannot add anymore toppings.");
         }
     }
+
+
 
 }

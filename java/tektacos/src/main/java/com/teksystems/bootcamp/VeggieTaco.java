@@ -10,14 +10,14 @@ public class VeggieTaco extends Taco implements MenuItem {
 
     @Override
     public double getPrice() {
-        return 2.75;
+        return 4.75;
     }
 
     @Override
     public String getDescription() {
         return "Veggie taco with "
-                + getTortilla().getDisplayName() + " tortilla, "
-                + getProtein().getDisplayName() + ", and...\n"
+                + getTortilla().toString() + " tortilla, "
+                + getProtein().toString() + ", and...\n"
                 + getToppingList() + " as toppings.";
     }
 

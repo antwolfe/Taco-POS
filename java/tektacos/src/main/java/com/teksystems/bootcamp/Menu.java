@@ -33,7 +33,7 @@ public interface Menu {
         System.out.println("---TORTILLAS---");
         System.out.println("===============");
         for (int i = 1; i <= tortillas.length; i++) {
-            System.out.println(i + ". " + tortillas[i - 1].getDisplayName());
+            System.out.println(i + ". " + tortillas[i - 1].toString());
         }
         System.out.println("3. default");
         System.out.println("===============");
@@ -46,7 +46,7 @@ public interface Menu {
         System.out.println(" ----PROTEINS---- ");
         System.out.println("===================");
         for (int i = 1; i <= proteins.length; i++) {
-            System.out.println(i + ". " + proteins[i - 1].getDisplayName());
+            System.out.println(i + ". " + proteins[i - 1].toString());
         }
         System.out.println("6. default");
         System.out.println("===================");
@@ -59,7 +59,7 @@ public interface Menu {
         System.out.println(" ----TOPPINGS---- ");
         System.out.println("==================");
         for (int i = 1; i <= toppings.length; i++) {
-            System.out.println(i + ". " + toppings[i - 1].getDisplayName());
+            System.out.println(i + ". " + toppings[i - 1].toString());
         }
         System.out.println("==================");
     }
@@ -71,7 +71,7 @@ public interface Menu {
         System.out.println(" ----Sides---- ");
         System.out.println("=================");
         for (int i = 1; i <= sides.length; i++) {
-            System.out.println(i + ". " + sides[i - 1].getDisplayName());
+            System.out.println(i + ". " + sides[i - 1].toString());
         }
         System.out.println("=================");
     }
@@ -83,7 +83,7 @@ public interface Menu {
         System.out.println(" ----Drinks---- ");
         System.out.println("=================");
         for (int i = 1; i <= drinks.length; i++) {
-            System.out.println(i + ". " + drinks[i - 1].getDisplayName());
+            System.out.println(i + ". " + drinks[i - 1].toString());
         }
         System.out.println("=================");
     }

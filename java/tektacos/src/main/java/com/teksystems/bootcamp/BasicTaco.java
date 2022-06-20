@@ -1,10 +1,9 @@
 package com.teksystems.bootcamp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BasicTaco extends Taco {
-    int toppingLimit = 4;
+    private final int toppingLimit = 4;
     public BasicTaco() {
         super(4, Tortillas.FLOUR, Proteins.GROUNDBEEF, new ArrayList<>());
     }
@@ -22,15 +21,15 @@ public class BasicTaco extends Taco {
 
     @Override
     public double getPrice() {
-        return 3.75;
+        return 5.75;
     }
 
 
     @Override
     public String getDescription() {
         return "Basic taco with "
-                + getTortilla().getDisplayName() + " tortilla, "
-                + getProtein().getDisplayName() + ", and\n"
+                + getTortilla().toString() + " tortilla, "
+                + getProtein().toString() + ", and\n"
                 + (getToppingList().isEmpty() ? "no toppings" : (getToppingList())
                 + " as toppings.");
     }

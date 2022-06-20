@@ -11,7 +11,7 @@ public enum Drinks implements MenuItem {
         this.displayName = displayName;
     }
 
-    public String getDisplayName() {
+    public String toString() {
         return displayName;
     }
 

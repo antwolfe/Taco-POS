@@ -21,6 +21,7 @@ public interface TakeOrder {
         return response;
     }
 
+    // main menu logic
     default Order fromMainMenu(Order theOrder) {
         boolean completedOrder = false;
         while (!completedOrder) {
@@ -46,6 +47,8 @@ public interface TakeOrder {
 
             boolean isValidInput = false;
             while (!isValidInput) {
+                System.out.println();
+                System.out.println("---------------------------------------------------");
                 System.out.print("Would you like to add something else? (y or n) --> ");
                 Scanner scIn = new Scanner(System.in);
                 String response = scIn.nextLine();
@@ -64,6 +67,8 @@ public interface TakeOrder {
         return theOrder;
     }
 
+    // all options on main menu
+
     default void fromEntreeMenu(Order theOrder) {
         Menu.entreeMenu();
         Taco chosenTaco = null;
@@ -78,7 +83,7 @@ public interface TakeOrder {
                 chosenTaco = new VeggieTaco();
                 break;
             default: //checkout with defaults?
-                System.exit(1);
+                System.exit(1); //VALIDATION
         }
 
         theOrder.fromTortillaMenu(theOrder, chosenTaco);
@@ -111,12 +116,12 @@ public interface TakeOrder {
             Proteins[] proteins = Proteins.values();
             int choice = theOrder.getUserInput(proteins.length + 1);
             if (choice == 6) {
-                System.out.println("You chose " + theTaco.getProtein().getDisplayName());
+                System.out.println("You chose " + theTaco.getProtein().toString());
             } else {
                 for (Proteins protein : proteins) {
                     if (proteins[choice - 1] == protein) {
                         theTaco.setProtein(proteins[choice - 1]);
-                        System.out.println("You added " + proteins[choice - 1].getDisplayName());
+                        System.out.println("You added " + proteins[choice - 1].toString());
                     }
                 }
             }
@@ -133,7 +138,7 @@ public interface TakeOrder {
             for (Toppings topping : toppings) {
                 if (toppings[choice - 1] == topping) {
                     theTaco.addTopping(toppings[choice - 1]);
-                    System.out.println("You added " + toppings[choice - 1].getDisplayName());
+                    System.out.println("You added " + toppings[choice - 1].toString());
                 }
             }
         }
@@ -147,7 +152,7 @@ public interface TakeOrder {
         for (Sides side : sides) {
             if (sides[choice - 1] == side) {
                 theOrder.addItemToOrder(sides[choice - 1]);
-                System.out.println("You added " + sides[choice - 1].getDisplayName());
+                System.out.println("You added " + sides[choice - 1].toString());
             }
         }
     }
@@ -159,16 +164,19 @@ public interface TakeOrder {
         for (Drinks drink : drinks) {
             if (drinks[choice - 1] == drink) {
                 theOrder.addItemToOrder(drinks[choice - 1]);
-                System.out.println("You added " + drinks[choice - 1].getDisplayName());
+                System.out.println("You added " + drinks[choice - 1].toString());
             }
         }
     }
 
     default void fromComboMenu(Order theOrder) {
         System.out.println("Pick an entree, side and drink");
+        Combo newCombo = new Combo();
         fromEntreeMenu(theOrder);
         fromSideMenu(theOrder);
         fromDrinksMenu(theOrder);
+        newCombo.addItemToCombo(theOrder);
+        newCombo.getDescription();
     }
 
 }
