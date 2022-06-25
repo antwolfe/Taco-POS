@@ -1,14 +1,20 @@
 package com.example.mazegame;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.shape.Circle;
 
 public class MazeController {
     @FXML
-    private Label welcomeText;
+    private ImageView userSprite;
+    private ImageView maze;
+
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public void up(ActionEvent event) {
+        circle.setCenterY(y-=10);
     }
+
 }

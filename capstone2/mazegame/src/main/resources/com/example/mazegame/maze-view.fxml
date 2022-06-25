@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Arc?>
-<?import javafx.scene.shape.Circle?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button layoutX="355.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="238.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-      <Button layoutX="462.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-      <Arc fill="#f4ff1f" layoutX="129.0" layoutY="200.0" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="45.0" stroke="BLACK" strokeType="INSIDE" type="ROUND" />
-      <Circle fill="DODGERBLUE" layoutX="122.0" layoutY="127.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
-   </children>
-</AnchorPane>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mazegame.MazeController" />
