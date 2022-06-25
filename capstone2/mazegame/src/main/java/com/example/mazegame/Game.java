@@ -5,4 +5,7 @@ package com.example.mazegame;
 //
 public class Game {
 
+    private double levelTimer;
+
+
 }
