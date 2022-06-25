@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.capstone2;
+package com.teksystems.bootcamp.mysterygame;
 
 import static org.junit.Assert.assertTrue;
 
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class MysteryGameTest
 {
     /**
      * Rigorous Test :-)

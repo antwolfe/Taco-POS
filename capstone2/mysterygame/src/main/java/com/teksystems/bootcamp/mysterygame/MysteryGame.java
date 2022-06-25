@@ -1,10 +1,10 @@
-package com.teksystems.bootcamp.capstone2;
+package com.teksystems.bootcamp.mysterygame;
 
 
 import java.util.Scanner;
 
 
-public class App 
+public class MysteryGame
 {
 
     public static void main( String[] args )
@@ -12,7 +12,7 @@ public class App
     Scanner scanner = new Scanner(System.in);
     String input;
         do {
-            System.out.println("> ");
+            System.out.print("> ");
             input = scanner.nextLine();
             System.out.println("You entered '" + input + "'");
         } while (!"q".equals(input));
