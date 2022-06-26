@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.mysterygame;
 
+import gameobjects.characters.Actor;
 import gameobjects.rooms.*;
 import globals.Items;
 
@@ -17,6 +18,9 @@ public class Game {
 
     void initGame() {
         createMap();
+        Actor player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
+        player.setCurrentRoom(map.get(0));
+        System.out.println(player.getCurrentRoom().getDescription());
     }
 
     void playGame() {
