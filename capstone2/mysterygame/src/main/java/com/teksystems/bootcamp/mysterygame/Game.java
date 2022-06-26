@@ -68,7 +68,14 @@ public class Game {
                      }
                      break;
                  case "go":
-                     System.out.println("pick a direction:");
+                     switch (noun) {
+                         case "n":
+                             System.out.println(player.getCurrentRoom().getN());
+                             System.out.println(map.get(player.getCurrentRoom().getS()));
+                             player.setCurrentRoom(map.get(player.getCurrentRoom().getS()));
+                             System.out.println(player.getCurrentRoom().getName());
+
+                     }
                      break;
                  default:
                      break;
