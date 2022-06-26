@@ -14,7 +14,7 @@ public class Room {
     private ArrayList<InteractiveItem> items;
 
 
-    public Room(String name, String description, int n, int e, int s, int w) {
+    public Room(String name, String description, int n, int e, int s, int w, ArrayList<InteractiveItem> roomItems) {
         this.name = name;
         this.description = description;
         this.n = n;
@@ -23,8 +23,9 @@ public class Room {
         this.w = w;
         this.characters = new ArrayList<Actor>();
         this.clues = new ArrayList<Clue>();
-        this.items = new ArrayList<InteractiveItem>();
+        this.items = roomItems; // moot if in constructor
     }
+
 
 
     public String getName() {
@@ -71,7 +72,7 @@ public class Room {
         return items;
     }
 
-    public void setItems(ArrayList<InteractiveItem> items) {
-        this.items = items;
+    public void setItems(InteractiveItem item) {
+        this.items.add(item);
     }
 }

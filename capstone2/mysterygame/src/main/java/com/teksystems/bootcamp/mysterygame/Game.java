@@ -23,6 +23,7 @@ public class Game {
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(map.get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
+        System.out.println(player.getCurrentRoom().getItems());
     }
 
     void playGame() {
@@ -45,11 +46,16 @@ public class Game {
 
     private void createMap() {
         // create map // TODO: refactor HashMap?
-        Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, 4, 1, -1);
-        Room kitchen = new Room("Kitchen", "where delicious sides line the counters and island", 0, 2, -1, 3);
-        Room cellar = new Room("Cellar", "damp and dark, gives you the shivers", -1, -1, -1, 1);
-        Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, 1, -1, -1);
-        Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1);
+        Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, 4, 1, -1, new ArrayList<>
+                (Arrays.asList(InteractiveItem.BBQ_PIT, InteractiveItem.MAT)));
+        Room kitchen = new Room("Kitchen", "where delicious sides line the counters and island", 0, 2, -1, 3, new ArrayList<>
+                (Arrays.asList(InteractiveItem.FRIDGE, InteractiveItem.OVEN, InteractiveItem.COUNTER)));
+        Room cellar = new Room("Cellar", "damp and dark, gives you the shivers", -1, -1, -1, 1, new ArrayList<>
+                (Arrays.asList(InteractiveItem.TRASHCAN)));
+        Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, 1, -1, -1, new ArrayList<>
+                (Arrays.asList(InteractiveItem.MAT, InteractiveItem.TRASHCAN)));
+        Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1, new ArrayList<>
+                (Arrays.asList(InteractiveItem.COMPUTER, InteractiveItem.DESK)));
 
         map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
         // map list TODO: remove before prod.
@@ -95,7 +101,7 @@ public class Game {
                 if (noun.equals("room")) {
                     player.LookRoom();
                 } else {
-                    player.LookItem();
+                    player.LookItem(noun);
                 }
             }
 
@@ -132,7 +138,6 @@ public class Game {
         return words;
     }
 
-
     private void goDirection(int direction) {
         Room newRoom;
         String noRoom = "There is no room that way.";
@@ -144,6 +149,11 @@ public class Game {
             player.LookRoom();
         }
     }
+
+    private void initRoom() {
+        map.get(0).setItems(InteractiveItem.BBQ_PIT);
+    }
+
 
 
 }
