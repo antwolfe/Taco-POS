@@ -19,6 +19,9 @@ public class Room {
         this.e = e;
         this.s = s;
         this.w = w;
+        this.characters = new ArrayList<Actor>();
+        this.clues = new ArrayList<Clues>();
+        this.items = new ArrayList<Items>();
     }
 
 

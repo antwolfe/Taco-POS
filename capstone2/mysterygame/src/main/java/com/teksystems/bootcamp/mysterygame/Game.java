@@ -11,17 +11,17 @@ import java.util.Scanner;
 
 public class Game {
     private ArrayList<Room> map = new ArrayList<>();
-    private String[] commandList = {"take", "drop", "look"};
+    private String[] commandList = {"take", "go", "look"};
     private Items[] itemList = Items.values();
     private ArrayList<String> commands = new ArrayList<>(Arrays.asList(commandList));
     private ArrayList<Items> items = new ArrayList<>(Arrays.asList(itemList));
+    private Actor player;
 
     void initGame() {
         createMap();
-        Actor player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
+        player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(map.get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false ));
-        System.out.println(player.getCurrentRoom().getCharacters());
     }
 
     void playGame() {
@@ -35,7 +35,7 @@ public class Game {
         String output = "";
         do {
             System.out.print("> ");
-            input = scanner.nextLine();
+            input = scanner.nextLine().toLowerCase();
             output = processCommands(input);
             System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
@@ -43,10 +43,10 @@ public class Game {
 
     private void createMap() {
         // create map
-        Room backyard = new Room("Backyard", "Where the BBQ is taking place", -1, -1, 1, -1);
-        Room kitchen = new Room("Kitchen", "Delicious sides line the counters and island", 0, 2, -1, 3);
-        Room cellar = new Room("Cellar", "Damp and dark, what could possibly be in here?", -1, -1, -1, 1);
-        Room hallway = new Room("Hallway", "Warm and cozy, looks like a good place to watch for suspects", 4, -1, -1, -1);
+        Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, -1, 1, -1);
+        Room kitchen = new Room("Kitchen", "where delicious sides line the counters and island", 0, 2, -1, 3);
+        Room cellar = new Room("Cellar", "damp and dark, gives you the shivers", -1, -1, -1, 1);
+        Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, -1, -1, -1);
         Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1);
 
         map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
@@ -55,9 +55,32 @@ public class Game {
     private String processCommands(String words) {
         if (isValidCommand(words)) {
             System.out.println("ok");
+             String[] arrWords = words.toLowerCase().split(" ");
+             String verb = arrWords[0];
+             String noun = arrWords[1];
+
+             switch (verb) { //TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
+                 case "look":
+                     if (noun.equals("room")) {
+                         LookRoom();
+                     } else {
+                         LookItem();
+                     }
+                     break;
+                 case "go":
+                     if (!noun.equals(char)){
+                        break;
+                     } else {
+
+                 }
+
+
+                 default:
+                     break;
+             }
 
         } else {
-            System.out.println("This is not a valid command");
+            System.out.println("not a valid command");
         }
         return words;
     }
@@ -81,5 +104,13 @@ public class Game {
         }
         return true;
     }
+
+    private void LookRoom() {
+        System.out.println("You are in the " + player.getCurrentRoom().getName() + ". It is " + player.getCurrentRoom().getDescription() + ".");
+    }
+
+    private void LookItem() {
+    }
+
 
 }
