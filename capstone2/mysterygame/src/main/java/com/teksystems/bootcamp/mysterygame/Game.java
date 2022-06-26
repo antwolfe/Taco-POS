@@ -20,7 +20,8 @@ public class Game {
         createMap();
         Actor player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(map.get(0));
-        System.out.println(player.getCurrentRoom().getDescription());
+        player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false ));
+        System.out.println(player.getCurrentRoom().getCharacters());
     }
 
     void playGame() {
@@ -42,11 +43,13 @@ public class Game {
 
     private void createMap() {
         // create map
-        map.add(new Room("Backyard", "Where the BBQ is taking place", -1, -1, 1, -1));
-        map.add(new Room("Kitchen", "Delicious sides line the counters and island", 0, 2, -1, 3));
-        map.add(new Room("Cellar", "Damp and dark, what could possibly be in here?", -1, -1, -1, 1));
-        map.add(new Room("Hallway", "Warm and cozy, looks like a good place to watch for suspects", 4, -1, -1, -1));
-        map.add(new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1));
+        Room backyard = new Room("Backyard", "Where the BBQ is taking place", -1, -1, 1, -1);
+        Room kitchen = new Room("Kitchen", "Delicious sides line the counters and island", 0, 2, -1, 3);
+        Room cellar = new Room("Cellar", "Damp and dark, what could possibly be in here?", -1, -1, -1, 1);
+        Room hallway = new Room("Hallway", "Warm and cozy, looks like a good place to watch for suspects", 4, -1, -1, -1);
+        Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1);
+
+        map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
     }
 
     private String processCommands(String words) {

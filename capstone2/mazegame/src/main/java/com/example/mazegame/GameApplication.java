@@ -19,17 +19,7 @@ public class GameApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view.fxml"));
         GameController controller = new GameController();
         Scene scene = new Scene(fxmlLoader.load(), 789, 421, Color.SKYBLUE);
-        stage.setTitle("Who stole");
-
-        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
-            @Override
-            public void handle(KeyEvent keyEvent) {
-                System.out.println(keyEvent.getCode());
-                if (keyEvent.getCode() == RIGHT){
-                    controller.moveRight();
-                }
-            }
-        });
+        stage.setTitle("Who stole the computer?");
 
         stage.setScene(scene);
         stage.show();

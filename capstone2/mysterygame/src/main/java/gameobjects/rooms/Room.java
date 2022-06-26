@@ -1,5 +1,6 @@
 package gameobjects.rooms;
 
+import gameobjects.characters.Actor;
 import globals.Clues;
 import globals.Items;
 
@@ -9,7 +10,7 @@ public class Room {
     private String name, description;
     private int n, e, s, w;
     private ArrayList<Clues> clues;
-    private ArrayList<Character> characters;
+    private ArrayList<Actor> characters;
     private ArrayList<Items> items;
     public Room(String name, String description, int n, int e, int s, int w) {
         this.name = name;
@@ -19,6 +20,7 @@ public class Room {
         this.s = s;
         this.w = w;
     }
+
 
     public String getName() {
         return name;
@@ -76,12 +78,12 @@ public class Room {
         this.clues = clues;
     }
 
-    public ArrayList<Character> getCharacters() {
+    public ArrayList<Actor> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(ArrayList<Character> characters) {
-        this.characters = characters;
+    public void setCharacters(Actor characters) {
+        this.characters.add(characters);
     }
 
     public ArrayList<Items> getItems() {
