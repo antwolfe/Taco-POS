@@ -26,4 +26,10 @@ class GameTest {
         assertFalse(game.isValidCommand(command));
     }
 
+    @Test
+    void goingNFromKitchenShouldSetRoomToBackyard() {
+        Game game = new Game();
+        String direction = "go n";
+
+    }
 }

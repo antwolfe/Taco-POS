@@ -2,6 +2,7 @@ package com.teksystems.bootcamp.mysterygame;
 
 import gameobjects.characters.Actor;
 import gameobjects.rooms.*;
+import globals.Directions;
 import globals.Items;
 
 import java.util.ArrayList;
@@ -44,20 +45,23 @@ public class Game {
 
     private void createMap() {
         // create map
-        Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, -1, 1, -1);
+        Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, 4, 1, -1);
         Room kitchen = new Room("Kitchen", "where delicious sides line the counters and island", 0, 2, -1, 3);
         Room cellar = new Room("Cellar", "damp and dark, gives you the shivers", -1, -1, -1, 1);
-        Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, -1, -1, -1);
+        Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, 1, -1, -1);
         Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1);
 
         map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
-        for (Room room : map
-        ) {
-            System.out.println(room.getName());
-        }
+        // map list TODO: remove before prod.
+//        int i = 0;
+//        for (Room room : map
+//        ) {
+//            System.out.println(i + ". " + room.getName());
+//            i++;
+//        }
     }
 
-    // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests
+    // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests // needs strong refactor
     protected boolean isValidCommand(String words) {
         String[] arrWords = words.toLowerCase().split(" ");
         if (arrWords.length != 2) {
@@ -92,37 +96,26 @@ public class Game {
                 }
             }
 
-            if ("go".equals(verb)) {
-                String noRoom = "There is no room that way.";
+            else if ("go".equals(verb)) {
+                Room currentRoom = player.getCurrentRoom();
+                int roomInMap;
                 switch (noun) {
                     case "n":
-                        if (player.getCurrentRoom().getN() == -1) {
-                            System.out.println(noRoom);
-                        } else {
-                            goDirection('n');
-                            break;
-                        }
+                        roomInMap = currentRoom.getN();
+                        goDirection(roomInMap);
+                        break;
                     case "e":
-                        if (player.getCurrentRoom().getE() == -1) {
-                            System.out.println(noRoom);
-                        } else {
-                            goDirection('e');
-                            break;
-                        }
+                        roomInMap = currentRoom.getE();
+                        goDirection(roomInMap);
+                        break;
                     case "s":
-                        if (player.getCurrentRoom().getS() == -1) {
-                            System.out.println(noRoom);
-                        } else {
-                            goDirection('s');
-                            break;
-                        }
+                        roomInMap = currentRoom.getS();
+                        goDirection(roomInMap);
+                        break;
                     case "w":
-                        if (player.getCurrentRoom().getW() == -1) {
-                            System.out.println(noRoom);
-                        } else {
-                            goDirection('w');
-                            break;
-                        }
+                        roomInMap = currentRoom.getW();
+                        goDirection(roomInMap);
+                        break;
                     default:
                         break;
                 }
@@ -139,38 +132,23 @@ public class Game {
 
     private void LookRoom() {
         System.out.println("You are in the " + player.getCurrentRoom().getName() + ". It is " + player.getCurrentRoom().getDescription() + ".");
+        // It has <Items>, do you want to look at any items?
     }
+
 
     private void LookItem() {
+
     }
 
-    private void goDirection(char direction) {
+    private void goDirection(int direction) {
         Room newRoom;
-        switch (direction) {
-            case 'n':
-                newRoom = map.get(player.getCurrentRoom().getN());
-                player.setCurrentRoom(map.get(player.getCurrentRoom().getN()));
-                LookRoom();
-                break;
-            case 'e':
-                newRoom = map.get(player.getCurrentRoom().getE());
-                player.setCurrentRoom(newRoom);
-                LookRoom();
-                break;
-            case 's':
-                newRoom = map.get(player.getCurrentRoom().getS());
-                player.setCurrentRoom(newRoom);
-                LookRoom();
-                break;
-            case 'w':
-                newRoom = map.get(player.getCurrentRoom().getW());
-                player.setCurrentRoom(newRoom);
-                System.out.println(player.getCurrentRoom().getName());
-                LookRoom();
-                break;
-            default:
-                break;
-
+        String noRoom = "There is no room that way.";
+        if (direction == -1) {
+            System.out.println(noRoom);
+        } else {
+            newRoom = map.get(direction);
+            player.setCurrentRoom(newRoom);
+            LookRoom();
         }
     }
 

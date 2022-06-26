@@ -9,7 +9,7 @@ public enum Clues {
     CHICKEN,
     ART_MAGAZINE,
     MUD_STAINS,
-    PHONECALL,
+    PHONE_CALL,
     DOGFOOD
     ;
 

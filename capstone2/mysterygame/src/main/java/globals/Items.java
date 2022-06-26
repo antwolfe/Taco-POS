@@ -12,6 +12,7 @@ public enum Items {
     MAT,
     FRIDGE,
     BBQ_PIT,
+    W, // TODO: fix
 
 
     ;
