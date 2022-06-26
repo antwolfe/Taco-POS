@@ -21,7 +21,7 @@ public class Game {
         createMap();
         player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(map.get(0));
-        player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false ));
+        player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
     }
 
     void playGame() {
@@ -51,8 +51,8 @@ public class Game {
         Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1);
 
         map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
-        for (Room room :map
-             ) {
+        for (Room room : map
+        ) {
             System.out.println(room.getName());
         }
     }
@@ -60,7 +60,7 @@ public class Game {
     // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests
     protected boolean isValidCommand(String words) {
         String[] arrWords = words.toLowerCase().split(" ");
-        if (arrWords.length != 2 ) {
+        if (arrWords.length != 2) {
             System.out.println("Please use two words");
             return false;
         }
@@ -78,57 +78,57 @@ public class Game {
     private String processCommands(String words) {
         if (isValidCommand(words)) {
             System.out.println("ok");
-             String[] arrWords = words.toLowerCase().split(" ");
-             String verb = arrWords[0];
-             String noun = arrWords[1];
+            String[] arrWords = words.toLowerCase().split(" ");
+            String verb = arrWords[0];
+            String noun = arrWords[1];
 
-             switch (verb) { // TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
-                 case "look":
-                     if (noun.equals("room")) {
-                         LookRoom();
-                     } else {
-                         LookItem();
-                     }
-                     break;
-                 case "go":
-                     String noRoom = "There is no room that way.";
-                     switch (noun) {
-//                         case "n":
-//                             if (player.getCurrentRoom().getN() != -1) {
-//                                 goDirection("n");
-//                             } else {
-//                                 System.out.println(noRoom);
-//                                 break;
-//                             }
-//                         case "e":
-//                             if (player.getCurrentRoom().getE() != -1) {
-//                                 goDirection("e");
-//                             } else {
-//                                 System.out.println(noRoom);
-//                                 break;
-//                             }
-                         case "s":
-                             if (player.getCurrentRoom().getS() != -1) {
-                                 goDirection("s");
-                             } else {
-                                 System.out.println(noRoom);
-                                 break;
-                             }
-//                         case "w":
-//                             if (player.getCurrentRoom().getW() == -1) {
-//                                 System.out.println(noRoom);
-//                             } else {
-//                                 goDirection("w");
-//                                 break;
-//                             }
-                         default:
-                             break;
-                     }
-                     break;
-                 default:
-                     System.out.println("Not a valid direction");
+            // TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
 
-             }
+            if ("look".equals(verb)) {
+                if (noun.equals("room")) {
+                    LookRoom();
+                } else {
+                    LookItem();
+                }
+            }
+
+            if ("go".equals(verb)) {
+                String noRoom = "There is no room that way.";
+                switch (noun) {
+                    case "n":
+                        if (player.getCurrentRoom().getN() == -1) {
+                            System.out.println(noRoom);
+                        } else {
+                            goDirection('n');
+                            break;
+                        }
+                    case "e":
+                        if (player.getCurrentRoom().getE() == -1) {
+                            System.out.println(noRoom);
+                        } else {
+                            goDirection('e');
+                            break;
+                        }
+                    case "s":
+                        if (player.getCurrentRoom().getS() == -1) {
+                            System.out.println(noRoom);
+                        } else {
+                            goDirection('s');
+                            break;
+                        }
+                    case "w":
+                        if (player.getCurrentRoom().getW() == -1) {
+                            System.out.println(noRoom);
+                        } else {
+                            goDirection('w');
+                            break;
+                        }
+                    default:
+                        break;
+                }
+            } else {
+                System.out.println("Not a valid direction");
+            }
 
         } else {
             System.out.println("not a valid command");
@@ -144,33 +144,30 @@ public class Game {
     private void LookItem() {
     }
 
-    private void goDirection(String direction) {
+    private void goDirection(char direction) {
+        Room newRoom;
         switch (direction) {
-//            case "n":
-//                player.setCurrentRoom(map.get(player.getCurrentRoom().getN()));
-//                System.out.println(player.getCurrentRoom().getName());
-////                LookRoom();
-//                break;
-//            case "e":
-//                player.setCurrentRoom(map.get(player.getCurrentRoom().getE()));
-//                System.out.println(player.getCurrentRoom().getName());
-//
-////                LookRoom();
-//                break;
-            case "s":
-                System.out.println(player.getCurrentRoom().getS());
-                System.out.println(player.getCurrentRoom().getName());
-//                player.setCurrentRoom(map.get(player.getCurrentRoom().getS()));
-                System.out.println(map.get(player.getCurrentRoom().getS()).getName());
-                System.out.println(player.getCurrentRoom().getName());
-//                LookRoom();
+            case 'n':
+                newRoom = map.get(player.getCurrentRoom().getN());
+                player.setCurrentRoom(map.get(player.getCurrentRoom().getN()));
+                LookRoom();
                 break;
-//            case "w":
-//                player.setCurrentRoom(map.get(player.getCurrentRoom().getW()));
-//                System.out.println(player.getCurrentRoom().getName());
-
-//                LookRoom();
-//                break;
+            case 'e':
+                newRoom = map.get(player.getCurrentRoom().getE());
+                player.setCurrentRoom(newRoom);
+                LookRoom();
+                break;
+            case 's':
+                newRoom = map.get(player.getCurrentRoom().getS());
+                player.setCurrentRoom(newRoom);
+                LookRoom();
+                break;
+            case 'w':
+                newRoom = map.get(player.getCurrentRoom().getW());
+                player.setCurrentRoom(newRoom);
+                System.out.println(player.getCurrentRoom().getName());
+                LookRoom();
+                break;
             default:
                 break;
 
