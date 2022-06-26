@@ -59,7 +59,7 @@ public class Game {
              String verb = arrWords[0];
              String noun = arrWords[1];
 
-             switch (verb) { //TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
+             switch (verb) { // TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
                  case "look":
                      if (noun.equals("room")) {
                          LookRoom();
@@ -68,13 +68,8 @@ public class Game {
                      }
                      break;
                  case "go":
-                     if (!noun.equals(char)){
-                        break;
-                     } else {
-
-                 }
-
-
+                     System.out.println("pick a direction:");
+                     break;
                  default:
                      break;
              }
@@ -88,7 +83,7 @@ public class Game {
 
 
     // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests
-    private boolean isValidCommand(String words) {
+    protected boolean isValidCommand(String words) {
         String[] arrWords = words.toLowerCase().split(" ");
         if (arrWords.length != 2 ) {
             System.out.println("Please use two words");
