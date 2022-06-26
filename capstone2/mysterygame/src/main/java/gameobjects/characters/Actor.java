@@ -56,4 +56,14 @@ public class Actor {
         this.currentRoom = newRoom;
     }
 
+    public void LookRoom() {
+        System.out.println("You are in the " + currentRoom.getName()
+                + ". It is " + currentRoom.getDescription() + ".");
+        // It has <Items>, do you want to look at any items?
+    }
+
+    private void LookItem() {
+        //add items to rooms
+    }
+
 }

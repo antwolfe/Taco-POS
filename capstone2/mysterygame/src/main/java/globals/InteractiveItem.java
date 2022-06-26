@@ -1,8 +1,6 @@
 package globals;
 
-import java.util.ArrayList;
-
-public enum Items {
+public enum InteractiveItem {
     ROOM,
     TRASHCAN,
     DESK,

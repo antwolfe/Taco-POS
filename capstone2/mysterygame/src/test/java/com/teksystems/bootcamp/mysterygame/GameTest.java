@@ -27,9 +27,11 @@ class GameTest {
     }
 
     @Test
-    void goingNFromKitchenShouldSetRoomToBackyard() {
+    void goNFromKitchenShouldSetRoomToBackyard() {
         Game game = new Game();
-        String direction = "go n";
 
     }
+
+
+
 }

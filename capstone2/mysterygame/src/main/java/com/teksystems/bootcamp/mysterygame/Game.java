@@ -2,8 +2,7 @@ package com.teksystems.bootcamp.mysterygame;
 
 import gameobjects.characters.Actor;
 import gameobjects.rooms.*;
-import globals.Directions;
-import globals.Items;
+import globals.InteractiveItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,11 +10,11 @@ import java.util.Scanner;
 
 
 public class Game {
-    private ArrayList<Room> map = new ArrayList<>();
-    private String[] commandList = {"take", "go", "look"};
-    private Items[] itemList = Items.values();
-    private ArrayList<String> commands = new ArrayList<>(Arrays.asList(commandList));
-    private ArrayList<Items> items = new ArrayList<>(Arrays.asList(itemList));
+    private final ArrayList<Room> map = new ArrayList<>();
+    private final InteractiveItem[] itemList = InteractiveItem.values(); // TODO: refactor (14 - 17)
+    private final ArrayList<InteractiveItem> items = new ArrayList<>(Arrays.asList(itemList));
+    private final String[] commandList = {"take", "go", "look"};
+    private final ArrayList<String> commands = new ArrayList<>(Arrays.asList(commandList));
     private Actor player;
 
     void initGame() {
@@ -44,7 +43,7 @@ public class Game {
 
 
     private void createMap() {
-        // create map
+        // create map // TODO: refactor HashMap?
         Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, 4, 1, -1);
         Room kitchen = new Room("Kitchen", "where delicious sides line the counters and island", 0, 2, -1, 3);
         Room cellar = new Room("Cellar", "damp and dark, gives you the shivers", -1, -1, -1, 1);
@@ -61,7 +60,10 @@ public class Game {
 //        }
     }
 
-    // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests // needs strong refactor
+    // TODO: stronger validation refactor:
+    //  one command word breaks validation
+    //  contains() not strong enough for user validation
+    //  write tests
     protected boolean isValidCommand(String words) {
         String[] arrWords = words.toLowerCase().split(" ");
         if (arrWords.length != 2) {
@@ -90,7 +92,7 @@ public class Game {
 
             if ("look".equals(verb)) {
                 if (noun.equals("room")) {
-                    LookRoom();
+                    player.LookRoom();
                 } else {
                     LookItem();
                 }
@@ -130,16 +132,6 @@ public class Game {
     }
 
 
-    private void LookRoom() {
-        System.out.println("You are in the " + player.getCurrentRoom().getName() + ". It is " + player.getCurrentRoom().getDescription() + ".");
-        // It has <Items>, do you want to look at any items?
-    }
-
-
-    private void LookItem() {
-
-    }
-
     private void goDirection(int direction) {
         Room newRoom;
         String noRoom = "There is no room that way.";
@@ -148,7 +140,7 @@ public class Game {
         } else {
             newRoom = map.get(direction);
             player.setCurrentRoom(newRoom);
-            LookRoom();
+            player.LookRoom();
         }
     }
 

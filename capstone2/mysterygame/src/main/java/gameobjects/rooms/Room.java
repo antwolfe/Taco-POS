@@ -1,17 +1,17 @@
 package gameobjects.rooms;
 
 import gameobjects.characters.Actor;
-import globals.Clues;
-import globals.Items;
+import globals.Clue;
+import globals.InteractiveItem;
 
 import java.util.ArrayList;
 
 public class Room {
     private final String name, description;
     private final int n, e, s, w;
-    private ArrayList<Clues> clues;
+    private ArrayList<Clue> clues;
     private ArrayList<Actor> characters;
-    private ArrayList<Items> items;
+    private ArrayList<InteractiveItem> items;
 
 
     public Room(String name, String description, int n, int e, int s, int w) {
@@ -22,8 +22,8 @@ public class Room {
         this.s = s;
         this.w = w;
         this.characters = new ArrayList<Actor>();
-        this.clues = new ArrayList<Clues>();
-        this.items = new ArrayList<Items>();
+        this.clues = new ArrayList<Clue>();
+        this.items = new ArrayList<InteractiveItem>();
     }
 
 
@@ -51,11 +51,11 @@ public class Room {
         return e;
     }
 
-    public ArrayList<Clues> getClues() {
+    public ArrayList<Clue> getClues() {
         return clues;
     }
 
-    public void setClues(ArrayList<Clues> clues) {
+    public void setClues(ArrayList<Clue> clues) {
         this.clues = clues;
     }
 
@@ -67,11 +67,11 @@ public class Room {
         this.characters.add(characters);
     }
 
-    public ArrayList<Items> getItems() {
+    public ArrayList<InteractiveItem> getItems() {
         return items;
     }
 
-    public void setItems(ArrayList<Items> items) {
+    public void setItems(ArrayList<InteractiveItem> items) {
         this.items = items;
     }
 }

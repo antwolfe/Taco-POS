@@ -1,6 +1,6 @@
 package globals;
 
-public enum Clues {
+public enum Clue {
     JOB_APPLICATION,
     LOTTERY_TICKET,
     DOG_TOY,
