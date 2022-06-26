@@ -1,9 +1,21 @@
 package globals;
 
-public enum Items {
-    BASKET,
+import java.util.ArrayList;
 
+public enum Items {
+    TRASHCAN,
+    DESK,
+    COMPUTER,
+    OVEN,
+    COUNTER,
+    MAT,
+    FRIDGE,
+    BBQ_PIT,
+
+    ;
 
 
 
 }
+
+

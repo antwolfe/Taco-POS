@@ -31,9 +31,8 @@ public class Game {
         do {
             System.out.print("> ");
             input = scanner.nextLine();
-            error = isValidCommand(input);
-            System.out.println(error);
-            System.out.println("You entered '" + input + "'");
+            output = processCommands(input);
+            System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
     }
 
@@ -46,20 +45,34 @@ public class Game {
         map.add(new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1));
     }
 
-//    private String processCommands(String words) {
-//        // turn words into array
-////        return words.split(" ");
-//    }
+    private String processCommands(String words) {
+        if (isValidCommand(words)) {
+            System.out.println("ok");
 
+        } else {
+            System.out.println("This is not a valid command");
+        }
+        return words;
+    }
+
+
+
+    // TODO: one command word breaks validation // contains() not strong enough for user validation // write tests
     private boolean isValidCommand(String words) {
-        String[] arrWords = words.split(" ");
-        if (arrWords.length > 2) {
+        String[] arrWords = words.toLowerCase().split(" ");
+        if (arrWords.length != 2 ) {
+            System.out.println("Please use two words");
             return false;
         }
         if (!commands.contains(arrWords[0])) {
+            System.out.println("Command is incorrect");
             return false;
         }
-        return items.toString().contains(arrWords[1]);
+        if (!items.toString().toLowerCase().contains(arrWords[1])) {
+            System.out.println("Item is incorrect");
+            return false;
+        }
+        return true;
     }
 
 }
