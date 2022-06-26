@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.mysterygame;
 
 import gameobjects.characters.Actor;
+import gameobjects.characters.Player;
 import gameobjects.rooms.*;
 import globals.InteractiveItem;
 
@@ -15,11 +16,11 @@ public class Game {
     private final ArrayList<InteractiveItem> items = new ArrayList<>(Arrays.asList(itemList));
     private final String[] commandList = {"take", "go", "look"};
     private final ArrayList<String> commands = new ArrayList<>(Arrays.asList(commandList));
-    private Actor player;
+    private Player player;
 
     void initGame() {
         createMap();
-        player = new Actor("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
+        player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(map.get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
     }
@@ -94,7 +95,7 @@ public class Game {
                 if (noun.equals("room")) {
                     player.LookRoom();
                 } else {
-                    LookItem();
+                    player.LookItem();
                 }
             }
 
