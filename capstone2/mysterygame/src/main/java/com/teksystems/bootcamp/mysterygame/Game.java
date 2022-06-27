@@ -1,24 +1,21 @@
 package com.teksystems.bootcamp.mysterygame;
 
+import com.teksystems.bootcamp.mysterygame.gameobjects.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
-import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
+import static com.teksystems.bootcamp.mysterygame.gameobjects.Map.getMap;
 
 
 public class Game
 {
-    private static final ArrayList<Room> map = new ArrayList<>();
     protected static Player player;
 
 
     static void initGame() {
-        createMap();
+        Map map = new Map();
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
-        player.setCurrentRoom(map.get(0));
+        player.setCurrentRoom(getMap().get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
         System.out.println(player.getCurrentRoom().getItems());
         playGame();

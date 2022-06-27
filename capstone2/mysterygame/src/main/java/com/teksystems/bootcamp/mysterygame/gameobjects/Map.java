@@ -8,10 +8,14 @@ import java.util.Arrays;
 
 public class Map {
 
-    public static ArrayList<Room> getMap() { return map; }
+    private static final ArrayList<Room> map = new ArrayList<>();
+
+    public Map() {
+        createMap();
+    }
 
     private void createMap() {
-        // create map // TODO: refactor HashMap? make Room enums? how to add arraylist if make enums? (extend Room class and... where can i put arraylists of items per room?)
+       // TODO: refactor HashMap? make Room enums? how to add arraylist if make enums? (extend Room class and... where can i put arraylists of items per room?)
 
         Room backyard = new Room("Backyard", "where the BBQ is taking place", -1, 4, 1, -1, new ArrayList<>
                 (Arrays.asList(InteractiveItem.BBQ_PIT, InteractiveItem.MAT)));
@@ -25,7 +29,7 @@ public class Map {
                 (Arrays.asList(InteractiveItem.COMPUTER, InteractiveItem.DESK)));
 
         map.addAll(Arrays.asList(backyard, kitchen, cellar, hallway, office));
-
     }
 
+    public static ArrayList<Room> getMap() { return map; }
 }

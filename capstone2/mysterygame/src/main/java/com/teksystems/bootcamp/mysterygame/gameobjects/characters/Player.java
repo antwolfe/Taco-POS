@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
 import com.teksystems.bootcamp.mysterygame.Game;
+import com.teksystems.bootcamp.mysterygame.gameobjects.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
@@ -23,7 +24,7 @@ public class Player extends Actor {
         if (direction == -1) {
             System.out.println(noRoom);
         } else {
-            newRoom = Game.getMap().get(direction);
+            newRoom = Map.getMap().get(direction);
             setCurrentRoom(newRoom);
             LookRoom();
         }
