@@ -1,4 +1,4 @@
-package globals;
+package com.teksystems.bootcamp.mysterygame.globals;
 
 public enum InteractiveItem { // TODO: use description as help for finding clues
     ROOM("It is a room with various items"),
@@ -16,6 +16,11 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
 
     InteractiveItem(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return this.name().toLowerCase();
     }
 
     public String getDescription(){

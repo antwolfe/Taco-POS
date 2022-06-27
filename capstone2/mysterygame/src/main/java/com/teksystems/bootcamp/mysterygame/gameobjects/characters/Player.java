@@ -1,16 +1,14 @@
-package gameobjects.characters;
+package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
 import com.teksystems.bootcamp.mysterygame.Game;
-import gameobjects.rooms.Room;
-import globals.Clue;
-import globals.InteractiveItem;
-
-import java.util.ArrayList;
+import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.globals.Clue;
+import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
 
 public class Player extends Actor {
 
-    ArrayList<GameItem> clues;
+//  ArrayList<GameItem> clues; // should i have all the interactives and clues under one class(GameItem)? // make arraylist of just clues?
 
 
     public Player(String name, String occupation, String description, boolean hasAlibi) {
@@ -31,14 +29,14 @@ public class Player extends Actor {
         }
     }
 
-    public void LookRoom() {
+    public void LookRoom() { // return Room
         System.out.println("You are in the " + currentRoom.getName()
                 + ". It is " + currentRoom.getDescription() + ".");
         // It has <Items>, do you want to look at any items?
         System.out.println("It has: " + currentRoom.getItems());
     }
 
-    public void LookItem(String item) {
+    public void LookItem(String item) { // return list of items in room
         //add items to rooms
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.toString().toLowerCase().contains(item) && currentRoom.getItems().contains(interItem)) {

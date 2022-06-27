@@ -1,6 +1,6 @@
-package gameobjects.characters;
+package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
-import gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 
 public class Actor {
     private String name;

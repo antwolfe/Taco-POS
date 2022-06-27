@@ -1,9 +1,9 @@
 package com.teksystems.bootcamp.mysterygame;
 
-import gameobjects.characters.Actor;
-import gameobjects.characters.Player;
-import gameobjects.rooms.*;
-import globals.InteractiveItem;
+import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
+import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
+import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -12,11 +12,7 @@ import java.util.Scanner;
 public class Game
 {
     private static final ArrayList<Room> map = new ArrayList<>();
-    private final InteractiveItem[] itemList = InteractiveItem.values(); // TODO: refactor (14 - 17)
-    private final ArrayList<InteractiveItem> items = new ArrayList<>(Arrays.asList(itemList));
-    private final String[] commandList = {"take", "go", "look", "examine"};
-    private final ArrayList<String> commands = new ArrayList<>(Arrays.asList(commandList));
-    private Player player;
+    protected static Player player;
 
     void initGame() {
         createMap();
@@ -38,7 +34,7 @@ public class Game
         do {
             System.out.print("> ");
             input = scanner.nextLine().toLowerCase();
-            output = processCommands(input);
+            output = GameInput.processCommands(input);
             System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
     }
@@ -68,89 +64,8 @@ public class Game
 //        }
     }
 
-    // TODO: stronger validation refactor:
-    //  one command word breaks validation
-    //  contains() not strong enough for user validation
-    //  write tests
-    protected boolean isValidCommand(String words) {
-        String[] arrWords = words.toLowerCase().split(" ");
-        if (arrWords.length != 2) {
-            System.out.println("Please use two words");
-            return false;
-        }
-        if (!commands.contains(arrWords[0])) {
-            System.out.println("Command is incorrect");
-            return false;
-        }
-        if (!items.toString().toLowerCase().contains(arrWords[1])) {
-            System.out.println("Item is incorrect");
-            return false;
-        }
-        return true;
-    }
-
-    private String processCommands(String words) {
-        if (isValidCommand(words)) {
-            System.out.println("ok");
-            String[] arrWords = words.toLowerCase().split(" ");
-            String verb = arrWords[0];
-            String noun = arrWords[1];
-
-            // TODO: needs stronger validation. any noun that's not "room" will auto look item ?? isValid will handle?
-            // refactor: switch statement? It broke when using switch. b/c of double switch?
-
-            if ("look".equals(verb)) {
-                if (noun.equals("room")) {
-                    player.LookRoom();
-                } else {
-                    player.LookItem(noun);
-                }
-            }
-
-            else if ("go".equals(verb)) {
-                Room currentRoom = player.getCurrentRoom();
-                int roomInMap;
-                switch (noun) {
-                    case "n":
-                        roomInMap = currentRoom.getN();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "e":
-                        roomInMap = currentRoom.getE();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "s":
-                        roomInMap = currentRoom.getS();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "w":
-                        roomInMap = currentRoom.getW();
-                        player.goDirection(roomInMap);
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            else if ("examine".equals(verb)) {
-                System.out.println("examining item");
-            }
-
-            else if ("take".equals(verb)) {
-                System.out.println("putting clue into inventory");
-            }
-
-            else {
-                System.out.println("Not a valid direction");
-            }
-
-        } else {
-            System.out.println("not a valid command");
-        }
-        return words;
-    }
-
-
+    void displayInstructions() {}
+    void displayCommandList() {}
 
 
 }

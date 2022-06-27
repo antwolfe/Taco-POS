@@ -1,4 +1,4 @@
-package globals;
+package com.teksystems.bootcamp.mysterygame.globals;
 
 public enum Clue {
     JOB_APPLICATION,
