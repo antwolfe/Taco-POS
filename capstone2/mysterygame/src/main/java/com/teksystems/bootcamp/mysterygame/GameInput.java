@@ -60,7 +60,7 @@ public class GameInput {
     void processExamineCommand() {}
 
     protected static String processCommands(String words) {
-        if (isValidCommand(words) || (isValidDirection(words))) {
+        if (isValidCommand(words) || (isValidDirection(words))) { //TODO: check isValidDirection
             System.out.println("ok");
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
