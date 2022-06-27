@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
 import com.teksystems.bootcamp.mysterygame.Game;
+import com.teksystems.bootcamp.mysterygame.gameobjects.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,7 +21,8 @@ class PlayerTest {
     @Test
     void goDirectionTest(){
         Room actual = room;
-        Room expected = Game.getMap().get(0);
+        Room expected = Map.getMap().get(0);
+
 
     }
 
