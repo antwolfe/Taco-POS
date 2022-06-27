@@ -33,13 +33,13 @@ public class Player extends Actor {
         System.out.println("You are in the " + currentRoom.getName()
                 + ". It is " + currentRoom.getDescription() + ".");
         // It has <Items>, do you want to look at any items?
-        System.out.println("It has: " + currentRoom.getItems());
+        System.out.println("It has: " + this.getCurrentRoom().getItems());
     }
 
     public void LookItem(String item) { // return list of items in room
         //add items to rooms
         for (InteractiveItem interItem : InteractiveItem.values()) {
-            if (interItem.toString().toLowerCase().contains(item) && currentRoom.getItems().contains(interItem)) {
+            if (interItem.toString().toLowerCase().contains(item) && this.currentRoom.getItems().contains(interItem)) {
                 System.out.println(interItem.getDescription());
             }
         }

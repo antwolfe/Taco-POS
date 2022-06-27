@@ -5,8 +5,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.junit.platform.commons.util.StringUtils;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -18,11 +16,21 @@ class GameInputTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = { "look room go", "go s north", "jack"})
+    @ValueSource(strings = { "look room go", "go s north", "jack" })
     void commandsShouldBeTwoWords(String command) {
         assertFalse(GameInput.isValidCommand(command));
-        assertEquals("Please use two words", GameInput.isValidCommand(command));
     }
+
+    @ParameterizedTest
+    @ValueSource(strings = { "no shot", "run game", "have coffee"})
+    void invalidCommandsShouldReturnFalse(String command) {
+        assertFalse(GameInput.isValidCommand(command));
+    }
+
+
+
+
+
 
 //    @Test
 //    void isValidCommandTest() {
