@@ -1,6 +1,6 @@
 package globals;
 
-public enum InteractiveItem {
+public enum InteractiveItem { // TODO: use description as help for finding clues
     ROOM("It is a room with various items"),
     TRASHCAN("You know what they say about another's trash..."),
     DESK("A big desk with many drawers. There is a computer on top"),

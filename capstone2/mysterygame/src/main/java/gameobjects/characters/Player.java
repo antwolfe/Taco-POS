@@ -1,7 +1,10 @@
 package gameobjects.characters;
 
+import com.teksystems.bootcamp.mysterygame.Game;
 import gameobjects.rooms.Room;
+import globals.Clue;
 import globals.InteractiveItem;
+
 
 public class Player extends Actor {
 
@@ -11,6 +14,18 @@ public class Player extends Actor {
         this.currentRoom = getCurrentRoom();
     }
 
+
+    public void goDirection(int direction) {
+        Room newRoom;
+        String noRoom = "There is no room that way.";
+        if (direction == -1) {
+            System.out.println(noRoom);
+        } else {
+            newRoom = Game.getMap().get(direction);
+            setCurrentRoom(newRoom);
+            LookRoom();
+        }
+    }
 
     public void LookRoom() {
         System.out.println("You are in the " + currentRoom.getName()
@@ -27,4 +42,14 @@ public class Player extends Actor {
             }
         }
     }
+
+    public void examineItem(){}
+
+
+    public void takeClue(Clue clue){
+        // after examining item, clue will be exposed.
+        // player will put clue into inventory
+    }
+
+
 }
