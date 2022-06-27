@@ -5,8 +5,12 @@ import gameobjects.rooms.Room;
 import globals.Clue;
 import globals.InteractiveItem;
 
+import java.util.ArrayList;
+
 
 public class Player extends Actor {
+
+    ArrayList<GameItem> clues;
 
 
     public Player(String name, String occupation, String description, boolean hasAlibi) {
@@ -43,7 +47,11 @@ public class Player extends Actor {
         }
     }
 
-    public void examineItem(){}
+    public void examineItem(){
+        // "You look closer to + item + and see a + clue. What do you want to do with + clue? "take", "look"...
+        // "look" will provide details about how the clue fits into the story
+        // "take" will "takeClue" and put clue item into inventory
+    }
 
 
     public void takeClue(Clue clue){
