@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-class GameInputTest {
+class ProcessInputTest {
 
 
     @BeforeEach
@@ -18,13 +18,13 @@ class GameInputTest {
     @ParameterizedTest
     @ValueSource(strings = { "look room go", "go s north", "jack" })
     void commandsShouldBeTwoWords(String command) {
-        assertFalse(GameInput.isValidCommand(command));
+        assertFalse(ProcessInput.isValidCommand(command));
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "no shot", "run game", "have coffee"})
     void invalidCommandsShouldReturnFalse(String command) {
-        assertFalse(GameInput.isValidCommand(command));
+        assertFalse(ProcessInput.isValidCommand(command));
     }
 
 

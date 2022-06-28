@@ -5,17 +5,18 @@ import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
+import java.util.ArrayList;
+
 
 public class Player extends Actor {
 
-//  ArrayList<GameItem> clues; // should i have all the interactives and clues under one class(GameItem)? // make arraylist of just clues?
+    private ArrayList<Clue> inventory;
 
 
     public Player(String name, String occupation, String description, boolean hasAlibi) {
         super(name, occupation, description, hasAlibi);
         this.currentRoom = getCurrentRoom();
     }
-
 
     public void goDirection(int direction) {
         Room newRoom;
@@ -52,7 +53,7 @@ public class Player extends Actor {
 
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.toString().contains(word) && currentRoom.getItems().contains(interItem)) {
-                System.out.println("You look closer to " + interItem + ". " + interItem.examineItem().getDescription());
+                System.out.println("You look closer to " + interItem + ". " + interItem.getClue(word).getDescription());
             }
         }
     }
@@ -60,6 +61,8 @@ public class Player extends Actor {
     public void takeClue(Clue clue) {
         // after examining item, clue will be exposed.
         // player will put clue into inventory
+
+
     }
 
 

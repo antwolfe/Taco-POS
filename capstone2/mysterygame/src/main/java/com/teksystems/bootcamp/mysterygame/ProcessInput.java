@@ -5,7 +5,7 @@ import com.teksystems.bootcamp.mysterygame.globals.Direction;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
-public class GameInput {
+public class ProcessInput {
 
     private static final InteractiveItem[] itemList = InteractiveItem.values();
     private static final String[] commandList = {"take", "go", "look", "examine"};

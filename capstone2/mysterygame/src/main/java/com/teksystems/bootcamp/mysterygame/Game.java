@@ -35,7 +35,7 @@ public class Game
         do {
             System.out.print("> ");
             input = scanner.nextLine().toLowerCase();
-            output = GameInput.processCommands(input);
+            output = ProcessInput.processCommands(input);
             System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
     }

@@ -1,9 +1,13 @@
 package com.teksystems.bootcamp.mysterygame.globals;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public enum InteractiveItem { // TODO: use description as help for finding clues
 
-    TRASHCAN("You know what they say about another's trash...", Clue.LOTTERY_TICKET),
+    TRASHCAN("You know what they say about another's trash...", Clue.LOTTERY_TICKET, Clue.JOB_APPLICATION),
     DESK("A big desk with many drawers. There is a computer on top", Clue.DOG_TOY),
     COMPUTER("A device for searching the internet", Clue.GOOGLE_RESULTS),
     OVEN("There seems to be some food in there", Clue.CHICKEN),
@@ -13,12 +17,12 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
     BBQ_PIT("Fixed in small holes in the dirt. Lots of coals burning", Clue.NONE),
     ;
     private final String description;
-    private final Clue clue;
+    private final ArrayList<Clue> clues = new ArrayList<>();
 
 
-    InteractiveItem(String description, Clue clue) {
+    InteractiveItem(String description, Clue... clues) {
         this.description = description;
-        this.clue = clue;
+        this.clues.addAll(Arrays.asList(clues));
     }
 
     @Override
@@ -30,7 +34,11 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
         return this.description;
     }
 
-    public Clue examineItem() { return this.clue; }
+    public Clue getClue(String word) {
+        Clue foundClue = null;
+
+        return foundClue;
+    }
 }
 
 
