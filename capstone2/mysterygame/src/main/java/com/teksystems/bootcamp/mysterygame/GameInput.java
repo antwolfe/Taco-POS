@@ -3,7 +3,6 @@ package com.teksystems.bootcamp.mysterygame;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Direction;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
-
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class GameInput {
@@ -12,7 +11,6 @@ public class GameInput {
     private static final String[] commandList = {"take", "go", "look", "examine"};
 
     //  write tests
-
 
     private static boolean isValidVerb(String word) {
         for (String command : commandList) {
@@ -51,13 +49,14 @@ public class GameInput {
         if (isValidVerb(arrWords[0]) && isValidDirection(arrWords[1])) { return true; }
         System.out.println("not a valid command");
         return false;
-
     }
 
     void processLookCommand() {}
     void processGoCommand() {}
     void processTakeCommand() {}
-    void processExamineCommand() {}
+    void processExamineCommand() {
+        // if noun is not in room return false
+    }
 
     protected static String processCommands(String words) {
         if (isValidCommand(words) || (isValidDirection(words))) { //TODO: check isValidDirection
@@ -98,8 +97,7 @@ public class GameInput {
                         break;
                 }
             } else if ("examine".equals(verb)) {
-
-                System.out.println("examining item");
+                player.examineItem(noun);
 
             } else if ("take".equals(verb)) {
                 System.out.println("putting clue into inventory");

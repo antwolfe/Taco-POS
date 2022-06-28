@@ -39,20 +39,25 @@ public class Player extends Actor {
     public void LookItem(String item) { // return list of items in room
         //add items to rooms
         for (InteractiveItem interItem : InteractiveItem.values()) {
-            if (interItem.toString().toLowerCase().contains(item) && currentRoom.getItems().contains(interItem)) {
+            if (interItem.toString().contains(item) && currentRoom.getItems().contains(interItem)) {
                 System.out.println(interItem.getDescription());
             }
         }
     }
 
-    public void examineItem(){
+    public void examineItem(String word){ // return Clue
         // "You look closer to + item + and see a + clue. What do you want to do with + clue? "take", "look"...
         // "look" will provide details about how the clue fits into the story
         // "take" will "takeClue" and put clue item into inventory
+
+        for (InteractiveItem interItem : InteractiveItem.values()) {
+            if (interItem.toString().contains(word) && currentRoom.getItems().contains(interItem)) {
+                System.out.println("You look closer to " + interItem + ". " + interItem.examineItem().getDescription());
+            }
+        }
     }
 
-
-    public void takeClue(Clue clue){
+    public void takeClue(Clue clue) {
         // after examining item, clue will be exposed.
         // player will put clue into inventory
     }

@@ -1,7 +1,5 @@
 package com.teksystems.bootcamp.mysterygame.globals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public enum InteractiveItem { // TODO: use description as help for finding clues
 
@@ -12,13 +10,13 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
     COUNTER("You see a colorful magazine scattered amongst junk mail", Clue.ART_MAGAZINE),
     MAT("Weird marks on the mat. Looks like someone tracked in some dirt", Clue.MUD_STAINS),
     FRIDGE("You open the fridge and see lots of seasoned chicken ready for the grill", Clue.DOGFOOD),
-    BBQ_PIT("Fixed in small holes in the dirt. Lots of coals burning", Clue.CHICKEN),
+    BBQ_PIT("Fixed in small holes in the dirt. Lots of coals burning", Clue.NONE),
     ;
     private final String description;
     private final Clue clue;
 
 
-    InteractiveItem(String description, Clue clue ) {
+    InteractiveItem(String description, Clue clue) {
         this.description = description;
         this.clue = clue;
     }

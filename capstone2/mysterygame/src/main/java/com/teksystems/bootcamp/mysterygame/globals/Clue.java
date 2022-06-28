@@ -10,7 +10,8 @@ public enum Clue {
     ART_MAGAZINE("You find an art magazine in the pile. You know your friend isn't into art."),
     MUD_STAINS("The mud here is in the shape of dog paws."),
     PHONE_CALL("You witness a text conversation between 'Guy' and his wife. It's their anniversary. "),
-    DOGFOOD("There is uneaten dog food here.")
+    DOGFOOD("There is uneaten dog food here."),
+    NONE("No clue here.")
     ;
     private final String description;
 
