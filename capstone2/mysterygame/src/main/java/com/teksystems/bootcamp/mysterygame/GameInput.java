@@ -98,7 +98,9 @@ public class GameInput {
                         break;
                 }
             } else if ("examine".equals(verb)) {
+
                 System.out.println("examining item");
+
             } else if ("take".equals(verb)) {
                 System.out.println("putting clue into inventory");
             } else {

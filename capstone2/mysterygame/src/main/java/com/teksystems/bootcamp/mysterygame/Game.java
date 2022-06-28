@@ -19,7 +19,7 @@ public class Game
         player.setCurrentRoom(getMap().get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
         // Debug Line
-        System.out.println(getMap().get(0).getName());
+
         playGame();
     }
 
