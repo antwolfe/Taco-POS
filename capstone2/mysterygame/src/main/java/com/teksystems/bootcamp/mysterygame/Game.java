@@ -1,11 +1,11 @@
 package com.teksystems.bootcamp.mysterygame;
 
 
-import com.teksystems.bootcamp.mysterygame.gameobjects.Map;
+import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
 import java.util.Scanner;
-import static com.teksystems.bootcamp.mysterygame.gameobjects.Map.getMap;
+import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
 
 public class Game
@@ -16,9 +16,10 @@ public class Game
     static void initGame() {
         new Map();
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
-        player.setCurrentRoom(getMap().get("Backyard"));
+        player.setCurrentRoom(getMap().get(0));
         player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
         // Debug Line
+        System.out.println(getMap().get(0).getName());
         playGame();
     }
 
@@ -38,7 +39,6 @@ public class Game
             System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
     }
-
 
 
     void displayInstructions() {}

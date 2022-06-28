@@ -1,15 +1,14 @@
-package com.teksystems.bootcamp.mysterygame.gameobjects;
+package com.teksystems.bootcamp.mysterygame.gameobjects.rooms;
 
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 
 public class Map {
 
-    private static final HashMap<String, Room> map = new HashMap<>();
+    private static final ArrayList<Room> map = new ArrayList<>();
 
     public Map() {
         createMap();
@@ -27,13 +26,13 @@ public class Map {
         Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1, new ArrayList<>
                 (Arrays.asList(InteractiveItem.COMPUTER, InteractiveItem.DESK)));
 
-        map.put("Backyard", backyard);
-        map.put("Kitchen", kitchen);
-        map.put("Cellar", cellar);
-        map.put("Hallway", hallway);
-        map.put("Office", office);
+        map.add(backyard);
+        map.add(kitchen);
+        map.add(cellar);
+        map.add(hallway);
+        map.add(office);
 
     }
 
-    public static HashMap<String, Room> getMap() { return map; }
+    public static ArrayList<Room> getMap() { return map; }
 }
