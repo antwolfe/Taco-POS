@@ -2,7 +2,7 @@ package com.teksystems.bootcamp.mysterygame.globals;
 
 public enum InteractiveItem { // TODO: use description as help for finding clues
 
-    TRASHCAN("You know what they say about another's trash..."),
+    TRASHCAN("You know what they say about another's trash...", ),
     DESK("A big desk with many drawers. There is a computer on top"),
     COMPUTER("A device for searching the internet"),
     OVEN("There seems to be some food in there"),
@@ -16,7 +16,7 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
 
     InteractiveItem(String description) {
         this.description = description;
-//        this.clue = clue;
+        this.clue = clue;
     }
 
     @Override
@@ -28,7 +28,7 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
         return this.description;
     }
 
-//    public Clue examineItem() { return this.clue; }
+    public Clue examineItem() { return this.clue; }
 }
 
 
