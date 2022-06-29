@@ -55,6 +55,9 @@ public enum InteractiveItem { // TODO: make abstract class? To add characters?
         return this.clueKeyword;
     }
 
+    public ArrayList<Clue> getClues() {
+        return clues;
+    }
 }
 
 

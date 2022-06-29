@@ -20,7 +20,7 @@ public class Room {
         this.e = e;
         this.s = s;
         this.w = w;
-        this.clues = new ArrayList<Clue>();
+        this.clues = new ArrayList<>();
         this.items = roomItems; // moot if in constructor
     }
 
@@ -49,7 +49,11 @@ public class Room {
         return e;
     }
 
-    public ArrayList<Clue> getClues() {
+    public ArrayList<Clue> getCluesInRoom() {
+        ArrayList<Clue> clues = new ArrayList<>();
+        for (InteractiveItem roomItem : this.getItems()) {
+            clues.addAll(roomItem.getClues());
+        }
         return clues;
     }
 

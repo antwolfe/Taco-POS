@@ -96,6 +96,7 @@ public class ProcessInput {
             } else if ("take".equals(verb)) {
                 player.takeClue(noun);
                 // put into inventory
+
             } else {
                 System.out.println("Do not recognize command");
             }

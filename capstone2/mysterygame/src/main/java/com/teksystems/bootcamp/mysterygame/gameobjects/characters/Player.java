@@ -61,7 +61,9 @@ public class Player extends Actor {
 
     public void takeClue(String pickedClue) {
         // put clue in inventory
-        for (Clue clue : currentRoom.getClues()) {
+        System.out.println(pickedClue);
+        System.out.println(currentRoom.getCluesInRoom());
+        for (Clue clue : currentRoom.getCluesInRoom()) {
             if (pickedClue.equals(clue.getTakeKeyword())) {
                 System.out.println("You took " + clue + " for later.");
             }

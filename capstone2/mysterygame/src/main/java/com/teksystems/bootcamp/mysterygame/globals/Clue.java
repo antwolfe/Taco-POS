@@ -17,7 +17,6 @@ public enum Clue { // TODO: add keywords from InteractiveItems
     private final String takeKeyword;
 
 
-
     Clue(String description, String takeKeyword) {
         this.description = description;
         this.takeKeyword = takeKeyword;
@@ -30,11 +29,6 @@ public enum Clue { // TODO: add keywords from InteractiveItems
     public String getDescription(){
         return this.description;
     }
-
-    public void getClue () {
-
-    }
-
 
     public String getTakeKeyword() {
         return this.takeKeyword;
