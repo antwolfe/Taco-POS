@@ -51,7 +51,7 @@ public class ProcessInput {
     }
 
     void helpMenu() {
-
+        // TODO: help keyword in game
     }
 
     protected static String processCommands(String words) {
@@ -60,8 +60,6 @@ public class ProcessInput {
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
             String noun = arrWords[1];
-
-            // TODO: takeable items only, separate verbs with correct items
 
             if ("look".equals(verb)) {
                 if (noun.equals("room")) {
