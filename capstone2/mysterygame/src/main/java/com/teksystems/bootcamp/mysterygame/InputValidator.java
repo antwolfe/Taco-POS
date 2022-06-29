@@ -9,10 +9,10 @@ import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class InputValidator {
     private static final InteractiveItem[] itemList = InteractiveItem.values();
-    static final String[] commandList = {"take", "go", "look", "examine", "x", "solve"};
+    static final String[] commandList = {"take", "go", "look", "examine", "x"};
 
 
-    public static boolean isValidClueToTake(String pickedClue) {
+     static boolean isValidClueToTake(String pickedClue) {
         for (Clue clue : player.getCurrentRoom().getCluesInRoom()) {
             if (pickedClue.equals(clue.getTakeKeyword()) && (!pickedClue.equals("none") && (!player.getInventory().contains(clue)))) {
                 return true;
@@ -24,7 +24,12 @@ public class InputValidator {
 
 
 
-
+    static boolean isValidInventoryCount() {
+        if (player.getInventory().size() > 5){
+            return true;
+        }
+        return false;
+    }
 
     private static boolean isValidVerb(String word) {
         for (String command : commandList) {

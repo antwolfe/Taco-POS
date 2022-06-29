@@ -18,8 +18,7 @@ public class ProcessInput {
 
         if (words.equals("help me")) {
             Game.showHelpMenu();
-        }
-        else if (InputValidator.isValidCommand(words)) {
+        } else if (InputValidator.isValidCommand(words)) {
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
             String noun = arrWords[1];
@@ -53,8 +52,12 @@ public class ProcessInput {
                         player.goDirection(roomInMap);
                         break;
                     case "solve":
-                        //validateInventory();
-                        player.solveMystery();
+                        if (InputValidator.isValidInventoryCount()) {
+                            player.solveMystery();
+                        } else {
+                            System.out.println("You don't have enough clues yet");
+                        }
+                        break;
                     default:
                         break;
                 }
@@ -68,14 +71,13 @@ public class ProcessInput {
 
 
                 if (currentInventorySize == inventoryMax - 1) {
-                    System.out.println("You have collected all of the clues. Type 'solve mystery' to solve the case!");
-                }
-                else if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
+                    System.out.println("You have collected all of the clues. Type 'go solve' to solve the case!");
+                } else if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
                     player.addToInventory(player.takeClue(noun));
                 } else if (InputValidator.isValidClueToTake(noun)) {
                     System.out.println(
                             "You now have enough clues to solve the mystery!\n " +
-                                    "Type 'solve' to access questionnaire or continue collecting clues"
+                                    "Type 'go solve' to access questionnaire or continue collecting clues"
                     );
                     player.addToInventory(player.takeClue(noun));
 
@@ -87,8 +89,7 @@ public class ProcessInput {
             }
 
         }
-            return words;
-
+        return words;
     }
 
     ;
