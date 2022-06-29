@@ -4,6 +4,9 @@ package com.teksystems.bootcamp.mysterygame;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
+import com.teksystems.bootcamp.mysterygame.globals.Clue;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
@@ -11,6 +14,7 @@ import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 public class Game
 {
     protected static Player player;
+    protected static ArrayList<Clue> playerInventory;
 
 
     static void initGame() {

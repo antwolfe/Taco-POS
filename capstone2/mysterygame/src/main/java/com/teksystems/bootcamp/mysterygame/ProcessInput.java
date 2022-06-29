@@ -97,7 +97,6 @@ public class ProcessInput {
                 if (InputValidator.isValidClueToTake(noun)) {
                     player.addToInventory(player.takeClue(noun));
                     player.getInventory().forEach(System.out::println);
-                    // put into inventory
 
                 } else {
                     System.out.println("Do not recognize command");

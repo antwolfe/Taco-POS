@@ -9,7 +9,7 @@ public class InputValidator {
 
     public static boolean isValidClueToTake(String pickedClue) {
         for (Clue clue : player.getCurrentRoom().getCluesInRoom()) {
-            if (pickedClue.equals(clue.getTakeKeyword())) {
+            if (pickedClue.equals(clue.getTakeKeyword()) && (!pickedClue.equals("none"))) {
                 return true;
             }
         }
