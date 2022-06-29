@@ -36,6 +36,10 @@ public class Player extends Actor {
         // It has <Items>, do you want to look at any items?
         System.out.println("It has: " + currentRoom.getItems() + ".\n" +
                 "Use 'look' to find next keyword.");
+        System.out.println("You see: ");
+                currentRoom.getCharacters().forEach((actor) -> {
+                    System.out.println(actor.getName());
+                });
     }
 
     public void LookItem(String item) { // return list of items in room

@@ -24,7 +24,7 @@ public class Game
     }
 
     static void playGame() {
-         displayInstructions();
+//         displayInstructions();
         // main loop
 
         Scanner scanner = new Scanner(System.in);

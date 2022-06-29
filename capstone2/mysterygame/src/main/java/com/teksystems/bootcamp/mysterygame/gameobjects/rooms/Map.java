@@ -1,6 +1,5 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.rooms;
 
-import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class Map {
                 (Arrays.asList(InteractiveItem.TRASHCAN)));
         Room hallway = new Room("Hallway", "warm and cozy, looks like a good place to watch for suspects", 4, 1, -1, -1, new ArrayList<>
                 (Arrays.asList(InteractiveItem.MAT, InteractiveItem.TRASHCAN)));
-        Room office = new Room("Office", "Dayra's office. Where the crime took place", -1, 0, 3, -1, new ArrayList<>
+        Room office = new Room("Office", "Your friend's office. Where the crime took place", -1, 0, 3, -1, new ArrayList<>
                 (Arrays.asList(InteractiveItem.COMPUTER, InteractiveItem.DESK)));
 
         map.add(backyard);
