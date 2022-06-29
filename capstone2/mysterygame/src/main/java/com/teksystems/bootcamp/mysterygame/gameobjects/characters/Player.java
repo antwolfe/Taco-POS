@@ -64,8 +64,6 @@ public class Player extends Actor {
     public Clue takeClue(String pickedClue) {
         // validate correct clue
             Clue guessedClue = null;
-            System.out.println(pickedClue);
-            System.out.println(currentRoom.getCluesInRoom());
             for (Clue clue : currentRoom.getCluesInRoom()) {
                 if (pickedClue.equals(clue.getTakeKeyword())) {
                     guessedClue = clue;
@@ -82,5 +80,8 @@ public class Player extends Actor {
 
     public void addToInventory(Clue inventory) {
         this.inventory.add(inventory);
+    }
+
+    public void solveMystery() {
     }
 }

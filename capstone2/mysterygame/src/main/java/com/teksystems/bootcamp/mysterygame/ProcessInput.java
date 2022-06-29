@@ -8,6 +8,7 @@ import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
@@ -65,15 +66,15 @@ public class ProcessInput {
     }
 
     protected static String processCommands(String words) {
-        if (isValidCommand(words)) {
+
+        if (words.equals("help me")) {
+            Game.showHelpMenu();
+        }
+        else if (isValidCommand(words)) {
             System.out.println("ok");
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
             String noun = arrWords[1];
-
-            //if playerInventory size > 5 && word[0].equals("solve")
-            // solveMysteryQuiz()
-
 
             if ("look".equals(verb)) {
                 if (noun.equals("room")) {
@@ -103,6 +104,9 @@ public class ProcessInput {
                         roomInMap = currentRoom.getW();
                         player.goDirection(roomInMap);
                         break;
+                    case "solve":
+                        //validateInventory();
+                        player.solveMystery();
                     default:
                         break;
                 }
@@ -112,9 +116,14 @@ public class ProcessInput {
             } else if ("take".equals(verb)) {
                 int currentInventorySize = player.getInventory().size();
                 int inventoryMin = 5;
-                int inventoryMax = Clue.values().length;
+                int inventoryMax = 8;
 
-                if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin && currentInventorySize != inventoryMax) {
+
+                if (currentInventorySize == inventoryMax) {
+                    System.out.println("You have collected all of the clues. Type 'solve mystery' to solve the case!");
+                }
+
+                if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
                     player.addToInventory(player.takeClue(noun));
                 } else if (InputValidator.isValidClueToTake(noun)) {
                     System.out.println(

@@ -89,8 +89,15 @@ public class Game
         );
     }
 
-    void displayCommandList() {
-        String[] allCommands = {"go n/s/e/w", "look", "examine", "take", "speak"};
+    public static void showHelpMenu() {
+        displayCommandList();
+    }
+
+    static void displayCommandList() {
+        System.out.println(
+                "Remember to look for keywords. Try the commands below with some words you find.\n" +
+                "GodMode Command List:\n" +
+        " - go n/s/e/w \n - look <item> \n - look room \n - examine <keyword> \n - take <keyword> \n - go solve \n - help me");
     }
 
 
