@@ -94,10 +94,17 @@ public class Game
     }
 
     static void displayCommandList() {
+        if (player.getInventory().isEmpty()) {
+            System.out.println(
+                    "Try the commands below with some words you find.\n" +
+                    " - go n/s/e/w \n - look <item> \n - look room \n - examine <keyword> \n - take <keyword>"
+            );
+        } else {
         System.out.println(
-                "Remember to look for keywords. Try the commands below with some words you find.\n" +
+                "Remember to look for keywords. Here are all possible commands in the game.\n" +
                 "GodMode Command List:\n" +
-        " - go n/s/e/w \n - look <item> \n - look room \n - examine <keyword> \n - take <keyword> \n - go solve \n - help me");
+        " - go n/s/e/w \n - look <item> \n - look room \n - look inventory \n - examine <keyword> \n - take <keyword> \n - go solve \n - help me");
+        }
     }
 
 
