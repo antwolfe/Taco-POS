@@ -9,7 +9,7 @@ import static com.teksystems.bootcamp.mysterygame.Game.player;
 public class ProcessInput {
 
     private static final InteractiveItem[] itemList = InteractiveItem.values();
-    private static final String[] commandList = {"take", "go", "look", "examine"};
+    private static final String[] commandList = {"take", "go", "look", "examine", "x"};
 
     private static boolean isValidVerb(String word) {
         for (String command : commandList) {
@@ -90,7 +90,7 @@ public class ProcessInput {
                     default:
                         break;
                 }
-            } else if ("examine".equals(verb)) {
+            } else if ("examine".equals(verb) || "x".equals(verb)) {
                 player.examineItem(noun);
 
             } else if ("take".equals(verb)) {

@@ -7,8 +7,7 @@ public enum Direction { // TODO: refactor to words? have chars as alt. keywords
     WEST,
     ;
 
-    Direction() {
-    }
+    Direction() {}
 
     @Override
     public String toString() {

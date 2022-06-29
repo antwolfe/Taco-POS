@@ -52,17 +52,18 @@ public class Player extends Actor {
 
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.getClueKeyword().contains(word) && currentRoom.getItems().contains(interItem)) {
-                System.out.println("You look closer to " + interItem + ". You see: ");
+                System.out.println("You look closer to " + interItem + ".");
                 interItem.displayClue();
             }
         }
+
     }
 
     public void takeClue(String pickedClue) {
         // put clue in inventory
         for (Clue clue : currentRoom.getClues()) {
-            if (clue.toString().equals(pickedClue)) {
-                System.out.println(clue.getDescription());
+            if (pickedClue.equals(clue.getTakeKeyword())) {
+                System.out.println("You took " + clue + " for later.");
             }
         }
     }
