@@ -119,11 +119,10 @@ public class ProcessInput {
                 int inventoryMax = 8;
 
 
-                if (currentInventorySize == inventoryMax) {
+                if (currentInventorySize == inventoryMax - 1) {
                     System.out.println("You have collected all of the clues. Type 'solve mystery' to solve the case!");
                 }
-
-                if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
+                else if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
                     player.addToInventory(player.takeClue(noun));
                 } else if (InputValidator.isValidClueToTake(noun)) {
                     System.out.println(
