@@ -24,7 +24,7 @@ public class Game
     }
 
     static void playGame() {
-        // displayInstructions();
+         displayInstructions();
         // main loop
 
         Scanner scanner = new Scanner(System.in);
@@ -60,14 +60,14 @@ public class Game
                         ".       .   professional sleuth, it's up to you to solve the  .       .\n" +
                         ". __|   .             mystery in time for dessert!            . __|   .\n" +
                         ".   \\o  .                                                     .    \\o .\n" +
-                        ".   ( \\ .                                                     .   ( \\ .\n" +
-                        ".       .                                                     .       .\n" +
-                        ".  \\ /  .               GAMEPLAY INSTRUCTIONS                 .  \\ /  .\n" +
+                        ".   ( \\ .                      RULES                          .   ( \\ .\n" +
+                        ".       .           Commands must be two words only.          .       .\n" +
+                        ".  \\ /  . Find the minimum number of clues and solve the case .  \\ /  .\n" +
                         ".   |   .                                                     .   |   .\n" +
-                        ".  /o\\  .                                                     .  /o\\  .\n" +
+                        ".  /o\\  .               GAMEPLAY INSTRUCTIONS                 .  /o\\  .\n" +
                         ".       .   You'll go around looking for clues in the house.  .       .\n" +
-                        ".   |__ .    Using commands to 'go, look, examine or take'    .   |__ .\n" +
-                        ". o/    .          items and clues around the house.          . o/    .\n" +
+                        ".   |__ . Use one of the commands: 'go, look, examine or take'.   |__ .\n" +
+                        ". o/    .  and one keyword provided by the items to progress  . o/    .\n" +
                         "./ )    .                                                     ./ )    .\n" +
                         ".       .   Moving around the house can be done by using one  .       .\n" +
                         ".       .            of the cardinal directions.              .       .\n" +
