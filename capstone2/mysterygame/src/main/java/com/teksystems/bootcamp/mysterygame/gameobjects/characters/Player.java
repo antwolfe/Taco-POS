@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Player extends Actor {
 
-    private ArrayList<Clue> inventory;
+    private ArrayList<Clue> inventory; //
 
 
     public Player(String name, String occupation, String description, boolean hasAlibi) {
@@ -46,22 +46,22 @@ public class Player extends Actor {
         }
     }
 
-    public void examineItem(String word){ // return Clue
-        // "You look closer to + item + and see a + clue. What do you want to do with + clue? "take", "look"...
-        // "look" will provide details about how the clue fits into the story
-        // "take" will "takeClue" and put clue item into inventory
-
+    public void examineItem(String word){ // TODO: return Clue, fix returned description
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.toString().contains(word) && currentRoom.getItems().contains(interItem)) {
-                System.out.println("You look closer to " + interItem + ". " + interItem.getClue(word).getDescription());
+                System.out.println("You look closer to " + interItem + ". Maybe you'll find a clue.");
             }
         }
     }
 
-    public void takeClue(Clue clue) {
+    public void takeClue(String pickedClue) {
         // after examining item, clue will be exposed.
         // player will put clue into inventory
-
+        for (Clue clue : currentRoom.getClues()){
+            if (clue.toString().equals(pickedClue)) {
+                System.out.println(clue.getDescription());
+            }
+        }
 
     }
 

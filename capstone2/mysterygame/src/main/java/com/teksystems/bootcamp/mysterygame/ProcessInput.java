@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.mysterygame;
 
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.Direction;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import static com.teksystems.bootcamp.mysterygame.Game.player;
@@ -57,9 +58,10 @@ public class ProcessInput {
     void processExamineCommand() {
         // if noun is not in room return false
     }
+    void helpMenu() {}
 
     protected static String processCommands(String words) {
-        if (isValidCommand(words) || (isValidDirection(words))) { //TODO: check isValidDirection
+        if (isValidCommand(words) || (isValidDirection(words))) { // TODO: check isValidDirection
             System.out.println("ok");
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
@@ -100,7 +102,8 @@ public class ProcessInput {
                 player.examineItem(noun);
 
             } else if ("take".equals(verb)) {
-                System.out.println("putting clue into inventory");
+                player.takeClue(noun);
+                // put into inventory
             } else {
                 System.out.println("Do not recognize command");
             }

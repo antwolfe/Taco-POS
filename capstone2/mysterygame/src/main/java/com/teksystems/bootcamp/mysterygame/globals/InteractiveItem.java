@@ -11,10 +11,10 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
     DESK("A big desk with many drawers. There is a computer on top", Clue.DOG_TOY),
     COMPUTER("A device for searching the internet", Clue.GOOGLE_RESULTS),
     OVEN("There seems to be some food in there", Clue.CHICKEN),
-    COUNTER("You see a colorful magazine scattered amongst junk mail", Clue.ART_MAGAZINE),
-    MAT("Weird marks on the mat. Looks like someone tracked in some dirt", Clue.MUD_STAINS),
+    COUNTER("You see a colorful magazine scattered amongst junk mail", Clue.ART_MAGAZINE), //magazine
+    MAT("Weird marks on the mat. Looks like someone tracked in some dirt", Clue.MUD_STAINS), // dirt
     FRIDGE("You open the fridge and see lots of seasoned chicken ready for the grill", Clue.DOGFOOD),
-    BBQ_PIT("Fixed in small holes in the dirt. Lots of coals burning", Clue.NONE),
+    BBQ_PIT("Something's burning...", Clue.NONE),
     ;
     private final String description;
     private final ArrayList<Clue> clues = new ArrayList<>();
@@ -36,8 +36,13 @@ public enum InteractiveItem { // TODO: use description as help for finding clues
 
     public Clue getClue(String word) {
         Clue foundClue = null;
-
-        return foundClue;
+            for (Clue clue : clues) {
+                System.out.println(clues);
+                if (word.equals(clue.toString())) {
+                    foundClue = clue;
+                }
+            }
+            return foundClue;
     }
 }
 

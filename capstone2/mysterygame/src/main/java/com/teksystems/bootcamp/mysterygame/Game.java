@@ -14,7 +14,6 @@ public class Game
 
 
     static void initGame() {
-        displayInstructions();
         new Map();
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
         player.setCurrentRoom(getMap().get(0));
@@ -25,8 +24,7 @@ public class Game
     }
 
     static void playGame() {
-        // instructions
-        // game description
+        // displayInstructions();
         // main loop
 
         Scanner scanner = new Scanner(System.in);
@@ -91,7 +89,9 @@ public class Game
         );
     }
 
-    void displayCommandList() {}
+    void displayCommandList() {
+        String[] allCommands = {"go n/s/e/w", "look", "examine", "take"};
+    }
 
 
 }
