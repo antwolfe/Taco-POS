@@ -14,14 +14,11 @@ import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 public class Game
 {
     protected static Player player;
-    protected static ArrayList<Clue> playerInventory;
-
 
     static void initGame() {
         new Map();
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.");
         player.setCurrentRoom(getMap().get(0));
-
         // Debug Line
 
         playGame();
@@ -29,7 +26,6 @@ public class Game
 
     static void playGame() {
 //         displayInstructions();
-        // main loop
 
         Scanner scanner = new Scanner(System.in);
         boolean error = false;

@@ -4,12 +4,18 @@ import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.Direction;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Scanner;
+
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class ProcessInput {
 
     private static final InteractiveItem[] itemList = InteractiveItem.values();
-    private static final String[] commandList = {"take", "go", "look", "examine", "x"};
+    static final String[] commandList = {"take", "go", "look", "examine", "x"};
+    static final String[] oneWordList = {"solve", "help", "inventory"};
 
     private static boolean isValidVerb(String word) {
         for (String command : commandList) {
@@ -21,7 +27,7 @@ public class ProcessInput {
     }
 
     private static boolean isValidItem(String word) {
-        for (InteractiveItem item : itemList){
+        for (InteractiveItem item : itemList) {
             if (!word.equals(item.toString())) {
                 return true;
             }
@@ -44,8 +50,12 @@ public class ProcessInput {
             System.out.println("Please use two words");
             return false;
         }
-        if (isValidVerb(arrWords[0]) && isValidItem(arrWords[1])) { return true; }
-        if (isValidVerb(arrWords[0]) && isValidDirection(arrWords[1])) { return true; }
+        if (isValidVerb(arrWords[0]) && isValidItem(arrWords[1])) {
+            return true;
+        }
+        if (isValidVerb(arrWords[0]) && isValidDirection(arrWords[1])) {
+            return true;
+        }
         System.out.println("not a valid command");
         return false;
     }
@@ -61,9 +71,15 @@ public class ProcessInput {
             String verb = arrWords[0];
             String noun = arrWords[1];
 
+            //if playerInventory size > 5 && word[0].equals("solve")
+            // solveMysteryQuiz()
+
+
             if ("look".equals(verb)) {
                 if (noun.equals("room")) {
                     player.LookRoom();
+                } else if (noun.equals("inventory")) {
+                    System.out.println(player.getInventory());
                 } else {
                     player.LookItem(noun);
                 }
@@ -94,15 +110,30 @@ public class ProcessInput {
                 player.examineItem(noun);
 
             } else if ("take".equals(verb)) {
-                if (InputValidator.isValidClueToTake(noun)) {
+                int currentInventorySize = player.getInventory().size();
+                int inventoryMin = 5;
+                int inventoryMax = Clue.values().length;
+
+                if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin && currentInventorySize != inventoryMax) {
                     player.addToInventory(player.takeClue(noun));
-                    player.getInventory().forEach(System.out::println);
+                } else if (InputValidator.isValidClueToTake(noun)) {
+                    System.out.println(
+                            "You now have enough clues to solve the mystery!\n " +
+                                    "Type 'solve' to access questionnaire or continue collecting clues"
+                    );
+                    player.addToInventory(player.takeClue(noun));
 
                 } else {
-                    System.out.println("Do not recognize command");
+                    System.out.println("This is not a clue you can pick up.");
                 }
+            } else {
+                System.out.println("Do not recognize command");
             }
+
         }
             return words;
-    };
-};
+
+    }
+
+    ;
+}

@@ -16,7 +16,7 @@ public enum InteractiveItem { // TODO: make abstract class? To add characters?
     COUNTER("You see a colorful magazine scattered amongst junk mail", "magazine",
             Clue.ART_MAGAZINE), //magazine
     FRIDGE("You open the fridge and see seasoned chicken ready for the grill, there's also some wet dog food", "food",
-            Clue.DOGFOOD),
+            Clue.DOG_FOOD),
     HALLWAY("A hallway with nice decor", "decor", Clue.PHONE_CALL, Clue.PHOTO),
     TRASHCAN("You know what they say about another's trash...", "trash",
             Clue.LOTTERY_TICKET, Clue.JOB_APPLICATION),
