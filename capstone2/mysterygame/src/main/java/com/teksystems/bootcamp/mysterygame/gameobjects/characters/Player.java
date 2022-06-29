@@ -84,5 +84,6 @@ public class Player extends Actor {
 
     public void solveMystery() {
         System.out.println("Time to solve the mystery!");
+        // create quiz class ?
     }
 }
