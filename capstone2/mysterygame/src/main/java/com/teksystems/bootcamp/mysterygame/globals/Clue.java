@@ -29,6 +29,10 @@ public enum Clue { // TODO: add keywords from InteractiveItems
         return this.description;
     }
 
+    public void getClue () {
+
+    }
+
 
 
 }

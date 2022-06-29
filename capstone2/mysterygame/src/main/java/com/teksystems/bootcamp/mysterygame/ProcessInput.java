@@ -9,9 +9,7 @@ import static com.teksystems.bootcamp.mysterygame.Game.player;
 public class ProcessInput {
 
     private static final InteractiveItem[] itemList = InteractiveItem.values();
-    private static final String[] commandList = {"take", "go", "look", "examine", "speak"};
-
-    //  write tests
+    private static final String[] commandList = {"take", "go", "look", "examine"};
 
     private static boolean isValidVerb(String word) {
         for (String command : commandList) {
@@ -52,16 +50,12 @@ public class ProcessInput {
         return false;
     }
 
-    void processLookCommand() {}
-    void processGoCommand() {}
-    void processTakeCommand() {}
-    void processExamineCommand() {
-        // if noun is not in room return false
+    void helpMenu() {
+
     }
-    void helpMenu() {}
 
     protected static String processCommands(String words) {
-        if (isValidCommand(words) || (isValidDirection(words))) { // TODO: check isValidDirection
+        if (isValidCommand(words)) {
             System.out.println("ok");
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
@@ -98,8 +92,6 @@ public class ProcessInput {
                     default:
                         break;
                 }
-            } else if ("speak".equals(verb)) {
-                player.speak(noun);
             } else if ("examine".equals(verb)) {
                 player.examineItem(noun);
 

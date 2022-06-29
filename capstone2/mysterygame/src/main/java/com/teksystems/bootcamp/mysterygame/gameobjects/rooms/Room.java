@@ -9,9 +9,8 @@ import java.util.ArrayList;
 public class Room {
     private final String name, description;
     private final int n, e, s, w;
-    private ArrayList<Clue> clues;
-    private ArrayList<Actor> characters;
-    private ArrayList<InteractiveItem> items;
+    private final ArrayList<Clue> clues;
+    private final ArrayList<InteractiveItem> items;
 
 
     public Room(String name, String description, int n, int e, int s, int w, ArrayList<InteractiveItem> roomItems) {
@@ -21,11 +20,9 @@ public class Room {
         this.e = e;
         this.s = s;
         this.w = w;
-        this.characters = new ArrayList<Actor>();
         this.clues = new ArrayList<Clue>();
         this.items = roomItems; // moot if in constructor
     }
-
 
 
     public String getName() {
@@ -56,23 +53,9 @@ public class Room {
         return clues;
     }
 
-    public void setClues(ArrayList<Clue> clues) {
-        this.clues = clues;
-    }
-
-    public ArrayList<Actor> getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(Actor characters) {
-        this.characters.add(characters);
-    }
-
     public ArrayList<InteractiveItem> getItems() {
         return items;
     }
 
-    public void setItems(InteractiveItem item) {
-        this.items.add(item);
-    }
+
 }
