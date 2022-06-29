@@ -9,7 +9,7 @@ import static com.teksystems.bootcamp.mysterygame.Game.player;
 public class ProcessInput {
 
     private static final InteractiveItem[] itemList = InteractiveItem.values();
-    private static final String[] commandList = {"take", "go", "look", "examine"};
+    private static final String[] commandList = {"take", "go", "look", "examine", "speak"};
 
     //  write tests
 
@@ -98,6 +98,8 @@ public class ProcessInput {
                     default:
                         break;
                 }
+            } else if ("speak".equals(verb)) {
+                player.speak(noun);
             } else if ("examine".equals(verb)) {
                 player.examineItem(noun);
 

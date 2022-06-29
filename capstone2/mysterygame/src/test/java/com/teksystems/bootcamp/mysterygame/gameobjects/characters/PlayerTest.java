@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 class PlayerTest {
     // better to use one instance for one test, not repeated instance
-        Player player = new Player("Anthony", "Detective", "cool guy", false );
+        Player player = new Player("Anthony", "Detective", "cool guy");
         Room room = player.getCurrentRoom();
 
     @BeforeEach

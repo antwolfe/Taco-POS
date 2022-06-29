@@ -15,9 +15,9 @@ public class Game
 
     static void initGame() {
         new Map();
-        player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.", true);
+        player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.");
         player.setCurrentRoom(getMap().get(0));
-        player.getCurrentRoom().setCharacters(new Actor("Dayra", "Professional Chef", "Warm and kind friend, always wants to cook for you.", false));
+
         // Debug Line
 
         playGame();
@@ -90,7 +90,7 @@ public class Game
     }
 
     void displayCommandList() {
-        String[] allCommands = {"go n/s/e/w", "look", "examine", "take"};
+        String[] allCommands = {"go n/s/e/w", "look", "examine", "take", "speak"};
     }
 
 

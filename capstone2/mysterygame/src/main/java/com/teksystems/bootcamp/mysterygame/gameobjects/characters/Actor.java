@@ -2,18 +2,16 @@ package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 
-public class Actor {
+public abstract class Actor {
     private String name;
-    private String occupation;
-    private String description;
-    private boolean hasAlibi;
+    private final String occupation;
+    private final String description;
     protected Room currentRoom;
 
-    public Actor(String name, String occupation, String description, boolean hasAlibi) {
+    public Actor(String name, String occupation, String description) {
         this.name = name;
         this.occupation = occupation;
         this.description = description;
-        this.hasAlibi = hasAlibi;
     }
 
     public String getName() {
@@ -28,24 +26,8 @@ public class Actor {
         return occupation;
     }
 
-    public void setOccupation(String occupation) {
-        this.occupation = occupation;
-    }
-
     public String getDescription() {
         return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public boolean isHasAlibi() {
-        return hasAlibi;
-    }
-
-    public void setHasAlibi(boolean hasAlibi) {
-        this.hasAlibi = hasAlibi;
     }
 
     public Room getCurrentRoom() {

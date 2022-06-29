@@ -6,6 +6,7 @@ import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Player extends Actor {
@@ -13,8 +14,8 @@ public class Player extends Actor {
     private ArrayList<Clue> inventory; //
 
 
-    public Player(String name, String occupation, String description, boolean hasAlibi) {
-        super(name, occupation, description, hasAlibi);
+    public Player(String name, String occupation, String description) {
+        super(name, occupation, description);
         this.currentRoom = getCurrentRoom();
     }
 
@@ -37,9 +38,9 @@ public class Player extends Actor {
         System.out.println("It has: " + currentRoom.getItems() + ".\n" +
                 "Use 'look' to find next keyword.");
         System.out.println("You see: ");
-                currentRoom.getCharacters().forEach((actor) -> {
-                    System.out.println(actor.getName());
-                });
+        currentRoom.getCharacters().forEach((actor) -> {
+            System.out.println(actor.getName());
+        });
     }
 
     public void LookItem(String item) { // return list of items in room
@@ -50,7 +51,7 @@ public class Player extends Actor {
         }
     }
 
-    public void examineItem(String word){ // TODO: return Clue, fix returned description
+    public void examineItem(String word) { // TODO: return Clue, fix returned description
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.toString().contains(word) && currentRoom.getItems().contains(interItem)) {
                 System.out.println("You look closer to " + interItem + ". Maybe you'll find a clue.");
@@ -61,12 +62,11 @@ public class Player extends Actor {
     public void takeClue(String pickedClue) {
         // after examining item, clue will be exposed.
         // player will put clue into inventory
-        for (Clue clue : currentRoom.getClues()){
+        for (Clue clue : currentRoom.getClues()) {
             if (clue.toString().equals(pickedClue)) {
                 System.out.println(clue.getDescription());
             }
         }
-
     }
 
 
