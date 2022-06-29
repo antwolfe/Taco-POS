@@ -94,15 +94,16 @@ public class ProcessInput {
                 player.examineItem(noun);
 
             } else if ("take".equals(verb)) {
-                player.takeClue(noun);
-                // put into inventory
+                if (InputValidator.isValidClueToTake(noun)) {
+                    player.addToInventory(player.takeClue(noun));
+                    player.getInventory().forEach(System.out::println);
+                    // put into inventory
 
-            } else {
-                System.out.println("Do not recognize command");
+                } else {
+                    System.out.println("Do not recognize command");
+                }
             }
-
         }
-        return words;
-    }
-
-}
+            return words;
+    };
+};

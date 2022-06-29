@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
+import com.teksystems.bootcamp.mysterygame.InputValidator;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
@@ -17,6 +18,7 @@ public class Player extends Actor {
     public Player(String name, String occupation, String description) {
         super(name, occupation, description);
         this.currentRoom = getCurrentRoom();
+        this.inventory = new ArrayList<>();
     }
 
     public void goDirection(int direction) {
@@ -59,16 +61,26 @@ public class Player extends Actor {
 
     }
 
-    public void takeClue(String pickedClue) {
-        // put clue in inventory
-        System.out.println(pickedClue);
-        System.out.println(currentRoom.getCluesInRoom());
-        for (Clue clue : currentRoom.getCluesInRoom()) {
-            if (pickedClue.equals(clue.getTakeKeyword())) {
-                System.out.println("You took " + clue + " for later.");
+    public Clue takeClue(String pickedClue) {
+        // validate correct clue
+            Clue guessedClue = null;
+            System.out.println(pickedClue);
+            System.out.println(currentRoom.getCluesInRoom());
+            for (Clue clue : currentRoom.getCluesInRoom()) {
+                if (pickedClue.equals(clue.getTakeKeyword())) {
+                    guessedClue = clue;
+                }
             }
-        }
+            System.out.println("You took " + guessedClue + " for later.");
+            return guessedClue;
+
     }
 
+    public ArrayList<Clue> getInventory() {
+        return inventory;
+    }
 
+    public void addToInventory(Clue inventory) {
+        this.inventory.add(inventory);
+    }
 }
