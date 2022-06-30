@@ -17,13 +17,13 @@ class ProcessInputTest {
     @ParameterizedTest
     @ValueSource(strings = { "look room go", "go s north", "jack" })
     void commandsShouldBeTwoWords(String command) {
-        assertFalse(ProcessInput.isValidCommand(command));
+        assertFalse(InputValidator.isValidCommand(command));
     }
 
     @ParameterizedTest
     @ValueSource(strings = { "no shot", "run game", "have coffee"})
     void invalidCommandsShouldReturnFalse(String command) {
-        assertFalse(ProcessInput.isValidCommand(command));
+        assertFalse(InputValidator.isValidCommand(command));
     }
 
 

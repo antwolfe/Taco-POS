@@ -44,16 +44,17 @@ public class Player extends Actor {
 
     }
 
-    public void LookItem(String item) { // return list of items in room
+    public String LookItem(String item) {
+        String currentItem = "no item of that name here";
         for (InteractiveItem interItem : InteractiveItem.values()) {
-            if (interItem.toString().contains(item) && currentRoom.getItems().contains(interItem)) {
-                System.out.println(interItem.getDescription());
+            if (currentRoom.getItems().contains(interItem) && interItem.toString().contains(item)) {
+                currentItem = interItem.getDescription();
             }
         }
+        return currentItem;
     }
 
     public void examineItem(String word) { // TODO: return Clue, fix returned description
-
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (interItem.getClueKeyword().contains(word) && currentRoom.getItems().contains(interItem)) {
                 System.out.println("You look closer to " + interItem + ".");
@@ -65,14 +66,14 @@ public class Player extends Actor {
 
     public Clue takeClue(String pickedClue) {
         // validate correct clue
-            Clue guessedClue = null;
-            for (Clue clue : currentRoom.getCluesInRoom()) {
-                if (pickedClue.equals(clue.getTakeKeyword())) {
-                    guessedClue = clue;
-                }
+        Clue guessedClue = null;
+        for (Clue clue : currentRoom.getCluesInRoom()) {
+            if (pickedClue.equals(clue.getTakeKeyword())) {
+                guessedClue = clue;
             }
-            System.out.println("You took " + guessedClue + " for later.");
-            return guessedClue;
+        }
+        System.out.println("You took " + guessedClue + " for later.");
+        return guessedClue;
 
     }
 
@@ -86,6 +87,6 @@ public class Player extends Actor {
 
     public void solveMystery() {
         System.out.println("Time to solve the mystery!");
-        System.out.println(Arrays.toString(Quiz.getQuestions()));
+        // put finished quiz here
     }
 }

@@ -29,8 +29,8 @@ public class Quiz {
     };
   }
 
-  public static Question[] getQuestions() {
-    return questions;
+  public static void getQuestions() {
+
   }
 
   public String[] getAnswerChoices() {

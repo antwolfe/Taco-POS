@@ -5,13 +5,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
-    static Game game;
+    static Game game = new Game();
 
 
     @BeforeAll
-    static void setUp(){
-        game = new Game();
-    }
+    static void setUp(){}
+
+
+    @Test
+    void initGame() {}
+
+    @Test
+    void playGame() {}
 
     // test return values of things like "look room returns correct room",
     // "look items returns item list in room"

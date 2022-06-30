@@ -3,6 +3,7 @@ package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 import com.teksystems.bootcamp.mysterygame.Game;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerTest {
     // better to use one instance for one test, not repeated instance
         Player player = new Player("Anthony", "Detective", "cool guy");
-//        Room room = player.getCurrentRoom();
 
     @BeforeEach
     void setUp() {
@@ -20,7 +20,7 @@ class PlayerTest {
     }
 
     @Test
-    void goDirectionTest(){
+    void goDirectionTest1(){
         player.goDirection(1);
         Room expected = Map.getMap().get(1);
         Room actual = player.getCurrentRoom();
@@ -45,7 +45,22 @@ class PlayerTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void lookItemTest1() {
+        player.LookItem("mat");
+        String expected = InteractiveItem.MAT.getDescription();
+        String actual = player.LookItem("mat");
+        assertEquals(expected, actual);
+    }
 
+    @Test
+    void lookItemTest2() {
+        player.LookItem("dog");
+        String expected = "no item of that name here";
+        String actual = player.LookItem("dog");
+        assertEquals(expected, actual);
+    }
 
-
+    @Test
+    void lookItem
 }

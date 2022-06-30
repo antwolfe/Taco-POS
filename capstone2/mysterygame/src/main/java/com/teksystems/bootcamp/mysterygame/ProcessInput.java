@@ -18,7 +18,8 @@ public class ProcessInput {
 
         if (words.equals("help me")) {
             Game.showHelpMenu();
-        } else if (InputValidator.isValidCommand(words)) {
+        }
+        else if (InputValidator.isValidCommand(words)) {
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
             String noun = arrWords[1];
@@ -29,7 +30,7 @@ public class ProcessInput {
                 } else if (noun.equals("inventory")) {
                     System.out.println(player.getInventory());
                 } else {
-                    player.LookItem(noun);
+                    System.out.println(player.LookItem(noun));
                 }
             } else if ("go".equals(verb)) {
                 Room currentRoom = player.getCurrentRoom();

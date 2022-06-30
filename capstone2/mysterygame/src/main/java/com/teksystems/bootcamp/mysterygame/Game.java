@@ -13,6 +13,7 @@ import java.util.Scanner;
 import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
 
+
 public class Game
 {
     protected static Player player;
@@ -22,13 +23,12 @@ public class Game
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.");
         player.setCurrentRoom(getMap().get(0));
         // Debug Line
-        System.out.println(Quiz.getQuestions());
+
         playGame();
     }
 
     static void playGame() {
 //         displayInstructions();
-
         Scanner scanner = new Scanner(System.in);
         boolean error = false;
         String input;
@@ -82,7 +82,7 @@ public class Game
                         ".       .                                                     .       .\n" +
                         ". \\ o / .   Once you find a clue, 'take' it with you to       . \\ o / .\n" +
                         ".   |   .         use it in your final revelation!            .   |   .\n" +
-                        ".  / \\  .                                                     .  / \\  .\n" +
+                        ".  / \\  .            Press 'q' to quit at any time            .  / \\  .\n" +
                         ".       .......................................................       .\n" +
                         ".   o   \\ o /  _ o        __|    \\ /     |__         o _  \\ o /   o   .\n" +
                         ".  /|\\    |     /\\   __\\o   \\o    |    o/     o/__   /\\     |    /|\\  .\n" +
