@@ -1,12 +1,14 @@
 package com.teksystems.bootcamp.mysterygame;
 
 
+import com.teksystems.bootcamp.mysterygame.gameobjects.Quiz;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
@@ -20,7 +22,7 @@ public class Game
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.");
         player.setCurrentRoom(getMap().get(0));
         // Debug Line
-
+        System.out.println(Quiz.getQuestions());
         playGame();
     }
 

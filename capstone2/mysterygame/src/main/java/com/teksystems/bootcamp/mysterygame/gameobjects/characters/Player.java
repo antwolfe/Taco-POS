@@ -1,12 +1,14 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
 import com.teksystems.bootcamp.mysterygame.InputValidator;
+import com.teksystems.bootcamp.mysterygame.gameobjects.Quiz;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -84,6 +86,6 @@ public class Player extends Actor {
 
     public void solveMystery() {
         System.out.println("Time to solve the mystery!");
-
+        System.out.println(Arrays.toString(Quiz.getQuestions()));
     }
 }

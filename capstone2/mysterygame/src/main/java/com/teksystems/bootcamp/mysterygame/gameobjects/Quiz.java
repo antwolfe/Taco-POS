@@ -2,11 +2,11 @@ package com.teksystems.bootcamp.mysterygame.gameobjects;
 
 public class Quiz {
 
-  Question[] questions;
-  String[] answerChoices = new String[]{"the butler", "the bookkeeper", "mac", "the dog"};
+ final Question[] questions;
+  final String[] answerChoices = new String[]{"the butler", "the bookkeeper", "mac", "the dog"};
 
-  public Quiz(Question[] questions) {
-    this.questions = new Question[]{
+  public Quiz() {
+    questions = new Question[]{
             new Question("Who tracked in the dirt?",
                     answerChoices,
                     'D'),
@@ -29,7 +29,7 @@ public class Quiz {
     };
   }
 
-  public Question[] getQuestions() {
+  public static Question[] getQuestions() {
     return questions;
   }
 
