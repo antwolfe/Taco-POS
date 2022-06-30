@@ -14,7 +14,7 @@ import java.util.List;
 
 public class Player extends Actor {
 
-    private ArrayList<Clue> inventory; //
+    private final ArrayList<Clue> inventory; //
 
 
     public Player(String name, String occupation, String description) {
@@ -54,9 +54,9 @@ public class Player extends Actor {
         return currentItem;
     }
 
-    public void examineItem(String word) { // TODO: return Clue, fix returned description
+    public void examineItem(String word) {
         for (InteractiveItem interItem : InteractiveItem.values()) {
-            if (interItem.getClueKeyword().contains(word) && currentRoom.getItems().contains(interItem)) {
+            if (currentRoom.getItems().contains(interItem) && interItem.getClueKeyword().contains(word)) {
                 System.out.println("You look closer to " + interItem + ".");
                 interItem.displayClue();
             }
@@ -64,7 +64,6 @@ public class Player extends Actor {
     }
 
     public Clue takeClue(String pickedClue) {
-        // validate correct clue
         Clue guessedClue = null;
         for (Clue clue : currentRoom.getCluesInRoom()) {
             if (pickedClue.equals(clue.getTakeKeyword())) {
@@ -73,7 +72,6 @@ public class Player extends Actor {
         }
         System.out.println("You took " + guessedClue + " for later.");
         return guessedClue;
-
     }
 
     public ArrayList<Clue> getInventory() {

@@ -3,24 +3,27 @@ package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 import com.teksystems.bootcamp.mysterygame.Game;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
+import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
     // better to use one instance for one test, not repeated instance
-        Player player = new Player("Anthony", "Detective", "cool guy");
+    Player player = new Player("Anthony", "Detective", "cool guy");
+    ArrayList<Clue> inventory = new ArrayList<>();
 
     @BeforeEach
     void setUp() {
-        Game game = new Game();
         new Map();
         player.setCurrentRoom(Map.getMap().get(0));
     }
 
     @Test
-    void goDirectionTest1(){
+    void goDirectionTest1() {
         player.goDirection(1);
         Room expected = Map.getMap().get(1);
         Room actual = player.getCurrentRoom();
@@ -71,22 +74,43 @@ class PlayerTest {
     }
 
     @Test
-    void examineItemTest1(){
+    void takeClue1() {
+        player.setCurrentRoom(Map.getMap().get(3));
+        player.takeClue("photo");
+        Clue expected = Clue.PHOTO;
+        Clue actual = player.takeClue("photo");
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void takeClue2() {
+        player.setCurrentRoom(Map.getMap().get(4));
+        player.takeClue("lochness");
+        Clue actual = player.takeClue("lochness");
+        assertNull(actual);
+    }
+
+    @Test
+    void takeClue3() {
 
     }
 
     @Test
-    void examineItemTest2(){
+    void addToInventoryTest1() {
+        player.setCurrentRoom(Map.getMap().get(4));
+        player.addToInventory(player.takeClue("toy"));
+        int expected = 1;
+        int actual = player.getInventory().size();
+        assertEquals(expected, actual);
+    }
+
+    void addToInventoryTest2() {
 
     }
 
-    @Test
-    void examineItemTest3(){
+    void addToInventoryTest3() {
 
     }
-
-
-
 
 
 
