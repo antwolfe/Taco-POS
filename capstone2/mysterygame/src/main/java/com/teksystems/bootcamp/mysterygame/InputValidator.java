@@ -1,10 +1,8 @@
 package com.teksystems.bootcamp.mysterygame;
 
-import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
 import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.Direction;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
-
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class InputValidator {
@@ -21,14 +19,8 @@ public class InputValidator {
       return false;
     }
 
-
-
-
     static boolean isValidInventoryCount() {
-        if (player.getInventory().size() > 5){
-            return true;
-        }
-        return false;
+        return player.getInventory().size() > 5;
     }
 
     private static boolean isValidVerb(String word) {
