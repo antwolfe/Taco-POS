@@ -62,5 +62,34 @@ class PlayerTest {
     }
 
     @Test
-    void lookItem
+    void lookItemTest3() {
+        player.setCurrentRoom(Map.getMap().get(2));
+        String expected = InteractiveItem.TRASHCAN.getDescription();
+        String actual = player.LookItem("tra");
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    void examineItemTest1(){
+
+    }
+
+    @Test
+    void examineItemTest2(){
+
+    }
+
+    @Test
+    void examineItemTest3(){
+
+    }
+
+
+
+
+
+
+
+
 }

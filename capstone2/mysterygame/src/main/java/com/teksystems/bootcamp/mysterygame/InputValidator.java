@@ -41,6 +41,7 @@ public class InputValidator {
         return false;
     }
 
+
     private static boolean isValidDirection(String word) {
         for (Direction direction : Direction.values()) {
             if (word.equals(direction.toString())) {

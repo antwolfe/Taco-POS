@@ -61,7 +61,6 @@ public class Player extends Actor {
                 interItem.displayClue();
             }
         }
-
     }
 
     public Clue takeClue(String pickedClue) {
