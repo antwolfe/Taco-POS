@@ -7,6 +7,8 @@ import com.teksystems.bootcamp.mysterygame.globals.Clue;
 import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
@@ -104,13 +106,31 @@ class PlayerTest {
         assertEquals(expected, actual);
     }
 
+    @Test
     void addToInventoryTest2() {
-
+        player.setCurrentRoom(Map.getMap().get(4));
+        Clue expected = Clue.DOG_TOY;
+        Clue actual = player.takeClue("toy");
+        assertNotNull(actual);
+        assertEquals(expected, actual);
     }
 
+    @Test
     void addToInventoryTest3() {
-
+        player.addToInventory(Clue.LOTTERY_TICKET);
+        player.addToInventory(Clue.MUD_STAINS);
+        player.addToInventory(Clue.ART_MAGAZINE);
+        ArrayList<Clue> actual = player.getInventory();
+        ArrayList<Clue> expected = new ArrayList<Clue>();
+        expected.add(Clue.LOTTERY_TICKET);
+        expected.add(Clue.MUD_STAINS);
+        expected.add(Clue.ART_MAGAZINE);
+        assertEquals(expected, actual);
     }
+
+    //get(o) from inventory
+
+
 
 
 

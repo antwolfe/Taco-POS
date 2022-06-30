@@ -78,8 +78,8 @@ public class Player extends Actor {
         return inventory;
     }
 
-    public void addToInventory(Clue inventory) {
-        this.inventory.add(inventory);
+    public void addToInventory(Clue clue) {
+        this.inventory.add(clue);
     }
 
     public void solveMystery() {
