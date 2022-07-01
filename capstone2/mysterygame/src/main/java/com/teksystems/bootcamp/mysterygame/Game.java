@@ -8,7 +8,6 @@ import java.util.Scanner;
 import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
 
-
 public class Game
 {
     protected static Player player;
