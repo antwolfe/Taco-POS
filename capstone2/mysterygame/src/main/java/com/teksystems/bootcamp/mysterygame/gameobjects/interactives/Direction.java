@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.mysterygame.globals;
+package com.teksystems.bootcamp.mysterygame.gameobjects.interactives;
 
 public enum Direction { // TODO: refactor to words? have chars as alt. keywords
     NORTH,

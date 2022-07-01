@@ -1,16 +1,14 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.characters;
 
-import com.teksystems.bootcamp.mysterygame.Game;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
-import com.teksystems.bootcamp.mysterygame.globals.Clue;
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.Clue;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.InteractiveItem;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {

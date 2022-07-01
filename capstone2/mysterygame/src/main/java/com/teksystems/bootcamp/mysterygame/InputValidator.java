@@ -1,8 +1,8 @@
 package com.teksystems.bootcamp.mysterygame;
 
-import com.teksystems.bootcamp.mysterygame.globals.Clue;
-import com.teksystems.bootcamp.mysterygame.globals.Direction;
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.Clue;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.Direction;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.InteractiveItem;
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class InputValidator {

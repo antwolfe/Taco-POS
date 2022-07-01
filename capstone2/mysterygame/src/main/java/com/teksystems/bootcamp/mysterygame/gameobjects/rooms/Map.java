@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.rooms;
 
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.InteractiveItem;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;

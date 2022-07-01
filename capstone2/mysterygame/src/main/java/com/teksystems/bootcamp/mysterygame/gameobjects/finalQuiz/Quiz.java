@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.mysterygame.gameobjects;
+package com.teksystems.bootcamp.mysterygame.gameobjects.finalQuiz;
 
 public class Quiz {
 

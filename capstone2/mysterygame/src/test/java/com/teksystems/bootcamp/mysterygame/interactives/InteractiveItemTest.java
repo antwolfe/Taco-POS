@@ -1,8 +1,6 @@
-package com.teksystems.bootcamp.mysterygame.globals;
+package com.teksystems.bootcamp.mysterygame.interactives;
 
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class InteractiveItemTest {
 

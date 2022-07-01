@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.mysterygame.globals;
+package com.teksystems.bootcamp.mysterygame.gameobjects.interactives;
 
 public enum Clue { // TODO: add keywords from InteractiveItems
     MUD_STAINS("The mud here is in the shape of dog paws.", "none"), // dirt

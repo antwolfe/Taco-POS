@@ -1,14 +1,9 @@
 package com.teksystems.bootcamp.mysterygame;
 
 
-import com.teksystems.bootcamp.mysterygame.gameobjects.Quiz;
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map;
-import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
 import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Player;
-import com.teksystems.bootcamp.mysterygame.globals.Clue;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import static com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Map.getMap;
 
@@ -22,13 +17,12 @@ public class Game
         new Map();
         player = new Player("You", "Detective", "Solves crimes. Never seems to get a day off.");
         player.setCurrentRoom(getMap().get(0));
-        // Debug Line
-
         playGame();
     }
 
     static void playGame() {
-//         displayInstructions();
+        displayInstructions();
+        System.out.println("Try 'look room'");
         Scanner scanner = new Scanner(System.in);
         boolean error = false;
         String input;
@@ -37,7 +31,7 @@ public class Game
             System.out.print("> ");
             input = scanner.nextLine().toLowerCase();
             output = ProcessInput.processCommands(input);
-            System.out.println("You entered '" + output + "'");
+//            System.out.println("You entered '" + output + "'");
         } while (!"q".equals(input));
     }
 
@@ -48,29 +42,29 @@ public class Game
                         ".  /|\\    |     /\\   __\\o   \\o    |    o/     o/__   /\\     |    /|\\  .\n" +
                         ".  / \\   / \\   | \\  /) |    ( \\  /o\\  / )    |   (\\  / |   / \\   / \\  .\n" +
                         ".       .......................................................       .\n" +
-                        ". \\ o / .                                                     . \\ o / .\n" +
+                        ". \\ o / .            WHAT HAPPENED TO THE MAZE?               . \\ o / .\n" +
                         ".   |   .                                                     .   |   .\n" +
-                        ".  / \\  .             WHAT HAPPENED TO THE MAZE?              .  / \\  .\n" +
-                        ".       .                                                     .       .\n" +
-                        ".  _ o  .                                                     .  _ o  .\n" +
-                        ".   /\\  .     Hello detective! Your friend invited you        .   /\\  .\n" +
-                        ".  | \\  .   to a BBQ party! You were having a great time      .  | \\  .\n" +
-                        ".       .    until your friend noticed that their favorite    .       .\n" +
-                        ".       .    maze puzzle has gone missing from their office!  .       .\n" +
-                        ".  __\\o .                                                     .  __\\o .\n" +
-                        ". /) |  .    As the only friend at the BBQ who is also a      . /) |  .\n" +
-                        ".       .   professional sleuth, it's up to you to solve the  .       .\n" +
-                        ". __|   .             mystery in time for dessert!            . __|   .\n" +
+                        ".  / \\  .      Hello detective! Your friend invited you       .  / \\  .\n" +
+                        ".       .     to a BBQ party! You were having a great time    .       .\n" +
+                        ".  _ o  .     until your friend noticed that their favorite   .  _ o  .\n" +
+                        ".   /\\  .   maze puzzle has gone missing from their office!   .   /\\  .\n" +
+                        ".  | \\  .                                                     .  | \\  .\n" +
+                        ".       .        As the only friend at the BBQ who is also a  .   .\n" +
+                        ".       .    professional sleuth, it's up to you to solve the .   .\n" +
+                        ".  __\\o .               mystery in time for dessert!          .  __\\o .\n" +
+                        ". /) |  .                                                     . /) |  .\n" +
+                        ".       . Type 'help me' for a hint & 'q' to quit at any time .\n" +
+                        ". __|   .                                                     . __|   .\n" +
                         ".   \\o  .                                                     .    \\o .\n" +
                         ".   ( \\ .                      RULES                          .   ( \\ .\n" +
-                        ".       .           Commands must be two words only.          .       .\n" +
+                        ".       .           Entries must be two words only.           .       .\n" +
                         ".  \\ /  . Find the minimum number of clues and solve the case .  \\ /  .\n" +
                         ".   |   .                                                     .   |   .\n" +
                         ".  /o\\  .               GAMEPLAY INSTRUCTIONS                 .  /o\\  .\n" +
                         ".       .   You'll go around looking for clues in the house.  .       .\n" +
                         ".   |__ . Use one of the commands: 'go, look, examine or take'.   |__ .\n" +
-                        ". o/    .  and one keyword provided by the items to progress  . o/    .\n" +
-                        "./ )    .                                                     ./ )    .\n" +
+                        ". o/    .  and one mystery keyword provided by the items      . o/    .\n" +
+                        "./ )    .                    to progress.                     ./ )    .\n" +
                         ".       .   Moving around the house can be done by using one  .       .\n" +
                         ".       .            of the cardinal directions.              .       .\n" +
                         ". o/__  .             (ex: 'go n' to move north)              . o/__  .\n" +
@@ -82,7 +76,7 @@ public class Game
                         ".       .                                                     .       .\n" +
                         ". \\ o / .   Once you find a clue, 'take' it with you to       . \\ o / .\n" +
                         ".   |   .         use it in your final revelation!            .   |   .\n" +
-                        ".  / \\  .            Press 'q' to quit at any time            .  / \\  .\n" +
+                        ".  / \\  .                                                     .  / \\  .\n" +
                         ".       .......................................................       .\n" +
                         ".   o   \\ o /  _ o        __|    \\ /     |__         o _  \\ o /   o   .\n" +
                         ".  /|\\    |     /\\   __\\o   \\o    |    o/     o/__   /\\     |    /|\\  .\n" +

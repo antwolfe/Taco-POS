@@ -1,67 +1,69 @@
 package com.teksystems.bootcamp.mysterygame;
 
 import com.teksystems.bootcamp.mysterygame.gameobjects.rooms.Room;
-import com.teksystems.bootcamp.mysterygame.globals.Clue;
-import com.teksystems.bootcamp.mysterygame.globals.Direction;
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import static com.teksystems.bootcamp.mysterygame.Game.player;
 
 public class ProcessInput {
 
+
+    static void processLookCommand(String noun) {
+    if (noun.equals("room")) {
+        player.LookRoom();
+    } else if (noun.equals("inventory")) {
+        System.out.println(player.getInventory());
+    } else {
+        System.out.println(player.LookItem(noun));
+    }
+}
+
+static void processGoCommand(String noun) {
+    Room currentRoom = player.getCurrentRoom();
+    int roomInMap;
+    switch (noun) {
+        case "n":
+            roomInMap = currentRoom.getN();
+            player.goDirection(roomInMap);
+            break;
+        case "e":
+            roomInMap = currentRoom.getE();
+            player.goDirection(roomInMap);
+            break;
+        case "s":
+            roomInMap = currentRoom.getS();
+            player.goDirection(roomInMap);
+            break;
+        case "w":
+            roomInMap = currentRoom.getW();
+            player.goDirection(roomInMap);
+            break;
+        case "solve":
+            if (InputValidator.isValidInventoryCount()) {
+                player.solveMystery();
+            } else {
+                System.out.println("You don't have enough clues yet");
+            }
+            break;
+        default:
+            System.out.println("that is not a valid direction. Try 'go n'");
+            break;
+    }
+}
+
+
     protected static String processCommands(String words) {
 
         if (words.equals("help me")) {
             Game.showHelpMenu();
-        }
-        else if (InputValidator.isValidCommand(words)) {
+        } else if (InputValidator.isValidCommand(words)) {
             String[] arrWords = words.toLowerCase().split(" ");
             String verb = arrWords[0];
             String noun = arrWords[1];
 
             if ("look".equals(verb)) {
-                if (noun.equals("room")) {
-                    player.LookRoom();
-                } else if (noun.equals("inventory")) {
-                    System.out.println(player.getInventory());
-                } else {
-                    System.out.println(player.LookItem(noun));
-                }
+                processLookCommand(noun);
             } else if ("go".equals(verb)) {
-                Room currentRoom = player.getCurrentRoom();
-                int roomInMap;
-                switch (noun) {
-                    case "n":
-                        roomInMap = currentRoom.getN();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "e":
-                        roomInMap = currentRoom.getE();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "s":
-                        roomInMap = currentRoom.getS();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "w":
-                        roomInMap = currentRoom.getW();
-                        player.goDirection(roomInMap);
-                        break;
-                    case "solve":
-                        if (InputValidator.isValidInventoryCount()) {
-                            player.solveMystery();
-                        } else {
-                            System.out.println("You don't have enough clues yet");
-                        }
-                        break;
-                    default:
-                        break;
-                }
+               processGoCommand(noun);
             } else if ("examine".equals(verb) || "x".equals(verb)) {
                 player.examineItem(noun);
 
@@ -87,7 +89,6 @@ public class ProcessInput {
             } else {
                 System.out.println("Do not recognize command");
             }
-
         }
         return words;
     }

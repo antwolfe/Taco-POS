@@ -14,23 +14,7 @@ public abstract class Actor {
         this.description = description;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getOccupation() {
-        return occupation;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Room getCurrentRoom() {
+   public Room getCurrentRoom() {
         return currentRoom;
     }
 

@@ -1,8 +1,7 @@
 package com.teksystems.bootcamp.mysterygame.gameobjects.rooms;
 
-import com.teksystems.bootcamp.mysterygame.gameobjects.characters.Actor;
-import com.teksystems.bootcamp.mysterygame.globals.Clue;
-import com.teksystems.bootcamp.mysterygame.globals.InteractiveItem;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.Clue;
+import com.teksystems.bootcamp.mysterygame.gameobjects.interactives.InteractiveItem;
 
 import java.util.ArrayList;
 

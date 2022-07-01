@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.mysterygame.globals;
+package com.teksystems.bootcamp.mysterygame.gameobjects.interactives;
 
 
 import java.util.ArrayList;
