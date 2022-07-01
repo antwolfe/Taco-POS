@@ -41,7 +41,7 @@ public class Player extends Actor {
     }
 
     public String LookItem(String item) {
-        String currentItem = "no item of that name here";
+        String currentItem = "no item of that name here, try 'examine'(or 'x' for short)";
         for (InteractiveItem interItem : InteractiveItem.values()) {
             if (currentRoom.getItems().contains(interItem) && interItem.toString().contains(item)) {
                 currentItem = interItem.getDescription();
@@ -66,7 +66,7 @@ public class Player extends Actor {
                 guessedClue = clue;
             }
         }
-        System.out.println("You took " + guessedClue + " for later.");
+        System.out.println("You put " + guessedClue + " in your pockets for later.");
         return guessedClue;
     }
 
@@ -80,6 +80,9 @@ public class Player extends Actor {
 
     public void solveMystery() {
         System.out.println("Time to solve the mystery!");
-        // put finished quiz here
+        // put quiz here
+        System.out.println("You're an ace sleuth! It's time for dessert!\n" +
+                "Press 'q' to quit.."
+                );
     }
 }

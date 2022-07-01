@@ -96,9 +96,9 @@ class PlayerTest {
     }
 
     @Test
-    void addToInventoryTest1() {
+    void addToInventoryWillIncreaseInventorySize() {
         player.setCurrentRoom(Map.getMap().get(4));
-        player.addToInventory(player.takeClue("toy"));
+        player.addToInventory(Clue.DOG_TOY);
         int expected = 1;
         int actual = player.getInventory().size();
         assertEquals(expected, actual);
@@ -119,14 +119,20 @@ class PlayerTest {
         player.addToInventory(Clue.MUD_STAINS);
         player.addToInventory(Clue.ART_MAGAZINE);
         ArrayList<Clue> actual = player.getInventory();
-        ArrayList<Clue> expected = new ArrayList<Clue>();
+        ArrayList<Clue> expected = new ArrayList<>();
         expected.add(Clue.LOTTERY_TICKET);
         expected.add(Clue.MUD_STAINS);
         expected.add(Clue.ART_MAGAZINE);
         assertEquals(expected, actual);
     }
 
-    //get(o) from inventory
+    @Test
+    void addToInventoryWillAddCorrectObject() {
+        player.addToInventory(Clue.LOTTERY_TICKET);
+        Clue actual = player.getInventory().get(0);
+        Clue expected = Clue.LOTTERY_TICKET;
+        assertEquals(expected, actual);
+    }
 
 
 
