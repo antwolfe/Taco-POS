@@ -23,14 +23,11 @@ public class Game
         displayInstructions();
         System.out.println("Try 'look room'");
         Scanner scanner = new Scanner(System.in);
-        boolean error = false;
         String input;
-        String output = "";
         do {
             System.out.print("> ");
             input = scanner.nextLine().toLowerCase();
-            output = ProcessInput.processCommands(input);
-//            System.out.println("You entered '" + output + "'");
+           ProcessInput.processCommands(input);
         } while (!"q".equals(input));
     }
 
