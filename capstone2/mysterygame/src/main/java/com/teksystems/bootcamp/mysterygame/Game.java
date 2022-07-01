@@ -48,11 +48,11 @@ public class Game
                         ".  _ o  .     until your friend noticed that their favorite   .  _ o  .\n" +
                         ".   /\\  .   maze puzzle has gone missing from their office!   .   /\\  .\n" +
                         ".  | \\  .                                                     .  | \\  .\n" +
-                        ".       .        As the only friend at the BBQ who is also a  .        .\n" +
-                        ".       .    professional sleuth, it's up to you to solve the .        .\n" +
+                        ".       .        As the only friend at the BBQ who is also a  .       .\n" +
+                        ".       .    professional sleuth, it's up to you to solve the .       .\n" +
                         ".  __\\o .               mystery in time for dessert!          .  __\\o .\n" +
                         ". /) |  .                                                     . /) |  .\n" +
-                        ".       . Type 'help me' for a hint & 'q' to quit at any time .\n" +
+                        ".       . Type 'help me' for a hint & 'q' to quit at any time .       .\n" +
                         ". __|   .                                                     . __|   .\n" +
                         ".   \\o  .                                                     .    \\o .\n" +
                         ".   ( \\ .                      RULES                          .   ( \\ .\n" +

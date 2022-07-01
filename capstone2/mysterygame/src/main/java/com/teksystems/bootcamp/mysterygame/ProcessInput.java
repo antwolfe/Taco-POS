@@ -55,7 +55,7 @@ public class ProcessInput {
         int inventoryMin = 5;
         int inventoryMax = 8;
 
-        if (currentInventorySize == inventoryMax - 1) {
+        if (currentInventorySize >= inventoryMax) {
             System.out.println("You have collected all of the clues. Type 'go solve' to solve the case!");
         } else if (InputValidator.isValidClueToTake(noun) && currentInventorySize < inventoryMin) {
             player.addToInventory(player.takeClue(noun));
