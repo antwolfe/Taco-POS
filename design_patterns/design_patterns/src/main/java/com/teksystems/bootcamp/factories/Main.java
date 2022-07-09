@@ -1,13 +1,32 @@
 package com.teksystems.bootcamp.factories;
 
-/**
- * Hello world!
- *
- */
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main
+
 {
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+
+        HashMap<String, String> naughtyNiceList = new HashMap<>();
+
+        naughtyNiceList.put("Jaden", "naughty");
+        naughtyNiceList.put("Jaime", "nice");
+        naughtyNiceList.put("Jake", "nice");
+        naughtyNiceList.put("Jeffery", "naughty");
+        naughtyNiceList.put("Jolie", "naughty");
+
+
+        SantasFactory factory = new SantasFactory();
+
+
+        for (Map.Entry<String, String> set : naughtyNiceList.entrySet()) {
+            System.out.println(set.getKey() + factory.makeGift(set.getValue()).getGift());
+        }
+
+
     }
 }
