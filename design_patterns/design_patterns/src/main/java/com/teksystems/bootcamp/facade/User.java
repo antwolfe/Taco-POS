@@ -2,6 +2,7 @@ package com.teksystems.bootcamp.facade;
 
 public class User {
 
+    int userAccountAmount = 50;
     Payment payment;
     Inventory itemToBuy;
 
@@ -10,7 +11,7 @@ public class User {
     };
 
     public void verifyPurchaseToUser(Inventory itemToBuy) {
-        if(payment.isEnough(itemToBuy)) {
+        if(payment.isEnough(itemToBuy, userAccountAmount)) {
             System.out.println("Purchase Complete");
         } else {
             System.out.println("Purchase Failed");
