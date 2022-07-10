@@ -1,32 +1,29 @@
 package com.teksystems.bootcamp.facade;
 
-import java.util.ArrayList;
 
 public class Inventory {
 
-    String name;
-    int price;
     boolean inStock;
-    ArrayList<Inventory> inventoryList = new ArrayList<>();
-
-    public Inventory(String name, int price, boolean inStock) {
-        this.name = name;
-        this.price = price;
-        this.inStock = inStock;
-    }
 
 
-    public boolean verifyInventoryItem(Inventory itemToPurchase) {
-        for (Inventory inventoryItem : inventoryList) {
-            inStock = inventoryItem == itemToPurchase;
+    public InventoryItems verifyInventoryItem(String itemToPurchase) {
+        InventoryItems item = null;
+        for (InventoryItems inventoryItem : InventoryItems.values()) {
+            if (itemToPurchase.equals(inventoryItem.toString())) {
+                item = inventoryItem;
+            }
         }
-        return inStock;
+            return item;
     }
 
-    public int getPrice() {
-        return price;
+    public boolean isItemInStock(String item) {
+        InventoryItems itemToPurchase = verifyInventoryItem(item);
+        if (itemToPurchase != null) {
+            return itemToPurchase.isInStock();
+        } else {
+            return false;
+        }
     }
-
 
 
 }
