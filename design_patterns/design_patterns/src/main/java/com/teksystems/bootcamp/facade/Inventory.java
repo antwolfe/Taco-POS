@@ -4,9 +4,9 @@ package com.teksystems.bootcamp.facade;
 public class Inventory {
 
 
-    public InventoryItems verifyInventoryItem(String itemToPurchase) {
-        InventoryItems item = null;
-        for (InventoryItems inventoryItem : InventoryItems.values()) {
+    public InventoryItem verifyInventoryItem(String itemToPurchase) {
+        InventoryItem item = null;
+        for (InventoryItem inventoryItem : InventoryItem.values()) {
             if (itemToPurchase.equals(inventoryItem.toString()) && isItemInStock(inventoryItem)) {
                     item = inventoryItem;
             }
@@ -14,7 +14,7 @@ public class Inventory {
         return item;
     }
 
-    public boolean isItemInStock(InventoryItems itemToPurchase) {
+    public boolean isItemInStock(InventoryItem itemToPurchase) {
         if (itemToPurchase != null) {
             return itemToPurchase.isInStock();
         } else {

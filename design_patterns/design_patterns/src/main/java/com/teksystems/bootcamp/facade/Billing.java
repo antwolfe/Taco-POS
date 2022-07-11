@@ -2,7 +2,7 @@ package com.teksystems.bootcamp.facade;
 
 public class Billing {
 
-    public void generateBill(InventoryItems item, boolean paymentStatus) {
+    public void generateBill(InventoryItem item, boolean paymentStatus) {
 
         if (paymentStatus) {
             System.out.println();

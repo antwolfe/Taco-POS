@@ -2,9 +2,7 @@ package com.teksystems.bootcamp.facade;
 
 public class Payment {
 
-    User user = new User();
-
-    public boolean makePurchase(InventoryItems item) {
+    public boolean makePurchase(User user, InventoryItem item) {
         double account = user.getUserAccountAmount();
         if (account >= item.getPrice()) {
             System.out.println();

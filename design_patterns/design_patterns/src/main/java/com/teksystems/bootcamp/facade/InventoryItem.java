@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.facade;
 
-public enum InventoryItems {
+public enum InventoryItem {
 
     SHIRT(8.99, true),
     PANTS(9.99, true),
@@ -14,7 +14,7 @@ public enum InventoryItems {
     final boolean inStock;
 
 
-  InventoryItems(double price, boolean inStock) {
+  InventoryItem(double price, boolean inStock) {
         this.price = price;
         this.inStock = inStock;
     }
