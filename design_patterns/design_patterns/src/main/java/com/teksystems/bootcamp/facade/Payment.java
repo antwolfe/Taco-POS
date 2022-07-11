@@ -8,7 +8,8 @@ public class Payment {
         double account = user.getUserAccountAmount();
         if (account >= item.getPrice()) {
             System.out.println();
-            System.out.println("purchase can be made");
+            double amount = user.getUserAccountAmount() - item.getPrice();
+            user.setUserAccountAmount(amount);
             return true;
         }
         return false;

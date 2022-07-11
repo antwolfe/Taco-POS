@@ -7,10 +7,8 @@ public class Inventory {
     public InventoryItems verifyInventoryItem(String itemToPurchase) {
         InventoryItems item = null;
         for (InventoryItems inventoryItem : InventoryItems.values()) {
-            if (itemToPurchase.equals(inventoryItem.toString())) {
-                if (isItemInStock(inventoryItem)) {
+            if (itemToPurchase.equals(inventoryItem.toString()) && isItemInStock(inventoryItem)) {
                     item = inventoryItem;
-                }
             }
         }
         return item;

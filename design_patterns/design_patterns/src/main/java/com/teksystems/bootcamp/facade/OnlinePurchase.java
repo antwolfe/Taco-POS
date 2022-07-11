@@ -3,7 +3,7 @@ package com.teksystems.bootcamp.facade;
 public class OnlinePurchase {
 
     User user = new User();
-    String purchaseRequest;
+    boolean paymentOk;
     Inventory inventory = new Inventory();
     InventoryItems itemToPurchase;
     Billing bill = new Billing();
@@ -14,9 +14,9 @@ public class OnlinePurchase {
     public void makeOnlinePurchase(String item) {
         user.purchaseRequest(item);
         itemToPurchase = inventory.verifyInventoryItem(item);
-        bill.generateBill(itemToPurchase);
-        paymentInformation.makePurchase(itemToPurchase);
-//        address.sendAddressDetails();
+        paymentOk = paymentInformation.makePurchase(itemToPurchase);
+        bill.generateBill(itemToPurchase, paymentOk);
+        address.sendAddressDetails();
 //        request.verifyPurchaseToUser(item);
 
 }

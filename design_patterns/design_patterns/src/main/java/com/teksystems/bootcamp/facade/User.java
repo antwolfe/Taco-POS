@@ -3,8 +3,7 @@ package com.teksystems.bootcamp.facade;
 public class User {
 
     double userAccountAmount = 50;
-    Payment payment;
-    Inventory itemToBuy;
+    String address = "1234 Britton Rd,\n St.Ave City,\n Michigan 20430";
 
     public void purchaseRequest(String item) {
         System.out.println("User has started a purchase request for " + item);
@@ -14,12 +13,10 @@ public class User {
         return userAccountAmount;
     }
 
-    public Payment getPayment() {
-        return payment;
+    public void setUserAccountAmount(double amount) {
+        this.userAccountAmount = amount;
     }
 
-    public Inventory getItemToBuy() {
-        return itemToBuy;
-    }
+
 }
 

@@ -8,6 +8,7 @@ public enum InventoryItems {
     HAT(15.00, false),
     SHOES(100.00, true),
     JEWELERY(5.00, false),
+    NO_ITEM(0.00, false),
     ;
     final double price;
     final boolean inStock;
