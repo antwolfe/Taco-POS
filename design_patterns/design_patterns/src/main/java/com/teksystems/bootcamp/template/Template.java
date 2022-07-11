@@ -9,8 +9,8 @@ public abstract class Template {
         System.out.println("The " + getAdjective() + " " + getPlace() + " was littered with " + getPluralNoun() + " and " + getAdjective() + " " + getAnimals() + ".");
         System.out.println("The " + getAnimal() + " was so " + getAdjective() + " at the amount of " + getAnimals() + " that it attacked all the " + getAnimals() + " at once.");
         System.out.println("It almost worked! But one of the " + getAnimals() + " " + getVerb() + " up and grabbed a " + getAdjective() + " " + getObject() + " that came crashing down onto the " + getAnimal() + "'s head.");
-        System.out.println("The cat fainted.");
-        System.out.println("I got up and wiped my face with a napkin and finished my lunch.");
+        System.out.println("The " + getAnimal() + " fainted.");
+        System.out.println("I got up and wiped my face with a napkin and finished my " + getMealTime() + ".");
     }
 
 
