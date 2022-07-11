@@ -65,7 +65,7 @@ public class OriginalStory extends Template {
     }
 
     @Override
-    String getPluralNoun() {
+    String getPluralObject() {
         return "bread";
     }
 

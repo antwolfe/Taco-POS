@@ -70,22 +70,34 @@ public class MadLibStory extends Template {
 
     @Override
     String getPlace() {
-        return null;
+        String[] places = {"street", "alley", "road", "bar", "house"};
+        int placeLimit = places.length;
+        randInt = rand.nextInt(placeLimit);
+        return places[randInt];
     }
 
     @Override
     String getColor() {
-        return null;
+        String[] colors = {"blue", "red", "orange", "black", "grey", "magenta", "rainbow"};
+        int colorLimit = colors.length;
+        randInt = rand.nextInt(colorLimit);
+        return colors[randInt];
     }
 
     @Override
     String getAnimal() {
-        return null;
+        String[] animalsSingle = {"dog", "whale", "raccoon", "jackal", "liger", "hippo"};
+        int animalsSingleLimit = animalsSingle.length;
+        randInt = rand.nextInt(animalsSingleLimit);
+        return animalsSingle[randInt];
     }
 
     @Override
-    String getPluralNoun() {
-        return null;
+    String getPluralObject() {
+        String[] pluralObjects = {"bicycles", "lamps", "golf balls", "kites", "pools"};
+        int pluralObjectsLimit = pluralObjects.length;
+        randInt = rand.nextInt(pluralObjectsLimit);
+        return pluralObjects[randInt];
     }
 
     @Override
