@@ -23,8 +23,13 @@ public class OriginalStory extends Template {
     }
 
     @Override
-    String getVerb() {
+    String getPastTenseVerb() {
         return "sitting";
+    }
+
+    @Override
+    String getVerb() {
+        return "ate";
     }
 
     @Override
