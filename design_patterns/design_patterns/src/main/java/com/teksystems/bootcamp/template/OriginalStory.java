@@ -7,7 +7,6 @@ public class OriginalStory extends Template {
     String[] adjectiveList = {"warm", "soft", "fluffy", "fat", "rickety"};
     int adjectiveCount = 0;
 
-
     @Override
     String getDay() {
         return "Today";
@@ -38,16 +37,11 @@ public class OriginalStory extends Template {
         return "streetlamp";
     }
 
-    void setAdjectiveCount() { adjectiveCount++;}
+    void setAdjective() { adjectiveCount++;}
 
     @Override
     String getAdjective() {
-        String adjective = null;
-        (adjectiveCount < adjectiveList.length) {
-            adjective = adjectiveList[adjectiveCount];
-            setAdjectiveCount();
-        }
-        return adjective;
+        return "warm";
     }
 
     @Override

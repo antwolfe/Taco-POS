@@ -2,6 +2,8 @@ package com.teksystems.bootcamp.template;
 
 public abstract class Template {
 
+    String[] adjectiveList = new String[6];
+
     final void tellMeAStory() {
         System.out.println(getDay() + " I had " + getFood() + " for " + getMealTime() + " as I was " + getVerb() + " on a " + getFurnitureObject());
         System.out.println("The " + getFood() + " was " + getAdjective() + ", " + getAdjective() + ", and " + getAdjective() + ".");
