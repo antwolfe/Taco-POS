@@ -1,4 +1,5 @@
 package com.teksystems.bootcamp.template;
 
-public class OriginalStory extends Template{
+public class OriginalStory extends Template {
+
 }
