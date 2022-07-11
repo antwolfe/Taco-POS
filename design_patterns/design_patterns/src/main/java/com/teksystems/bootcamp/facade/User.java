@@ -2,7 +2,7 @@ package com.teksystems.bootcamp.facade;
 
 public class User {
 
-    int userAccountAmount = 50;
+    double userAccountAmount = 50;
     Payment payment;
     Inventory itemToBuy;
 
@@ -10,8 +10,16 @@ public class User {
         System.out.println("User has started a purchase request for " + item);
     };
 
-
-
-
+    public double getUserAccountAmount() {
+        return userAccountAmount;
     }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public Inventory getItemToBuy() {
+        return itemToBuy;
+    }
+}
 

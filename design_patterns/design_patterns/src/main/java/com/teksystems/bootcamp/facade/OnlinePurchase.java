@@ -15,7 +15,7 @@ public class OnlinePurchase {
         user.purchaseRequest(item);
         itemToPurchase = inventory.verifyInventoryItem(item);
         bill.generateBill(itemToPurchase);
-        paymentInformation.makePurchase(item);
+        paymentInformation.makePurchase(itemToPurchase);
 //        address.sendAddressDetails();
 //        request.verifyPurchaseToUser(item);
 
