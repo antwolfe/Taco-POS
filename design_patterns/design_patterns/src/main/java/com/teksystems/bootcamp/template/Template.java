@@ -14,28 +14,26 @@ public abstract class Template {
     }
 
 
-    String getDay() {}
+    abstract String getDay();
 
-    String getFood() {}
+    abstract String getFood();
 
-    String getNoun() {}
+    abstract String getMealTime();
 
-    String getMealTime() {}
+    abstract String getVerb();
 
-    String getVerb() {}
+    abstract String getFurnitureObject();
 
-    String getFurnitureObject() {}
+    abstract String getObject();
 
-    String getObject() {}
+    abstract String getAdjective();
 
-    String getAdjective() {}
+    abstract String getPlace();
 
-    String getPlace() {}
+    abstract String getAnimal();
 
-    String getAnimal() {}
+    abstract String getPluralNoun();
 
-    String getPluralNoun() {}
-
-    String getAnimals() {}
+    abstract String getAnimals();
 
 }
