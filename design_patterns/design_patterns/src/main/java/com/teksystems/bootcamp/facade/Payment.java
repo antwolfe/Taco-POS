@@ -4,17 +4,12 @@ public class Payment {
 
     public boolean makePurchase(User user, InventoryItem item) {
         double account = user.getUserAccountAmount();
-        if (account >= item.getPrice()) {
-            System.out.println();
-            double amount = user.getUserAccountAmount() - item.getPrice();
-            user.setUserAccountAmount(amount);
+        if (account >= item.getPrice() && item.getPrice() != 0) {
+            double subtractedAmount = user.getUserAccountAmount() - item.getPrice();
+            user.setUserAccountAmount(subtractedAmount);
             return true;
         }
         return false;
     }
 
-
-//    public boolean isEnough(Inventory item, int account) {
-//        return account > item.getPrice();
-//    }
 }

@@ -12,16 +12,18 @@ public class OnlinePurchase {
 
 
     public void makeOnlinePurchase(String item) {
-        System.out.println("User has started a purchase request for " + item);
+        System.out.println();
+        System.out.println("--------Online Purchase---------");
+        System.out.println("User has started a purchase request for " + item + ".\nAccount has $" + user.getUserAccountAmount());
         itemToPurchase = inventory.verifyInventoryItem(item);
         paymentOk = paymentInformation.makePurchase(user, itemToPurchase);
-        bill.generateBill(itemToPurchase, paymentOk);
+        bill.generateBill(itemToPurchase, paymentOk, user);
         shipping.sendAddressDetails(user.getAddress());
-        verifyPurchaseToUser(itemToPurchase);
+        verifyPurchaseToUser();
     }
 
 
-    private void verifyPurchaseToUser(InventoryItem itemToBuy) {
+    private void verifyPurchaseToUser() {
         if (paymentOk) {
             System.out.println("Purchase Complete");
         } else {

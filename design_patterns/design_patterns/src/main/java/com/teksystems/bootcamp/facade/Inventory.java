@@ -7,7 +7,7 @@ public class Inventory {
     public InventoryItem verifyInventoryItem(String itemToPurchase) {
         InventoryItem item = null;
         for (InventoryItem inventoryItem : InventoryItem.values()) {
-            if (itemToPurchase.equals(inventoryItem.toString()) && isItemInStock(inventoryItem)) {
+            if (itemToPurchase.toLowerCase().equals(inventoryItem.getName()) && isItemInStock(inventoryItem)) {
                     item = inventoryItem;
             }
         }
@@ -18,6 +18,7 @@ public class Inventory {
         if (itemToPurchase != null) {
             return itemToPurchase.isInStock();
         } else {
+            System.out.println("Item not in stock");
             return false;
         }
     }
