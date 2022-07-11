@@ -3,21 +3,20 @@ package com.teksystems.bootcamp.facade;
 
 public class Inventory {
 
-    boolean inStock;
-
 
     public InventoryItems verifyInventoryItem(String itemToPurchase) {
         InventoryItems item = null;
         for (InventoryItems inventoryItem : InventoryItems.values()) {
             if (itemToPurchase.equals(inventoryItem.toString())) {
-                item = inventoryItem;
+                if (isItemInStock(inventoryItem)) {
+                    item = inventoryItem;
+                }
             }
         }
-            return item;
+        return item;
     }
 
-    public boolean isItemInStock(String item) {
-        InventoryItems itemToPurchase = verifyInventoryItem(item);
+    public boolean isItemInStock(InventoryItems itemToPurchase) {
         if (itemToPurchase != null) {
             return itemToPurchase.isInStock();
         } else {

@@ -27,4 +27,8 @@ public enum InventoryItems {
     public String toString() {
         return super.toString().toLowerCase();
     }
+
+    public double getPrice() {
+      return price;
+    }
 }

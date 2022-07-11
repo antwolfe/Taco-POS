@@ -5,6 +5,7 @@ public class OnlinePurchase {
     User user = new User();
     String purchaseRequest;
     Inventory inventory = new Inventory();
+    InventoryItems itemToPurchase;
     Billing bill = new Billing();
     Payment paymentInformation = new Payment();
     Shipping address = new Shipping();
@@ -12,9 +13,9 @@ public class OnlinePurchase {
 
     public void makeOnlinePurchase(String item) {
         user.purchaseRequest(item);
-        System.out.println(inventory.isItemInStock(item));
-        bill.generateBill(item);
-//        paymentInformation.makePurchase();
+        itemToPurchase = inventory.verifyInventoryItem(item);
+        bill.generateBill(itemToPurchase);
+        paymentInformation.makePurchase(item);
 //        address.sendAddressDetails();
 //        request.verifyPurchaseToUser(item);
 
