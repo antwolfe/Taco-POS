@@ -5,13 +5,13 @@ public class Inventory {
 
 
     public InventoryItem verifyInventoryItem(String itemToPurchase) {
-       InventoryItem[] inventoryItems = InventoryItem.values();
-       for (int i = 0; i <= inventoryItems.length; i++) {
-            if (inventoryItems[i].toString().equals(itemToPurchase) && isItemInStock(inventoryItems[i])) {
-               return inventoryItems[i];
-           }
-       }
-       return InventoryItem.NO_ITEM;
+        InventoryItem item = null;
+        for (InventoryItem inventoryItem : InventoryItem.values()) {
+            if (itemToPurchase.toLowerCase().equals(inventoryItem.getName()) && isItemInStock(inventoryItem)) {
+                    item = inventoryItem;
+            }
+        }
+        return item;
     }
 
     public boolean isItemInStock(InventoryItem itemToPurchase) {
