@@ -4,9 +4,6 @@ import java.util.Arrays;
 
 public class OriginalStory extends Template {
 
-    String[] adjectiveList = {"warm", "soft", "fluffy", "fat", "rickety"};
-    int adjectiveCount = 0;
-
     @Override
     String getDay() {
         return "Today";
@@ -27,7 +24,6 @@ public class OriginalStory extends Template {
         return "sitting";
     }
 
-
     @Override
     String getFurnitureObject() {
         return "window";
@@ -37,8 +33,6 @@ public class OriginalStory extends Template {
     String getObject() {
         return "streetlamp";
     }
-
-    void setAdjective() { adjectiveCount++;}
 
     @Override
     String getAdjective() {

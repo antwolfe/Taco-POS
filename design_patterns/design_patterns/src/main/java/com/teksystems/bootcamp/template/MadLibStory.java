@@ -5,7 +5,6 @@ import java.util.Random;
 public class MadLibStory extends Template {
     Random rand = new Random();
     int randInt;
-    String mainAnimal;
 
     @Override
     String getDay() {
@@ -57,7 +56,8 @@ public class MadLibStory extends Template {
 
     @Override
     String getAdjective() {
-        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful"};
+        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+                "soft", "fluffy", "rickety"};
         int adjectiveLimit = adjectives.length;
         randInt = rand.nextInt(adjectiveLimit);
         return adjectives[randInt];
