@@ -6,6 +6,10 @@ public class TemplateMain {
         OriginalStory original = new OriginalStory();
         MadLibStory madLib = new MadLibStory();
 
+        original.tellMeAStory();
+        System.out.println();
+        System.out.println("-----VS-----");
+        System.out.println();
         madLib.tellMeAStory();
     }
 }

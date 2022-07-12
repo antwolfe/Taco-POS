@@ -5,6 +5,7 @@ import java.util.Random;
 public class MadLibStory extends Template {
     Random rand = new Random();
     int randInt;
+    String mainAnimal;
 
     @Override
     String getDay() {
@@ -39,11 +40,6 @@ public class MadLibStory extends Template {
     }
 
     @Override
-    String getVerb() {
-        return null;
-    }
-
-    @Override
     String getFurnitureObject() {
         String[] furnitureObjects = {"bench", "chair", "couch", "table", "stool"};
         int furnitureLimit = furnitureObjects.length;
@@ -67,7 +63,6 @@ public class MadLibStory extends Template {
         return adjectives[randInt];
     }
 
-
     @Override
     String getPlace() {
         String[] places = {"street", "alley", "road", "bar", "house"};
@@ -84,14 +79,20 @@ public class MadLibStory extends Template {
         return colors[randInt];
     }
 
+
     @Override
     String getAnimal() {
         String[] animalsSingle = {"dog", "whale", "raccoon", "jackal", "liger", "hippo"};
         int animalsSingleLimit = animalsSingle.length;
         randInt = rand.nextInt(animalsSingleLimit);
-        final int animal = randInt;
-        return animalsSingle[animal];
+        return animalsSingle[randInt];
     }
+
+    @Override
+    String getSameAnimal() {
+        return getAnimal();
+    }
+
 
     @Override
     String getPluralObject() {
@@ -110,7 +111,21 @@ public class MadLibStory extends Template {
     }
 
     @Override
+    String getSameAnimals() {
+        return getAnimals();
+    }
+
+    @Override
     String getEmotion() {
-        return null;
+        String[] emotions = {"angry", "sad", "surprised", "shocked", "flustered"};
+        int emotionsLimit = emotions.length;
+        randInt = rand.nextInt(emotionsLimit);
+        getSameAnimals();
+        return emotions[randInt];
+    }
+
+    @Override
+    String getSameMealTime() {
+        return getMealTime();
     }
 }

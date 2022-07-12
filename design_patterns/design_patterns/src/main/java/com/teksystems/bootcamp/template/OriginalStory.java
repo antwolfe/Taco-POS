@@ -27,10 +27,6 @@ public class OriginalStory extends Template {
         return "sitting";
     }
 
-    @Override
-    String getVerb() {
-        return "ate";
-    }
 
     @Override
     String getFurnitureObject() {
@@ -60,6 +56,11 @@ public class OriginalStory extends Template {
     }
 
     @Override
+    String getSameAnimal() {
+        return getAnimal();
+    }
+
+    @Override
     String getAnimal() {
         return "cat";
     }
@@ -75,7 +76,17 @@ public class OriginalStory extends Template {
     }
 
     @Override
+    String getSameAnimals() {
+        return getAnimals();
+    }
+
+    @Override
     String getEmotion() {
         return "surprised";
+    }
+
+    @Override
+    String getSameMealTime() {
+        return getMealTime();
     }
 }
