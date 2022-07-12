@@ -89,7 +89,8 @@ public class MadLibStory extends Template {
         String[] animalsSingle = {"dog", "whale", "raccoon", "jackal", "liger", "hippo"};
         int animalsSingleLimit = animalsSingle.length;
         randInt = rand.nextInt(animalsSingleLimit);
-        return animalsSingle[randInt];
+        final int animal = randInt;
+        return animalsSingle[animal];
     }
 
     @Override
@@ -102,7 +103,10 @@ public class MadLibStory extends Template {
 
     @Override
     String getAnimals() {
-        return null;
+        String[] animalsPlural = {"gophers", "beetles", "hedgehogs", "eagles", "lions"};
+        int animalsPluralLimit = animalsPlural.length;
+        randInt = rand.nextInt(animalsPluralLimit);
+        return animalsPlural[randInt];
     }
 
     @Override
