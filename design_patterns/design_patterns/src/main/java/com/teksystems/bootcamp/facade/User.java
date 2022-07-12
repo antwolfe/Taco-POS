@@ -5,8 +5,6 @@ public class User {
     double userAccountAmount = 50;
     String address = "1234 Britton Rd,\n St.Ave City,\n Michigan 20430";
 
-
-
     public double getUserAccountAmount() {
         return userAccountAmount;
     }

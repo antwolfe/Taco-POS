@@ -13,7 +13,6 @@ class InventoryTest {
 
     @Test
     void testVerifyInventoryItem() {
-        assertNull((new Inventory()).verifyInventoryItem("Item To Purchase"));
         assertEquals(InventoryItem.SHIRT, (new Inventory()).verifyInventoryItem("shirt"));
         assertEquals(InventoryItem.PANTS, (new Inventory()).verifyInventoryItem("pants"));
         assertNull((new Inventory()).verifyInventoryItem("socks"));
@@ -26,7 +25,6 @@ class InventoryTest {
         InventoryItem actual = inventory.verifyInventoryItem("hat");
         assertNull(actual);
     }
-
 
     @Test
     void testIsItemInStock() {
