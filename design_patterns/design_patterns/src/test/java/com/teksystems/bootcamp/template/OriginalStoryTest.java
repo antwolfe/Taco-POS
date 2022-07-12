@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class OriginalStoryTest {
 
+    //
     @Test
     void testGetSameAnimal() {
         assertEquals("cat", (new OriginalStory()).getSameAnimal());

@@ -10,9 +10,9 @@ public class Inventory {
         InventoryItem item = null;
         for (InventoryItem inventoryItem : inventoryItems) {
             if (itemToPurchase.toLowerCase().equals(inventoryItem.getName()) && isItemInStock(inventoryItem)) {
-                    item = inventoryItem;
-                    break;
-            } else if (itemToPurchase.toLowerCase().equals(inventoryItem.getName()) && (!isItemInStock(inventoryItem))){
+                item = inventoryItem;
+                break;
+            } else if (itemToPurchase.toLowerCase().equals(inventoryItem.getName()) && (!isItemInStock(inventoryItem))) {
                 System.out.println("Item not in stock");
                 break;
             }
@@ -24,12 +24,9 @@ public class Inventory {
         if (itemToPurchase != null) {
             return itemToPurchase.isInStock();
         } else {
-            System.out.println("Item not in stock");
             return false;
         }
     }
-
-
 
 
 }
