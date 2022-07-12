@@ -6,27 +6,10 @@ import org.junit.jupiter.api.Test;
 
 class OriginalStoryTest {
 
-    //
-    @Test
-    void testGetSameAnimal() {
-        assertEquals("cat", (new OriginalStory()).getSameAnimal());
-    }
-
-    @Test
-    void testGetSameAnimals() {
-        assertEquals("birds", (new OriginalStory()).getSameAnimals());
-    }
-
-    @Test
-    void testGetSameMealTime() {
-        assertEquals("lunch", (new OriginalStory()).getSameMealTime());
-    }
 
     @Test
     void testConstructor() {
         OriginalStory actualOriginalStory = new OriginalStory();
-        assertEquals("warm", actualOriginalStory.getAdjective());
-        assertEquals("cat", actualOriginalStory.getAnimal());
         assertEquals("birds", actualOriginalStory.getAnimals());
         assertEquals("grey", actualOriginalStory.getColor());
         assertEquals("Today", actualOriginalStory.getDay());

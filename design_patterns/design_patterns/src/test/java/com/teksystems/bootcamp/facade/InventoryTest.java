@@ -40,7 +40,6 @@ class InventoryTest {
         assertEquals(InventoryItem.SHOES, actual2);
         assertEquals(InventoryItem.PANTS, actual3);
         assertNull(actual4);
-
     }
 
 

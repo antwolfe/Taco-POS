@@ -4,6 +4,19 @@ import java.util.Arrays;
 
 public class OriginalStory extends Template {
 
+
+    @Override
+    String getAdjective1() { return "warm"; }
+
+    @Override
+    String getAdjective2() { return "soft"; }
+
+    @Override
+    String getAdjective3() { return "fluffy"; }
+
+    @Override
+    String getAdjective4() { return "fat"; }
+
     @Override
     String getDay() {
         return "Today";
@@ -21,7 +34,7 @@ public class OriginalStory extends Template {
 
     @Override
     String getPastTenseVerb() {
-        return "sitting";
+        return "sat";
     }
 
     @Override
@@ -35,11 +48,6 @@ public class OriginalStory extends Template {
     }
 
     @Override
-    String getAdjective() {
-        return "warm";
-    }
-
-    @Override
     String getPlace() {
         return "alley";
     }
@@ -47,16 +55,6 @@ public class OriginalStory extends Template {
     @Override
     String getColor() {
         return "grey";
-    }
-
-    @Override
-    String getSameAnimal() {
-        return getAnimal();
-    }
-
-    @Override
-    String getAnimal() {
-        return "cat";
     }
 
     @Override
@@ -70,17 +68,8 @@ public class OriginalStory extends Template {
     }
 
     @Override
-    String getSameAnimals() {
-        return getAnimals();
-    }
-
-    @Override
     String getEmotion() {
         return "surprised";
     }
-
-    @Override
-    String getSameMealTime() {
-        return getMealTime();
-    }
 }
+

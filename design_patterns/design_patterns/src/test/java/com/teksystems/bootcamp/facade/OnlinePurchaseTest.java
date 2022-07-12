@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 
 class OnlinePurchaseTest {
 
+    // these tests were created by diffblue
+
     @Test
     void testMakeOnlinePurchase3() {
         OnlinePurchase onlinePurchase = new OnlinePurchase();

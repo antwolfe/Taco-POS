@@ -7,8 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SantasFactoryTest {
 
+    // i created this test
     @Test
-    void testMakeGift() {
+    void givenStatusShouldReturnCorrectGift() {
         //given
         SantasFactory factory = new SantasFactory();
         String naughty = "naughty";

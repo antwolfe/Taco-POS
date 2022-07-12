@@ -7,6 +7,42 @@ public class MadLibStory extends Template {
     int randInt;
 
     @Override
+    String getAdjective4() {
+        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+                "soft", "fluffy", "rickety"};
+        int adjectiveLimit = adjectives.length;
+        randInt = rand.nextInt(adjectiveLimit);
+        return adjectives[randInt];
+    }
+
+    @Override
+    String getAdjective3() {
+        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+                "soft", "fluffy", "rickety"};
+        int adjectiveLimit = adjectives.length;
+        randInt = rand.nextInt(adjectiveLimit);
+        return adjectives[randInt];
+    }
+
+    @Override
+    String getAdjective2() {
+        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+                "soft", "fluffy", "rickety"};
+        int adjectiveLimit = adjectives.length;
+        randInt = rand.nextInt(adjectiveLimit);
+        return adjectives[randInt];
+    }
+
+    @Override
+    String getAdjective1() {
+        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+                "soft", "fluffy", "rickety"};
+        int adjectiveLimit = adjectives.length;
+        randInt = rand.nextInt(adjectiveLimit);
+        return adjectives[randInt];
+    }
+
+    @Override
     String getDay() {
         String[] days = {"Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday", "Sunday", "Yesterday", "Today"};
         int dayLimit = days.length;
@@ -32,7 +68,7 @@ public class MadLibStory extends Template {
 
     @Override
     String getPastTenseVerb() {
-        String[] verbs = {"jumped", "skipped", "grabbed", "pushed", "ran"};
+        String[] verbs = {"jumped", "skipped", "swam", "ran"};
         int verbLimit = verbs.length;
         randInt = rand.nextInt(verbLimit);
         return verbs[randInt];
@@ -54,14 +90,14 @@ public class MadLibStory extends Template {
         return objects[randInt];
     }
 
-    @Override
-    String getAdjective() {
-        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
-                "soft", "fluffy", "rickety"};
-        int adjectiveLimit = adjectives.length;
-        randInt = rand.nextInt(adjectiveLimit);
-        return adjectives[randInt];
-    }
+//    @Override
+//    String getAdjective() {
+//        String[] adjectives = {"big", "fat", "small", "large", "kind", "rigid", "hard", "beautiful", "warm",
+//                "soft", "fluffy", "rickety"};
+//        int adjectiveLimit = adjectives.length;
+//        randInt = rand.nextInt(adjectiveLimit);
+//        return adjectives[randInt];
+//    }
 
     @Override
     String getPlace() {
@@ -79,21 +115,6 @@ public class MadLibStory extends Template {
         return colors[randInt];
     }
 
-
-    @Override
-    String getAnimal() {
-        String[] animalsSingle = {"dog", "whale", "raccoon", "jackal", "liger", "hippo"};
-        int animalsSingleLimit = animalsSingle.length;
-        randInt = rand.nextInt(animalsSingleLimit);
-        return animalsSingle[randInt];
-    }
-
-    @Override
-    String getSameAnimal() {
-        return getAnimal();
-    }
-
-
     @Override
     String getPluralObject() {
         String[] pluralObjects = {"bicycles", "lamps", "golf balls", "kites", "pools"};
@@ -110,22 +131,13 @@ public class MadLibStory extends Template {
         return animalsPlural[randInt];
     }
 
-    @Override
-    String getSameAnimals() {
-        return getAnimals();
-    }
 
     @Override
     String getEmotion() {
         String[] emotions = {"angry", "sad", "surprised", "shocked", "flustered"};
         int emotionsLimit = emotions.length;
         randInt = rand.nextInt(emotionsLimit);
-        getSameAnimals();
         return emotions[randInt];
     }
 
-    @Override
-    String getSameMealTime() {
-        return getMealTime();
-    }
 }
