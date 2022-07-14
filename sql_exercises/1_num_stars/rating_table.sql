@@ -1,4 +1,5 @@
 USE sakila;
+SHOW TABLES;
 DROP TABLE IF EXISTS rating;
 CREATE TABLE rating
 (
@@ -14,7 +15,8 @@ VALUES
             ("3", "if you have nothing else to watch"),
             ("4", "worthy of attention"),
             ("5", "alright, watch it");
-SELECT * FROM rating
+            
+SELECT * FROM rating;
 
 	
 
