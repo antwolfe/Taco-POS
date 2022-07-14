@@ -1,9 +1,7 @@
 USE sakila;
 
-select * from inventory;
-
-SELECT film_id, store_id, count(film_id) as inventory_count from inventory
-group by film_id, store_id
+SELECT film_id, store_id, COUNT(film_id) AS inventory_count FROM inventory
+GROUP BY film_id, store_id
 ORDER BY film_id
 
 
