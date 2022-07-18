@@ -1,7 +1,9 @@
 package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -16,12 +18,15 @@ public class Review {
     private Long id;
 
     @Column
+    @Getter @Setter
     private Long ratingId;
 
     @Column
+    @Getter @Setter
     private Long customerId;
 
     @Column
+    @Getter @Setter
     private Long filmId;
 
 

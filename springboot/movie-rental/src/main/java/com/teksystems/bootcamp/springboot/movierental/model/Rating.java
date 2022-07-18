@@ -1,6 +1,5 @@
 package com.teksystems.bootcamp.springboot.movierental.model;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,12 +18,17 @@ public class Rating {
     @Getter @Setter
     private Long id;
 
-    @Column
+    @Column(name = "rating")
     @Getter @Setter
     private int starRating;
 
-    @Column
+    @Column(name = "description")
     @Getter @Setter
     private String description;
+
+    public Rating(int rating, String description) {
+        this.starRating = rating;
+        this.description = description;
+    }
 
 }
