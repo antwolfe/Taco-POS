@@ -3,7 +3,6 @@ package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
@@ -20,5 +19,8 @@ public class Rating {
 
     @Column
     private String name;
+
+    @Column
+    private String description;
 
 }

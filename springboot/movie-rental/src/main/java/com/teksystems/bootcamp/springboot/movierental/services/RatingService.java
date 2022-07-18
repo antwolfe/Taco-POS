@@ -1,32 +1,37 @@
 package com.teksystems.bootcamp.springboot.movierental.services;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Customer;
-import com.teksystems.bootcamp.springboot.movierental.repository.CustomerRepository;
+import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 import java.util.List;
 
-public class CustomerService {
+@AllArgsConstructor
+@NoArgsConstructor
+@Service
+public class RatingService {
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private RatingRepository ratingRepository;
 
     public List<Customer> getAllCustomers() {
-        return customerRepository.findAll();
+        return ratingRepository.findAll();
     }
 
     public Customer createCustomer(Customer customer) {
-        return customerRepository.save(customer);
+        return ratingRepository.save(customer);
     }
 
     public Customer updateCustomer(Long customerId, Customer customerDetails) {
-        Customer customer = customerRepository.getById(customerId);
+        Customer customer = ratingRepository.getReferenceById(customerId);
         customer.setFirstName(customerDetails.getFirstName());
         customer.setLastName(customer.getLastName());
-        return customerRepository.save(customer);
+        return ratingRepository.save(customer);
     }
 
     public void deleteCustomer(Long customerId) {
-        customerRepository.deleteById(customerId);
+        ratingRepository.deleteById(customerId);
     }
 }

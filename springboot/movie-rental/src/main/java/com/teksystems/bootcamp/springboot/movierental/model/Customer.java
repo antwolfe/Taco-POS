@@ -2,59 +2,46 @@ package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
 
 
 @AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Customer {
-    @Getter
-    @Setter
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter @Setter
     private short id;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private int storeId;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private String firstName;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private String lastName;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private String email;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private short addressId;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private int active;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private Timestamp createDate;
-    @Getter
-    @Setter
+
+    @Getter @Setter
     private Time lastUpdate;
 
-
-    public Customer(short id, int storeId, String firstName, String lastName, String email) {
-        this.id = id;
-        this.storeId = storeId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Customer{");
-        sb.append("id=").append(id);
-        sb.append(", storeId=").append(storeId);
-        sb.append(", firstName='").append(firstName).append('\'');
-        sb.append(", lastName='").append(lastName).append('\'');
-        sb.append(", email='").append(email).append('\'');
-        sb.append('}');
-        return sb.toString();
-    }
 }
