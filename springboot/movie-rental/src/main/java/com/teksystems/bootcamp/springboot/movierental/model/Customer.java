@@ -1,11 +1,11 @@
-package com.teksystems.bootcamp.springboot.movierental.Customer;
+package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-
 import java.sql.Time;
 import java.sql.Timestamp;
+
 
 @AllArgsConstructor
 public class Customer {
@@ -44,5 +44,17 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Customer{");
+        sb.append("id=").append(id);
+        sb.append(", storeId=").append(storeId);
+        sb.append(", firstName='").append(firstName).append('\'');
+        sb.append(", lastName='").append(lastName).append('\'');
+        sb.append(", email='").append(email).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
