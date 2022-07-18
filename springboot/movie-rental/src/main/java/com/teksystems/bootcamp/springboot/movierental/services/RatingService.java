@@ -17,7 +17,7 @@ public class RatingService {
     private RatingRepository ratingRepository;
 
     public List<Customer> getAllCustomers() {
-        return ratingRepository.findAll();
+        return ratingRepository.findAllgit ();
     }
 
     public Customer createCustomer(Customer customer) {

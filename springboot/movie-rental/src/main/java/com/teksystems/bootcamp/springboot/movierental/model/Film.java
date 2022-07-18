@@ -34,8 +34,8 @@ public class Film {
     @Getter @Setter
     private double replacementCost;
 
-    @Getter @Setter
-    private enum rating;
+//    @Getter
+//    private enum rating;
 
     @Getter @Setter
     private Array specialFeatures;

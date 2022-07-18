@@ -15,10 +15,7 @@ public class Rating {
     private Long id;
 
     @Column
-    private int film_id;
-
-    @Column
-    private String name;
+    private int starRating;
 
     @Column
     private String description;

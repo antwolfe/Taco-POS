@@ -32,7 +32,7 @@ public class RatingController {
         return ratingService.updateCustomer(customerId, customerDetails);
     }
 
-    @DeleteMapping("/{customerId}") // if variable in param is same as in path, name = is not needed
+    @DeleteMapping("/{ratingId}") // if variable in param is same as in path, name = is not needed
     public void deleteCustomer(@PathVariable Long customerId) {
         ratingService.deleteCustomer(customerId);
     }
