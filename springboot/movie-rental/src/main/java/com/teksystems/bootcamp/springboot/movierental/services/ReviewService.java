@@ -25,11 +25,15 @@ public class ReviewService {
         return reviewRepository.save(review);
     }
 
-    public Review updateReview(Long reviewId, Review reviewDetails) {
-        Review review = reviewRepository.getReferenceById(reviewId);
-        // review set ratingId, customerId, filmId
-        return reviewRepository.save(review);
-    }
+//    public Review updateReview(Long reviewId, Review reviewDetails) {
+//        Review review = reviewRepository.getReferenceById(reviewId);
+//        review.setRatingId();
+//        review.setCustomerId();
+//        review.setFilmId();
+//        reviewDetails =
+//        // review set ratingId, customerId, filmId
+//        return reviewRepository.save(review);
+//    }
 
     public void deleteReview(Long reviewId) {
         reviewRepository.deleteById(reviewId);

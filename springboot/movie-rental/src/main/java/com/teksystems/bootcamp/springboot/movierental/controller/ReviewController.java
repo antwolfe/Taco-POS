@@ -1,15 +1,14 @@
 package com.teksystems.bootcamp.springboot.movierental.controller;
 
-import com.teksystems.bootcamp.springboot.movierental.model.Rating;
 import com.teksystems.bootcamp.springboot.movierental.model.Review;
 import com.teksystems.bootcamp.springboot.movierental.services.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/reviews")
+
 public class ReviewController {
 
     @Autowired
@@ -25,11 +24,11 @@ public class ReviewController {
         return reviewService.createReview(review);
     }
 
-//    @PutMapping("/{id}")
-//    public Rating updateReview(@PathVariable(name= "id") Long reviewId,
-//                               @RequestBody Review reviewDetails) {
-//        return reviewService.updateReview(reviewId, reviewDetails);
-//}
+    @PutMapping("/{id}")
+    public Review updateReview(@PathVariable(name= "id") Long reviewId,
+                               @RequestBody Review reviewDetails) {
+        return reviewService.updateReview(reviewId, reviewDetails);
+    }
 
     @DeleteMapping("/{reviewId}")
     public void deleteReview(@PathVariable Long reviewId){
