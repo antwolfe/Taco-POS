@@ -22,16 +22,19 @@ public class RatingController {
         return ratingService.getAllRatings();
     }
 
+
     @PostMapping("/")
     public Rating createRating(@RequestBody Rating rating) {
         return ratingService.createRating(rating);
     }
+
 
     @PutMapping("/{id}")
     public Rating updateRating(@PathVariable(name= "id") Long ratingId,
                                    @RequestBody Rating ratingDetails) {
         return ratingService.updateRating(ratingId, ratingDetails);
     }
+
 
     @DeleteMapping("/{ratingId}") // if variable in param is same as in path, name = is not needed
     public void deleteRating(@PathVariable Long ratingId) {

@@ -1,8 +1,6 @@
 package com.teksystems.bootcamp.springboot.movierental.services;
 
-import com.teksystems.bootcamp.springboot.movierental.model.Rating;
 import com.teksystems.bootcamp.springboot.movierental.model.Review;
-import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepository;
 import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;

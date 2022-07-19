@@ -26,9 +26,5 @@ public class Rating {
     @Getter @Setter
     private String description;
 
-    public Rating(int rating, String description) {
-        this.starRating = rating;
-        this.description = description;
-    }
 
 }
