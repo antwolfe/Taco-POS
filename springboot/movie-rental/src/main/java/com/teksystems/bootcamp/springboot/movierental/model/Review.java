@@ -19,14 +19,16 @@ public class Review {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "star_rating_id")
+    @JoinColumn(name = "rating_id", nullable = false)
     private Rating rating;
-//
-//    @ManyToOne
-//    private Customer customer;
-//
-//    @ManyToOne
-//    private Film film;
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id", nullable = false)
+    private Customer customer;
+
+    @ManyToOne
+    @JoinColumn(name = "film_id", nullable = false)
+    private Film film;
 
 
 

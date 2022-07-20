@@ -5,12 +5,16 @@ import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepositor
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,13 +33,27 @@ public class ReviewService {
     }
 
     public Review updateReview(Long reviewId, Review reviewDetails) {
-        Review review = reviewRepository.getReferenceById(reviewId);
+        Optional<Review> review = reviewRepository.findById(reviewId);
+        if (review.isPresent()) {
+            Review newReview = review.get();
+            // review.setStarRating()
+//            return review.save();
+            return newReview;
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No review exists with id: " + reviewId);
+        }
         // review set ratingId, customerId, filmId
-        return reviewRepository.save(review);
+        ;
     }
 
     public void deleteReview(Long reviewId) {
-        reviewRepository.deleteById(reviewId);
+        try {
+            reviewRepository.deleteById(reviewId);
+        } catch (EmptyResultDataAccessException exception){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No Review exists with that ID");
+        }
     }
 
     public List<Review> getPaginatedReviews(int page, int limit){
@@ -45,7 +63,15 @@ public class ReviewService {
     }
 
     public Review getReview(Long reviewId){
-        return reviewRepository.findById(reviewId).get();
+        Optional<Review> review = reviewRepository.findById(reviewId);
+        if (review.isPresent()) {
+            return review.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No review exists with id: " + reviewId);
+        }
     }
+
+
 
 }

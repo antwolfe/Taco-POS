@@ -5,7 +5,10 @@ import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepositor
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -31,9 +34,7 @@ public class RatingService {
         return ratingRepository.save(rating);
     }
 
-    public void deleteRating(Long ratingId) {
-        ratingRepository.deleteById(ratingId);
-    }
+
 
 
 }
