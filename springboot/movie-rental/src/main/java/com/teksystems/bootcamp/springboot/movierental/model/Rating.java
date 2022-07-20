@@ -18,21 +18,24 @@ public class Rating {
         this.id = id;
     }
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @Setter @Getter
+    @Setter
     Long id;
 
 //    @Size(max = 5)
     @Column(name = "star_rating")
-    @Getter @Setter
+    @Setter
     int starRating;
 
     @Column(name = "description")
-    @Getter @Setter
+    @Setter
     String description;
 
-
+    public Long getId() {
+        return this.id;
+    }
 
 }

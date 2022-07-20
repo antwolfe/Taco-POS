@@ -15,6 +15,14 @@ import java.util.List;
 @NoArgsConstructor
 public class Film {
 
+    public Film(Integer id){
+        this.id = id.shortValue();
+    }
+
+    public short getId(){
+        return this.id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -29,9 +37,6 @@ public class Film {
     @Getter @Setter
     String description;
 
-    @Column(name = "film_releaseYear")
-    @Getter @Setter
-    Year releaseYear;
 
 
 }

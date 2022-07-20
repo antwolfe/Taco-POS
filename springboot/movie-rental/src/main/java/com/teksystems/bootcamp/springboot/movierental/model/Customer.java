@@ -16,8 +16,12 @@ import java.util.List;
 @Entity
 public class Customer {
 
-    public Customer(short id){
-        this.id = id;
+    public Customer(Integer id){
+        this.id = id.shortValue();
+    }
+
+    public short getCustomerId(){
+        return this.id;
     }
 
     @Id
