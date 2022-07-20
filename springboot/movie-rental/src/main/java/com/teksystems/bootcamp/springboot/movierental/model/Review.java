@@ -1,9 +1,8 @@
 package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+
 import javax.persistence.*;
 
 // connect customer to film to rating
@@ -33,24 +32,24 @@ public class Review {
         return id;
     }
 
-    public Rating getRating() {
-        return rating;
+    public Long getRating() {
+        return rating.getId();
     }
 
     public void setRating(Rating rating) {
         this.rating = rating;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public short getCustomer() {
+        return customer.getId();
     }
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
-    public Film getFilm() {
-        return film;
+    public short getFilm() {
+        return film.getFilmId();
     }
 
     public void setFilm(Film film) {
