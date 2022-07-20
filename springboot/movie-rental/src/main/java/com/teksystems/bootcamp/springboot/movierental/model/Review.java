@@ -1,7 +1,9 @@
 package com.teksystems.bootcamp.springboot.movierental.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -11,48 +13,29 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Review {
 
+    public Review(Long id){
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "review_id")
+    @Column(name = "id")
+    @Getter
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "rating_id", nullable = false)
+
+
+    @ManyToOne //(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "rating_id", nullable = false)
     private Rating rating;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", nullable = false)
+//    @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name = "film_id", nullable = false)
+//    @JoinColumn(name = "film_id", nullable = false)
     private Film film;
 
-    public Long getId() {
-        return id;
-    }
 
-    public Long getRating() {
-        return rating.getId();
-    }
-
-    public void setRating(Rating rating) {
-        this.rating = rating;
-    }
-
-    public short getCustomer() {
-        return customer.getId();
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
-
-    public short getFilm() {
-        return film.getFilmId();
-    }
-
-    public void setFilm(Film film) {
-        this.film = film;
-    }
 }

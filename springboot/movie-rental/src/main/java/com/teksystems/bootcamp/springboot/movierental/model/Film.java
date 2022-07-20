@@ -19,7 +19,7 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @Getter @Setter
-    private short filmId;
+    private short id;
 
     @Getter @Setter
     private String title;
@@ -30,8 +30,8 @@ public class Film {
     @Getter @Setter
     private Year releaseYear;
 
-//    @OneToMany(mappedBy = "film")
-//    private List<Review> reviews;
+    @OneToMany(mappedBy = "film")
+    private List<Review> reviews;
 
 
 

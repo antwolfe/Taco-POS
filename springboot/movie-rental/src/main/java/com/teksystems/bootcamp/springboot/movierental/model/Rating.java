@@ -14,11 +14,15 @@ import java.util.List;
 @AllArgsConstructor
 public class Rating {
 
+    public Rating(Long id){
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @Getter
-    private Long id;
+    Long id;
 
 //    @Size(max = 5)
     @Column(name = "star_rating")
@@ -29,9 +33,9 @@ public class Rating {
     @Getter @Setter
     private String description;
 
-    public Rating(int starRating, String desc){
-        this.starRating = starRating;
-        this.description = desc;
-    }
+    @OneToMany(mappedBy = "rating")
+    private List<Review> reviews;
+
+
 
 }

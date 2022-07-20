@@ -18,6 +18,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     @Getter @Setter
     private short id;
 
@@ -27,8 +28,8 @@ public class Customer {
     @Getter @Setter
     private String lastName;
 
-//    @OneToMany(mappedBy = "customer")
-//    private List<Review> reviews;
+    @OneToMany(mappedBy = "customer")
+    private List<Review> reviews;
 
 
 }

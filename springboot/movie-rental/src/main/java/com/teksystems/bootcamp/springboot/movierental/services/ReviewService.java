@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.springboot.movierental.services;
 
+import com.teksystems.bootcamp.springboot.movierental.model.Rating;
 import com.teksystems.bootcamp.springboot.movierental.model.Review;
 import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepository;
 import lombok.AllArgsConstructor;
@@ -36,7 +37,8 @@ public class ReviewService {
         Optional<Review> review = reviewRepository.findById(reviewId);
         if (review.isPresent()) {
             Review newReview = review.get();
-//             review.setRating()
+//            Rating newRating = new Rating();
+//             review.setRating(newRating.setStarRating(newRating))
 //            return review.save();
             return newReview;
         } else {
