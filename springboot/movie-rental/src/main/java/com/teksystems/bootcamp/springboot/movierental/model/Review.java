@@ -14,20 +14,25 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    @Getter @Setter
+    @Column(name = "review_id")
+    @Getter
     private Long id;
 
-    @Column(name = "rating_id")
-    @Getter @Setter
-    private Long ratingId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "star_rating_id")
+    private Rating rating;
+//
+//    @ManyToOne
+//    private Customer customer;
+//
+//    @ManyToOne
+//    private Film film;
 
-    @Column(name = "customer_id")
-    @Getter @Setter
-    private Long customerId;
 
-    @Column(name = "film_id")
-    @Getter @Setter
-    private Long filmId;
+
+
+
+
+
 
 }

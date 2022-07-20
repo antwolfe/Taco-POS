@@ -5,7 +5,10 @@ import com.teksystems.bootcamp.springboot.movierental.services.RatingService;
 import com.teksystems.bootcamp.springboot.movierental.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
+import java.util.Objects;
 
 @RestController // aka api controller
 @RequestMapping("/api/ratings")
@@ -18,11 +21,12 @@ public class RatingController {
 
     // customer controller
     @GetMapping("/")
-    public List<Rating> getAllCustomers() {
+    public List<Rating> getAllRatings() {
         return ratingService.getAllRatings();
     }
 
 
+    // why should i create another rating?
     @PostMapping("/")
     public Rating createRating(@RequestBody Rating rating) {
         return ratingService.createRating(rating);
@@ -30,8 +34,14 @@ public class RatingController {
 
 
     @PutMapping("/{id}")
-    public Rating updateRating(@PathVariable(name= "id") Long ratingId,
+    public Rating updateRating(@PathVariable(name= "id") @Valid Long ratingId,
                                    @RequestBody Rating ratingDetails) {
+//        List<Rating> allRatings = getAllRatings();
+//        for (Rating rating:allRatings) {
+//            if (!Objects.equals(rating.getId(), ratingId)) {
+//                return null;
+//            }
+//        }
         return ratingService.updateRating(ratingId, ratingDetails);
     }
 

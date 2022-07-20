@@ -19,6 +19,17 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
+    @GetMapping("/{page}{limit}")
+    public List<Review> getPaginatedReviews(@PathVariable int page,
+                                            @PathVariable int limit){
+        return reviewService.getPaginatedReviews(page, limit);
+    }
+
+    @GetMapping("/{id}")
+    public Review getReview(@PathVariable Long id){
+        return reviewService.getReview(id);
+    }
+
     @PostMapping("/")
     public Review createReview(@RequestBody Review review) {
         return reviewService.createReview(review);

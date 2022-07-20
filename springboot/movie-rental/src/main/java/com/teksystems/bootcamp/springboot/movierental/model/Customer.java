@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -21,27 +22,13 @@ public class Customer {
     private short id;
 
     @Getter @Setter
-    private int storeId;
-
-    @Getter @Setter
     private String firstName;
 
     @Getter @Setter
     private String lastName;
 
-    @Getter @Setter
-    private String email;
+//    @OneToMany(mappedBy = "customer")
+//    private List<Review> reviews;
 
-    @Getter @Setter
-    private short addressId;
-
-    @Getter @Setter
-    private int active;
-
-    @Getter @Setter
-    private Timestamp createDate;
-
-    @Getter @Setter
-    private Time lastUpdate;
 
 }
