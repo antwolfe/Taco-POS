@@ -36,7 +36,7 @@ public class ReviewService {
         Optional<Review> review = reviewRepository.findById(reviewId);
         if (review.isPresent()) {
             Review newReview = review.get();
-            // review.setStarRating()
+//             review.setRating()
 //            return review.save();
             return newReview;
         } else {
@@ -44,7 +44,6 @@ public class ReviewService {
                     "No review exists with id: " + reviewId);
         }
         // review set ratingId, customerId, filmId
-        ;
     }
 
     public void deleteReview(Long reviewId) {

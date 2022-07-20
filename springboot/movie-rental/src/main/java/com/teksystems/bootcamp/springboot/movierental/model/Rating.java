@@ -11,6 +11,7 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
+@AllArgsConstructor
 public class Rating {
 
     @Id
@@ -19,7 +20,7 @@ public class Rating {
     @Getter
     private Long id;
 
-    @Size(max = 5)
+//    @Size(max = 5)
     @Column(name = "star_rating")
     @Getter @Setter
     private int starRating;

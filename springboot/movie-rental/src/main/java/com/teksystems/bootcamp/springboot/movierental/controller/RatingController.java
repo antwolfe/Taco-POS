@@ -26,22 +26,14 @@ public class RatingController {
     }
 
 
-    // why should i create another rating?
     @PostMapping("/")
     public Rating createRating(@RequestBody Rating rating) {
         return ratingService.createRating(rating);
     }
 
-
     @PutMapping("/{id}")
     public Rating updateRating(@PathVariable(name= "id") @Valid Long ratingId,
                                    @RequestBody Rating ratingDetails) {
-//        List<Rating> allRatings = getAllRatings();
-//        for (Rating rating:allRatings) {
-//            if (!Objects.equals(rating.getId(), ratingId)) {
-//                return null;
-//            }
-//        }
         return ratingService.updateRating(ratingId, ratingDetails);
     }
 

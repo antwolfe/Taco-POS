@@ -15,7 +15,6 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "review_id")
-    @Getter
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -30,11 +29,31 @@ public class Review {
     @JoinColumn(name = "film_id", nullable = false)
     private Film film;
 
+    public Long getId() {
+        return id;
+    }
 
+    public Rating getRating() {
+        return rating;
+    }
 
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
 
+    public Customer getCustomer() {
+        return customer;
+    }
 
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 
+    public Film getFilm() {
+        return film;
+    }
 
-
+    public void setFilm(Film film) {
+        this.film = film;
+    }
 }

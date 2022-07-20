@@ -34,7 +34,14 @@ public class RatingService {
         return ratingRepository.save(rating);
     }
 
-
+    public void deleteRating(Long ratingId) {
+        try {
+            ratingRepository.deleteById(ratingId);
+        } catch (EmptyResultDataAccessException exception){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No Review exists with that ID");
+        }
+    }
 
 
 }
