@@ -13,29 +13,33 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Review {
 
-    public Review(Long id){
+    public Review(short id){
         this.id = id;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @Getter
-    private Long id;
+    @Getter @Setter
+    private short id;
 
-
-
-    @ManyToOne //(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "rating_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "rating_id", nullable = false)
+    @Getter @Setter
     private Rating rating;
 
     @ManyToOne
-//    @JoinColumn(name = "customer_id", nullable = false)
+    @JoinColumn(name = "customer_id", nullable = false, columnDefinition = "SMALLINT UNSIGNED NOT NULL")
+    @Getter @Setter
     private Customer customer;
 
     @ManyToOne
-//    @JoinColumn(name = "film_id", nullable = false)
+    @JoinColumn(name = "film_id", nullable = false, columnDefinition = "SMALLINT UNSIGNED NOT NULL")
     private Film film;
+
+    @Column(name = "review")
+    @Getter @Setter
+    private String review;
 
 
 }

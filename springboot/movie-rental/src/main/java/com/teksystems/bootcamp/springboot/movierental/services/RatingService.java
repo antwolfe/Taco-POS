@@ -24,8 +24,8 @@ public class RatingService {
         return ratingRepository.findAll();
     }
 
-    public Rating createRating(Rating rating) {
-        return ratingRepository.save(rating);
+    public List<Rating> createRating(List<Rating> ratings) {
+        return ratingRepository.saveAll(ratings);
     }
 
     public Rating updateRating(Long ratingId, Rating ratingDetails) {

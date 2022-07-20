@@ -16,20 +16,23 @@ import java.util.List;
 @Entity
 public class Customer {
 
+    public Customer(short id){
+        this.id = id;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @Getter @Setter
-    private short id;
+    short id;
 
+    @Column(name = "first_name")
     @Getter @Setter
-    private String firstName;
+    String firstName;
 
+    @Column(name = "last_name")
     @Getter @Setter
-    private String lastName;
-
-    @OneToMany(mappedBy = "customer")
-    private List<Review> reviews;
+    String lastName;
 
 
 }

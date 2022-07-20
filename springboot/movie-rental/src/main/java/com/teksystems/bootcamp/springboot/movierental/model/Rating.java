@@ -21,20 +21,17 @@ public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    @Getter
+    @Setter @Getter
     Long id;
 
 //    @Size(max = 5)
     @Column(name = "star_rating")
     @Getter @Setter
-    private int starRating;
+    int starRating;
 
     @Column(name = "description")
     @Getter @Setter
-    private String description;
-
-    @OneToMany(mappedBy = "rating")
-    private List<Review> reviews;
+    String description;
 
 
 

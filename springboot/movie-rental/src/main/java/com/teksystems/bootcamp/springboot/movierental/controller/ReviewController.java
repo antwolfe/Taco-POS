@@ -31,8 +31,8 @@ public class ReviewController {
     }
 
     @PostMapping("/")
-    public Review createReview(@RequestBody Review review) {
-        return reviewService.createReview(review);
+    public List<Review> createReview(@RequestBody List<Review> reviews) {
+        return reviewService.createReview(reviews);
     }
 
     @PutMapping("/{id}")

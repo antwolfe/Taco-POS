@@ -19,20 +19,19 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @Getter @Setter
-    private short id;
+    short id;
 
+    @Column(name = "film_title")
     @Getter @Setter
-    private String title;
+    String title;
 
+    @Column(name = "film_description")
     @Getter @Setter
-    private String description;
+    String description;
 
+    @Column(name = "film_releaseYear")
     @Getter @Setter
-    private Year releaseYear;
-
-    @OneToMany(mappedBy = "film")
-    private List<Review> reviews;
-
+    Year releaseYear;
 
 
 }
