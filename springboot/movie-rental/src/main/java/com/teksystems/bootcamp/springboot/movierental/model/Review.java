@@ -19,7 +19,7 @@ public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
+    @Column(name = "id", columnDefinition = "SMALLINT UNSIGNED NOT NULL")
     @Getter @Setter
     private short id;
 

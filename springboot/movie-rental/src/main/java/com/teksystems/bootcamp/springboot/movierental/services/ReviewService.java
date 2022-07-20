@@ -17,13 +17,13 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 import java.util.Optional;
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Service
 public class ReviewService {
 
     @Autowired
     private ReviewRepository reviewRepository;
+    //pull in film, rating, customer repos. find matching
 
     public List<Review> getAllReviews() {
         return reviewRepository.findAll();
@@ -33,20 +33,20 @@ public class ReviewService {
         return reviewRepository.saveAll(reviews);
     }
 
-    public Review updateReview(Long reviewId, Review reviewDetails) {
-        Optional<Review> review = reviewRepository.findById(reviewId);
-        if (review.isPresent()) {
-            Review newReview = review.get();
-//            Rating newRating = new Rating();
-//             review.setRating(newRating.setStarRating(newRating))
-//            return review.save();
-            return newReview;
-        } else {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-                    "No review exists with id: " + reviewId);
-        }
-        // review set ratingId, customerId, filmId
-    }
+//    public Review updateReview(Long reviewId, Review reviewDetails) {
+//        Optional<Review> review = reviewRepository.findById(reviewId);
+//        if (review.isPresent()) {
+//            Review newReview = review.get();
+//            newReview.setCustomer(reviewDetails.getCustomer());
+//            newReview.setFilm(reviewDetails.getFilm());
+//            newReview.setRating(reviewDetails.getRating());
+//            return newReview;
+//        } else {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+//                    "No review exists with id: " + reviewId);
+//        }
+//        // review set ratingId, customerId, filmId
+//    }
 
     public void deleteReview(Long reviewId) {
         try {

@@ -26,7 +26,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
+    @Column(name = "customer_id", columnDefinition = "SMALLINT UNSIGNED NOT NULL")
     @Getter @Setter
     short id;
 
@@ -38,5 +38,7 @@ public class Customer {
     @Getter @Setter
     String lastName;
 
+    @OneToMany(mappedBy = "customer")
+    List<Review> reviews;
 
 }

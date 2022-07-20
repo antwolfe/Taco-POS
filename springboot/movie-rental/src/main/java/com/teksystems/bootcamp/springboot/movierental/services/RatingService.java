@@ -12,8 +12,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Service
 public class RatingService {
 
@@ -28,10 +27,12 @@ public class RatingService {
         return ratingRepository.saveAll(ratings);
     }
 
-    public Rating updateRating(Long ratingId, Rating ratingDetails) {
-        Rating rating = ratingRepository.findById(ratingId).get();
-        return ratingRepository.save(rating);
-    }
+//    public Rating updateRating(Long ratingId, Rating ratingDetails) {
+//        Rating rating = ratingRepository.findById(ratingId).get();
+//        rating.setStarRating(ratingDetails.getId());
+//        rating.set
+//        return ratingRepository.save(rating);
+//    }
 
     public void deleteRating(Long ratingId) {
         try {

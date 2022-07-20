@@ -35,11 +35,11 @@ public class ReviewController {
         return reviewService.createReview(reviews);
     }
 
-    @PutMapping("/{id}")
-    public Review updateReview(@PathVariable(name= "id") Long reviewId,
-                               @RequestBody Review reviewDetails) {
-        return reviewService.updateReview(reviewId, reviewDetails);
-    }
+//    @PutMapping("/{id}")
+//    public Review updateReview(@PathVariable(name= "id") Long reviewId,
+//                               @RequestBody Review reviewDetails) {
+//        return reviewService.updateReview(reviewId, reviewDetails);
+//    }
 
     @DeleteMapping("/{reviewId}")
     public void deleteReview(@PathVariable Long reviewId){

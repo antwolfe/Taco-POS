@@ -18,7 +18,6 @@ public class Rating {
         this.id = id;
     }
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")

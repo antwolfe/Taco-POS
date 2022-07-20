@@ -20,10 +20,9 @@ public class Film {
     }
 
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
+    @Column(name = "film_id", columnDefinition = "INT UNSIGNED NOT NULL")
     @Getter @Setter
     short id;
 
@@ -34,7 +33,5 @@ public class Film {
     @Column(name = "film_description")
     @Getter @Setter
     String description;
-
-
 
 }
