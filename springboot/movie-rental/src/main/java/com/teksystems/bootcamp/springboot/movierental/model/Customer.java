@@ -26,7 +26,7 @@ public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
     @Getter @Setter
     short id;
 

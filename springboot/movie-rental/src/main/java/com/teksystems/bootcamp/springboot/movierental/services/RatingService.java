@@ -30,7 +30,6 @@ public class RatingService {
 
     public Rating updateRating(Long ratingId, Rating ratingDetails) {
         Rating rating = ratingRepository.findById(ratingId).get();
-//        rating.setStarRating(ratingDetails.getId());
         return ratingRepository.save(rating);
     }
 

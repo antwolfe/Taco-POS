@@ -21,7 +21,7 @@ public class Rating {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
     @Setter
     Long id;
 

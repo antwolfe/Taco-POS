@@ -19,13 +19,11 @@ public class Film {
         this.id = id.shortValue();
     }
 
-    public short getId(){
-        return this.id;
-    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id", columnDefinition = "INT UNSIGNED NOT NULL")
     @Getter @Setter
     short id;
 
