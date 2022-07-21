@@ -47,4 +47,6 @@ public class ReviewController {
         reviewService.deleteReview(reviewId);
     }
 
+    // Controller Notes:
+    // if variable in param is same as in path, name = is not needed
 }

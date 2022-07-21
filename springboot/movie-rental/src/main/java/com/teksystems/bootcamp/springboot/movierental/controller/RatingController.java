@@ -40,9 +40,11 @@ public class RatingController {
     }
 
     // DELETE
-    @DeleteMapping("/{ratingId}") // if variable in param is same as in path, name = is not needed
+    @DeleteMapping("/{ratingId}")
     public void deleteRating(@PathVariable Long ratingId) {
         ratingService.deleteRating(ratingId);
     }
 
+    // Controller Notes:
+    // if variable in param is same as in path, name = is not needed
 }
