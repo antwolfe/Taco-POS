@@ -38,6 +38,16 @@ public class RatingService {
         return pagedResults.toList();
     }
 
+    public Rating getRating(Long ratingId){
+        Optional<Rating> rating = ratingRepository.findById(ratingId);
+        if (rating.isPresent()) {
+            return rating.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No rating exists with id: " + ratingId);
+        }
+    }
+
     // UPDATE
     public Rating updateRating(Long ratingId, Rating ratingDetails) {
         Optional<Rating> rating = ratingRepository.findById(ratingId);

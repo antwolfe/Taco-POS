@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.springboot.movierental.controller;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Rating;
+import com.teksystems.bootcamp.springboot.movierental.model.Review;
 import com.teksystems.bootcamp.springboot.movierental.services.RatingService;
 import com.teksystems.bootcamp.springboot.movierental.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,11 @@ public class RatingController {
     public List<Rating> getRatings(@RequestParam(required = false) Integer page,
                                    @RequestParam(required = false) Integer limit) {
         return ratingService.getRatings(page, limit);
+    }
+
+    @GetMapping("/{id}")
+    public Rating getRating(@PathVariable Long id){
+        return ratingService.getRating(id);
     }
 
     // UPDATE
