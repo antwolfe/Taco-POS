@@ -14,6 +14,7 @@ public class ReviewController {
     @Autowired
     ReviewService reviewService;
 
+    // CREATE
     @GetMapping("/")
     public List<Review> getAllReviews() {
         return reviewService.getAllReviews();
@@ -30,17 +31,20 @@ public class ReviewController {
         return reviewService.getReview(id);
     }
 
+    // READ
     @PostMapping("/")
     public List<Review> createReview(@RequestBody List<Review> reviews) {
         return reviewService.createReview(reviews);
     }
 
+    // UPDATE
 //    @PutMapping("/{id}")
 //    public Review updateReview(@PathVariable(name= "id") Long reviewId,
 //                               @RequestBody Review reviewDetails) {
 //        return reviewService.updateReview(reviewId, reviewDetails);
 //    }
 
+    // DELETE
     @DeleteMapping("/{reviewId}")
     public void deleteReview(@PathVariable Long reviewId){
         reviewService.deleteReview(reviewId);

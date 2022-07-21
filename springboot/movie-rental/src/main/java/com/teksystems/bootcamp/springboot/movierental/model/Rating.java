@@ -26,11 +26,11 @@ public class Rating {
 
 //    @Size(max = 5)
     @Column(name = "star_rating")
-    @Setter
+    @Setter @Getter
     int starRating;
 
     @Column(name = "description")
-    @Setter
+    @Setter @Getter
     String description;
 
     public Long getId() {

@@ -19,24 +19,26 @@ public class RatingController {
     @Autowired
     private RatingService ratingService;
 
-    // customer controller
-    @GetMapping("/")
-    public List<Rating> getAllRatings() {
-        return ratingService.getAllRatings();
-    }
-
-
+    //CREATE
     @PostMapping("/")
     public List<Rating> createRating(@RequestBody List<Rating> ratings) {
         return ratingService.createRating(ratings);
     }
 
-//    @PutMapping("/{id}")
-//    public Rating updateRating(@PathVariable(name= "id") @Valid Long ratingId,
-//                                   @RequestBody Rating ratingDetails) {
-//        return ratingService.updateRating(ratingId, ratingDetails);
-//    }
+   // READ
+    @GetMapping("/")
+    public List<Rating> getAllRatings() {
+        return ratingService.getAllRatings();
+    }
 
+    // UPDATE
+    @PutMapping("/{id}")
+    public Rating updateRating(@PathVariable(name= "id") @Valid Long ratingId,
+                                   @RequestBody Rating ratingDetails) {
+        return ratingService.updateRating(ratingId, ratingDetails);
+    }
+
+    // DELETE
     @DeleteMapping("/{ratingId}") // if variable in param is same as in path, name = is not needed
     public void deleteRating(@PathVariable Long ratingId) {
         ratingService.deleteRating(ratingId);
