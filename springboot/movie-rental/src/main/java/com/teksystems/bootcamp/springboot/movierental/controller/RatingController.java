@@ -27,8 +27,9 @@ public class RatingController {
 
    // READ
     @GetMapping("/")
-    public List<Rating> getAllRatings() {
-        return ratingService.getAllRatings();
+    public List<Rating> getRatings(@RequestParam(required = false) Integer page,
+                                   @RequestParam(required = false) Integer limit) {
+        return ratingService.getRatings(page, limit);
     }
 
     // UPDATE

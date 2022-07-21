@@ -23,7 +23,7 @@ public class ReviewController {
 
     // READ
     @GetMapping("/")
-    public List<Review> getAllReviews(@RequestParam(required = false) Integer page,
+    public List<Review> getReviews(@RequestParam(required = false) Integer page,
                                       @RequestParam(required = false) Integer limit) {
         return reviewService.getReviews(page, limit);
     }
