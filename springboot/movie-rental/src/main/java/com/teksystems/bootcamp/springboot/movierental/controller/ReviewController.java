@@ -20,16 +20,17 @@ public class ReviewController {
         return reviewService.getAllReviews();
     }
 
+    @GetMapping("/{id}")
+    public Review getReview(@PathVariable short id){
+        return reviewService.getReview(id);
+    }
+
     @GetMapping("/{page}{limit}")
     public List<Review> getPaginatedReviews(@PathVariable int page,
                                             @PathVariable int limit){
         return reviewService.getPaginatedReviews(page, limit);
     }
 
-    @GetMapping("/{id}")
-    public Review getReview(@PathVariable Long id){
-        return reviewService.getReview(id);
-    }
 
     // READ
     @PostMapping("/")
@@ -46,7 +47,7 @@ public class ReviewController {
 
     // DELETE
     @DeleteMapping("/{reviewId}")
-    public void deleteReview(@PathVariable Long reviewId){
+    public void deleteReview(@PathVariable short reviewId){
         reviewService.deleteReview(reviewId);
     }
 

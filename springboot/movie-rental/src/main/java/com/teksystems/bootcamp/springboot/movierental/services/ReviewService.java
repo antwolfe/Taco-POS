@@ -39,13 +39,7 @@ public class ReviewService {
         return reviewRepository.findAll();
     }
 
-    public List<Review> getPaginatedReviews(int page, int limit){
-        Pageable paging = PageRequest.of(page, limit);
-        Page<Review> pagedResults = reviewRepository.findAll(paging);
-        return pagedResults.toList();
-    }
-
-    public Review getReview(Long reviewId){
+    public Review getReview(short reviewId){
         Optional<Review> review = reviewRepository.findById(reviewId);
         if (review.isPresent()) {
             return review.get();
@@ -54,6 +48,13 @@ public class ReviewService {
                     "No review exists with id: " + reviewId);
         }
     }
+
+    public List<Review> getPaginatedReviews(int page, int limit){
+        Pageable paging = PageRequest.of(page, limit);
+        Page<Review> pagedResults = reviewRepository.findAll(paging);
+        return pagedResults.toList();
+    }
+
 
     // UPDATE
 
@@ -74,7 +75,7 @@ public class ReviewService {
 
 
     // DELETE
-    public void deleteReview(Long reviewId) {
+    public void deleteReview(short reviewId) {
         try {
             reviewRepository.deleteById(reviewId);
         } catch (EmptyResultDataAccessException exception){
