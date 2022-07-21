@@ -15,9 +15,17 @@ public class ReviewController {
     ReviewService reviewService;
 
     // CREATE
+    @PostMapping("/")
+    public List<Review> createReview(@RequestBody List<Review> reviews) {
+        return reviewService.createReview(reviews);
+    }
+
+
+    // READ
     @GetMapping("/")
-    public List<Review> getAllReviews() {
-        return reviewService.getAllReviews();
+    public List<Review> getAllReviews(@RequestParam(required = false) Integer page,
+                                      @RequestParam(required = false) Integer limit) {
+        return reviewService.getAllReviews(page, limit);
     }
 
     @GetMapping("/{id}")
@@ -25,25 +33,13 @@ public class ReviewController {
         return reviewService.getReview(id);
     }
 
-    @GetMapping("/{page}{limit}")
-    public List<Review> getPaginatedReviews(@PathVariable int page,
-                                            @PathVariable int limit){
-        return reviewService.getPaginatedReviews(page, limit);
-    }
-
-
-    // READ
-    @PostMapping("/")
-    public List<Review> createReview(@RequestBody List<Review> reviews) {
-        return reviewService.createReview(reviews);
-    }
 
     // UPDATE
-//    @PutMapping("/{id}")
-//    public Review updateReview(@PathVariable(name= "id") Long reviewId,
-//                               @RequestBody Review reviewDetails) {
-//        return reviewService.updateReview(reviewId, reviewDetails);
-//    }
+    @PutMapping("/{id}")
+    public Review updateReview(@PathVariable(name= "id") short reviewId,
+                               @RequestBody Review reviewDetails) {
+        return reviewService.updateReview(reviewId, reviewDetails);
+    }
 
     // DELETE
     @DeleteMapping("/{reviewId}")

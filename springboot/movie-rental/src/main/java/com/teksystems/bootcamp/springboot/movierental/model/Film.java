@@ -34,4 +34,7 @@ public class Film {
     @Getter @Setter
     String description;
 
+    @OneToMany(mappedBy = "film")
+    List<Review> reviews;
+
 }

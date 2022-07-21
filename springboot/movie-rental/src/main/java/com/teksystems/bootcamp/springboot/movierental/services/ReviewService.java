@@ -2,6 +2,8 @@ package com.teksystems.bootcamp.springboot.movierental.services;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Rating;
 import com.teksystems.bootcamp.springboot.movierental.model.Review;
+import com.teksystems.bootcamp.springboot.movierental.repository.CustomerRepository;
+import com.teksystems.bootcamp.springboot.movierental.repository.FilmRepository;
 import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepository;
 import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepository;
 import lombok.AllArgsConstructor;
@@ -13,6 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
@@ -26,6 +29,10 @@ public class ReviewService {
     private ReviewRepository reviewRepository;
     @Autowired
     private RatingRepository ratingRepository;
+    @Autowired
+    private FilmRepository filmRepository;
+    @Autowired
+    private CustomerRepository customerRepository;
     //pull in film, rating, customer repos. find matching
 
 
@@ -35,8 +42,12 @@ public class ReviewService {
     }
 
     // READ
-    public List<Review> getAllReviews() {
-        return reviewRepository.findAll();
+    public List<Review> getAllReviews(Integer page, Integer limit) {
+        if (page == null){ page = 0; }
+        if (limit == null){ limit = 5; }
+        Pageable paging = PageRequest.of(page, limit);
+        Page<Review> pagedResults = reviewRepository.findAll(paging);
+        return pagedResults.toList();
     }
 
     public Review getReview(short reviewId){
@@ -49,29 +60,22 @@ public class ReviewService {
         }
     }
 
-    public List<Review> getPaginatedReviews(int page, int limit){
-        Pageable paging = PageRequest.of(page, limit);
-        Page<Review> pagedResults = reviewRepository.findAll(paging);
-        return pagedResults.toList();
-    }
-
 
     // UPDATE
-
-//    public Review updateReview(Long reviewId, Review reviewDetails) {
-//        Optional<Review> review = reviewRepository.findById(reviewId);
-//        if (review.isPresent()) {
-//            Review newReview = review.get();
-//            newReview.setCustomer(reviewDetails.getCustomer());
-//            newReview.setFilm(reviewDetails.getFilm());
-//            newReview.setRating(reviewDetails.getRating());
-//            return newReview;
-//        } else {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-//                    "No review exists with id: " + reviewId);
-//        }
-//        // review set ratingId, customerId, filmId
-//    }
+    public Review updateReview(short reviewId, Review reviewDetails) {
+        Optional<Review> review = reviewRepository.findById(reviewId);
+        if (review.isPresent()) {
+            Review newReview = review.get();
+            newReview.setCustomer(customerRepository.findById(reviewDetails.getCustomer()).get());
+            newReview.setFilm(filmRepository.findById(reviewDetails.getFilm()).get());
+            newReview.setRating(ratingRepository.findById(reviewDetails.getRating()).get());
+            return reviewRepository.save(newReview);
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No review exists with id: " + reviewId);
+        }
+        // review set ratingId, customerId, filmId
+    }
 
 
     // DELETE

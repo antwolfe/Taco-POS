@@ -33,6 +33,9 @@ public class Rating {
     @Setter @Getter
     String description;
 
+    @OneToMany(mappedBy = "rating")
+    List<Review> reviews;
+
     public Long getId() {
         return this.id;
     }
