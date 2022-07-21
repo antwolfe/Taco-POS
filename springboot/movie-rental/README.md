@@ -11,12 +11,11 @@
 - Daily Lectures with Abigail Swigert (most of code was follow along from lectures)
 
 - Office Hours with Josi Reis-West, Abram Jablonkski, Olga Ozolina 
-- 
-    (code for pagination - Abram)
+
+    -(code for pagination - Abram)
     
-    (idea to use all repos to update reviews - Abigail)
-    
+    -(idea to use all repos to update reviews - Abigail)
    
-    (code refactoring)
+    -(code refactoring)
     
-    (help with understanding more about SpringBoot and SQL)
+    -(help with understanding more about SpringBoot and SQL)
