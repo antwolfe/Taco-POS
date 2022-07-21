@@ -16,7 +16,7 @@ import java.util.Objects;
 
 public class RatingController {
 
-    @Autowired
+    @Autowired //creates injected instance
     private RatingService ratingService;
 
     //CREATE

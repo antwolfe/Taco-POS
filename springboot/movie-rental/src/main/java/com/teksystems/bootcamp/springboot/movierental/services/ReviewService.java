@@ -2,6 +2,7 @@ package com.teksystems.bootcamp.springboot.movierental.services;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Rating;
 import com.teksystems.bootcamp.springboot.movierental.model.Review;
+import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepository;
 import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -23,38 +24,19 @@ public class ReviewService {
 
     @Autowired
     private ReviewRepository reviewRepository;
+    @Autowired
+    private RatingRepository ratingRepository;
     //pull in film, rating, customer repos. find matching
 
-    public List<Review> getAllReviews() {
-        return reviewRepository.findAll();
-    }
 
+    // CREATE
     public List<Review> createReview(List<Review> reviews) {
         return reviewRepository.saveAll(reviews);
     }
 
-//    public Review updateReview(Long reviewId, Review reviewDetails) {
-//        Optional<Review> review = reviewRepository.findById(reviewId);
-//        if (review.isPresent()) {
-//            Review newReview = review.get();
-//            newReview.setCustomer(reviewDetails.getCustomer());
-//            newReview.setFilm(reviewDetails.getFilm());
-//            newReview.setRating(reviewDetails.getRating());
-//            return newReview;
-//        } else {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-//                    "No review exists with id: " + reviewId);
-//        }
-//        // review set ratingId, customerId, filmId
-//    }
-
-    public void deleteReview(Long reviewId) {
-        try {
-            reviewRepository.deleteById(reviewId);
-        } catch (EmptyResultDataAccessException exception){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
-                    "No Review exists with that ID");
-        }
+    // READ
+    public List<Review> getAllReviews() {
+        return reviewRepository.findAll();
     }
 
     public List<Review> getPaginatedReviews(int page, int limit){
@@ -72,6 +54,35 @@ public class ReviewService {
                     "No review exists with id: " + reviewId);
         }
     }
+
+    // UPDATE
+
+//    public Review updateReview(Long reviewId, Review reviewDetails) {
+//        Optional<Review> review = reviewRepository.findById(reviewId);
+//        if (review.isPresent()) {
+//            Review newReview = review.get();
+//            newReview.setCustomer(reviewDetails.getCustomer());
+//            newReview.setFilm(reviewDetails.getFilm());
+//            newReview.setRating(reviewDetails.getRating());
+//            return newReview;
+//        } else {
+//            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+//                    "No review exists with id: " + reviewId);
+//        }
+//        // review set ratingId, customerId, filmId
+//    }
+
+
+    // DELETE
+    public void deleteReview(Long reviewId) {
+        try {
+            reviewRepository.deleteById(reviewId);
+        } catch (EmptyResultDataAccessException exception){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                    "No Review exists with that ID");
+        }
+    }
+
 
 
 
