@@ -25,7 +25,7 @@ public class ReviewController {
     @GetMapping("/")
     public List<Review> getAllReviews(@RequestParam(required = false) Integer page,
                                       @RequestParam(required = false) Integer limit) {
-        return reviewService.getAllReviews(page, limit);
+        return reviewService.getReviews(page, limit);
     }
 
     @GetMapping("/{id}")

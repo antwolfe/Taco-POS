@@ -1,11 +1,15 @@
 package com.teksystems.bootcamp.springboot.movierental.services;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Rating;
+import com.teksystems.bootcamp.springboot.movierental.model.Review;
 import com.teksystems.bootcamp.springboot.movierental.repository.RatingRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
@@ -26,8 +30,12 @@ public class RatingService {
     }
 
     // READ
-    public List<Rating> getAllRatings() {
-        return ratingRepository.findAll();
+    public List<Rating> getRatings(Integer page, Integer limit) {
+        if (page == null){ page = 0; }
+        if (limit == null){ limit = 5; }
+        Pageable paging = PageRequest.of(page, limit);
+        Page<Rating> pagedResults = ratingRepository.findAll(paging);
+        return pagedResults.toList();
     }
 
     // UPDATE

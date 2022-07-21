@@ -42,7 +42,7 @@ public class ReviewService {
     }
 
     // READ
-    public List<Review> getAllReviews(Integer page, Integer limit) {
+    public List<Review> getReviews(Integer page, Integer limit) {
         if (page == null){ page = 0; }
         if (limit == null){ limit = 5; }
         Pageable paging = PageRequest.of(page, limit);
@@ -74,7 +74,6 @@ public class ReviewService {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "No review exists with id: " + reviewId);
         }
-        // review set ratingId, customerId, filmId
     }
 
 
@@ -87,8 +86,5 @@ public class ReviewService {
                     "No Review exists with that ID");
         }
     }
-
-
-
 
 }
